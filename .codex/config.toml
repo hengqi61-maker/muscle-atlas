@@ -1,0 +1,5 @@
+# Repository-scoped agent defaults. Actual approval/sandbox policy is inherited
+# from the parent Codex session; this file is not a security boundary.
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 3
