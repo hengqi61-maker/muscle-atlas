@@ -28,8 +28,8 @@ test('finished non-loop playback restarts and paused source picking survives non
   await slider.fill(String(time));await page.waitForTimeout(120);
   const result=await page.evaluate(()=>{
    const s=(window as any).runtimeScene,m=s.scene.getObjectByName('left_latissimus_dorsi');
-   const point=s.camera.position.clone().set(0,0,0);let n=0,maxOutside=-Infinity,sourceMeshes=0,checkedVertices=0,morphMeshes=0;
-   s.scene.traverse((mesh:any)=>{if(!mesh.isSkinnedMesh||!mesh.userData.entry)return;sourceMeshes++;if(mesh.geometry.morphAttributes.position?.length)morphMeshes++;
+   const point=s.camera.position.clone().set(0,0,0);let n=0,maxOutside=-Infinity,sourceMeshes=0,checkedVertices=0;const morphIds:string[]=[];
+   s.scene.traverse((mesh:any)=>{if(!mesh.isSkinnedMesh||!mesh.userData.entry)return;sourceMeshes++;if(mesh.geometry.morphAttributes.position?.length)morphIds.push(mesh.userData.entry.bpId);
     for(let i=0;i<mesh.geometry.attributes.position.count;i++){
      const vertex=mesh.getVertexPosition(i,s.camera.position.clone().set(0,0,0));checkedVertices++;
      maxOutside=Math.max(maxOutside,vertex.distanceTo(mesh.boundingSphere.center)-mesh.boundingSphere.radius);
@@ -42,9 +42,9 @@ test('finished non-loop playback restarts and paused source picking survives non
     if(i%20===0){point.add(m.localToWorld(vertex));n++;}
    }
    point.divideScalar(n).project(s.camera);const rect=s.gl.domElement.getBoundingClientRect();
-   return {maxOutside,sourceMeshes,checkedVertices,morphMeshes,x:rect.x+(point.x+1)*rect.width/2,y:rect.y+(1-point.y)*rect.height/2};
+   return {maxOutside,sourceMeshes,checkedVertices,morphIds:morphIds.sort(),x:rect.x+(point.x+1)*rect.width/2,y:rect.y+(1-point.y)*rect.height/2};
   });
-  expect(result.sourceMeshes).toBe(467);expect(result.morphMeshes).toBe(8);expect(result.checkedVertices).toBeGreaterThan(100000);
+  expect(result.sourceMeshes).toBe(467);expect(result.morphIds).toEqual(['BP8965','BP7781','BP8214','BP8376','BP9197','BP4797','BP4839','BP4795','BP4791','BP4793'].sort());expect(result.checkedVertices).toBeGreaterThan(100000);
   expect(result.maxOutside).toBeLessThan(1e-5);
   await page.mouse.click(result.x,result.y);
   await expect(page.locator('aside.right')).toContainText('z-anatomy:unmapped:left_latissimus_dorsi');
