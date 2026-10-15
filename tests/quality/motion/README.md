@@ -36,3 +36,17 @@ Optional `--interfaces /absolute/interfaces.json` accepts an array of explicit s
 The example box follows the current seat dimensions, but its placeholder source must be replaced by an independently verified contact region. Thigh-pad solids can use the same interface. Matching source meshes are actually sampled across all 121 poses; strict interior-vertex and triangle/SAT counts are emitted separately. Supplied AABBs and source binding are preserved in evidence, and interface verdicts stay INCONCLUSIVE until reviewed. No artificial skin, fabricated contact region or marker substitute is introduced. Seat/thigh support is explicitly unmeasured when no descriptor is supplied.
 
 Prior v1 red/prototype packets are preserved. Follow-up runs use a separate `artifacts/motion-quality-v2/` directory.
+
+## Round 2 shared-production support diagnostics
+
+The legacy `scripts/quality/measure-attachments-support.mjs` has hardcoded seat `.64` / thigh-pad `.80` dimensions and is **round 1 geometry evidence only**. Do not reuse its support measurements as round 2 evidence. This independent replacement consumes only the actual shared `config.supports` definitions and has no legacy geometry fallback:
+
+```
+npm run test:motion-support -- --source /absolute/candidate/tree --asset /absolute/candidate.glb --ref COMMIT --out /absolute/new/evidence
+```
+
+It hashes the **complete configuration**, runtime machine source and GLB independently, so changed supports remain traceable even when the GLB hash is unchanged. It samples all original source meshes across 121 poses. Explicit `supportContactRegions` source names and BP IDs are preserved, resolved against the actual GLB metadata and reported with unmatched bindings. Selected proxy face gaps are recalculated from actual triangle polygons clipped to the current seat/pad XZ footprint. Positive gaps remain INCONCLUSIVE; there is no invented skin thickness, force or contact PASS.
+
+Boxes use actual strict interior vertices and triangle SAT against the box inset by the unchanged 1 micrometre precision tolerance. Crossing triangles with all vertices outside are covered by calibration tests. Actual oriented finite capped cylinders use strict vertex depth, analytic segment crossings and axis/triangle intersections. A conservative cylinder AABB candidate alone never fails. Some interior-only cylinder/triangle intersections can evade these sufficient tests, so no detections is INCONCLUSIVE and cannot prove clearance. Reports preserve exact source IDs, solid IDs, poses and distinct candidate/interior counts.
+
+A support-connection graph records exact sufficient geometric witnesses among the current boxes/cylinders. No witness path is INCONCLUSIVE, never proof of disconnection; the graph does not validate frame strength, floor anchorage or physical support. Production-render geometry agreement still requires the separate real browser probe. Math calibration tests include positive 20 micrometre gaps, negative 10 micrometre overlaps, crossing triangles, oriented-cylinder AABB false positives and cap/box connection witnesses. Thresholds do not adapt to candidate dimensions or observed results.
