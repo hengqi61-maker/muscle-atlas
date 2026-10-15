@@ -1,0 +1,19 @@
+{
+  "file": "public/models/anatomy.glb",
+  "bytes": 25133568,
+  "sha256": "6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f",
+  "meshes": 467,
+  "nodes": 468,
+  "skins": 0,
+  "animations": 0,
+  "names": [
+    "abdominal part of left pectoralis major",
+    "abdominal part of right pectoralis major",
+    "abductor digiti minimi of left foot",
+    "abductor digiti minimi of left hand",
+    "abductor digiti minimi of right foot",
+    "abductor digiti minimi of right hand",
+    "acromial part of left deltoid",
+    "acromial part of right deltoid"
+  ]
+}
