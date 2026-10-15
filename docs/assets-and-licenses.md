@@ -26,3 +26,6 @@ anatomy.glb 25,133,568 bytes；Git blob SHA1 a112885444785a9dd93c5753b46ac790e6e
 
 ## 2026-10-15 派生动作资产
 anatomy-curl.glb 由 scripts/build-curl-rig.py 从固定SHA256的原GLB派生，保留467源mesh和源名称/FMA/BP/source，新增左臂蒙皮、手工形态键和哑铃。geometry坐标归一化，源解剖拓扑保留。保留上文BP3D与Z-Anatomy各自署名和适用ShareAlike义务，不将整个派生GLB重标为软件代码许可。原GLB仍随仓库保存，生成脚本给出变更和可重建路径。动态形变是项目新增艺术性试验，不归因于原作者的医学验证。
+
+## 2026-10-15 哑铃和手部/坐姿派生更新
+本次哑铃与手部表面为本项目原创程序几何，记录于equipment-and-grip.md，不宣称来自Innerscene/Poly Pizza。外部候选虽页面标CC0，但未取得下载字节；不把其许可套用于原创文件。独立哑铃public/models/equipment/detailed-hex-dumbbell.glb不含第三方人体。动画派生anatomy-curl.glb、anatomy-pulldown.glb仍包含上述BP3D/Z-Anatomy资产，保持各来源署名与适用条款。动作派生中的远端组织握持位移、坐姿与腕部/双臂骨骼为新增变更，原始anatomy.glb不变。

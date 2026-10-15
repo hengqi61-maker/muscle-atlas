@@ -1,8 +1,9 @@
 import {test,expect} from '@playwright/test';
 test('real model, joint playback, selection and persistence',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+ const anatomyResponse=page.waitForResponse(r=>r.url().endsWith('anatomy.glb')&&r.status()===200);
  await page.goto('/');await expect(page.locator('canvas')).toBeVisible();
- await page.waitForResponse(r=>r.url().endsWith('anatomy.glb')&&r.status()===200);await page.waitForTimeout(2000);
+ await anatomyResponse;await page.waitForTimeout(2000);
  await page.screenshot({path:'docs/anatomy-browser.png'});
  const canvas=page.locator('canvas');const box=(await canvas.boundingBox())!;await page.mouse.click(box.x+box.width*.49,box.y+box.height*.28);await expect(page.getByText('来源：bp3d',{exact:false})).toBeVisible();
  await page.mouse.move(box.x+box.width/2,box.y+box.height/2);await page.mouse.down();await page.mouse.move(box.x+box.width/2+50,box.y+box.height/2+10);await page.mouse.up();await page.mouse.wheel(0,-100);await page.getByRole('button',{name:'视角复位'}).click();

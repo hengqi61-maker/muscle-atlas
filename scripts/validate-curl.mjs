@@ -19,10 +19,14 @@ pose(0);const baseRotation=forearm.getWorldQuaternion(new Quaternion());const ba
 const target=skinned.find(o=>o.name==='left_brachioradialis');assert.ok(target);
 const positions=[];for(let i=0;i<target.geometry.attributes.position.count;i++)positions.push(sample(target,i));
 const topology=Array.from(target.geometry.index.array);let blended=0;for(let i=0;i<target.geometry.attributes.skinWeight.count;i++){const w=target.geometry.attributes.skinWeight; if(w.getX(i)>0&&w.getY(i)>0)blended++;}assert.ok(blended>0,'actual source muscle must have mixed weights');
+const palm=gltf.scene.getObjectByName('CurlPalmAnchor'),handle=gltf.scene.getObjectByName('CurlHandleAnchor');assert.ok(palm&&handle);
+function anchor(m){const v=new Vector3();for(let i=0;i<m.geometry.attributes.position.count;i++)v.add(m.localToWorld(m.getVertexPosition(i,new Vector3())));return v.divideScalar(m.geometry.attributes.position.count);}
+let maxGripError=0;
 const snapshots=[];
 for(const [angle,time] of [[0,0],[45,Math.acos(.25)/Math.PI*2],[90,4/3],[120,2],[0,4]]){
  pose(time);
  const measuredAngle=forearm.getWorldQuaternion(new Quaternion()).angleTo(baseRotation)*180/Math.PI;assert.ok(Math.abs(measuredAngle-angle)<.02);
+ maxGripError=Math.max(maxGripError,anchor(palm).distanceTo(anchor(handle)));
  const weights=biceps.map(m=>m.morphTargetInfluences[0]);assert.ok(Math.abs(weights[0]-angle/120)<.002);
  assert.deepEqual(upper.getWorldPosition(new Vector3()).toArray(),baseUpper);
  assert.deepEqual(forearm.getWorldPosition(new Vector3()).toArray(),baseElbow);
@@ -37,5 +41,6 @@ const normal=triangle[1].clone().sub(triangle[0]).cross(triangle[2].clone().sub(
 const ray=new Raycaster(center.clone().addScaledVector(normal,.015),normal.clone().negate(),0,.03);
 const rayHits=ray.intersectObject(target,false);assert.ok(rayHits.length>0,'paused deformed source mesh must be raycastable');
 pose(0);const m=biceps[0];const base=sample(m,100);m.morphTargetInfluences[0]=1;const morphOnly=sample(m,100).distanceTo(base);assert.ok(morphOnly>1e-6,'independent morph must move tissue');m.morphTargetInfluences[0]=0;
-const report={file,validator:{errors:validation.issues.numErrors,warnings:validation.issues.numWarnings},skinnedMeshes:skinned.length,joints:skinned[0].skeleton.bones.map(b=>b.name),clips:gltf.animations.map(c=>({name:c.name,duration:c.duration,tracks:c.tracks.map(t=>t.name)})),blendedVertices:blended,independentMorphDisplacement:morphOnly,posedRaycastHits:rayHits.length,snapshots,limitation:'edge ratios are diagnostics, not proof of physiological correctness or absence of all collisions'};
+assert.ok(maxGripError<1e-5);
+const report={maxGripErrorMetres:maxGripError,file,validator:{errors:validation.issues.numErrors,warnings:validation.issues.numWarnings},skinnedMeshes:skinned.length,joints:skinned[0].skeleton.bones.map(b=>b.name),clips:gltf.animations.map(c=>({name:c.name,duration:c.duration,tracks:c.tracks.map(t=>t.name)})),blendedVertices:blended,independentMorphDisplacement:morphOnly,posedRaycastHits:rayHits.length,snapshots,limitation:'edge ratios are diagnostics, not proof of physiological correctness or absence of all collisions'};
 fs.writeFileSync('docs/evidence/curl-runtime.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));

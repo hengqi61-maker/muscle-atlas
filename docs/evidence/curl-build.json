@@ -74,6 +74,13 @@
     ]
   },
   "duration": 4,
+  "gripCenter": [
+    0.23100000619888306,
+    -0.1340000033378601,
+    0.7540000081062317
+  ],
+  "handSurface": "original closed-grip opaque presentation layer",
+  "equipment": "original bevelled hex; no downloaded asset claim",
   "poseCorrectiveMeshes": 22,
   "morph": "24% radial artistic envelope, taper to zero at endpoints; not physiological",
   "scope": "left arm, original independent meshes; rest of body static"

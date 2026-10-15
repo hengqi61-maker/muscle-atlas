@@ -1,0 +1,41 @@
+{
+  "file": "public/models/equipment/detailed-hex-dumbbell.glb",
+  "validator": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "dimensionsMetres": [
+    0.31310000643134117,
+    0.13339148461818695,
+    0.11777946352958679
+  ],
+  "heads": [
+    {
+      "name": "Dumbbell_HexHead_1",
+      "center": [
+        0.11599999666213989,
+        0,
+        0
+      ],
+      "size": [
+        0.078000009059906,
+        0.13339148461818695,
+        0.11777946352958679
+      ]
+    },
+    {
+      "name": "Dumbbell_HexHead_-1",
+      "center": [
+        -0.11599999666213989,
+        0,
+        0
+      ],
+      "size": [
+        0.078000009059906,
+        0.13339148461818695,
+        0.11777946352958679
+      ]
+    }
+  ],
+  "origin": "original project geometry; external candidate not imported"
+}

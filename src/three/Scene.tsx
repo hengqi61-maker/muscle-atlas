@@ -7,9 +7,12 @@ import {useAtlas} from '../stores/useAtlas';
 import {appearance,resolveState} from './materials';
 import {advance,DURATION} from './animation';
 import {byMesh} from '../data/catalogue';
+import LatPulldownMachine from './LatPulldownMachine';
+import {latPulldownAnatomyRelations} from '../data/latPulldown';
 
-function Anatomy({animated=false}:{animated?:boolean}){
- const {scene,animations}=useGLTF(animated?'/models/anatomy-curl.glb':'/models/anatomy.glb');
+function Anatomy({model}:{model:'anatomy'|'rigged'|'pulldown'}){
+ const animated=model!=='anatomy';const seated=model==='pulldown';
+ const {scene,animations}=useGLTF(seated?'/models/anatomy-pulldown.glb':animated?'/models/anatomy-curl.glb':'/models/anatomy.glb');
  const root=useMemo(()=>{
   const object=clone(scene);if(!animated)object.rotation.x=-Math.PI/2;
   object.updateMatrixWorld(true);
@@ -29,21 +32,22 @@ function Anatomy({animated=false}:{animated?:boolean}){
  },[root,animations,animated]);
  const box=useMemo(()=>new THREE.Box3().setFromObject(root),[root]);
  const size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3()),factor=3.5/size.y;
+ const handSkin=useAtlas(s=>s.handSkin);
  const style=useAtlas(s=>s.style),selected=useAtlas(s=>s.selected),hovered=useAtlas(s=>s.hovered),hidden=useAtlas(s=>s.hidden),mode=useAtlas(s=>s.mode);
  useEffect(()=>{
   const materials:THREE.Material[]=[];
   root.traverse(o=>{if(o instanceof THREE.Mesh){
    const entry=o.userData.entry;const name=String(entry?.name||'');
-   const role=animated&&mode==='exercise'&&name.includes('left')?
+   const role=seated&&mode==='exercise'?latPulldownAnatomyRelations.find(r=>r.anatomyId===entry?.anatomyId)?.role:animated&&mode==='exercise'&&name.includes('left')?
     name.includes('biceps brachii')?'primary':(name.includes('brachialis')||name.includes('brachioradialis'))?'secondary':(name.includes('deltoid')||((name.includes('flexor')||name.includes('extensor'))&&o.userData.rigRegion))?'stabilizer':undefined:undefined;
    const state=resolveState(o.userData.anatomyId,selected,hovered,hidden,role);
-   if(!entry){o.visible=true;return;}
-   const a=appearance(state,style);o.visible=a.visible;
+   if(!entry){o.visible=o.userData.visualLayer==='contact-marker'?false:o.userData.visualLayer==='grip-skin'?handSkin:true;return;}
+   const a=appearance(state,style);o.visible=a.visible&&!(handSkin&&o.userData.coveredByGripSkin);
    const color=entry.isTendon&&(state==='default'||state==='dimmed')?'#d4c5ad':a.color;
    const material=new THREE.MeshStandardMaterial({...a,color});materials.push(material);o.material=material;
   }});
   return ()=>materials.forEach(m=>m.dispose());
- },[root,style,selected,hovered,hidden,animated,mode]);
+ },[root,style,selected,hovered,hidden,animated,mode,seated,handSkin]);
  useEffect(()=>{if(animated){if(!animations.length)throw new Error('动画资源缺少 clip');const action=mixer.clipAction(animations[0]);action.setLoop(THREE.LoopOnce,1);action.clampWhenFinished=true;action.reset().play();}return ()=>{mixer.stopAllAction();mixer.uncacheRoot(root);};},[mixer,root,animated,animations]);
  useFrame(()=>{if(!animated)return;
   const s=useAtlas.getState();const action=mixer.clipAction(animations[0]);action.paused=false;action.enabled=true;mixer.setTime(Math.min(s.time,DURATION));root.updateMatrixWorld(true);
@@ -56,6 +60,7 @@ function Anatomy({animated=false}:{animated?:boolean}){
   if(!e.object.userData.entry)return;e.stopPropagation();
   useAtlas.getState().set(hover?{hovered:e.object.userData.anatomyId}:{selected:e.object.userData.anatomyId});
  };
+ if(seated)return <primitive object={root} onClick={pick} onPointerOver={(e:ThreeEvent<PointerEvent>)=>pick(e,true)} onPointerOut={()=>useAtlas.getState().set({hovered:null})}/>;
  return <group scale={factor} position={[-center.x*factor,-center.y*factor+.3,-center.z*factor]}>
   <primitive object={root} onClick={pick} onPointerOver={(e:ThreeEvent<PointerEvent>)=>pick(e,true)} onPointerOut={()=>useAtlas.getState().set({hovered:null})}/>
  </group>;
@@ -63,16 +68,18 @@ function Anatomy({animated=false}:{animated?:boolean}){
 function Clock(){useFrame((_,delta)=>{const s=useAtlas.getState();if(s.playing){const time=advance(s.time,delta,s.speed,s.loop);s.set({time,playing:s.loop||time<DURATION});}});return null;}
 function CameraControls(){
  const ref=useRef<React.ComponentRef<typeof OrbitControls>>(null);
- const reset=useAtlas(s=>s.reset),focus=useAtlas(s=>s.focus);
+ const reset=useAtlas(s=>s.reset),focus=useAtlas(s=>s.focus),model=useAtlas(s=>s.model);
  useEffect(()=>{const controls=ref.current;if(!controls)return;
-  if(focus==='arm'){controls.object.position.set(1.7,1.25,2.1);controls.target.set(.44,.90,.15);}
+  if(focus==='grip'){controls.object.position.set(.95,1.15,1.55);controls.target.set(.40,.90,.55);}
+  else if(focus==='arm'){controls.object.position.set(1.7,1.25,2.1);controls.target.set(.44,.90,.15);}
+  else if(model==='pulldown'){controls.object.position.set(3,1.4,5.3);controls.target.set(0,.15,.1);}
   else{controls.object.position.set(0,1,5.8);controls.target.set(0,.3,0);}
   controls.update();
- },[reset,focus]);
+ },[reset,focus,model]);
  return <OrbitControls ref={ref} makeDefault minDistance={.8} maxDistance={12} target={[0,.3,0]}/>;
 }
 export default function Scene(){const model=useAtlas(s=>s.model);return <Canvas camera={{position:[0,1,5.8],fov:42}} dpr={[1,2]} onPointerMissed={()=>useAtlas.getState().set({selected:null})}>
  <color attach="background" args={['#111922']}/><ambientLight intensity={.8}/><directionalLight position={[3,5,5]} intensity={2.5}/><directionalLight position={[-4,2,-3]} intensity={1.5} color="#8eaed1"/>
- <Suspense fallback={null}><Anatomy key={model} animated={model==='rigged'}/></Suspense>
+ <Suspense fallback={null}>{model==='pulldown'?<group position={[0,-1.45,0]} scale={1.45}><Anatomy model={model}/><LatPulldownMachine/></group>:<Anatomy key={model} model={model}/>}</Suspense>
  <Grid position={[0,-1.5,0]} args={[10,10]} cellColor="#2b3947" sectionColor="#43515e" fadeDistance={12} infiniteGrid/><CameraControls/><Clock/>
  </Canvas>;}

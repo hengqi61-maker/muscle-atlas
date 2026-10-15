@@ -2,9 +2,11 @@
 No auto-weight fallback. Morph is an illustrative artistic correction, not measured physiology.
 Run with Blender --background --python scripts/build-curl-rig.py.
 """
-import bpy,math,json,pathlib,hashlib
+import bpy,math,json,pathlib,hashlib,sys
 from mathutils import Vector,Quaternion,Matrix
 root=pathlib.Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(root/'scripts'))
+from grip_geometry import create_grip_hand,create_hex_dumbbell,fold_source_hand,contact_marker
 source=root/'public/models/anatomy.glb'
 assert hashlib.sha256(source.read_bytes()).hexdigest()=='6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f'
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
@@ -36,6 +38,7 @@ for o in meshes:
  distal='left' in o.name and maxx>.175 and maxz<1.175 and minz>.60
  if 'left' not in o.name or not(upper_muscle or distal):continue
  arm.append(o);o['rigRegion']='left-arm'
+ fold_source_hand(o,(.231,-.134,.754),.802)
  u=o.vertex_groups.new(name='UpperArm');f=o.vertex_groups.new(name='Forearm')
  for v in o.data.vertices:
   # Shared transition plane provides continuous weights across mesh boundaries.
@@ -78,17 +81,12 @@ for o in arm:
    a=identity*(1-w)+r*w;b=(elbow-r@elbow)*w
    key.data[v.index].co=a.inverted()@(desired-b)
 
-# Compact dumbbell, independent steel handle and rubber heads; hand is supplied anatomy.
-def mat(name,color,metal=.0):
- m=bpy.data.materials.new(name);m.diffuse_color=(*color,1);m.use_nodes=True;p=m.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=(*color,1);p.inputs['Metallic'].default_value=metal;p.inputs['Roughness'].default_value=.35;return m
-steel=mat('HandleSteel',(.35,.42,.45),.85);rubber=mat('DumbbellRubber',(.035,.045,.055))
-grip=Vector((.224,-.117,.754))
-for name,offset,radius,depth,material in [('Dumbbell_Handle',0,.012,.15,steel),('Dumbbell_Inner',-.083,.055,.05,rubber),('Dumbbell_Outer',.083,.055,.05,rubber)]:
- bpy.ops.mesh.primitive_cylinder_add(vertices=32,radius=radius,depth=depth,location=grip+Vector((offset,0,0)),rotation=(0,math.pi/2,0))
- o=bpy.context.object;o.name=name;bpy.ops.object.transform_apply(location=False,rotation=True,scale=True)
- group=o.vertex_groups.new(name='Forearm');group.add(list(range(len(o.data.vertices))),1.,'REPLACE');o.parent=None
- modifier=o.modifiers.new('GripSkin','ARMATURE');modifier.object=rig;o.data.materials.append(material)
- for p in o.data.polygons:p.use_smooth=True
+# Shared shaft/palm anchor in forearm rest frame. The raw atlas remains unchanged.
+grip=Vector((.231,-.134,.754))
+hand=create_grip_hand(grip,rig,'Forearm')
+equipment=create_hex_dumbbell(grip,rig,'Forearm')
+contact_marker(grip,rig,'Forearm','CurlPalmAnchor')
+contact_marker(grip,rig,'Forearm','CurlHandleAnchor')
 # Bake both channels; no Blender Drivers are required in the runtime.
 scene=bpy.context.scene;scene.render.fps=30;scene.frame_start=0;scene.frame_end=120
 bone=rig.pose.bones['Forearm'];bone.rotation_mode='QUATERNION';rest=arm_data.bones['Forearm'].matrix_local.to_quaternion()
@@ -108,5 +106,5 @@ scene.frame_set(0)
 bpy.ops.wm.save_as_mainfile(filepath=str(root/'artifacts/curl-rig.blend'))
 # Scene mode bakes bones and morph weights into the same glTF clip.
 bpy.ops.export_scene.gltf(filepath=str(root/'public/models/anatomy-curl.glb'),export_format='GLB',export_animations=True,export_animation_mode='SCENE',export_frame_range=True,export_frame_step=1,export_force_sampling=True,export_skins=True,export_morph=True,export_morph_animation=True,export_extras=True,export_yup=True,export_anim_scene_split_object=False)
-report={'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'sourceMeshes':len(meshes),'armMeshes':len(arm),'bicepsMeshes':[o.name for o in biceps],'riggedMeshes':[o.name for o in arm],'bones':['UpperArm','Forearm'],'landmarks':{'shoulder':list(shoulder),'elbow':list(elbow),'wrist':list(wrist)},'duration':4,'poseCorrectiveMeshes':len(corrected),'morph':'24% radial artistic envelope, taper to zero at endpoints; not physiological','scope':'left arm, original independent meshes; rest of body static'}
+report={'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'sourceMeshes':len(meshes),'armMeshes':len(arm),'bicepsMeshes':[o.name for o in biceps],'riggedMeshes':[o.name for o in arm],'bones':['UpperArm','Forearm'],'landmarks':{'shoulder':list(shoulder),'elbow':list(elbow),'wrist':list(wrist)},'duration':4,'gripCenter':list(grip),'handSurface':'original closed-grip opaque presentation layer','equipment':'original bevelled hex; no downloaded asset claim','poseCorrectiveMeshes':len(corrected),'morph':'24% radial artistic envelope, taper to zero at endpoints; not physiological','scope':'left arm, original independent meshes; rest of body static'}
 (root/'docs/evidence/curl-build.json').write_text(json.dumps(report,indent=2))

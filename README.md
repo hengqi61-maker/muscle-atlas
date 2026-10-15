@@ -32,3 +32,8 @@ npm run test:rig
 Produces public/models/anatomy-curl.glb and ignored artifacts/curl-rig.blend. Raw source SHA256 is pinned before transformations. No network is needed when source assets are present. `python3 scripts/fetch-models.py` verifies cache first; use `--offline` to prohibit requests.
 
 See [current rig evidence](docs/rig-verification.md), [download diagnostics](docs/download-diagnostics.md), [roadmap](docs/roadmap.md) and [asset terms](docs/assets-and-licenses.md). Historical first-delivery screenshots/docs describe the superseded procedural prototype and are retained as evidence.
+
+## Equipment and grip update
+Exercise mode also includes seated lat pulldown: real source anatomy with baked bilateral IK and shared machine anchors. Curl now uses an original detailed hex dumbbell and closed-grip hand surface; inspect with “握持近景”. This is an explicit presentation layer, not scanned human skin. A CC0 external dumbbell was researched but its download returned403, so it was **not** imported. See [equipment/grip evidence and limitations](docs/equipment-and-grip.md).
+
+`npm run test:pulldown` verifies both hand anchors, bar-axis alignment and fixed bone lengths over121frames. Rebuild with Blender using scripts/build-pulldown-rig.py and scripts/build-equipment-preview.py.

@@ -1,0 +1,472 @@
+{
+  "sourceSha256": "6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f",
+  "sourceMeshes": 467,
+  "armMeshes": [
+    "abductor digiti minimi of left hand",
+    "abductor digiti minimi of right hand",
+    "acromial part of left deltoid",
+    "acromial part of right deltoid",
+    "clavicular part of left deltoid",
+    "clavicular part of right deltoid",
+    "flexor digiti minimi brevis of left hand",
+    "flexor digiti minimi brevis of right hand",
+    "flexor retinaculum of left wrist",
+    "flexor retinaculum of right wrist",
+    "humeral head of left flexor carpi ulnaris",
+    "humeral head of left pronator teres",
+    "humeral head of right flexor carpi ulnaris",
+    "humeral head of right pronator teres",
+    "interosseous membrane of left forearm",
+    "interosseous membrane of right forearm",
+    "lateral head of left triceps brachii",
+    "lateral head of right triceps brachii",
+    "left abductor pollicis brevis",
+    "left abductor pollicis longus",
+    "left anconeus",
+    "left brachialis",
+    "left brachioradialis",
+    "left coracobrachialis",
+    "left extensor carpi radialis brevis",
+    "left extensor carpi radialis longus",
+    "left extensor carpi ulnaris",
+    "left extensor carpi ulnaris (2)",
+    "left extensor digiti minimi",
+    "left extensor digitorum",
+    "left extensor indicis",
+    "left extensor pollicis brevis",
+    "left extensor pollicis longus",
+    "left flexor carpi radialis",
+    "left flexor digitorum profundus",
+    "left flexor digitorum superficialis",
+    "left flexor digitorum superficialis (2)",
+    "left flexor pollicis brevis",
+    "left flexor pollicis longus",
+    "left opponens pollicis",
+    "left palmaris longus",
+    "left pronator quadratus",
+    "left supinator",
+    "long head of left biceps brachii",
+    "long head of left triceps brachii",
+    "long head of right biceps brachii",
+    "long head of right triceps brachii",
+    "medial head of left triceps brachii",
+    "medial head of right triceps brachii",
+    "oblique head of left adductor pollicis",
+    "oblique head of right adductor pollicis",
+    "opponens digiti minimi of left hand",
+    "opponens digiti minimi of right hand",
+    "right abductor pollicis brevis",
+    "right abductor pollicis longus",
+    "right anconeus",
+    "right brachialis",
+    "right brachioradialis",
+    "right coracobrachialis",
+    "right extensor carpi radialis brevis",
+    "right extensor carpi radialis longus",
+    "right extensor carpi ulnaris",
+    "right extensor carpi ulnaris (2)",
+    "right extensor digiti minimi",
+    "right extensor digitorum",
+    "right extensor indicis",
+    "right extensor pollicis brevis",
+    "right extensor pollicis longus",
+    "right flexor carpi radialis",
+    "right flexor digitorum profundus",
+    "right flexor digitorum superficialis",
+    "right flexor digitorum superficialis (2)",
+    "right flexor pollicis brevis",
+    "right flexor pollicis longus",
+    "right opponens pollicis",
+    "right palmaris longus",
+    "right pronator quadratus",
+    "right supinator",
+    "set of dorsal interossei of left hand",
+    "set of dorsal interossei of right hand",
+    "set of lumbricals of left hand",
+    "set of lumbricals of right hand",
+    "set of palmar interossei of left hand",
+    "set of palmar interossei of right hand",
+    "short head of left biceps brachii",
+    "short head of right biceps brachii",
+    "spinal part of left deltoid",
+    "spinal part of right deltoid",
+    "superficial head of left flexor pollicis brevis",
+    "superficial head of right flexor pollicis brevis",
+    "transverse head of left adductor pollicis",
+    "transverse head of right adductor pollicis",
+    "ulnar head of left flexor carpi ulnaris",
+    "ulnar head of left pronator teres",
+    "ulnar head of right flexor carpi ulnaris",
+    "ulnar head of right pronator teres"
+  ],
+  "legMeshes": [
+    "abductor digiti minimi of left foot",
+    "abductor digiti minimi of right foot",
+    "first lumbrical of left foot",
+    "first lumbrical of right foot",
+    "first plantar interosseous of left foot",
+    "first plantar interosseous of right foot",
+    "flexor digiti minimi brevis of left foot",
+    "flexor digiti minimi brevis of right foot",
+    "fourth lumbrical of left foot",
+    "fourth lumbrical of right foot",
+    "interosseous membrane of left leg",
+    "interosseous membrane of right leg",
+    "lateral head of left flexor hallucis brevis",
+    "lateral head of left gastrocnemius",
+    "lateral head of right flexor hallucis brevis",
+    "lateral head of right gastrocnemius",
+    "left abductor hallucis",
+    "left adductor longus",
+    "left adductor magnus",
+    "left calcaneal tendon",
+    "left extensor digitorum longus",
+    "left extensor hallucis brevis",
+    "left extensor hallucis longus",
+    "left fibularis brevis",
+    "left fibularis longus",
+    "left fibularis tertius",
+    "left flexor accessorius",
+    "left flexor digitorum brevis",
+    "left flexor digitorum longus",
+    "left flexor hallucis longus",
+    "left gracilis",
+    "left long plantar ligament",
+    "left plantaris",
+    "left popliteus",
+    "left rectus femoris",
+    "left sartorius",
+    "left semimembranosus",
+    "left semitendinosus",
+    "left soleus",
+    "left tibialis anterior",
+    "left tibialis posterior",
+    "left vastus intermedius",
+    "left vastus lateralis",
+    "left vastus medialis",
+    "long head of left biceps femoris",
+    "long head of right biceps femoris",
+    "medial head of left flexor hallucis brevis",
+    "medial head of left gastrocnemius",
+    "medial head of right flexor hallucis brevis",
+    "medial head of right gastrocnemius",
+    "oblique head of left adductor hallucis",
+    "oblique head of right adductor hallucis",
+    "opponens digiti minimi of left foot",
+    "opponens digiti minimi of right foot",
+    "right abductor hallucis",
+    "right adductor longus",
+    "right adductor magnus",
+    "right calcaneal tendon",
+    "right extensor digitorum longus",
+    "right extensor hallucis brevis",
+    "right extensor hallucis longus",
+    "right fibularis brevis",
+    "right fibularis longus",
+    "right fibularis tertius",
+    "right flexor accessorius",
+    "right flexor digitorum brevis",
+    "right flexor digitorum longus",
+    "right flexor hallucis longus",
+    "right gracilis",
+    "right long plantar ligament",
+    "right plantaris",
+    "right popliteus",
+    "right rectus femoris",
+    "right sartorius",
+    "right semimembranosus",
+    "right semitendinosus",
+    "right soleus",
+    "right tibialis anterior",
+    "right tibialis posterior",
+    "right vastus intermedius",
+    "right vastus lateralis",
+    "right vastus medialis",
+    "second lumbrical of left foot",
+    "second lumbrical of right foot",
+    "second plantar interosseous of left foot",
+    "second plantar interosseous of right foot",
+    "short head of left biceps femoris",
+    "short head of right biceps femoris",
+    "third lumbrical of left foot",
+    "third lumbrical of right foot",
+    "third plantar interosseous of left foot",
+    "third plantar interosseous of right foot",
+    "transverse head of left adductor hallucis",
+    "transverse head of right adductor hallucis",
+    "left iliotibial tract",
+    "right iliotibial tract"
+  ],
+  "samples": [
+    {
+      "frame": 0,
+      "side": "Left",
+      "targetGrip": [
+        0.3700000047683716,
+        -0.46000000834465027,
+        1.6319999694824219
+      ],
+      "wrist": [
+        0.39969706535339355,
+        -0.4309999942779541,
+        1.6697105169296265
+      ],
+      "elbow": [
+        0.34079086780548096,
+        -0.35914096236228943,
+        1.451675295829773
+      ],
+      "ankle": [
+        0.10000000149011612,
+        -0.6917681694030762,
+        0.37698429822921753
+      ],
+      "shoulderWristDistance": 0.5003493641913669
+    },
+    {
+      "frame": 0,
+      "side": "Right",
+      "targetGrip": [
+        -0.3700000047683716,
+        -0.46000000834465027,
+        1.6319999694824219
+      ],
+      "wrist": [
+        -0.39969706535339355,
+        -0.4309999942779541,
+        1.6697105169296265
+      ],
+      "elbow": [
+        -0.34079086780548096,
+        -0.35914096236228943,
+        1.451675295829773
+      ],
+      "ankle": [
+        -0.10000000149011612,
+        -0.6917681694030762,
+        0.37698429822921753
+      ],
+      "shoulderWristDistance": 0.5003493641913669
+    },
+    {
+      "frame": 30,
+      "side": "Left",
+      "targetGrip": [
+        0.3700000047683716,
+        -0.46000000834465027,
+        1.4119999408721924
+      ],
+      "wrist": [
+        0.39969706535339355,
+        -0.4309999942779541,
+        1.449710488319397
+      ],
+      "elbow": [
+        0.4391021132469177,
+        -0.3432033658027649,
+        1.2331185340881348
+      ],
+      "ankle": [
+        0.10000000149011612,
+        -0.6917681694030762,
+        0.37698429822921753
+      ],
+      "shoulderWristDistance": 0.33775263653336024
+    },
+    {
+      "frame": 30,
+      "side": "Right",
+      "targetGrip": [
+        -0.3700000047683716,
+        -0.46000000834465027,
+        1.4119999408721924
+      ],
+      "wrist": [
+        -0.39969706535339355,
+        -0.4309999942779541,
+        1.449710488319397
+      ],
+      "elbow": [
+        -0.4391021132469177,
+        -0.3432033658027649,
+        1.2331185340881348
+      ],
+      "ankle": [
+        -0.10000000149011612,
+        -0.6917681694030762,
+        0.37698429822921753
+      ],
+      "shoulderWristDistance": 0.33775263653336024
+    },
+    {
+      "frame": 60,
+      "side": "Left",
+      "targetGrip": [
+        0.3700000047683716,
+        -0.46000000834465027,
+        1.1920000314712524
+      ],
+      "wrist": [
+        0.39969706535339355,
+        -0.4309999942779541,
+        1.229710578918457
+      ],
+      "elbow": [
+        0.3758898377418518,
+        -0.2604638338088989,
+        1.066849708557129
+      ],
+      "ankle": [
+        0.10000000149011612,
+        -0.6917681694030762,
+        0.37698429822921753
+      ],
+      "shoulderWristDistance": 0.273137737572159
+    },
+    {
+      "frame": 60,
+      "side": "Right",
+      "targetGrip": [
+        -0.3700000047683716,
+        -0.46000000834465027,
+        1.1920000314712524
+      ],
+      "wrist": [
+        -0.39969706535339355,
+        -0.4309999942779541,
+        1.229710578918457
+      ],
+      "elbow": [
+        -0.3758898377418518,
+        -0.2604638338088989,
+        1.066849708557129
+      ],
+      "ankle": [
+        -0.10000000149011612,
+        -0.6917681694030762,
+        0.37698429822921753
+      ],
+      "shoulderWristDistance": 0.273137737572159
+    },
+    {
+      "frame": 90,
+      "side": "Left",
+      "targetGrip": [
+        0.3700000047683716,
+        -0.46000000834465027,
+        1.4119999408721924
+      ],
+      "wrist": [
+        0.39969706535339355,
+        -0.4309999942779541,
+        1.449710488319397
+      ],
+      "elbow": [
+        0.4391021132469177,
+        -0.3432033658027649,
+        1.2331185340881348
+      ],
+      "ankle": [
+        0.10000000149011612,
+        -0.6917681694030762,
+        0.37698429822921753
+      ],
+      "shoulderWristDistance": 0.33775263653336024
+    },
+    {
+      "frame": 90,
+      "side": "Right",
+      "targetGrip": [
+        -0.3700000047683716,
+        -0.46000000834465027,
+        1.4119999408721924
+      ],
+      "wrist": [
+        -0.39969706535339355,
+        -0.4309999942779541,
+        1.449710488319397
+      ],
+      "elbow": [
+        -0.4391021132469177,
+        -0.3432033658027649,
+        1.2331185340881348
+      ],
+      "ankle": [
+        -0.10000000149011612,
+        -0.6917681694030762,
+        0.37698429822921753
+      ],
+      "shoulderWristDistance": 0.33775263653336024
+    },
+    {
+      "frame": 120,
+      "side": "Left",
+      "targetGrip": [
+        0.3700000047683716,
+        -0.46000000834465027,
+        1.6319999694824219
+      ],
+      "wrist": [
+        0.39969706535339355,
+        -0.4309999942779541,
+        1.6697105169296265
+      ],
+      "elbow": [
+        0.34079086780548096,
+        -0.35914096236228943,
+        1.451675295829773
+      ],
+      "ankle": [
+        0.10000000149011612,
+        -0.6917681694030762,
+        0.37698429822921753
+      ],
+      "shoulderWristDistance": 0.5003493641913669
+    },
+    {
+      "frame": 120,
+      "side": "Right",
+      "targetGrip": [
+        -0.3700000047683716,
+        -0.46000000834465027,
+        1.6319999694824219
+      ],
+      "wrist": [
+        -0.39969706535339355,
+        -0.4309999942779541,
+        1.6697105169296265
+      ],
+      "elbow": [
+        -0.34079086780548096,
+        -0.35914096236228943,
+        1.451675295829773
+      ],
+      "ankle": [
+        -0.10000000149011612,
+        -0.6917681694030762,
+        0.37698429822921753
+      ],
+      "shoulderWristDistance": 0.5003493641913669
+    }
+  ],
+  "config": {
+    "duration": 4,
+    "barTopY": 1.687,
+    "barTravel": 0.44,
+    "gripHalfWidth": 0.37,
+    "gripDrop": 0.055,
+    "gripZ": 0.46,
+    "bodyTranslation": [
+      0,
+      -0.213,
+      -0.055
+    ],
+    "palmOffsetBlender": [
+      0,
+      -0.029,
+      -0.048
+    ],
+    "footPlatformY": 0.28
+  },
+  "scope": "Baked two-arm analytic IK, fixed bone lengths, static closed grip surface; approximate shoulders and seated anatomy, no force simulation"
+}

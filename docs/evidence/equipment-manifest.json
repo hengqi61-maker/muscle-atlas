@@ -1,0 +1,17 @@
+{
+  "asset": "equipment/detailed-hex-dumbbell.glb",
+  "sha256": "920acfacdbb0156ce30e73d9c2a7791abb8e9030515ca51c05ca21b336430e68",
+  "origin": "original project geometry, not downloaded",
+  "dimensionsMetresBlenderXYZ": [
+    0.31310001015663147,
+    0.11777946352958679,
+    0.13339148461818695
+  ],
+  "details": [
+    "bevelled hex rubber heads",
+    "geometry knurled28mm steel handle",
+    "collars",
+    "inset badge and original8mark"
+  ],
+  "reference": "Public real-scale hex dumbbell dimensions; source candidate403not imported"
+}

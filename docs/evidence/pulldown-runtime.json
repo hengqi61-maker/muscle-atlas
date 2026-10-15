@@ -1,0 +1,195 @@
+{
+  "maxGripAxisErrorDegrees": 0.00058190358231031,
+  "validator": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "sourceMeshes": 467,
+  "skinnedMeshes": 204,
+  "bones": [
+    "SpineRoot",
+    "LeftThigh",
+    "LeftShin",
+    "LeftFoot",
+    "RightThigh",
+    "RightShin",
+    "RightFoot",
+    "RightUpperArm",
+    "RightForearm",
+    "RightHand",
+    "UpperArm",
+    "Forearm",
+    "LeftHand"
+  ],
+  "maxGripErrorMetres": 0.00003175944113149877,
+  "maxBoneLengthErrorMetres": 2.980225672355452e-7,
+  "framesChecked": 121,
+  "samples": [
+    {
+      "time": 0,
+      "contacts": [
+        {
+          "hand": "LeftPalmContact",
+          "position": [
+            0.3699809927502772,
+            1.6320170489156947,
+            0.4600005807695621
+          ],
+          "target": [
+            0.37,
+            1.6320000000000001,
+            0.46
+          ],
+          "error": 0.000025539740830108597
+        },
+        {
+          "hand": "RightPalmContact",
+          "position": [
+            -0.3700251025257309,
+            1.6319823128926092,
+            0.460000580734608
+          ],
+          "target": [
+            -0.37,
+            1.6320000000000001,
+            0.46
+          ],
+          "error": 0.00003071331663323512
+        }
+      ]
+    },
+    {
+      "time": 1,
+      "contacts": [
+        {
+          "hand": "LeftPalmContact",
+          "position": [
+            0.3699791361375486,
+            1.4120139819359068,
+            0.4600004601631139
+          ],
+          "target": [
+            0.37,
+            1.4120000000000001,
+            0.46
+          ],
+          "error": 0.00002511985346649307
+        },
+        {
+          "hand": "RightPalmContact",
+          "position": [
+            -0.37002324612208726,
+            1.4119792459551586,
+            0.46000046031565334
+          ],
+          "target": [
+            -0.37,
+            1.4120000000000001,
+            0.46
+          ],
+          "error": 0.000031166078673505644
+        }
+      ]
+    },
+    {
+      "time": 2,
+      "contacts": [
+        {
+          "hand": "LeftPalmContact",
+          "position": [
+            0.3699785600276234,
+            1.1920143350308328,
+            0.459998946268555
+          ],
+          "target": [
+            0.37,
+            1.1920000000000002,
+            0.46
+          ],
+          "error": 0.000025812320206407633
+        },
+        {
+          "hand": "RightPalmContact",
+          "position": [
+            -0.3700226701198471,
+            1.1919795985736297,
+            0.45999894637078464
+          ],
+          "target": [
+            -0.37,
+            1.1920000000000002,
+            0.46
+          ],
+          "error": 0.0000305165965722795
+        }
+      ]
+    },
+    {
+      "time": 3,
+      "contacts": [
+        {
+          "hand": "LeftPalmContact",
+          "position": [
+            0.3699791361375486,
+            1.4120139819359068,
+            0.4600004601631139
+          ],
+          "target": [
+            0.37,
+            1.4120000000000001,
+            0.46
+          ],
+          "error": 0.00002511985346649307
+        },
+        {
+          "hand": "RightPalmContact",
+          "position": [
+            -0.37002324612208726,
+            1.4119792459551586,
+            0.46000046031565334
+          ],
+          "target": [
+            -0.37,
+            1.4120000000000001,
+            0.46
+          ],
+          "error": 0.000031166078673505644
+        }
+      ]
+    },
+    {
+      "time": 4,
+      "contacts": [
+        {
+          "hand": "LeftPalmContact",
+          "position": [
+            0.3699809927502772,
+            1.6320170489156947,
+            0.4600005807695621
+          ],
+          "target": [
+            0.37,
+            1.6320000000000001,
+            0.46
+          ],
+          "error": 0.000025539740830108597
+        },
+        {
+          "hand": "RightPalmContact",
+          "position": [
+            -0.3700251025257309,
+            1.6319823128926092,
+            0.460000580734608
+          ],
+          "target": [
+            -0.37,
+            1.6320000000000001,
+            0.46
+          ],
+          "error": 0.00003071331663323512
+        }
+      ]
+    }
+  ],
+  "limitations": "shared anchor accuracy does not prove skin/tool collision clearance, physiological shoulder mechanics or all seated soft-tissue quality"
+}

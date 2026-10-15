@@ -73,3 +73,46 @@ Title: MODEL-RIG
 - Evidence:KhronosValidator0errors0warnings; actualThree skeleton angles0/45.003/90.000/120.000deg,normalized JOINTS/WEIGHTS,929mixed brachioradialis vertices,independent morph displacement;2Chrome workflows and0/45/90/120screenshots. Source/script/report paths:docs/rig-verification.md anddocs/evidence/curl-*.json.
 - Remaining cause/impact:estimated landmarks/linear blend weighting and independent source muscle geometry are not calibrated soft-tissue mechanics. Of12000triangle-edge observations for one spanning muscle,105at90deg and57at120deg compress below20%rest length;min~6%. No claim of full continuity/collision quality,skin layer or physiological bulge. Hand grip remains source/rest shape.
 - Status:DEFERRED for quality/attachment/contact/grip; minimum rig/GLB/runtime pipeline achieved, not complete dynamic anatomy. Next action:localized weight painting and tendon/contact landmarks,pose corrective evaluation or localretopology,closed-grip pose. Reopen at nextanimation-quality task or visible distortion; rerun four-angle front/side/back and numeric compression measures. NoACCEPTED_RISK or hidden skipped check.
+
+### MODEL-RIG reopened for user-requested grip and pulldown integration
+- User identified oversized crude dumbbell and exposed open hand tendons. Source anatomy has no skin surface and no gripping pose; original curl implemented only elbow bones. Need actual grip representation and shared hand/tool anchors, not scale-only replacement.
+- Compare sourced skin hand asset with finger rig versus original procedural continuous hand surface with explicit source-hand visualization control. Asset provenance investigation in progress. No permission or validation claim inferred from screenshot.
+
+## WD-2026-10-15-0006
+Status: DEFERRED
+Title: DUMBBELL-ASSET-IMPORT
+- Original failure: public Innerscene CC0 model page exposes download API, but urllib request to https://www.innerscene.com/api/library/hex-weight-dumbbell-32966c1b/download returned HTTP403; no bytes published.
+- Exact repro: urllib.request.urlopen(the public download URL,timeout=30).read().
+- Workaround: none yet. Continue independent grip and pulldown implementation without substituting unverified asset or claiming download success.
+- Cause: not established; browser public page advertises download, server access result differs. Do not bypass authentication or download controls.
+- Paths: ordinary public UI download if authorized endpoint works; alternative verifiably licensed asset; original detailed geometry based on measured real references, explicitly identified as original rather than downloaded. Source investigator comparing evidence.
+- Impact: real sourced dumbbell geometry not yet imported. Evidence: tool HTTP403 on2026-10-15.
+
+## WD-2026-10-15-0007
+Status: RESOLVED
+Title: BROWSER-TEST-ISOLATION
+- Original failure: pulldown browser flow timed out clicking play after active model reset to default anatomy. During that run the main agent edited main.tsx, triggering shared Vite HMR/page reload; screenshot evidence showed stale UI.
+- Reproduction: npm run test:e2e reused interactive5173 while source files were edited mid-run. Failure retained in test output; no assertion skipped.
+- Workaround: none yet. Prior passing results do not validate final changed files.
+- Paths compared: only retry shared dev server (not durable isolation); separate owned test port and disable test-modeHMR (selected); production-preview tests (future separate coverage, larger test setup change).
+- Fix: use dedicated5175 test server, reuseExistingServer=false, Vite test mode disablesHMR; freeze source during final run. Exact original failing test must pass after clean start.
+
+### WD-2026-10-15-0007 subsequent controlled finding
+- Dedicated clean test server exposed an existing waitForResponse registration race in atlas.spec.ts: navigation/canvas visibility was awaited before registering the GLB response listener; cached/fast response could already have happened. Pulldown and rig flows passed. This was not model load failure.
+- Compared increasing arbitrary sleep/timeout (does not fix lost event) versus registering response promise before navigation (selected). Original assertion retained; no skipped response check. Clean full rerun required.
+
+### MODEL-RIG grip/pulldown outcome
+- Completed user-requested functional integration: actual source seated anatomy,13bones including bilateralUpperArm/Forearm/Hand and seatedlegs; no arm stretch. Machine and pose share one4second config.121frame target-renderer samples:contacterror~0.03mm,axiserror<0.001deg,bone-length error<0.001mm. Contact precision is not a claim of full skin/tool collision validation.
+- Removed crude cylinder prop and visible open-tendon grasp from default curl. Original detailed hex geometry with28mmknurl,bevels,collars,endcaps; continuous original grip surface with four fingers/thumb/wrist/nails. Originalstaticatlas unchanged. Distal source tissues folded under explicitly labelled,optional presentation skin, not claimed as scanned skin or physiological tendon pose.
+- Paths compared: source riggedhandasset(provenance/acquisition notverified),originalcontinuousgrip surface(selected),hidehand entirely(rejected;not a grasp). This surface solves current visual/attachment requirement but is not the full anatomic finger rig; all residual quality limits remain explicit.
+- Final verification:3owned-portChrome tests,9Vitest tests,8Python tests,curl/pulldown/equipmentValidator0errors0warnings;actual hand/bar direction and points measured;no skipped assertions. Full clean test server run completed after fixes.
+- DEFERRED residual: detailed shoulder/scapular and elbow/hip/legpad soft-tissue quality,fullcollision/individualfingeranatomicalrig and externalphotorealisticsurface. Next:weightpainting,contactchecks,artistqualityreview;reopen on nextanimationqualitywork or visiblepenetration.
+
+### WD-2026-10-15-0006 outcome
+- OfficialpublicpageclaimsCC0butordinarydownloadAPIreturned403;no fileobtained,no accesscontrols bypassed. AlternativePolyPizzaCC0lowpolycandidatealsonotacquired;limitedGitHubsearchnoverifiedbetterrealisticasset.
+- Reversiblealternative selected:original detailed geometry based on public metric proportions,clearlyidentifiedasoriginal,notasdownloadedasset. EquipmentstandaloneGLBdimensionsmeasured~.3131x.1334x.1178m;Validator0errors0warnings;headscoaxial.
+- DEFERRED only for external asset acquisition/inspection. Reason:publishedendpointaccessfailure;applicationusesoriginalpropindependently. EvidenceandURLsdocs/equipment-and-grip.md. Next/reopen:authorizedordinarydownloadbecomesavailableoruserprovideslicensedfile,verifyhash/license/visualqualitythenreplaceatsharedanchor. No claim externalmodelimportsuccessful.
+
+### WD-2026-10-15-0007 durable verification
+- Dedicatedowned5175,strictPort,reuseExistingServer=false,test-modeHMRoff isolatefrom5173preview. RegisterGLBresponsebeforepage.goto fixes lost-eventrace;responseandvisualassertionsretained.
+- Exactoriginalatlasflow and failingpulldownplayflow passed in fullclean3testChrome run;subsequentfullfinalrun3passed. No retry option,extra timeout,disabledassertionor fallback was used. StatusRESOLVED.

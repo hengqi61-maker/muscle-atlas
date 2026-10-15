@@ -1,0 +1,11 @@
+{
+  "duration": 4,
+  "barTopY": 1.687,
+  "barTravel": 0.44,
+  "gripHalfWidth": 0.37,
+  "gripDrop": 0.055,
+  "gripZ": 0.46,
+  "bodyTranslation": [0, -0.213, -0.055],
+  "palmOffsetBlender": [0, -0.029, -0.048],
+  "footPlatformY": 0.28
+}

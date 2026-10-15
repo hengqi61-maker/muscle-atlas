@@ -19,3 +19,6 @@ React + TypeScript + Vite；R3F/Drei + Three.js；Zustand；Dexie IndexedDB sche
 ## 2026-10-15 动画管线更新（覆盖上文原型状态）
 动作模式切换到rigged资产，Scene使用SkeletonUtils.clone隔离骨架、AnimationMixer同时采样骨骼与形态键，支持末端后反向拖动和React StrictMode重新挂载。更新skinned bounds以支持变形后的点击。旧椭球模型已从运行时代码移除。状态增加focus与独立morph控制；只覆盖BicepsBulge，不改变肘部姿态修正targets。定性参与角色只显示已知主要/协同/稳定分类，不将整条rigged手臂统一当协同肌。
 下载器升级为SHA256缓存优先、有限退避、安全Range恢复、验证后原子替换；Python测试覆盖失败路径。两份网络与动作资产在本地加载，仍无后端。
+
+## 2026-10-15 器械/握持后续
+exerciseId分离动作选择与model资产；pulldown采用同一个Canvas中的米制共同场景，machine和人体共享config/time。真实mesh身份不变；附加手部surface和接触marker使用visualLayer，marker不可见，surface可切换。material resolver不改写器械原始材质。训练实录使用当前选择动作ID，不再一律记录curl。测试独立端口5175，test模式禁HMR。

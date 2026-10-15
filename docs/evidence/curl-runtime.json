@@ -1,10 +1,11 @@
 {
+  "maxGripErrorMetres": 0,
   "file": "public/models/anatomy-curl.glb",
   "validator": {
     "errors": 0,
     "warnings": 0
   },
-  "skinnedMeshes": 47,
+  "skinnedMeshes": 60,
   "joints": [
     "UpperArm",
     "Forearm"
