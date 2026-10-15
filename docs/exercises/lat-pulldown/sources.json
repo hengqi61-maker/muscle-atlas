@@ -191,8 +191,10 @@
     },
     {
       "id": "ace-candidate",
-      "title": null,
-      "authors": [],
+      "title": "Seated Lat Pulldown",
+      "authors": [
+        "American Council on Exercise (corporate publisher; individual author not listed)"
+      ],
       "publisher": "American Council on Exercise",
       "url": "https://www.acefitness.org/resources/everyone/exercise-library/158/seated-lat-pulldown/",
       "publicationDate": null,
@@ -200,9 +202,12 @@
       "license": "No redistribution license verified; link and paraphrase only",
       "evidenceType": "institutional-exercise-guidance-candidate",
       "variant": "Candidate lat pulldown; variant not verified",
-      "retrievalStatus": "INCONCLUSIVE",
-      "supports": [],
-      "limitations": "Candidate URL/title not verified: official direct HTTP403; no page text or video observed. Link is a retrieval candidate, not a claimed verified source."
+      "retrievalStatus": "verified-official-page-text",
+      "supports": [
+        "Thigh-pad setup, controlled downward elbow path, endpoint and return coaching cues"
+      ],
+      "limitations": "Official page text read through web tool on2026-10-15; no publication date observed, no video measurement or redistribution. Coaching scapular cues are not measured scapulohumeral kinematics.",
+      "locator": "Steps1–4; web open canonical official URL"
     },
     {
       "id": "nasm-candidate",
@@ -221,18 +226,23 @@
     },
     {
       "id": "mayo-candidate",
-      "title": null,
-      "authors": [],
+      "title": "Video: Lat pull-down with weight machine",
+      "authors": [
+        "Mayo Clinic (corporate publisher; transcript speakers Dr. Laskowski and Nicole Campbell)"
+      ],
       "publisher": "Mayo Clinic",
       "url": "https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/lat-pull-down/vid-20084683",
-      "publicationDate": null,
+      "publicationDate": "2025-11-21",
       "accessDate": "2026-10-15",
       "license": "No redistribution license verified; link and paraphrase only",
       "evidenceType": "institutional-exercise-guidance-candidate",
       "variant": "Candidate lat pulldown; variant not verified",
-      "retrievalStatus": "INCONCLUSIVE",
-      "supports": [],
-      "limitations": "Candidate URL/title not verified: official direct HTTP403; no page text or video observed. Link is a retrieval candidate, not a claimed verified source."
+      "retrievalStatus": "verified-official-page-transcript",
+      "supports": [
+        "Seated anterior pulldown setup and controlled return; bar need not touch chest"
+      ],
+      "limitations": "Official transcript read through web tool on2026-10-15. Video itself not viewed or measured; no quantitative joint trajectory. All rights reserved; no copied video or transcript.",
+      "locator": "Transcript paragraphs and date; web open full official URL"
     }
   ],
   "retrievalIncident": {
@@ -243,9 +253,10 @@
       "ACE/NASM/Mayo candidate HTTP403",
       "Direct PubMed article endpoints challenge, MEDLINE query route supplied actual abstracts",
       "NCBI Books HTTP200 CAPTCHA",
-      "UAMS SSL certificate expired; verification preserved"
+      "UAMS SSL certificate expired; verification preserved",
+      "2026-10-15 resumed session: original web search and official page open now succeed for ACE/Mayo; prior direct HTTP403 observations preserved. Cause of earlier transport failure unknown."
     ],
     "workaround": "Read-only direct official HTTP and PubMed MEDLINE query; no proxy/TLS bypass or video downloads",
-    "remainingGap": "Professional action guidance/video and detailed cuff footprints require accessible verification"
+    "remainingGap": "NASM access, authorized video observation/calibration and detailed cuff footprints remain pending; official ACE/Mayo page text now verified."
   }
 }

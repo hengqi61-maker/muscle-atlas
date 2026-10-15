@@ -1,6 +1,6 @@
 # Lat pulldown reference · authoring baseline
 
-Status: **PROVISIONAL / INCONCLUSIVE for institutional guidance and video calibration**, accessed 2026-10-15. This package defines a target independently of the current rig. It does not certify a rendered repetition, an implementation, or medical safety. See [source register](sources.json), [anatomy](anatomy.md), [kinematics](kinematics.json), and [reference policy](../../quality/reference-policy.md).
+Status: **PROVISIONAL / INCONCLUSIVE for video calibration and attachment landmark calibration**, accessed 2026-10-15. This package defines a target independently of the current rig. It does not certify a rendered repetition, an implementation, or medical safety. See [source register](sources.json), [anatomy](anatomy.md), [kinematics](kinematics.json), and [reference policy](../../quality/reference-policy.md).
 
 ## Variant and scope
 
@@ -47,3 +47,9 @@ Verified retrieval: PubMed MEDLINE abstracts for Andersen 2014 and Lusk 2010; fu
 **Preferred institutional exercise guidance remains unverified.** ACE and NASM were searched/attempted; candidate official requests returned HTTP403, both web search transports failed, and generic search results did not establish the official titles/URLs. These are candidates, not verified references. Publication dates and individual authors remain null. NCBI Books returned a CAPTCHA page despite HTTP200. UAMS anatomy candidate failed certificate validation; TLS verification was preserved. Task-associated global network debt is coordinated by the main author under `WD-GLOBAL-2026-10-15-DOCS`.
 
 Next: obtain accessible official ACE/NASM, Mayo Clinic or equivalent institutional exercise guidance with authors/title/date and an authorized front/side video. Link videos only unless an explicit redistribution license permits copying; no video was downloaded or redistributed here. Record timestamps for start/pull/bottom/return, camera, variant, bar/grip type and uncertainty. Resolve affected guidance/calibration gates before claiming the package is source-complete or using it to pass M2. Current model/rig corrections and release review are separate work.
+
+## Resumed-source verification — 2026-10-15
+
+The original web search/open path now returned both official pages; earlier failures remain recorded, with no demonstrated network root-cause repair. [Mayo Clinic](https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/lat-pull-down/vid-20084683), dated2025-11-21, supports a seated anterior pull and controlled return; chest contact is not mandatory. Its transcript was read, not its moving video. [ACE](https://www.acefitness.org/resources/everyone/exercise-library/158/seated-lat-pulldown/) supports thigh restraint, controlled elbow lowering and a brief reversal before return. No page publication date was observed.
+
+These are LITERATURE/INSTITUTIONAL-GUIDANCE observations, not measured video facts. The authoring target uses supported seating, a stable torso, an anterior bar path and a controlled return. ACE's scapular coaching cue must not become a rigid bone lock or fixed rhythm; general scapular research still limits such inference. Preserve both institutional variations on endpoint, rather than force chest contact or an unsupported medical angle. Video calibration and source attachment landmarks remain INCONCLUSIVE. The older access notes above describe the earlier attempt, not current page-text availability. No external footage, figures or transcript is redistributed.
