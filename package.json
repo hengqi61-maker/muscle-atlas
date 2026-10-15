@@ -13,7 +13,8 @@
     "test:pulldown": "node scripts/validate-pulldown.mjs",
     "quality:audit": "node scripts/quality/motion-audit.mjs",
     "quality:gate": "node scripts/quality/gate.mjs",
-    "test:quality": "node --test tests/quality/*.node.mjs"
+    "test:quality": "node --test tests/quality/*.node.mjs tests/quality/motion/*.node.mjs",
+    "test:motion-quality": "node scripts/quality/motion-quality.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.0.0",

@@ -20,3 +20,19 @@ K02 uses actual original source vertices near handle surfaces, never contact mar
 KINEMATICS records 121 actual joint positions and actual segment distances with 10 micrometres tolerance for invariant rigid lengths/cycle closure, separately from 1 micrometre point-interior precision. It reports maximum intersample displacement without unsourced medical cutoffs. Bar/stack curves share sample times but are analytic; production common-clock verification requires the separate browser probe. Units are model metres, seconds, no production parent scale.
 
 Known limits are deliberately visible as INCONCLUSIVE. The test author does not release or independently approve their own suite.
+
+Schema v2 separates **B01 cuff-specific** frozen/collapse constraints from **GEOMETRY**, which reports severe collapse across every sampled source region, including palmaris longus. A non-cuff collapse does not acquire a cuff label.
+
+`npm run test:quality` includes all motion math tests; the existing core-quality CI already runs this command. `npm run test:motion-quality -- --source ... --asset ... --ref ... --out ...` runs asset constraints and deliberately fails on confirmed geometric defects. It is not installed as a green-only CI bypass for the known-bad prototype. Both commands supplement the existing build, Vitest and real browser checks.
+
+`spatialFlags` localizes original hand/thumb/carpal meshes at 0/25/50/75/100% by exact source name, BP/FMA ID, node, connected-component index, actual centroid/bounds and distances to joint origins. This includes ordinary left/right flexor pollicis brevis (BP7575/BP8958). A component nearer a non-hand joint receives `NEARER_NON_HAND_JOINT` (or `NEARER_OPPOSITE_HAND_JOINT` for the opposite wrist); every spatial observation remains INCONCLUSIVE. Disconnected source anatomy is retained. These diagnostics help reviewers find a suspicious mesh and pose; nearest-joint proximity is not a proof of anatomical side or wrong binding.
+
+Optional `--interfaces /absolute/interfaces.json` accepts an array of explicit source-bound solid AABBs, for example:
+
+```json
+[{"id":"seat","sourceIds":["CONFIRMED_SOURCE_NAME_OR_BP_ID"],"min_m":[-0.26,0.5975,0.13],"max_m":[0.26,0.6825,0.55]}]
+```
+
+The example box follows the current seat dimensions, but its placeholder source must be replaced by an independently verified contact region. Thigh-pad solids can use the same interface. Matching source meshes are actually sampled across all 121 poses; strict interior-vertex and triangle/SAT counts are emitted separately. Supplied AABBs and source binding are preserved in evidence, and interface verdicts stay INCONCLUSIVE until reviewed. No artificial skin, fabricated contact region or marker substitute is introduced. Seat/thigh support is explicitly unmeasured when no descriptor is supplied.
+
+Prior v1 red/prototype packets are preserved. Follow-up runs use a separate `artifacts/motion-quality-v2/` directory.
