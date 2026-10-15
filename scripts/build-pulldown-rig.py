@@ -140,6 +140,13 @@ for frame in range(121):
   knee=hip+Vector((0,-1,-.10)).normalized()*thigh_length;ankle=knee+Vector((0,0,-shin_length));toe=ankle+(lm['toe']-lm['ankle'])
   for name,head,tail in [(label+'Thigh',hip,knee),(label+'Shin',knee,ankle),(label+'Foot',ankle,toe)]:pose_direction(name,head,tail);key(name,frame)
   if frame in [0,30,60,90,120]:samples.append({'frame':frame,'side':label,'targetGrip':list(grip),'wrist':list(w),'elbow':list(e),'ankle':list(ankle),'shoulderWristDistance':(w-s).length})
+# Portable cuff-only correction: keep source base geometry and existing skin bindings.
+# DQ desired posed vertices are inverted through LBS into relative pre-skin morphs.
+from rig_cuff_correctives import prepare as prepare_cuffs,install as install_cuffs
+cuff_objects=[o for o in meshes if o.name in cuff_names]
+cuff_prepared=prepare_cuffs(scene,rig,cuff_objects)
+install_cuffs(cuff_objects,cuff_prepared)
+cuff_correction_report={name:info['report'] for name,info in cuff_prepared.items()}
 # Actual evaluated source surfaces determine platform support height, not ankle origins.
 scene.frame_set(0);depsgraph=bpy.context.evaluated_depsgraph_get();support=[]
 for o in meshes:
@@ -176,4 +183,4 @@ for o in meshes:
  attachment_checks[o.name]=check
 scene.frame_set(0);(root/'artifacts').mkdir(exist_ok=True);bpy.ops.wm.save_as_mainfile(filepath=str(root/'artifacts/pulldown-rig.blend'))
 bpy.ops.export_scene.gltf(filepath=str(root/'public/models/anatomy-pulldown.glb'),export_format='GLB',export_animation_mode='SCENE',export_animations=True,export_frame_range=True,export_force_sampling=True,export_skins=True,export_morph=True,export_extras=True,export_yup=True,export_anim_scene_split_object=False)
-(root/'docs/evidence/pulldown-build.json').write_text(json.dumps({'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'sourceMeshes':len(meshes),'supportCalibration':support_report,'attachmentChecks':attachment_checks,'attachmentAnchors':attachment_anchors,'spatialSideCorrections':side_corrections,'armMeshes':arm_names,'legMeshes':leg_names,'samples':samples,'config':config,'scope':'Baked two-arm analytic IK, fixed bone lengths, moving shoulder girdle and attachment-aware back skinning; original source hands; illustrative uncalibrated shoulder angles, no force or activation simulation'},indent=2))
+(root/'docs/evidence/pulldown-build.json').write_text(json.dumps({'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'sourceMeshes':len(meshes),'cuffCorrectiveMethod':{'method':'DQ posed targets inverted through nonsingular LBS into relative preskin morphs;21linear convex-adjacent weights','knotFrames':list(range(0,121,6)),'weightRange':[0,1],'scope':'eight cuff meshes only; source base geometry and non-cuff skinning unchanged; not a tissue strain model'},'cuffCorrectiveSurfaceChecks':cuff_correction_report,'supportCalibration':support_report,'attachmentChecks':attachment_checks,'attachmentAnchors':attachment_anchors,'spatialSideCorrections':side_corrections,'armMeshes':arm_names,'legMeshes':leg_names,'samples':samples,'config':config,'scope':'Baked two-arm analytic IK, fixed bone lengths, moving shoulder girdle and attachment-aware back skinning; original source hands; illustrative uncalibrated shoulder angles, no force or activation simulation'},indent=2))
