@@ -29,3 +29,7 @@ anatomy-curl.glb 由 scripts/build-curl-rig.py 从固定SHA256的原GLB派生，
 
 ## 2026-10-15 哑铃和手部/坐姿派生更新
 本次哑铃与手部表面为本项目原创程序几何，记录于equipment-and-grip.md，不宣称来自Innerscene/Poly Pizza。外部候选虽页面标CC0，但未取得下载字节；不把其许可套用于原创文件。独立哑铃public/models/equipment/detailed-hex-dumbbell.glb不含第三方人体。动画派生anatomy-curl.glb、anatomy-pulldown.glb仍包含上述BP3D/Z-Anatomy资产，保持各来源署名与适用条款。动作派生中的远端组织握持位移、坐姿与腕部/双臂骨骼为新增变更，原始anatomy.glb不变。
+
+
+## 2026-10-16 M2第二轮状态
+当前动作GLB保留467个来源网格的基底三角形身份，新增十块肌肉的蒙皮姿态修正（八肩袖、双掌长肌），不代表原作者的医学验证。原始解剖手部保留，无替代手壳或源手指折叠。媒体包仅包含自主渲染/测量/报告，不含外部参考录像或教材图片；保留上文BP3D/Z-Anatomy署名和适用ShareAlike义务，不能把整个派生资产改标为代码许可。

@@ -40,3 +40,7 @@ Preserve all 467 source mesh identities and original hand geometry. No replaceme
 ## Delivery status
 
 The Windows host `win-codex` was contacted once via SSH but returned `Host is down`; no message was delivered and no Windows filesystem was modified. Desktop task listing showed no Windows task to message. This committed document is the retrievable handoff. Current maker/test agent turns hit an account usage limit; unfinished work must not be represented as accepted.
+
+
+## 最新交接更新 — 2026-10-16
+最新审查候选32315ebc59b3be17c3e8c200ba1922e7f6312ee3，当前anatomy-pulldown.glb SHA256为1e0af33c14cd74b5b353c0d9e8e2c030d9559e2c561c96ae831c4bf666f4a2ab；此前cc4/c410表格是历史检查点，不是当前模型。源资产相对位置不变；共享器械配置在src/data/pulldown-config.json，实际几何在src/three/LatPulldownMachine.tsx。最新完整报告docs/reviews/lat-pulldown/32315ebc59b3be17c3e8c200ba1922e7f6312ee3/M2-summary.md。两轮复审后仍有真实手部P1，不可放行或自动开新动作。最新证据见evidence-m2-final-32315eb预发布。wsl-codex当前配置地址已变为192.168.1.105:2222；本轮严格主机密钥连接超时，未成功发送消息，不能声称Windows Codex收到交接。

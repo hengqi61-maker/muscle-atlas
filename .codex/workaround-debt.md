@@ -162,7 +162,7 @@ Title: OFFICIAL-DOCS-FETCH
 - System-level WD0009/WD0010 also recorded in ~/.codex/state/workaround-debt.md as WD-GLOBAL-2026-10-15-CLI and WD-GLOBAL-2026-10-15-DOCS; project entries retain task linkage. BothDEFERRED, no product fallback or tool-resolution claim.
 
 ## WD-2026-10-15-0011
-Status: OPEN
+Status: DEFERRED
 Title: M2-ANATOMICAL-ATTACHMENTS-CONTACT
 - Scope/owner: explicit latest approval for B01/B02/V01 and K02 measurement; no main merge, no Face Pull, source hands preserved. Baseline exact7a0d258 and first reports immutable.
 - Reproduction/evidence: original eight cuff meshes100%Thorax/static while shoulder moves; foot-platform397interior vertices per side; floating original thumb-muscle fragments visible. Baseline mesh-kinematics and videos preserved in exact7a0 packet.
@@ -171,8 +171,10 @@ Title: M2-ANATOMICAL-ATTACHMENTS-CONTACT
 - Temporary workaround: none newly introduced. Existing illustrative LBS/uncalibrated anatomy limits retained and must not be relabeled physiology. Maker corrections require all-vertex/source-ID measurements and four independent new-candidate reviews before closing P1.
 - Next: newGLB/hash, real endpoint/edge and foot-solid tests, original hand surface/frame contact, paired before/after images/video. Status OPEN until review or explicit bounded DEFERRED outcome.
 
+- Final second-cycle disposition2026-10-16: actual GLB1e0af33c and candidate32315eb reviewed by four fresh contexts. All467 source base triangles preserved. Cuff freezing and severe-collapse alarms cleared, support sampled intersections cleared, but K02 deep original-thumb/bar penetration remains verified P1; attachment landmarks and axillary tissue attribution remain INCONCLUSIVE. Two automatic cycles exhausted; no full M2 completion/accepted risk. Evidence artifacts/m2/review-final-1e0af33 + versioned final reports. Next: owner-scoped original-hand contact/rig feasibility, source-labelled tissue attribution and attachment calibration. Reopen only on new approved repair scope; rerun full evidence and independent reviews.
+
 ## WD-2026-10-15-0012
-Status: OPEN
+Status: DEFERRED
 Title: M2-PLAYBACK-PERFORMANCE
 - Original failures: nonloop at4s cannot replay; continuous per-frame exact sphere traversal and redundant469shared skeleton updates even paused. Controlled old production matrix measures~15–16actualrenders/sec and~full mainthread occupation, not just rAF proxy.
 - Paths compared: shared endpoint transition vs separate restart control; dirty-pose exact sphere updates vs conservative per-influence bone bounds vs lazy per-raycast bounds/demand rendering. Selected shared pure playback transition, dirty pose/cache+renderer-owned skeleton upload, mathematically conservative pulldown bounds from positive normalized LBS influence boxes. Curl morph retains exact bounds.
@@ -180,7 +182,10 @@ Title: M2-PLAYBACK-PERFORMANCE
 - Maker initial checks: build,11unit tests and actual Chrome endpoint/pose containment/picking pass. Independent new-asset review and paired profiling still required. Status OPEN until those results; no accepted-risk approval inferred.
 
 
-## WD-2026-10-15-0013 — Windows handoff unavailable
+- Final second-cycle disposition2026-10-16: Q01 endpoint replay permanently corrected and actual five-test Chrome suite PASS, unit13/quality26 PASS. Exact current morph bounds and dirty-pose source tests exercised; no stale-bounds bypass. Remaining Q02 workload-matched new CPU/GPU comparison DEFERRED because latest owner scope excludes specialty FPS engineering; old24-trial baseline preserved, current paused rAF is only smoke observation. Reopen controlled benchmark if owner restores that scope or severe runtime regression occurs; no performance PASS/medical quality claim.
+
+## WD-2026-10-15-0013
+Title: Windows handoff unavailable
 Status: DEFERRED
 - Original path: `ssh -o BatchMode=yes -o ConnectTimeout=8 win-codex` to deliver asset locations; exited255, `192.168.1.108 port22: Host is down`. Desktop list_threads contained no Windows task.
 - Evidence preserved in session command output. No Windows writes or message delivery occurred.
@@ -188,7 +193,8 @@ Status: DEFERRED
 - Paths compared: existing authorized desktop task message (no matching task), direct existing SSH host (offline), repository handoff (available, selected for preservation). No network/security changes or repeat reconnection attempts.
 - Next/reopen: when Windows host reconnects or its task becomes visible, send this handoff and confirm delivery.
 
-## WD-2026-10-15-0014 — M2 agents interrupted by usage limit
+## WD-2026-10-15-0014
+Title: M2 agents interrupted by usage limit
 Status: DEFERRED
 - Three active maker/test turns returned account usage-limit errors. No independent review or successful repair may be inferred.
 - Current tracked work checkpointed and pushed; unfinished browser test expansion explicitly marked unverified. No replacement single-context expert review, alternate account, paid credits or scope bypass used.
@@ -204,3 +210,17 @@ Title: M2 runtime JSON import, mount readiness and camera matrix instrumentation
 - Oct16 rerun: runtime PASS; all support geometry/proxy/visibility checks completed, but same-evaluation camera projection test failed with maxX1.98885. Cause: controls.update changes camera pose, while project uses matrixWorldInverse from prior render. Corrected instrumentation by camera.updateMatrixWorld(true) before projection, rather than weakening viewport threshold or enlarging camera blindly. Exact two-test command rerun required.
 - Durable verification Oct16: exact original two-test command PASS2/2 in34.1s; fresh clean full Playwright suite PASS5/5 in43.0s. BuildPASS/unit13PASS. Original import, mounted-scene readiness and camera projection paths all exercised without skipped assertions or relaxed thresholds. Evidence artifacts/m2/round2-runtime-maker/{exact-original-browser.log,full-browser.log,build.log,unit.log,maker-summary.md}. No retained workaround.
 - Ledger checker limitation: stock check-workaround-debt.sh rejects existing historical ledger headings/status structure before ID selection; no global/other task entries were modified. This task entry has exactly one terminal RESOLVED status and verified original/full-suite evidence above; checker success is not claimed.
+
+
+## WD-2026-10-16-0016
+Status: RESOLVED
+Title: Project debt ledger parser compatibility
+- Original reproduction: stock root-cause-debugging check-workaround-debt.sh --scope project --id WD-2026-10-16-0015 --json exits2, malformed entry, before ID filtering. Root reproduced after maker reported same.
+- Cause: inline titles on WD0013/0014 headings prevent strict documented heading recognition; their Status lines are then counted under WD0012. Semantic statuses are valid.
+- Compared: normalize project heading syntax preserving all text and statuses (selected local durable fix); change global skill parser to accept arbitrary headings (broader unneeded maintenance); manual status inspection (temporary fallback, not selected as completion proof). No production workaround introduced.
+- Correction: move only inline heading titles to separate Title fields; do not alter historical review reports or semantic debt outcomes. Rerun original failing stock checker before closure.
+- Durable verification: exact original stock checker now exits0 and reports WD0015 RESOLVED. Only heading presentation changed; same semantic debt content and original reports preserved.
+
+Oct16 follow-up WD0013: authorized wsl-codex endpoint now192.168.1.105:2222 was checked once with existing strict host verification; connection timed out. No message delivered, no remote/network modifications. GitHub handoff remains the retrievable alternative, receipt unconfirmed.
+
+Oct16 follow-up WD0014: capacity returned and exact maker/test paths resumed, followed by four new final independent reviews. Quota limits themselves are normal external capacity constraints, not repaired by this project; future limit risk remains deferred. Current results are actual executed evidence, not inferred from resumed capacity.
