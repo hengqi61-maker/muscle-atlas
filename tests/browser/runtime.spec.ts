@@ -23,7 +23,8 @@ test('finished non-loop playback restarts and paused source picking survives non
   }
   throw Error('Production R3F scene missing');
  });
- for(const time of [0,2,4,1,3,0]){
+ for(const [index,time] of [0,2,4,1,3,0].entries()){
+  await page.getByRole('button',{name:index%2===0?'Clean Tech':'Real Anatomy',exact:true}).click();
   await slider.fill(String(time));await page.waitForTimeout(120);
   const result=await page.evaluate(()=>{
    const s=(window as any).runtimeScene,m=s.scene.getObjectByName('left_latissimus_dorsi');
@@ -50,5 +51,26 @@ test('finished non-loop playback restarts and paused source picking survives non
  }
  await page.getByRole('button',{name:'Real Anatomy',exact:true}).click();
  await expect(page.locator('aside.right')).toContainText('z-anatomy:unmapped:left_latissimus_dorsi');
+ // Slow playback crosses the endpoint and continues rather than stopping.
+ await page.getByRole('button',{name:'循环',exact:true}).click();
+ await page.getByLabel('播放速度').selectOption('0.25');await slider.fill('3.95');
+ await page.getByRole('button',{name:'▶',exact:true}).click();
+ await expect.poll(async()=>Number(await slider.inputValue())).toBeLessThan(1);
+ await expect(page.getByRole('button',{name:'Ⅱ',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Ⅱ',exact:true}).click();
+ const wrapped=await slider.inputValue();await page.waitForTimeout(150);await expect(slider).toHaveValue(wrapped);
+ // Exercise remount restores the requested clock and source model, then remains seekable.
+ await page.getByRole('button',{name:'哑铃弯举',exact:true}).click();
+ await expect(page.getByRole('button',{name:'90°',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'90°',exact:true}).click();
+ await expect.poll(async()=>Number(await slider.inputValue())).toBeCloseTo(4/3);
+ await page.getByRole('button',{name:'高位下拉',exact:true}).click();
+ await expect(slider).toHaveValue('0');await expect(page.getByRole('button',{name:'▶',exact:true})).toBeVisible();
+ await slider.fill('2');await page.waitForTimeout(150);
+ const restored=await page.evaluate(()=>{
+  const scene=(window as any).runtimeScene.scene;let sources=0;scene.traverse((o:any)=>{if(o.isSkinnedMesh&&o.userData.entry)sources++;});
+  return {sources,hasMachine:!!scene.getObjectByName('MovingLatBar')};
+ });
+ expect(restored).toEqual({sources:467,hasMachine:true});
  expect(errors).toEqual([]);
 });
