@@ -18,6 +18,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
+      - run: npm run test:quality
       - name: Validate reviewer bundle script syntax
         run: node --check scripts/quality/validate-review-bundle.mjs
       - name: Audit browser test status

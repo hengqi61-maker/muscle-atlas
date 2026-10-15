@@ -1,0 +1,15 @@
+import{test}from'node:test';import assert from'node:assert/strict';import{assess}from'../../scripts/quality/gate.mjs';
+const fixture=()=>({commit:'a'.repeat(40),anatomyGlbSha256:'b'.repeat(64),sampleCount:121,reworkCycles:0,producerSessions:['maker'],reviews:Object.fromEntries(['biomechanics','visual','exerciseScience','softwareQa'].map((r,i)=>[r,{session:'independent'+i,verdict:'PASS'}])),userApproval:'pending',readyForMerge:false,defects:[]});
+test('complete audit allowed while owner pending',()=>assert.deepEqual(assess(fixture()),[]));
+test('owner pending prevents release',()=>assert.ok(assess(fixture(),true).length));
+test('FAIL remains a valid completed review but blocks release',()=>{let m=fixture();m.reviews.visual.verdict='FAIL';assert.deepEqual(assess(m),[]);assert.ok(assess(m,true).length)});
+test('inconclusive cannot be relabeled as release',()=>{let m=fixture();m.reviews.biomechanics.verdict='INCONCLUSIVE';m.readyForMerge=true;assert.ok(assess(m).length)});
+test('duplicate reviewer contexts rejected',()=>{let m=fixture();m.reviews.visual.session=m.reviews.biomechanics.session;assert.ok(assess(m).length)});
+test('self approval rejected',()=>{let m=fixture();m.producerSessions=['independent0'];assert.ok(assess(m).length)});
+test('third rework cycle rejected',()=>{let m=fixture();m.reworkCycles=3;assert.ok(assess(m).length)});
+test('few samples rejected',()=>{let m=fixture();m.sampleCount=20;assert.ok(assess(m).length)});
+test('P1 blocks despite passing reviewer fields',()=>{let m=fixture();m.userApproval='approved';m.ownerApprovalEvidence='fixture-only';m.defects=[{severity:'P1',status:'OPEN'}];assert.ok(assess(m,true).length)});
+import{nextAction}from'../../scripts/quality/next-action.mjs';
+test('M1 always waits owner even with supplied repair flag',()=>assert.equal(nextAction({stage:'M1',repairScopeApproval:'scope'}).mayModifyProduction,false));
+test('third repair cycle cannot run',()=>assert.equal(nextAction({stage:'M2',repairScopeApproval:'scope',reworkCycles:2}).action,'STOP_AND_ESCALATE'));
+test('clean candidate still cannot auto approve M3',()=>assert.equal(nextAction({stage:'M2',repairScopeApproval:'scope',reworkCycles:1,defects:[]}).action,'WAIT_OWNER_M3_ACCEPTANCE'));

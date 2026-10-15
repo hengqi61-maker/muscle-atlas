@@ -126,3 +126,37 @@ Title: BROWSER-TEST-ISOLATION
 - Compared shoulder-girdle plus attachment-aware skinning (selected), appearance-only bulge keys (cannot repair attachment), full calibrated musculoskeletal simulation (requires unavailable subject/load inputs). No workaround introduced; implementing structural rig correction. Original-hand preference remains mandatory. Verification will measure actual Three.js deformed vertices, shoulders and contacts, plus back/side screenshots.
 - Structural correction verified in exported GLB/Three runtime:16bones,467source meshes; lat upper insertion mean displacement92.46mm, lower sampled lumbar origin0mm, shoulder excursion41.46mm;121frames max palm marker error0.0284mm, hand-axis error0.000048degrees;Validator0errors/0warnings. This resolves the observed missing back skinning/fixed shoulder cause, not physiological calibration.
 - MODEL-RIG remains DEFERRED for uncalibrated shoulder motion, linear-blend/local soft tissue artifacts and original open-hand grasp. Evidence/parameters/alternatives: docs/pulldown-motion-review.md; next: localized weight/pose correction and attachment/collision QA; reopen upon visible distortion or calibrated motion-data availability. No ACCEPTED_RISK. No new workaround.
+
+## WD-2026-10-15-0008
+Status: RESOLVED
+Title: M0-AUDIT-CAPTURE
+- Original failure/repro: frozen a2864e4 production preview5181, run artifact capture.mjs; page.evaluate throws R3F current root not found, no frames generated. Log preserved as logs/capture-initial-failure.log. Application baseline tests pass; this is audit harness failure.
+- Cause: Canvas rootState ref is initial snapshot; controls is populated later in current store, so testing ref.controls directly rejects it. Need current store via ref.get().
+- Temporary workaround: none; no substitute images or alternate renderer. Candidate paths: read live store through rootState.get() (selected, camera-only instrumentation); UI-only orbit gestures (less reproducible cameras); injecting application exports (would alter audited build, rejected). No production changes.
+- Impact: blocks M0 evidence completion and reviewer visual verdict until exact production capture succeeds. Next: durable live-state accessor fix; rerun exact script and verify source hashes unchanged.
+- Follow-up same capture path: all50frames+browser measurements succeeded, but Playwright native video context failed because its version-specific ffmpeg dependency is absent. Existing system ffmpeg is separate. Compare installing pinned Playwright ffmpeg dependency (selected exact supported path) versus CDP screencast+system encoder (alternate capture path, unnecessary). Install required runtime dependency without changing project lock/source, then rerun entire original capture from fresh browser and require full video.
+
+- Durable verification forWD0008: live get() accessor plus installed pinned Playwright ffmpeg1013; exact full capture.mjs rerun in freshbrowser exits0,50productionframes,27actualscene seek samples,47.92s native continuous video. No alternate renderer, no asset/source edits; seven frozen file hashes rechecked unchanged. Failure logs preserved in bundle. No implementation workaround or bypass remains.
+- M1 audit only, MODEL-RIG remains DEFERRED: independent fixed-SHA reviews confirmed displaced bilateral flexor pollicis brevis and foot-platform penetration; additional cable/grasp findings in docs/reviews/lat-pulldown/a2864e4bdb8716b6fd3bf21e2bd459eac233887c/summary.md. No repair attempted, no risk accepted. Next/reopening trigger: owner approves M2 scope; trace original source transforms/weights and measure actual contact before edits. Audit completion does not close implementation defects.
+
+## WD-2026-10-15-0009
+Status: DEFERRED
+Title: CODEX-CLI-BINARY
+- Reproduction: nvm@24.15.0/bin/codex --version and --help fail ENOENT missing packaged native binary. No install/security setting changes.
+- Impact: cannot verify custom-role auto-discovery through broken CLI. Desktop collaboration tools actually spawn isolated contexts successfully.
+- Paths compared: repair global CLI/native optional dependency (outside current review scope); actual working desktop subagents plus role instructions and static configuration validation (chosen, not CLI repair).
+- Next/reopen: repair correct CLI install when CLI execution is required and scoped. No accepted risk; no CLI-runtime success claim.
+
+## WD-2026-10-15-0010
+Status: DEFERRED
+Title: OFFICIAL-DOCS-FETCH
+- Search succeeded but direct official subagent page open twice returned tool transport connection failed. No third-party mirror used as authoritative evidence.
+- Impact: latest custom-role schema documentation not fetched through this tool yet; preserve uncertainty. Compare official URL via system-proxy-aware urllib versus local packaged docs/schema; use only verified official bytes or avoid speculative config edits.
+- Next/reopen: official retrieval route test; do not pretend current schema confirmed by search snippets. Primary blind review can proceed using actual desktop child agents.
+
+### Exact7a0d258 blind audit outcome
+- Latest user instruction superseded prior M2 approval; rigging agent interrupted before production edits. Current task M0/M1 only. Four NEW fork-none reviewers blocked from old findings until own reports frozen; ledger in exactbaseline artifactpacket.
+- Working desktop actualsubagents reused, no pretend CLI loader. WD0009 remainsDEFERRED (global CLI native binary absent); WD0010 remainsDEFERRED (official page/tool transport and urllib TLS failure, no speculative schema changes). TOML syntax/required role fields verified with Python3.12; not runtime auto-discovery. Root-cause alternative compared already, no systeminstall/securityconfig changed. Reopen when CLI/docs route required.
+- No new product workaround. Existing MODEL-RIG remainsDEFERRED for actualanatomy/contact/uncalibrated motion; blind reports verify platform/cuff/fragment issues; M2 notstarted and no risk accepted. Workflow gate intentionally rejects release pending owner and unresolvedP1; this negative test is expected, not a workaround.
+
+- System-level WD0009/WD0010 also recorded in ~/.codex/state/workaround-debt.md as WD-GLOBAL-2026-10-15-CLI and WD-GLOBAL-2026-10-15-DOCS; project entries retain task linkage. BothDEFERRED, no product fallback or tool-resolution claim.
