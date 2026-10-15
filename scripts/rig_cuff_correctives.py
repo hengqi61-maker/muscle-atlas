@@ -1,5 +1,6 @@
-"""Portable cuff-only DQ target -> inverse-LBS relative pose correctives.
-Base geometry, skeleton, weights and all non-cuff meshes stay unchanged.
+"""Portable attachment DQ target -> inverse-LBS relative pose correctives.
+Selected cuff/palmaris base geometry, skeleton and weights stay unchanged;
+all unselected meshes stay unchanged. No digit articulation is introduced.
 This is an illustrative digital skinning correction, not a tissue strain model.
 """
 import numpy as np
@@ -38,8 +39,8 @@ def prepare(scene,rig,objects,knot_step=6):
    correction=np.array(delta);corrections.append(correction);maximum_correction=max(maximum_correction,float(np.linalg.norm(correction,axis=1).max()));dq_stats.append({'frame':frame,**geometry_stats(rest,np.array(desired),tri)})
   # Evaluate actual linearly-interpolated correction + changing skin matrices at every frame.
   actual=[]
-  for frame in range(121):
-   scene.frame_set(frame);index=min(frame//knot_step,len(knots)-2);alpha=(frame-knots[index])/knot_step;delta=corrections[index]*(1-alpha)+corrections[index+1]*alpha
+  for frame in np.arange(0,120.001,.5):
+   scene.frame_set(int(frame),subframe=float(frame-int(frame)));index=min(int(frame//knot_step),len(knots)-2);alpha=(frame-knots[index])/knot_step;delta=corrections[index]*(1-alpha)+corrections[index+1]*alpha
    transforms={name:np.array(rig.pose.bones[name].matrix@rig.data.bones[name].matrix_local.inverted()) for name in rig.data.bones.keys()};posed=[]
    for i,binding in enumerate(bindings):
     matrix=sum((transforms[n]*w for n,w in binding),np.zeros((4,4)));posed.append((matrix@np.append(rest[i]+delta[i],1))[:3])
