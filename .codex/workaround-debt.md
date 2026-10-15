@@ -178,3 +178,19 @@ Title: M2-PLAYBACK-PERFORMANCE
 - Paths compared: shared endpoint transition vs separate restart control; dirty-pose exact sphere updates vs conservative per-influence bone bounds vs lazy per-raycast bounds/demand rendering. Selected shared pure playback transition, dirty pose/cache+renderer-owned skeleton upload, mathematically conservative pulldown bounds from positive normalized LBS influence boxes. Curl morph retains exact bounds.
 - No skipped picking or substitute geometry. All source actual vertices must remain enclosed, raycasts and seek/style tested. CPU/performance after must use matched controlled conditions; GPU timer unavailable is not a fake PASS.
 - Maker initial checks: build,11unit tests and actual Chrome endpoint/pose containment/picking pass. Independent new-asset review and paired profiling still required. Status OPEN until those results; no accepted-risk approval inferred.
+
+
+## WD-2026-10-15-0013 — Windows handoff unavailable
+Status: DEFERRED
+- Original path: `ssh -o BatchMode=yes -o ConnectTimeout=8 win-codex` to deliver asset locations; exited255, `192.168.1.108 port22: Host is down`. Desktop list_threads contained no Windows task.
+- Evidence preserved in session command output. No Windows writes or message delivery occurred.
+- Temporary alternative: commit retrievable `docs/handoff/windows-assets.md` to the existing GitHub M2 branch; this preserves information but does not repair connectivity or prove receipt.
+- Paths compared: existing authorized desktop task message (no matching task), direct existing SSH host (offline), repository handoff (available, selected for preservation). No network/security changes or repeat reconnection attempts.
+- Next/reopen: when Windows host reconnects or its task becomes visible, send this handoff and confirm delivery.
+
+## WD-2026-10-15-0014 — M2 agents interrupted by usage limit
+Status: DEFERRED
+- Three active maker/test turns returned account usage-limit errors. No independent review or successful repair may be inferred.
+- Current tracked work checkpointed and pushed; unfinished browser test expansion explicitly marked unverified. No replacement single-context expert review, alternate account, paid credits or scope bypass used.
+- Paths compared: resume same authorized makers after quota recovery; preserve and hand off existing version now. Selected preservation now, resume makers when capacity returns.
+- Reopen: account capacity restored; rerun exact maker/test tasks, freeze new candidate, perform four fresh independent reviews before claiming M2 completion.
