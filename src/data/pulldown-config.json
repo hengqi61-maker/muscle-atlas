@@ -5,7 +5,15 @@
   "gripHalfWidth": 0.37,
   "gripDrop": 0.055,
   "gripZ": 0.46,
-  "bodyTranslation": [0, -0.213, -0.055],
-  "palmOffsetBlender": [0, -0.029, -0.048],
-  "footPlatformY": 0.28
+  "bodyTranslation": [
+    0,
+    -0.213,
+    -0.055
+  ],
+  "palmOffsetBlender": [
+    0,
+    -0.029,
+    -0.048
+  ],
+  "footPlatformY": 0.194174
 }

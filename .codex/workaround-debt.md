@@ -160,3 +160,21 @@ Title: OFFICIAL-DOCS-FETCH
 - No new product workaround. Existing MODEL-RIG remainsDEFERRED for actualanatomy/contact/uncalibrated motion; blind reports verify platform/cuff/fragment issues; M2 notstarted and no risk accepted. Workflow gate intentionally rejects release pending owner and unresolvedP1; this negative test is expected, not a workaround.
 
 - System-level WD0009/WD0010 also recorded in ~/.codex/state/workaround-debt.md as WD-GLOBAL-2026-10-15-CLI and WD-GLOBAL-2026-10-15-DOCS; project entries retain task linkage. BothDEFERRED, no product fallback or tool-resolution claim.
+
+## WD-2026-10-15-0011
+Status: OPEN
+Title: M2-ANATOMICAL-ATTACHMENTS-CONTACT
+- Scope/owner: explicit latest approval for B01/B02/V01 and K02 measurement; no main merge, no Face Pull, source hands preserved. Baseline exact7a0d258 and first reports immutable.
+- Reproduction/evidence: original eight cuff meshes100%Thorax/static while shoulder moves; foot-platform397interior vertices per side; floating original thumb-muscle fragments visible. Baseline mesh-kinematics and videos preserved in exact7a0 packet.
+- Earliest causes found by maker: absent cuff branches fall through attach=0; two flexor pollicis brevis SOURCE labels disagree with source spatial side, name-based assignment chooses opposite hand; foot/platform geometry was placed without evaluated source-foot support constraint.
+- Compared durable paths: explicit named cuff attachment-region weights vs handpainted per-mesh landmarks; explicit source-ID spatial-side anomaly correction vs rewriting source labels/auto distance heuristics; derive support height from actual posed feet vs alter fixed-length leg IK. Selected source-preserving explicit cuff origin/insertion blend, documented two-ID binding correction, and measured support geometry if placement fits machine. No source deletion/hiding/vertex folding allowed.
+- Temporary workaround: none newly introduced. Existing illustrative LBS/uncalibrated anatomy limits retained and must not be relabeled physiology. Maker corrections require all-vertex/source-ID measurements and four independent new-candidate reviews before closing P1.
+- Next: newGLB/hash, real endpoint/edge and foot-solid tests, original hand surface/frame contact, paired before/after images/video. Status OPEN until review or explicit bounded DEFERRED outcome.
+
+## WD-2026-10-15-0012
+Status: OPEN
+Title: M2-PLAYBACK-PERFORMANCE
+- Original failures: nonloop at4s cannot replay; continuous per-frame exact sphere traversal and redundant469shared skeleton updates even paused. Controlled old production matrix measures~15–16actualrenders/sec and~full mainthread occupation, not just rAF proxy.
+- Paths compared: shared endpoint transition vs separate restart control; dirty-pose exact sphere updates vs conservative per-influence bone bounds vs lazy per-raycast bounds/demand rendering. Selected shared pure playback transition, dirty pose/cache+renderer-owned skeleton upload, mathematically conservative pulldown bounds from positive normalized LBS influence boxes. Curl morph retains exact bounds.
+- No skipped picking or substitute geometry. All source actual vertices must remain enclosed, raycasts and seek/style tested. CPU/performance after must use matched controlled conditions; GPU timer unavailable is not a fake PASS.
+- Maker initial checks: build,11unit tests and actual Chrome endpoint/pose containment/picking pass. Independent new-asset review and paired profiling still required. Status OPEN until those results; no accepted-risk approval inferred.
