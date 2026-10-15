@@ -10,7 +10,12 @@
     "test:rig": "node scripts/validate-curl.mjs",
     "test:assets": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "test:e2e": "playwright test",
-    "test:pulldown": "node scripts/validate-pulldown.mjs"
+    "test:pulldown": "node scripts/validate-pulldown.mjs",
+    "quality:audit": "node scripts/quality/motion-audit.mjs",
+    "quality:gate": "node scripts/quality/gate.mjs",
+    "test:quality": "node --test tests/quality/*.node.mjs tests/quality/motion/*.node.mjs",
+    "test:motion-quality": "node scripts/quality/motion-quality.mjs",
+    "test:motion-support": "node scripts/quality/motion-quality-support.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.0.0",

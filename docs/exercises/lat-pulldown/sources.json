@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "status": "PROVISIONAL",
+  "accessDate": "2026-10-15",
+  "sources": [
+    {
+      "id": "andersen-2014",
+      "title": "Effects of grip width on muscle strength and activation in the lat pull-down.",
+      "authors": [
+        "Vidar Andersen",
+        "Marius S Fimland",
+        "Espen Wiik",
+        "Anders Skoglund",
+        "Atle H Saeterbakken"
+      ],
+      "publisher": "Journal of Strength and Conditioning Research / PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24662157/",
+      "publicationDate": "2014-04",
+      "accessDate": "2026-10-15",
+      "license": "No redistribution license verified; link and paraphrase only",
+      "evidenceType": "primary-experimental-EMG-study",
+      "variant": "Anterior lat pulldown; three pronated grip widths; 15 men",
+      "retrievalStatus": "verified-indexed-abstract",
+      "supports": [
+        "Grip-width variants and study population; no universal wider-is-better rule"
+      ],
+      "limitations": "MEDLINE abstract fetched, not full paper; no movement-angle or scapular trajectory validation; no EMG-to-stimulus conversion.",
+      "retrievalUrl": "https://pubmed.ncbi.nlm.nih.gov/?term=24662157&format=pubmed",
+      "localCaptureSha256": "7e1b8f06833568471d86e1d0c6080d7adebae858bf1ccdaad7f506ec76737626",
+      "captureRedistributed": false,
+      "locator": "MEDLINE fields TI,AB,FAU,DP,LID"
+    },
+    {
+      "id": "lusk-2010",
+      "title": "Grip width and forearm orientation effects on muscle activity during the lat pull-down.",
+      "authors": [
+        "Stephen J Lusk",
+        "Bruce D Hale",
+        "Daniel M Russell"
+      ],
+      "publisher": "Journal of Strength and Conditioning Research / PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20543740/",
+      "publicationDate": "2010-07",
+      "accessDate": "2026-10-15",
+      "license": "No redistribution license verified; link and paraphrase only",
+      "evidenceType": "primary-experimental-EMG-study",
+      "variant": "Anterior wide/narrow pronated/supinated lat pulldown; 12 healthy men",
+      "retrievalStatus": "verified-indexed-abstract",
+      "supports": [
+        "Pronated versus supinated are distinct variants; trial used two-second pull and return cadence"
+      ],
+      "limitations": "Cadence is study protocol, not universal timing requirement; abstract only; cannot validate wrist geometry or pulldown scapular timing.",
+      "retrievalUrl": "https://pubmed.ncbi.nlm.nih.gov/?term=20543740&format=pubmed",
+      "localCaptureSha256": "92f78d3fe34fbc9a0af7eafc941b296d36388b63d9820c780eb27ac1d6e6256a",
+      "captureRedistributed": false,
+      "locator": "MEDLINE fields TI,AB,FAU,DP,LID"
+    },
+    {
+      "id": "ludewig-reynolds-2009",
+      "title": "The Association of Scapular Kinematics and Glenohumeral Joint Pathologies",
+      "authors": [
+        "Paula M Ludewig",
+        "Jonathan F Reynolds"
+      ],
+      "publisher": "Journal of Orthopaedic & Sports Physical Therapy / PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2730194/",
+      "publicationDate": "2009-02",
+      "accessDate": "2026-10-15",
+      "license": "No redistribution license verified; link and paraphrase only",
+      "evidenceType": "narrative-review",
+      "variant": "Arm elevation; varied populations/tasks, not resisted lat pulldown",
+      "retrievalStatus": "verified-full-text",
+      "supports": [
+        "Scapular upward rotation and posterior tilt during elevation; internal/external rotation varies; shoulder-girdle coupling"
+      ],
+      "limitations": "Secondary review; no fixed ratio or transfer of elevation trajectory to loaded pulldown; no pulldown phase timing.",
+      "localCaptureSha256": "35bc92e558ba92224edb7a4fe3ac9470d5d6fbbe7e48b5c4da08002319b6712f",
+      "captureRedistributed": false,
+      "locator": "SCAPULAR KINEMATICS DURING ARM ELEVATION; reference78 for McClure bibliographic identity"
+    },
+    {
+      "id": "mcclure-2001",
+      "title": "Direct 3-dimensional measurement of scapular kinematics during dynamic movements in vivo",
+      "authors": [
+        "Philip W McClure",
+        "Lori A Michener",
+        "Brian J Sennett",
+        "Andrew R Karduna"
+      ],
+      "publisher": "Journal of Shoulder and Elbow Surgery",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11408911/",
+      "publicationDate": "2001-05",
+      "accessDate": "2026-10-15",
+      "license": "No redistribution license verified; link and paraphrase only",
+      "evidenceType": "primary-kinematic-study",
+      "variant": "Dynamic shoulder movements",
+      "retrievalStatus": "verified-indexed-metadata",
+      "supports": [
+        "Bibliographic identity via reference 78 of retrieved Ludewig/Reynolds review"
+      ],
+      "limitations": "Individual PubMed page challenge; abstract/full study not independently retrieved. Do not attribute numerical findings to this record. DOI10.1067/mse.2001.112954."
+    },
+    {
+      "id": "mochizuki-2008",
+      "title": "Humeral insertion of the supraspinatus and infraspinatus. New anatomical findings regarding the footprint of the rotator cuff.",
+      "authors": [
+        "T Mochizuki",
+        "H Sugaya",
+        "M Uomizu",
+        "K Maeda",
+        "K Matsuki",
+        "I Sekiya",
+        "T Muneta",
+        "K Akita"
+      ],
+      "publisher": "Journal of Bone and Joint Surgery American / PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18451386/",
+      "publicationDate": "2008-05",
+      "accessDate": "2026-10-15",
+      "license": "No redistribution license verified; link and paraphrase only",
+      "evidenceType": "primary-anatomical-study",
+      "variant": "Rotator-cuff humeral footprint anatomy",
+      "retrievalStatus": "verified-indexed-metadata",
+      "supports": [
+        "Bibliographic identity only"
+      ],
+      "limitations": "Direct PubMed search metadata verified by biomechanics collaborator; no full paper or footprint results verified. DOI10.2106/JBJS.G.00427.",
+      "localCaptureSha256": "7b0221c85db1dd64bad433b86cf3890d9425cee04ea7308cc2dc34a2dea0bed3",
+      "captureRedistributed": false,
+      "retrievalUrl": "https://pubmed.ncbi.nlm.nih.gov/?term=rotator+cuff+tendons+insertion+Mochizuki+Sugaya+2008",
+      "locator": "Indexed result PMID18451386; title/authors/journal/DOI only used"
+    },
+    {
+      "id": "arai-2008",
+      "title": "Subscapularis tendon tear: an anatomic and clinical investigation.",
+      "authors": [
+        "R Arai",
+        "H Sugaya",
+        "T Mochizuki",
+        "A Nimura",
+        "J Moriishi",
+        "K Akita"
+      ],
+      "publisher": "Arthroscopy / PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18760206/",
+      "publicationDate": "2008-09",
+      "accessDate": "2026-10-15",
+      "license": "No redistribution license verified; link and paraphrase only",
+      "evidenceType": "primary-anatomical-clinical-study",
+      "variant": "Subscapularis anatomy/clinical investigation",
+      "retrievalStatus": "verified-indexed-metadata",
+      "supports": [
+        "Bibliographic identity only"
+      ],
+      "limitations": "No full paper or specific attachment findings verified. DOI10.1016/j.arthro.2008.04.076.",
+      "localCaptureSha256": "7b0221c85db1dd64bad433b86cf3890d9425cee04ea7308cc2dc34a2dea0bed3",
+      "captureRedistributed": false,
+      "retrievalUrl": "https://pubmed.ncbi.nlm.nih.gov/?term=rotator+cuff+tendons+insertion+Mochizuki+Sugaya+2008",
+      "locator": "Indexed result PMID18760206; title/authors/journal/DOI only used"
+    },
+    {
+      "id": "openstax-ap2e-11-5",
+      "title": "11.5 Muscles of the Pectoral Girdle and Upper Limbs — Anatomy and Physiology 2e",
+      "authors": [
+        "J. Gordon Betts",
+        "Kelly A. Young",
+        "James A. Wise",
+        "Eddie Johnson",
+        "Brandon Poe",
+        "Dean H. Kruse",
+        "Oksana Korol",
+        "Jody E. Johnson",
+        "Mark Womble",
+        "Peter DeSaix"
+      ],
+      "publisher": "OpenStax / Rice University",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-5-muscles-of-the-pectoral-girdle-and-upper-limbs",
+      "publicationDate": "2022-04-20",
+      "accessDate": "2026-10-15",
+      "license": "Current page: CC BY-NC-SA4.0; explicit AI/commercial reuse restriction notice; link-only bibliographic/factual reference here.",
+      "evidenceType": "institutional-anatomy-textbook",
+      "variant": "General upper-limb anatomy",
+      "retrievalStatus": "verified-full-text",
+      "supports": [
+        "Four cuff members; scapula-to-humerus connection; general locations and actions"
+      ],
+      "limitations": "Detailed facet footprints not verified by retrieved prose; no exercise timing. Current page notice ©2026-06-12 differs from historical licensing assumptions; no textbook text/figures redistributed.",
+      "localCaptureSha256": "fb52325507c6950a0fccbb7e0042ecf4b0596d9521ac6a359200a1ce104a333b",
+      "captureRedistributed": false,
+      "locator": "Muscles That Move the Humerus; citation/attribution and current license footer"
+    },
+    {
+      "id": "ace-candidate",
+      "title": "Seated Lat Pulldown",
+      "authors": [
+        "American Council on Exercise (corporate publisher; individual author not listed)"
+      ],
+      "publisher": "American Council on Exercise",
+      "url": "https://www.acefitness.org/resources/everyone/exercise-library/158/seated-lat-pulldown/",
+      "publicationDate": null,
+      "accessDate": "2026-10-15",
+      "license": "No redistribution license verified; link and paraphrase only",
+      "evidenceType": "institutional-exercise-guidance-candidate",
+      "variant": "Candidate lat pulldown; variant not verified",
+      "retrievalStatus": "verified-official-page-text",
+      "supports": [
+        "Thigh-pad setup, controlled downward elbow path, endpoint and return coaching cues"
+      ],
+      "limitations": "Official page text read through web tool on2026-10-15; no publication date observed, no video measurement or redistribution. Coaching scapular cues are not measured scapulohumeral kinematics.",
+      "locator": "Steps1–4; web open canonical official URL"
+    },
+    {
+      "id": "nasm-candidate",
+      "title": null,
+      "authors": [],
+      "publisher": "National Academy of Sports Medicine",
+      "url": "https://blog.nasm.org/lat-pulldown",
+      "publicationDate": null,
+      "accessDate": "2026-10-15",
+      "license": "No redistribution license verified; link and paraphrase only",
+      "evidenceType": "institutional-exercise-guidance-candidate",
+      "variant": "Candidate lat pulldown; variant not verified",
+      "retrievalStatus": "INCONCLUSIVE",
+      "supports": [],
+      "limitations": "Candidate URL/title not verified: official direct HTTP403; no page text or video observed. Link is a retrieval candidate, not a claimed verified source."
+    },
+    {
+      "id": "mayo-candidate",
+      "title": "Video: Lat pull-down with weight machine",
+      "authors": [
+        "Mayo Clinic (corporate publisher; transcript speakers Dr. Laskowski and Nicole Campbell)"
+      ],
+      "publisher": "Mayo Clinic",
+      "url": "https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/lat-pull-down/vid-20084683",
+      "publicationDate": "2025-11-21",
+      "accessDate": "2026-10-15",
+      "license": "No redistribution license verified; link and paraphrase only",
+      "evidenceType": "institutional-exercise-guidance-candidate",
+      "variant": "Candidate lat pulldown; variant not verified",
+      "retrievalStatus": "verified-official-page-transcript",
+      "supports": [
+        "Seated anterior pulldown setup and controlled return; bar need not touch chest"
+      ],
+      "limitations": "Official transcript read through web tool on2026-10-15. Video itself not viewed or measured; no quantitative joint trajectory. All rights reserved; no copied video or transcript.",
+      "locator": "Transcript paragraphs and date; web open full official URL"
+    }
+  ],
+  "retrievalIncident": {
+    "debtId": "WD-GLOBAL-2026-10-15-DOCS",
+    "observations": [
+      "web__run fatal transport failure",
+      "search_service_web_run transport failure",
+      "ACE/NASM/Mayo candidate HTTP403",
+      "Direct PubMed article endpoints challenge, MEDLINE query route supplied actual abstracts",
+      "NCBI Books HTTP200 CAPTCHA",
+      "UAMS SSL certificate expired; verification preserved",
+      "2026-10-15 resumed session: original web search and official page open now succeed for ACE/Mayo; prior direct HTTP403 observations preserved. Cause of earlier transport failure unknown."
+    ],
+    "workaround": "Read-only direct official HTTP and PubMed MEDLINE query; no proxy/TLS bypass or video downloads",
+    "remainingGap": "NASM access, authorized video observation/calibration and detailed cuff footprints remain pending; official ACE/Mayo page text now verified."
+  }
+}

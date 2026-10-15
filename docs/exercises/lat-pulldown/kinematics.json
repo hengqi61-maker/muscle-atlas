@@ -1,0 +1,303 @@
+{
+  "schemaVersion": "1.0.0",
+  "exerciseId": "lat-pulldown",
+  "status": "AUTHORING_REFERENCE_NOT_M2_RELEASE_APPROVAL",
+  "authoredAt": "2026-10-15",
+  "sourceCommit": "9c9c97125c1ea902478894f164669764677d3563",
+  "variant": {
+    "name": "seated bilateral anterior lat pulldown",
+    "grip": "pronated straight/angled bar; width and individual arm path must be recorded per reference",
+    "path": "overhead to anterior upper-chest region; no behind-neck extrapolation",
+    "excluded": "No claim for every grip, machine, individual ROM, injury status or force distribution."
+  },
+  "evidenceClasses": {
+    "literature": "Published anatomical/kinematic evidence with source ID; evidence for elevation is not a calibrated pulldown trajectory.",
+    "directVideoObservation": "Requires named external recording, camera, timestamps and visible landmarks. None acquired or measured by this biomechanics author.",
+    "anatomyConstraint": "Attachment continuity and compatible relative frames, interpreted with anatomy.md; not measured strain or a diagnostic limit.",
+    "authoringAssumption": "Declared digital convention or qualitative keypose proposal requiring future calibration; not a human measurement.",
+    "runtimeObservation": "Read-only source-code observation at sourceCommit; current implementation is not biological ground truth."
+  },
+  "coordinateSystems": {
+    "canonicalGltf": {
+      "handedness": "right",
+      "units": "metre",
+      "axes": {
+        "+x": "subject left lateral",
+        "-x": "subject right lateral",
+        "+y": "superior/up",
+        "+z": "anterior",
+        "-z": "posterior"
+      },
+      "origin": "Model-local origin; landmark coordinates must specify rest/posed state. Do not imply anatomical pelvis origin."
+    },
+    "blenderAuthoring": {
+      "handedness": "right",
+      "units": "metre",
+      "axes": {
+        "+x": "subject left lateral",
+        "+y": "posterior",
+        "+z": "superior"
+      },
+      "toCanonicalGltf": "(x_g,y_g,z_g) = (x_b,z_b,-y_b)",
+      "fromCanonicalGltf": "(x_b,y_b,z_b) = (x_g,-z_g,y_g)",
+      "vectorsAndRotations": "Convert vectors by the same orthonormal basis; rotations by basis conjugation. Never apply position translation to directions."
+    },
+    "rawSourceImport": {
+      "classification": "runtimeObservation",
+      "file": "scripts/build-pulldown-rig.py",
+      "observedVertexOperation": "After Blender glTF import: (x,z,-y)/1000 + bodyTranslation. This operates on imported Blender coordinates, not directly on raw glTF file arrays.",
+      "unitsClaim": "Division by1000 is the current source-size convention; verify against source dimensions and provenance rather than inferring subject stature.",
+      "bodyTranslationBlender_m": [
+        0,
+        -0.213,
+        -0.055
+      ],
+      "sourceSha256": "6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f"
+    },
+    "currentDisplayTransform": {
+      "classification": "runtimeObservation",
+      "file": "src/three/Scene.tsx",
+      "scale": 1.45,
+      "translationCanonical_m": [
+        0,
+        -1.45,
+        0
+      ],
+      "equation": "p_scene = 1.45 * p_model + (0,-1.45,0)",
+      "warning": "Compare geometry/clearance in a declared frame. Display-scaled scene distances differ from model metres."
+    }
+  },
+  "localFrames": [
+    {
+      "id": "thorax",
+      "landmarks": [
+        "suprasternal notch",
+        "xiphoid process",
+        "C7",
+        "T8"
+      ],
+      "definition": "Future landmark-based frame: superior and anterior directions from documented thorax landmarks, orthonormalized; declare origin and handedness. Current Thorax control is a manually estimated rig segment, not this anatomical calibration.",
+      "uncertainty": "No source skeletal landmark annotation, landmark error bars or subject calibration supplied; null angular precision."
+    },
+    {
+      "id": "scapula-left/right",
+      "landmarks": [
+        "acromial angle",
+        "root of scapular spine",
+        "inferior angle",
+        "glenoid centre if available"
+      ],
+      "definition": "Use a separately tracked scapular frame relative to thorax; name the chosen axes and rotation sequence. Do not label one world-axis control rotation as all three anatomical rotations.",
+      "uncertainty": "Muscle meshes do not identify bony landmarks or joint centre accurately; current Scapula head/tail cannot substitute for digitized scapular landmarks."
+    },
+    {
+      "id": "humerus-left/right",
+      "landmarks": [
+        "humeral head centre",
+        "medial epicondyle",
+        "lateral epicondyle"
+      ],
+      "definition": "Long axis from elbow midpoint toward head centre; axial rotation requires epicondylar reference. Report humerus relative to scapula separately from humerus relative to thorax.",
+      "uncertainty": "Two-bone IK determines segment direction but does not independently establish humeral axial rotation or glenohumeral contact."
+    },
+    {
+      "id": "forearm-hand-left/right",
+      "landmarks": [
+        "elbow centre",
+        "radial styloid",
+        "ulnar styloid",
+        "third metacarpal/palm landmarks"
+      ],
+      "definition": "Separate elbow flexion, forearm pronation and wrist orientation; original source hand geometry must remain identifiable.",
+      "uncertainty": "Bar alignment and contact-marker alignment alone do not establish palm contact, finger closure or wrist-neutral anatomy."
+    }
+  ],
+  "keyposeConvention": {
+    "classification": "authoringAssumption",
+    "phaseUnit": "percent of complete repetition, not muscle activation or percentage ROM",
+    "timing": "0 top;25 descending;50 bottom turnaround;75 ascending;100 top return. Equal spacing is a reusable capture convention, not measured human timing.",
+    "phaseToCurrentSeconds": "phasePercent /100 *4 only for current4-second digital clip",
+    "reversibility": "Return should be smooth; 25/75 need not be identical in real movement. Current symmetric cosine must not be treated as observed human symmetry."
+  },
+  "keyposes": [
+    {
+      "phasePercent": 0,
+      "label": "top/start",
+      "bar": "overhead with controllable reach",
+      "humerus": "elevated relative to thorax; exact elevation plane and axial rotation uncalibrated",
+      "elbow": "more extended than at bottom; no compulsory locked joint",
+      "scapula": "Allow elevation-related upward rotation/posterior tilt; do not pin shoulder blades permanently down/back. Exact orientation depends on variant and subject.",
+      "trunk": "supported seated setup; selected stable lean must be documented",
+      "evidenceClass": "authoringAssumption",
+      "constraintSourceIds": [
+        "ludewig-reynolds-2009"
+      ]
+    },
+    {
+      "phasePercent": 25,
+      "label": "pull/descent",
+      "bar": "travels down in front of head toward upper chest",
+      "humerus": "elevation decreases; adduction/extension combination depends on grip and plane",
+      "elbow": "flexion increases as elbows move down",
+      "scapula": "Moves relative to thorax; direction/timing must be observed, no forced constant scapulohumeral ratio",
+      "trunk": "avoid using a changing trunk swing as a substitute for arm motion",
+      "evidenceClass": "authoringAssumption",
+      "constraintSourceIds": [
+        "ludewig-reynolds-2009"
+      ]
+    },
+    {
+      "phasePercent": 50,
+      "label": "bottom/turnaround",
+      "bar": "anterior upper-chest region; individual reach/contact not prescribed as fixed distance",
+      "humerus": "less elevated than top; no invented posterior elbow endpoint",
+      "elbow": "more flexed than top, with wrist/bar geometry separately checked",
+      "scapula": "Compatible with thorax and humeral orientation; do not require maximal retraction/depression",
+      "trunk": "remains stable; smooth change of direction",
+      "evidenceClass": "authoringAssumption",
+      "constraintSourceIds": [
+        "ludewig-reynolds-2009"
+      ]
+    },
+    {
+      "phasePercent": 75,
+      "label": "controlled return",
+      "bar": "rises in front of head under control",
+      "humerus": "elevation increases toward start",
+      "elbow": "extends progressively",
+      "scapula": "Can resume elevation-related upward rotation/posterior tilt; no rigid fixed-ratio interpolation",
+      "trunk": "returns without added compensatory swing",
+      "evidenceClass": "authoringAssumption",
+      "constraintSourceIds": [
+        "ludewig-reynolds-2009"
+      ]
+    },
+    {
+      "phasePercent": 100,
+      "label": "top/end",
+      "bar": "returns to same intended start region",
+      "humerus": "returns to selected elevated start pose",
+      "elbow": "returns to start extension",
+      "scapula": "Returns to compatible start orientation without discontinuity",
+      "trunk": "returns to start setup",
+      "evidenceClass": "authoringAssumption",
+      "constraintSourceIds": [
+        "ludewig-reynolds-2009"
+      ]
+    }
+  ],
+  "scapulohumeralConstraints": {
+    "sourceIds": [
+      "ludewig-reynolds-2009"
+    ],
+    "literature": "Arm elevation involves scapular upward rotation and posterior tilt with variability of internal/external rotation, and combined sternoclavicular/acromioclavicular motion.",
+    "inferenceForAuthoring": "Scapula, humerus and thorax need compatible relative movement. Lowering from an elevated arm should not be implemented by freezing all scapular tissue to thorax.",
+    "notEstablished": [
+      "A universal2:1 rhythm",
+      "A numeric pulldown shoulder/scapula angle curve",
+      "Exact humeral axial rotation from upper-arm direction",
+      "Safe or diagnostic angle cutoffs",
+      "Scapular motion reconstructed from muscle colour or silhouette alone"
+    ]
+  },
+  "cameraPresets": {
+    "classification": "authoringAssumption",
+    "units": "display-scene metre",
+    "basis": "canonicalGltf; scene transform explicitly above",
+    "target_m": [
+      0,
+      0.28,
+      0.1
+    ],
+    "views": [
+      {
+        "id": "front",
+        "position_m": [
+          0,
+          1,
+          4.5
+        ]
+      },
+      {
+        "id": "left-side",
+        "position_m": [
+          4.5,
+          1,
+          0.1
+        ]
+      },
+      {
+        "id": "back",
+        "position_m": [
+          0,
+          1,
+          -4.5
+        ]
+      },
+      {
+        "id": "oblique-support",
+        "position_m": [
+          3,
+          0.65,
+          3
+        ]
+      },
+      {
+        "id": "shoulder-oblique",
+        "position_m": [
+          1.8,
+          1.2,
+          2
+        ]
+      }
+    ],
+    "projection": "Record perspective FOV and viewport in each capture; no image-based angle measurement without camera calibration.",
+    "origin": "First three copied from current capture adapter for reproducibility; extra views are proposed authoring diagnostics.",
+    "occlusion": "Record any hidden machine meshes. Back view with machine hidden is an inspection aid and must not imply collision clearance.",
+    "gripTracking": "Target each actual palm landmark and bar at every phase; fixed top-position grip camera is insufficient for full-rep clearance."
+  },
+  "digitalVerificationTolerances": {
+    "status": "proposed numerical reproducibility checks, not anatomical acceptance limits",
+    "checks": [
+      {
+        "id": "basis-roundtrip",
+        "maximum": 1e-09,
+        "units": "metre",
+        "scope": "synthetic point round-trip conversion only",
+        "rationale": "Double-precision orthonormal basis conversion should introduce negligible numerical drift; does not cover asset/export rounding."
+      },
+      {
+        "id": "phase-endpoint-determinism",
+        "maximum": 1e-06,
+        "units": "metre in model frame",
+        "scope": "same sampled vertex after identical seek in deterministic digital playback",
+        "rationale": "Detect stale matrices or seek state. Human repetitions need not repeat within this value."
+      }
+    ],
+    "humanThresholds": null,
+    "deformationAcceptance": "Attachment continuity, severe compression and inversion require independently chosen tests and visual/anatomical review; no thresholds derived from current failing cuff output."
+  },
+  "currentUncalibratedAssumptions": {
+    "classification": "runtimeObservation",
+    "files": [
+      "scripts/build-pulldown-rig.py",
+      "src/data/pulldown-config.json",
+      "src/three/Scene.tsx"
+    ],
+    "observed": [
+      "Source shoulder/elbow/wrist landmarks estimated from muscle extents; no scanned skeletal centres.",
+      "4-second symmetric cosine phase and fixed chest tilt are authored timing/pose choices.",
+      "Scapula control rotations/translations are illustrative constants, not measured three-dimensional scapular kinematics.",
+      "Analytic fixed-length arm IK and a hand/bar offset do not validate tissue strain or shoulder articulation.",
+      "Current cuff weighting compression is a prototype concern for independent future deformation review, not a baseline to fit passing criteria."
+    ],
+    "scope": "No production GLB, rig, runtime or historical review modified by this reference."
+  },
+  "nextEvidenceNeeded": [
+    "External variant-matched multi-view demonstration with timestamps and permission/license metadata.",
+    "Skeletal or manually reviewed attachment landmark annotations with uncertainty.",
+    "Separate scapular/humeral local frames and continuous upper-limb trajectory capture.",
+    "Original source-hand/palm contact and shoulder-cuff tissue continuity evidence in model metres.",
+    "Independent deformation-method comparison before choosing future maker implementation."
+  ]
+}

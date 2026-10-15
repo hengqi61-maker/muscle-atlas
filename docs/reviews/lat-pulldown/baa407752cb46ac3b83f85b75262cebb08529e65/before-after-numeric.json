@@ -1,0 +1,48 @@
+[
+  {
+    "label": "old-7a0d258",
+    "assetSha256": "56b3ca231dda14100d64233758da2116282547b472afd4fc9b24160f345fee05",
+    "sampleCount": 121,
+    "ruleStatus": {
+      "B01": "AUTO FAIL",
+      "GEOMETRY": "AUTO FAIL",
+      "B02": "AUTO FAIL",
+      "V01": "INCONCLUSIVE",
+      "K02": "INCONCLUSIVE",
+      "KINEMATICS": "INCONCLUSIVE"
+    },
+    "frozenCuffs": [
+      "left infraspinatus muscle",
+      "left subscapularis",
+      "left supraspinatus",
+      "left teres minor",
+      "right infraspinatus muscle",
+      "right subscapularis",
+      "right supraspinatus",
+      "right teres minor"
+    ],
+    "severeCuffCollapse": [],
+    "footInteriorMeshIds": [
+      "left extensor hallucis brevis",
+      "left flexor digitorum longus",
+      "right extensor hallucis brevis",
+      "right flexor digitorum longus"
+    ]
+  },
+  {
+    "label": "candidate-baa4077",
+    "assetSha256": "44109e516dc44ee1767beec7a5cb61504c804c83b952fee92e9d1120c9021cea",
+    "sampleCount": 121,
+    "ruleStatus": {
+      "B01": "INCONCLUSIVE",
+      "GEOMETRY": "AUTO FAIL",
+      "B02": "INCONCLUSIVE",
+      "V01": "INCONCLUSIVE",
+      "K02": "INCONCLUSIVE",
+      "KINEMATICS": "INCONCLUSIVE"
+    },
+    "frozenCuffs": [],
+    "severeCuffCollapse": [],
+    "footInteriorMeshIds": []
+  }
+]

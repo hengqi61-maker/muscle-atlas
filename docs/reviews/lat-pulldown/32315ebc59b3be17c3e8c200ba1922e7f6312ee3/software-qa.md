@@ -1,0 +1,35 @@
+# Independent final second-cycle Software QA review
+
+Candidate: `32315ebc59b3be17c3e8c200ba1922e7f6312ee3`. GLB SHA256: `1e0af33c14cd74b5b353c0d9e8e2c030d9559e2c561c96ae831c4bf666f4a2ab`.
+
+Overall: **INCONCLUSIVE for complete S02/performance and milestone completion; PASS for measured software integrity/regression gates below.** No owner approval or merge authorization. This reviewer read no historical or other current reviewer reports before submission and changed only this report. Runtime/build logs are supplied observations, explicitly distinguished from fresh runs.
+
+## Measurable gates
+
+| Gate | Verdict | Evidence and limits |
+|---|---|---|
+| Frozen source/asset identity | PASS | Fresh HEAD check exactly matches candidate; SHA256 independently recomputed for all 67 freeze-listed files, zero mismatches. Public GLB matches stated SHA. Evidence asset parses and has 467 sourceName-tagged nodes; 469 meshes, one skin, one animation. Runtime anatomyId is resolved through catalogue mapping, not baked GLB anatomyId. |
+| GLB validity / S01 structure | PASS | Fresh nonmutating gltf-validator validateBytes: zero errors, zero warnings, three informational messages (two unused UV attributes, one empty node). No legacy validator invoked. |
+| Unit correctness | PASS | Fresh npm test: 13/13; npm run test:quality: 26/26, zero skipped. Includes interpolated and extrapolated relative/absolute morph bounds, skin bind transforms, triangle crossing without contained vertices, oriented cylinder semantics, contact clipping, and release negative tests. |
+| Build / S02 build | PASS on supplied execution | runtime-checks/build.log records tsc/Vite success, with existing large-chunk advisory. No independent build rerun because review authorization permits only report writes. npm ci not rerun; dependency reinstall evidence is not newly established here. |
+| Browser / S01 controls, picking, styles, seeks | PASS on supplied execution plus source inspection | runtime-checks/full-browser.log records real Chrome 5/5, 43.0s; exact-original-browser.log supplies resolved original two-test path. runtime.spec.ts checks 467 meshes, exact ten morph BP IDs, >100k actual vertices inside current sphere/box at nine nonmonotonic poses, pointer selection of the lat with alternating styles, pause/replay/loop and exercise remount. No independent browser rerun claimed. |
+| Conservative bounds / pose cache | PASS within measured assumptions | Scene.tsx invalidates on time/morph mode/morph weight and resets on mixer mount; unmorphed bounds union per-bone bind-space influence boxes, requiring finite nonnegative normalized weights. Convex blends remain enclosed. Morph meshes compute exact current vertex boxes. No per-mesh skeleton upload remains. Synthetic unit tests run fresh; supplied browser all-source containment covers current asset. This is correctness evidence, not a GPU benchmark. |
+| Actual rendered support geometry | PASS for specified assertions; INCONCLUSIVE for universal clearance/contact | supports.spec.ts validates box dimensions, beam endpoints/radii, restraint/pedestal connectivity, actual rendered convex triangle-plane vertex-interior tests on all 467 sources at five poses, named source triangles clipped to support footprints (0..1mm gap), visibility, and full-body projection. This is actual production geometry, not analytic-cylinder substitution. It does not triangle-clip every source against every cylinder: zero contained vertices alone cannot exclude crossing triangles. Dense independent support JSON explicitly retains analytic-cylinder limitations. |
+| Source preservation | PASS for packet consistency; limited independent reconstruction | 467 source-preservation records report zero index-expanded base-coordinate error. Independently counted 467 sourceName nodes. This review did not reconstruct original source correspondence from scratch; base preservation never proves posed anatomical validity. |
+| Q02 performance | INCONCLUSIVE | Current capture metadata explicitly says paused rAF latency, not GPU timer: 241 callbacks, mean16.603ms, p95 16.7ms, Apple A18 Pro ANGLE, 482 draw calls, 1,092,530 triangles. Preserve earlier controlled baseline separately. Latest scope excludes specialty FPS work; no new workload-matched speedup or GPU duration claim is supported or required to be invented. |
+| Release controls | PASS | Fresh quality tests reject pending owner, non-PASS reviews, producer self-approval, unresolved P1 even with PASS fields, and third repair cycle. gate.mjs requires explicit approval evidence; maximum two automatic cycles. Review completion is not release approval. |
+| Anatomical gates B01/B02/V01/K02/KINEMATICS | INCONCLUSIVE in software scope | 121-frame motion-quality JSON itself marks all these gates INCONCLUSIVE. Absent collapse/frozen-region/penetration engineering alarms cannot establish attachments, physiological motion, closed grasp, load-bearing contact or skin compression. Domain reviewers remain necessary. |
+
+## Findings and reproducibility
+
+No independently verified new software P0/P1 is established by these checks. Reproduce fresh checks with `npm test`, `npm run test:quality`, and nonmutating `gltf-validator.validateBytes`; hash all freeze.files entries using SHA256. Runtime and support assertions are in `tests/browser/runtime.spec.ts` and `tests/browser/supports.spec.ts`; their actual supplied run output is under `runtime-checks/`.
+
+**Debt/completion blocker (process, not invented anatomical defect):** at this review snapshot WD-2026-10-15-0011 and WD-2026-10-15-0012 remain OPEN. They prevent a full-completion claim. Coordinator may terminally DEFER them with reason, evidence, next action and reopening trigger after reports; that would document bounded unfinished work, not resolve anatomy or measured performance. WD0015 is RESOLVED with original/full browser evidence. WD0016 records durable ledger-heading parser repair; current dirty ledger is documentary and not among the 67 frozen production/test inputs. No third repair or owner approval follows from this review.
+
+## Required final accounting
+
+- Completed primary review: frozen integrity, structure, fresh 13 unit /26 quality tests, bounds/cache and actual polyhedron test-source examination, supplied build/Chrome logs assessed independently.
+- Workarounds introduced by reviewer: none. No implementation, asset, historical report or test edits.
+- Permanently resolved debt: no new reviewer repair; supplied WD0015/0016 closure evidence reviewed, not reclassified as anatomical closure.
+- Deferred/open debt: snapshot WD0011/0012 OPEN; existing MODEL-RIG DEFERRED remains. Coordinator terminal disposition still required. No accepted risk or owner signoff inferred.
+- Remaining evidence/risks: full continuous clearance especially cylinder triangle-interior cases; independent source correspondence reconstruction if needed; anatomical attachment/contact/domain assessment; workload-matched performance and GPU timing if future scope requests it. Existing chunk-size advisory remains. No medically validated/high-fidelity or fully complete M2 claim.

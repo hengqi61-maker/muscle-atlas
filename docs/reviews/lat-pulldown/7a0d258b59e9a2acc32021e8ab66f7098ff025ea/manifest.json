@@ -1,0 +1,130 @@
+{
+  "commit": "7a0d258b59e9a2acc32021e8ab66f7098ff025ea",
+  "anatomyGlbSha256": "56b3ca231dda14100d64233758da2116282547b472afd4fc9b24160f345fee05",
+  "exercise": "lat-pulldown",
+  "variant": "seated-front-pulldown",
+  "video": "full-rep.webm",
+  "trajectoryCsv": "joint-trajectories.csv",
+  "frames": {
+    "front": {
+      "0": "frames/front/0.png",
+      "25": "frames/front/25.png",
+      "50": "frames/front/50.png",
+      "75": "frames/front/75.png",
+      "100": "frames/front/100.png"
+    },
+    "side": {
+      "0": "frames/side/0.png",
+      "25": "frames/side/25.png",
+      "50": "frames/side/50.png",
+      "75": "frames/side/75.png",
+      "100": "frames/side/100.png"
+    },
+    "back": {
+      "0": "frames/back/0.png",
+      "25": "frames/back/25.png",
+      "50": "frames/back/50.png",
+      "75": "frames/back/75.png",
+      "100": "frames/back/100.png"
+    },
+    "grip": {
+      "0": "frames/grip/0.png",
+      "25": "frames/grip/25.png",
+      "50": "frames/grip/50.png",
+      "75": "frames/grip/75.png",
+      "100": "frames/grip/100.png"
+    }
+  },
+  "reviews": {
+    "biomechanics": {
+      "file": "reviews/round1/biomechanics.md",
+      "session": "/root/blind_biomechanics_7a0d258",
+      "sha256": "4f5d1ca87d3b4a5b92fe13a8bf620522a2c4c931904475591ce203b6faf80310",
+      "blindness": "reviewer declared no historical or cross-review access",
+      "verdict": "FAIL"
+    },
+    "visual": {
+      "file": "reviews/round1/visual.md",
+      "session": "/root/blind_visual_7a0d258",
+      "sha256": "dca2786f8e133238a09fd5898dda9fbd96a4cb0d918f1aa896c97ee77cf0b8fb",
+      "blindness": "reviewer declared no historical or cross-review access",
+      "verdict": "FAIL"
+    },
+    "exerciseScience": {
+      "file": "reviews/round1/exerciseScience.md",
+      "session": "/root/blind_science_7a0d258",
+      "sha256": "445176caf000ecdabd064bb6a84b1c9275048ecb63bc71a4cca3b8ab5fd607df",
+      "blindness": "reviewer declared no historical or cross-review access",
+      "verdict": "PASS"
+    },
+    "softwareQa": {
+      "file": "reviews/round1/softwareQa.md",
+      "session": "/root/blind_software_7a0d258",
+      "sha256": "8eccfd925454bec06ea74cba2548aee8d3368fbf9873c1a3fa2af1a64462c620",
+      "blindness": "reviewer declared no historical or cross-review access",
+      "verdict": "INCONCLUSIVE"
+    }
+  },
+  "sampleCount": 121,
+  "stage": "M1",
+  "reworkCycles": 0,
+  "producerSessions": [
+    "legacy-single-agent-unrecorded",
+    "/root"
+  ],
+  "userApproval": "pending",
+  "readyForMerge": false,
+  "defects": [
+    {
+      "id": "BLIND-B01",
+      "severity": "P1",
+      "status": "UNRESOLVED",
+      "description": "stationary rotator cuff attachments"
+    },
+    {
+      "id": "BLIND-B02",
+      "severity": "P1",
+      "status": "UNRESOLVED",
+      "description": "foot platform penetration"
+    },
+    {
+      "id": "BLIND-V01",
+      "severity": "P1",
+      "status": "UNRESOLVED",
+      "description": "detached anatomy fragment"
+    }
+  ],
+  "evidenceHashes": {
+    "full-rep.webm": "590f9c8eed5165c39409a7c84fe2c481583e6adf6a6052853051281c99838176",
+    "joint-trajectories.csv": "ff7c9ceaffa90f0bf34423ae79f90573dde25410ed52e90855faf05a9b2beb91",
+    "transforms.json": "848c64260573ad8bb14d63555b09fe1e7c892a57d87db7520e856d57077723e5",
+    "mesh-kinematics.json": "3290362d153575b9b1acda6163b0991f21ef87a79d16d157fd0d4d2e577f39ee",
+    "trajectory-check.json": "78f181580a2db79efcb5f5c5e83fcc6b01c5da500fe63c7e5784e66dcc08031e",
+    "first-report-freeze.json": "563fdc31ce4e4d417dd5a8ccb79eb6442ff5a75f72db32e560c51fd6e14deb1b",
+    "capture-metadata.json": "35343bc7ec48424c26f2373f348b8493388bda7d469a2892bad8d5720248c555",
+    "frames/front/0.png": "6bb758b1305eaac862180dc355e2b9f090324dda1caae64c0be13bfcbf633939",
+    "frames/front/25.png": "d250eac9bf0a97f86cc2455ce0f212e55b9fc4cc7c4c6d1597bf295aa998baa4",
+    "frames/front/50.png": "a6fc81a1c711d6c51da5be273ce5dcbaaba887a7d6e7f80339c4ded947c60096",
+    "frames/front/75.png": "0b98e459010ae332c3c392deee2c6d689bbcfdad1ed2a15aafed423bf4a89cb5",
+    "frames/front/100.png": "a375a4d60db4293480b397b03e3f0fd43954dd0a979a72c4fb4efd9d1b329b1b",
+    "frames/side/0.png": "e6fb31a56770c5630d9b85a330452c99718fc8fd39bd94a9c02004a2ccb23a23",
+    "frames/side/25.png": "6e5165a11b918ce89aa3cd3990487c7429951d4a227d197b87a55ba1977beb1a",
+    "frames/side/50.png": "0c807cf42f3d952b84fe217453b0468e14c7c8fc7c336b2afa71213f07d270d8",
+    "frames/side/75.png": "a1f95aa7fb32a3e8ee8a4fa74edfd7687d9c5623a7de492083a334baa32aae7e",
+    "frames/side/100.png": "97c50591c07e7ad2bbc6b4fd50a185b1861df3b5ec6d680fd9bc509a01de951e",
+    "frames/back/0.png": "74422603d5c21e75585fda077543997b785bf5b4648a5dc26a3e36817b5f9207",
+    "frames/back/25.png": "9ce0cbe137cc3fc697ee58ab41fa37a78eaef3f1e4039c557d6548c9ae45d223",
+    "frames/back/50.png": "90ecff70f955746379825d1ee84f855cadd2e00b6acab0d9d6d8e072387c8d54",
+    "frames/back/75.png": "f0e0c8e7d1e6cd94b75afb1f083145c01c3c12f960635b5edd2a2509d169cc5d",
+    "frames/back/100.png": "ba088d03d63ae9ca27d466ab1b002197ff8777fff968a244d5278ff507b337c6",
+    "frames/grip/0.png": "553ff8586abf717850e9be311beb024cc43597020494126f897799d44fbe910b",
+    "frames/grip/25.png": "98726797b081d0c309944ab97473dc2ce2fd26c407e9128c140389c378b36301",
+    "frames/grip/50.png": "6f7f46882887cad81a22a9e91fe377ae595a9a8a9c7fc25909d6c3c9791b0b3b",
+    "frames/grip/75.png": "796e946a08d832fca041a074d2eb035f17f46f7e5797219e76f4954ae5ef2d02",
+    "frames/grip/100.png": "2854947c040156f59baf832dc908285e2b68fb93c8c194b45be1d8bf82910302",
+    "reviews/round1/biomechanics.md": "4f5d1ca87d3b4a5b92fe13a8bf620522a2c4c931904475591ce203b6faf80310",
+    "reviews/round1/visual.md": "dca2786f8e133238a09fd5898dda9fbd96a4cb0d918f1aa896c97ee77cf0b8fb",
+    "reviews/round1/exerciseScience.md": "445176caf000ecdabd064bb6a84b1c9275048ecb63bc71a4cca3b8ab5fd607df",
+    "reviews/round1/softwareQa.md": "8eccfd925454bec06ea74cba2548aee8d3368fbf9873c1a3fa2af1a64462c620"
+  }
+}

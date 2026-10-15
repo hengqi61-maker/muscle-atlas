@@ -126,3 +126,101 @@ Title: BROWSER-TEST-ISOLATION
 - Compared shoulder-girdle plus attachment-aware skinning (selected), appearance-only bulge keys (cannot repair attachment), full calibrated musculoskeletal simulation (requires unavailable subject/load inputs). No workaround introduced; implementing structural rig correction. Original-hand preference remains mandatory. Verification will measure actual Three.js deformed vertices, shoulders and contacts, plus back/side screenshots.
 - Structural correction verified in exported GLB/Three runtime:16bones,467source meshes; lat upper insertion mean displacement92.46mm, lower sampled lumbar origin0mm, shoulder excursion41.46mm;121frames max palm marker error0.0284mm, hand-axis error0.000048degrees;Validator0errors/0warnings. This resolves the observed missing back skinning/fixed shoulder cause, not physiological calibration.
 - MODEL-RIG remains DEFERRED for uncalibrated shoulder motion, linear-blend/local soft tissue artifacts and original open-hand grasp. Evidence/parameters/alternatives: docs/pulldown-motion-review.md; next: localized weight/pose correction and attachment/collision QA; reopen upon visible distortion or calibrated motion-data availability. No ACCEPTED_RISK. No new workaround.
+
+## WD-2026-10-15-0008
+Status: RESOLVED
+Title: M0-AUDIT-CAPTURE
+- Original failure/repro: frozen a2864e4 production preview5181, run artifact capture.mjs; page.evaluate throws R3F current root not found, no frames generated. Log preserved as logs/capture-initial-failure.log. Application baseline tests pass; this is audit harness failure.
+- Cause: Canvas rootState ref is initial snapshot; controls is populated later in current store, so testing ref.controls directly rejects it. Need current store via ref.get().
+- Temporary workaround: none; no substitute images or alternate renderer. Candidate paths: read live store through rootState.get() (selected, camera-only instrumentation); UI-only orbit gestures (less reproducible cameras); injecting application exports (would alter audited build, rejected). No production changes.
+- Impact: blocks M0 evidence completion and reviewer visual verdict until exact production capture succeeds. Next: durable live-state accessor fix; rerun exact script and verify source hashes unchanged.
+- Follow-up same capture path: all50frames+browser measurements succeeded, but Playwright native video context failed because its version-specific ffmpeg dependency is absent. Existing system ffmpeg is separate. Compare installing pinned Playwright ffmpeg dependency (selected exact supported path) versus CDP screencast+system encoder (alternate capture path, unnecessary). Install required runtime dependency without changing project lock/source, then rerun entire original capture from fresh browser and require full video.
+
+- Durable verification forWD0008: live get() accessor plus installed pinned Playwright ffmpeg1013; exact full capture.mjs rerun in freshbrowser exits0,50productionframes,27actualscene seek samples,47.92s native continuous video. No alternate renderer, no asset/source edits; seven frozen file hashes rechecked unchanged. Failure logs preserved in bundle. No implementation workaround or bypass remains.
+- M1 audit only, MODEL-RIG remains DEFERRED: independent fixed-SHA reviews confirmed displaced bilateral flexor pollicis brevis and foot-platform penetration; additional cable/grasp findings in docs/reviews/lat-pulldown/a2864e4bdb8716b6fd3bf21e2bd459eac233887c/summary.md. No repair attempted, no risk accepted. Next/reopening trigger: owner approves M2 scope; trace original source transforms/weights and measure actual contact before edits. Audit completion does not close implementation defects.
+
+## WD-2026-10-15-0009
+Status: DEFERRED
+Title: CODEX-CLI-BINARY
+- Reproduction: nvm@24.15.0/bin/codex --version and --help fail ENOENT missing packaged native binary. No install/security setting changes.
+- Impact: cannot verify custom-role auto-discovery through broken CLI. Desktop collaboration tools actually spawn isolated contexts successfully.
+- Paths compared: repair global CLI/native optional dependency (outside current review scope); actual working desktop subagents plus role instructions and static configuration validation (chosen, not CLI repair).
+- Next/reopen: repair correct CLI install when CLI execution is required and scoped. No accepted risk; no CLI-runtime success claim.
+
+## WD-2026-10-15-0010
+Status: DEFERRED
+Title: OFFICIAL-DOCS-FETCH
+- Search succeeded but direct official subagent page open twice returned tool transport connection failed. No third-party mirror used as authoritative evidence.
+- Impact: latest custom-role schema documentation not fetched through this tool yet; preserve uncertainty. Compare official URL via system-proxy-aware urllib versus local packaged docs/schema; use only verified official bytes or avoid speculative config edits.
+- Next/reopen: official retrieval route test; do not pretend current schema confirmed by search snippets. Primary blind review can proceed using actual desktop child agents.
+
+### Exact7a0d258 blind audit outcome
+- Latest user instruction superseded prior M2 approval; rigging agent interrupted before production edits. Current task M0/M1 only. Four NEW fork-none reviewers blocked from old findings until own reports frozen; ledger in exactbaseline artifactpacket.
+- Working desktop actualsubagents reused, no pretend CLI loader. WD0009 remainsDEFERRED (global CLI native binary absent); WD0010 remainsDEFERRED (official page/tool transport and urllib TLS failure, no speculative schema changes). TOML syntax/required role fields verified with Python3.12; not runtime auto-discovery. Root-cause alternative compared already, no systeminstall/securityconfig changed. Reopen when CLI/docs route required.
+- No new product workaround. Existing MODEL-RIG remainsDEFERRED for actualanatomy/contact/uncalibrated motion; blind reports verify platform/cuff/fragment issues; M2 notstarted and no risk accepted. Workflow gate intentionally rejects release pending owner and unresolvedP1; this negative test is expected, not a workaround.
+
+- System-level WD0009/WD0010 also recorded in ~/.codex/state/workaround-debt.md as WD-GLOBAL-2026-10-15-CLI and WD-GLOBAL-2026-10-15-DOCS; project entries retain task linkage. BothDEFERRED, no product fallback or tool-resolution claim.
+
+## WD-2026-10-15-0011
+Status: DEFERRED
+Title: M2-ANATOMICAL-ATTACHMENTS-CONTACT
+- Scope/owner: explicit latest approval for B01/B02/V01 and K02 measurement; no main merge, no Face Pull, source hands preserved. Baseline exact7a0d258 and first reports immutable.
+- Reproduction/evidence: original eight cuff meshes100%Thorax/static while shoulder moves; foot-platform397interior vertices per side; floating original thumb-muscle fragments visible. Baseline mesh-kinematics and videos preserved in exact7a0 packet.
+- Earliest causes found by maker: absent cuff branches fall through attach=0; two flexor pollicis brevis SOURCE labels disagree with source spatial side, name-based assignment chooses opposite hand; foot/platform geometry was placed without evaluated source-foot support constraint.
+- Compared durable paths: explicit named cuff attachment-region weights vs handpainted per-mesh landmarks; explicit source-ID spatial-side anomaly correction vs rewriting source labels/auto distance heuristics; derive support height from actual posed feet vs alter fixed-length leg IK. Selected source-preserving explicit cuff origin/insertion blend, documented two-ID binding correction, and measured support geometry if placement fits machine. No source deletion/hiding/vertex folding allowed.
+- Temporary workaround: none newly introduced. Existing illustrative LBS/uncalibrated anatomy limits retained and must not be relabeled physiology. Maker corrections require all-vertex/source-ID measurements and four independent new-candidate reviews before closing P1.
+- Next: newGLB/hash, real endpoint/edge and foot-solid tests, original hand surface/frame contact, paired before/after images/video. Status OPEN until review or explicit bounded DEFERRED outcome.
+
+- Final second-cycle disposition2026-10-16: actual GLB1e0af33c and candidate32315eb reviewed by four fresh contexts. All467 source base triangles preserved. Cuff freezing and severe-collapse alarms cleared, support sampled intersections cleared, but K02 deep original-thumb/bar penetration remains verified P1; attachment landmarks and axillary tissue attribution remain INCONCLUSIVE. Two automatic cycles exhausted; no full M2 completion/accepted risk. Evidence artifacts/m2/review-final-1e0af33 + versioned final reports. Next: owner-scoped original-hand contact/rig feasibility, source-labelled tissue attribution and attachment calibration. Reopen only on new approved repair scope; rerun full evidence and independent reviews.
+
+## WD-2026-10-15-0012
+Status: DEFERRED
+Title: M2-PLAYBACK-PERFORMANCE
+- Original failures: nonloop at4s cannot replay; continuous per-frame exact sphere traversal and redundant469shared skeleton updates even paused. Controlled old production matrix measures~15–16actualrenders/sec and~full mainthread occupation, not just rAF proxy.
+- Paths compared: shared endpoint transition vs separate restart control; dirty-pose exact sphere updates vs conservative per-influence bone bounds vs lazy per-raycast bounds/demand rendering. Selected shared pure playback transition, dirty pose/cache+renderer-owned skeleton upload, mathematically conservative pulldown bounds from positive normalized LBS influence boxes. Curl morph retains exact bounds.
+- No skipped picking or substitute geometry. All source actual vertices must remain enclosed, raycasts and seek/style tested. CPU/performance after must use matched controlled conditions; GPU timer unavailable is not a fake PASS.
+- Maker initial checks: build,11unit tests and actual Chrome endpoint/pose containment/picking pass. Independent new-asset review and paired profiling still required. Status OPEN until those results; no accepted-risk approval inferred.
+
+
+- Final second-cycle disposition2026-10-16: Q01 endpoint replay permanently corrected and actual five-test Chrome suite PASS, unit13/quality26 PASS. Exact current morph bounds and dirty-pose source tests exercised; no stale-bounds bypass. Remaining Q02 workload-matched new CPU/GPU comparison DEFERRED because latest owner scope excludes specialty FPS engineering; old24-trial baseline preserved, current paused rAF is only smoke observation. Reopen controlled benchmark if owner restores that scope or severe runtime regression occurs; no performance PASS/medical quality claim.
+
+## WD-2026-10-15-0013
+Title: Windows handoff unavailable
+Status: DEFERRED
+- Original path: `ssh -o BatchMode=yes -o ConnectTimeout=8 win-codex` to deliver asset locations; exited255, `192.168.1.108 port22: Host is down`. Desktop list_threads contained no Windows task.
+- Evidence preserved in session command output. No Windows writes or message delivery occurred.
+- Temporary alternative: commit retrievable `docs/handoff/windows-assets.md` to the existing GitHub M2 branch; this preserves information but does not repair connectivity or prove receipt.
+- Paths compared: existing authorized desktop task message (no matching task), direct existing SSH host (offline), repository handoff (available, selected for preservation). No network/security changes or repeat reconnection attempts.
+- Next/reopen: when Windows host reconnects or its task becomes visible, send this handoff and confirm delivery.
+
+## WD-2026-10-15-0014
+Title: M2 agents interrupted by usage limit
+Status: DEFERRED
+- Three active maker/test turns returned account usage-limit errors. No independent review or successful repair may be inferred.
+- Current tracked work checkpointed and pushed; unfinished browser test expansion explicitly marked unverified. No replacement single-context expert review, alternate account, paid credits or scope bypass used.
+- Paths compared: resume same authorized makers after quota recovery; preserve and hand off existing version now. Selected preservation now, resume makers when capacity returns.
+- Reopen: account capacity restored; rerun exact maker/test tasks, freeze new candidate, perform four fresh independent reviews before claiming M2 completion.
+
+## WD-2026-10-16-0015
+Status: RESOLVED
+Title: M2 runtime JSON import, mount readiness and camera matrix instrumentation
+- Original failure: `npx playwright test tests/browser/runtime.spec.ts tests/browser/supports.spec.ts` aborted during test collection: JSON module needs import attribute type json. No browser checks ran. New supports test used Vite-style JSON import under native Node loader.
+- Paths compared: standard JSON import attribute (chosen minimal native ESM fix) versus fs read/parse plus separate type import (more test boilerplate). No workaround or skipped check introduced. Exact original command will be rerun after adding explicit import attribute; evidence in maker session. Impact limited to test collection; production build and13unit checks already pass.
+- Exact rerun passed runtime but support test exposed a second new-test readiness defect: loading DOM can be absent before Suspense GLB mount, so SeatPad lookup ran against previous anatomy scene. Durable paths: response/UI waits (insufficient proof of mounted scene) versus actual named scene readiness assertion (selected). Added expect.poll actual SeatPad presence; no arbitrary sleep/retry masking product errors. Original two-test command rerun required.
+- Oct16 rerun: runtime PASS; all support geometry/proxy/visibility checks completed, but same-evaluation camera projection test failed with maxX1.98885. Cause: controls.update changes camera pose, while project uses matrixWorldInverse from prior render. Corrected instrumentation by camera.updateMatrixWorld(true) before projection, rather than weakening viewport threshold or enlarging camera blindly. Exact two-test command rerun required.
+- Durable verification Oct16: exact original two-test command PASS2/2 in34.1s; fresh clean full Playwright suite PASS5/5 in43.0s. BuildPASS/unit13PASS. Original import, mounted-scene readiness and camera projection paths all exercised without skipped assertions or relaxed thresholds. Evidence artifacts/m2/round2-runtime-maker/{exact-original-browser.log,full-browser.log,build.log,unit.log,maker-summary.md}. No retained workaround.
+- Ledger checker limitation: stock check-workaround-debt.sh rejects existing historical ledger headings/status structure before ID selection; no global/other task entries were modified. This task entry has exactly one terminal RESOLVED status and verified original/full-suite evidence above; checker success is not claimed.
+
+
+## WD-2026-10-16-0016
+Status: RESOLVED
+Title: Project debt ledger parser compatibility
+- Original reproduction: stock root-cause-debugging check-workaround-debt.sh --scope project --id WD-2026-10-16-0015 --json exits2, malformed entry, before ID filtering. Root reproduced after maker reported same.
+- Cause: inline titles on WD0013/0014 headings prevent strict documented heading recognition; their Status lines are then counted under WD0012. Semantic statuses are valid.
+- Compared: normalize project heading syntax preserving all text and statuses (selected local durable fix); change global skill parser to accept arbitrary headings (broader unneeded maintenance); manual status inspection (temporary fallback, not selected as completion proof). No production workaround introduced.
+- Correction: move only inline heading titles to separate Title fields; do not alter historical review reports or semantic debt outcomes. Rerun original failing stock checker before closure.
+- Durable verification: exact original stock checker now exits0 and reports WD0015 RESOLVED. Only heading presentation changed; same semantic debt content and original reports preserved.
+
+Oct16 follow-up WD0013: authorized wsl-codex endpoint now192.168.1.105:2222 was checked once with existing strict host verification; connection timed out. No message delivered, no remote/network modifications. GitHub handoff remains the retrievable alternative, receipt unconfirmed.
+
+Oct16 follow-up WD0014: capacity returned and exact maker/test paths resumed, followed by four new final independent reviews. Quota limits themselves are normal external capacity constraints, not repaired by this project; future limit risk remains deferred. Current results are actual executed evidence, not inferred from resumed capacity.

@@ -6,6 +6,7 @@ import {clone} from 'three/addons/utils/SkeletonUtils.js';
 import {useAtlas} from '../stores/useAtlas';
 import {appearance,resolveState} from './materials';
 import {advance,DURATION} from './animation';
+import {createSkinnedBounds} from './skinnedBounds';
 import {byMesh} from '../data/catalogue';
 import LatPulldownMachine from './LatPulldownMachine';
 import {latPulldownAnatomyRelations} from '../data/latPulldown';
@@ -26,6 +27,13 @@ function Anatomy({model}:{model:'anatomy'|'rigged'|'pulldown'}){
   }});
   return object;
  },[scene,animated]);
+ const skins=useMemo(()=>{
+  const meshes:THREE.SkinnedMesh[]=[];
+  root.traverse(o=>{if(o instanceof THREE.SkinnedMesh)meshes.push(o);});
+  return meshes;
+ },[root]);
+ const conservativeBounds=useMemo(()=>seated?skins.map(createSkinnedBounds):null,[skins,seated]);
+ const appliedPose=useRef<{time:number;morphMode:string;morphWeight:number}|null>(null);
  const mixer=useMemo(()=>{
   const value=new THREE.AnimationMixer(root);
   return value;
@@ -47,13 +55,19 @@ function Anatomy({model}:{model:'anatomy'|'rigged'|'pulldown'}){
   }});
   return ()=>materials.forEach(m=>m.dispose());
  },[root,style,selected,hovered,hidden,animated,mode,seated]);
- useEffect(()=>{if(animated){if(!animations.length)throw new Error('动画资源缺少 clip');const action=mixer.clipAction(animations[0]);action.setLoop(THREE.LoopOnce,1);action.clampWhenFinished=true;action.reset().play();}return ()=>{mixer.stopAllAction();mixer.uncacheRoot(root);};},[mixer,root,animated,animations]);
+ useEffect(()=>{appliedPose.current=null;if(animated){if(!animations.length)throw new Error('动画资源缺少 clip');const action=mixer.clipAction(animations[0]);action.setLoop(THREE.LoopOnce,1);action.clampWhenFinished=true;action.reset().play();}return ()=>{mixer.stopAllAction();mixer.uncacheRoot(root);};},[mixer,root,animated,animations]);
  useFrame(()=>{if(!animated)return;
-  const s=useAtlas.getState();const action=mixer.clipAction(animations[0]);action.paused=false;action.enabled=true;mixer.setTime(Math.min(s.time,DURATION));root.updateMatrixWorld(true);
-  root.traverse(o=>{if(o instanceof THREE.SkinnedMesh){
+  const s=useAtlas.getState();const time=Math.min(s.time,DURATION);const previous=appliedPose.current;
+  if(previous?.time===time&&previous.morphMode===s.morphMode&&previous.morphWeight===s.morphWeight)return;
+  const action=mixer.clipAction(animations[0]);action.paused=false;action.enabled=true;mixer.setTime(time);root.updateMatrixWorld(true);
+  for(const [index,o] of skins.entries()){
    if(s.morphMode==='manual'&&o.morphTargetInfluences&&o.morphTargetDictionary?.BicepsBulge!==undefined)o.morphTargetInfluences[o.morphTargetDictionary.BicepsBulge]=s.morphWeight;
-   o.skeleton.update();o.computeBoundingSphere();
-  }});
+   // Raycasting needs bounds of the current deformed vertices; refresh every changed pose,
+   // including paused seeks and independent morph edits. WebGLRenderer updates
+   // each shared skeleton once per render, so no per-mesh skeleton upload here.
+   if(conservativeBounds)conservativeBounds[index]();else o.computeBoundingSphere();
+  }
+  appliedPose.current={time,morphMode:s.morphMode,morphWeight:s.morphWeight};
  });
  const pick=(e:ThreeEvent<PointerEvent>|ThreeEvent<MouseEvent>,hover=false)=>{
   if(!e.object.userData.entry)return;e.stopPropagation();
