@@ -17,3 +17,6 @@
 
 ## 网络与工具证据
 curl raw GitHub 连接 reset；urllib Pages 全文件可用并匹配公开 API blob。下载管线已有可复现验证方式；系统 curl/raw 网络问题延期排查，未修改代理。Blender MCP 服务固定工作区在另一个工程，因此脚本读取本工程绝对输入并生成本工程 JSON；其 saveTo 输出在服务工作区，交付路径需显式复制。后续用本工程独立 bpy CLI 脚本避免服务工作区耦合。
+
+## 2026-10-15 后续更新（覆盖上文待试验状态）
+单臂两骨、JOINTS/WEIGHTS、独立肌肉形态键和4秒GLB Clip已生成并在实际Three.js场景验证；原型已从运行时移除。当前证据与剩余质量问题见rig-verification.md。可重建脚本build-curl-rig.py从项目根路径取输入；MCP每次原生后台进程执行该脚本，无跨工程输出路径依赖。原始静态atlas仍保留，未对其宣称自带rig。

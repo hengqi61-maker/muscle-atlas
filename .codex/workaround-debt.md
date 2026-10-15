@@ -54,3 +54,22 @@ Title: MODEL-RIG
 - Reason deferred: actual anatomical rigging is next technical stage, not supplied by free asset.
 - Next action: single-arm two-bone weight/shape-key experiment and GLB AnimationMixer verification per docs/model-pipeline.md.
 - Reopening trigger: start P2 true-rig milestone. No accepted-risk approval or claim of complete dynamic anatomy.
+
+### Reopened 2026-10-15
+- User requested both investigations. Original conclusions retained above; no resolution claimed until exact-path and target-renderer evidence.
+- Rig paths reconsidered: actual mesh manual two-bone skinning+morph versus rigid mesh parenting versus Rigify auto-weights. Choose manual localized weights, preserving source topology, IDs and attachment endpoints; morph is illustrative, not physiological simulation.
+
+### WD-2026-10-15-0001 · Reopened investigation outcome
+- Observed controllable cause: no proxy env; urllib discovers macOS system HTTPS proxy, unconfigured curl does not use it. Keeping curl+original raw URL constant and specifying the discovered per-process proxy gives HTTP200 twice (25,133,568bytes,2.761s/1.079s), both SHA256 match. Exact unqualified raw command now exits28 timeout/0bytes, not historical35 reset. No evidence identifies the network device behind historical reset.
+- Paths compared: global curl/env/network reconfiguration (unnecessary cross-project impact); explicit per-command proxy (verified and documented); project urllib/platform proxy + verified offline cache (selected).
+- Project reliability permanently improved: fixed SHA256, cache-valid zero requests, max3 attempts bounded backoff, trustworthy206 range only, final hash then atomic replacement. Partial/retry logs preserved; retries are explicitly recovery, not a route fix.
+- Verification:8Python tests, real fresh-directory downloads first attempt for both files, separate offline process passes; docs/download-diagnostics.md has commands and route evidence.
+- Remaining impact/status: DEFERRED only for original unqualified curl/direct connectivity and historical reset origin. Application loads bundled cache offline; no global configuration changed. Next/reopen: if required raw CLI operation or project importer fails, investigate direct route with explicit scope rather than silently adding retries. This does not block single-arm rig development.
+
+### WD-2026-10-15-0005 · Reopened investigation outcome
+- Original ellipsoid hierarchy workaround removed from runtime. Built from unchanged source SHA256:467 anatomical Mesh +3dumbbell Mesh;1skin shared by47SkinnedMesh, UpperArm/Forearm,44anatomical meshes weighted. Two independent biceps morphs and baked elbow corrective shape targets; one4second clip played via actual Three.js AnimationMixer. No Drivers/fake skin or pre-rendered animation.
+- Fixes verified:frame0..120 removes measured1/30second export offset; unparented skinned nodes retain modifier/bind, removes47Validator warnings; skeletal clone, dynamic bounds and StrictMode action lifetime support actual paused mesh picking.
+- Paths: rigid-parent (doesn't solve tissue deformation), Rigify/automatic weights (unverified attachment), manual two-bone localized weights (chosen); for pinching compare nativeDQ(nonportable currentGLB), custom runtime shader(extra renderer coupling), baked pose-space corrections(portable,chosen). Corrections improve95th-percentile stretch but do not eliminate local compression.
+- Evidence:KhronosValidator0errors0warnings; actualThree skeleton angles0/45.003/90.000/120.000deg,normalized JOINTS/WEIGHTS,929mixed brachioradialis vertices,independent morph displacement;2Chrome workflows and0/45/90/120screenshots. Source/script/report paths:docs/rig-verification.md anddocs/evidence/curl-*.json.
+- Remaining cause/impact:estimated landmarks/linear blend weighting and independent source muscle geometry are not calibrated soft-tissue mechanics. Of12000triangle-edge observations for one spanning muscle,105at90deg and57at120deg compress below20%rest length;min~6%. No claim of full continuity/collision quality,skin layer or physiological bulge. Hand grip remains source/rest shape.
+- Status:DEFERRED for quality/attachment/contact/grip; minimum rig/GLB/runtime pipeline achieved, not complete dynamic anatomy. Next action:localized weight painting and tendon/contact landmarks,pose corrective evaluation or localretopology,closed-grip pose. Reopen at nextanimation-quality task or visible distortion; rerun four-angle front/side/back and numeric compression measures. NoACCEPTED_RISK or hidden skipped check.

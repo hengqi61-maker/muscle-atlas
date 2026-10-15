@@ -1,0 +1,80 @@
+{
+  "sourceSha256": "6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f",
+  "sourceMeshes": 467,
+  "armMeshes": 44,
+  "bicepsMeshes": [
+    "long head of left biceps brachii",
+    "short head of left biceps brachii"
+  ],
+  "riggedMeshes": [
+    "abductor digiti minimi of left hand",
+    "flexor digiti minimi brevis of left hand",
+    "flexor retinaculum of left wrist",
+    "humeral head of left flexor carpi ulnaris",
+    "humeral head of left pronator teres",
+    "interosseous membrane of left forearm",
+    "lateral head of left triceps brachii",
+    "left abductor pollicis brevis",
+    "left abductor pollicis longus",
+    "left anconeus",
+    "left brachialis",
+    "left brachioradialis",
+    "left coracobrachialis",
+    "left extensor carpi radialis brevis",
+    "left extensor carpi radialis longus",
+    "left extensor carpi ulnaris",
+    "left extensor carpi ulnaris (2)",
+    "left extensor digiti minimi",
+    "left extensor digitorum",
+    "left extensor indicis",
+    "left extensor pollicis brevis",
+    "left extensor pollicis longus",
+    "left flexor carpi radialis",
+    "left flexor digitorum profundus",
+    "left flexor digitorum superficialis",
+    "left flexor digitorum superficialis (2)",
+    "left flexor pollicis longus",
+    "left opponens pollicis",
+    "left palmaris longus",
+    "left pronator quadratus",
+    "left supinator",
+    "long head of left biceps brachii",
+    "long head of left triceps brachii",
+    "medial head of left triceps brachii",
+    "oblique head of left adductor pollicis",
+    "opponens digiti minimi of left hand",
+    "set of dorsal interossei of left hand",
+    "set of lumbricals of left hand",
+    "set of palmar interossei of left hand",
+    "short head of left biceps brachii",
+    "superficial head of left flexor pollicis brevis",
+    "transverse head of left adductor pollicis",
+    "ulnar head of left flexor carpi ulnaris",
+    "ulnar head of left pronator teres"
+  ],
+  "bones": [
+    "UpperArm",
+    "Forearm"
+  ],
+  "landmarks": {
+    "shoulder": [
+      0.17299999296665192,
+      -0.06700000166893005,
+      1.3049999475479126
+    ],
+    "elbow": [
+      0.21299999952316284,
+      -0.05999999865889549,
+      1.034000039100647
+    ],
+    "wrist": [
+      0.23100000619888306,
+      -0.10499999672174454,
+      0.8019999861717224
+    ]
+  },
+  "duration": 4,
+  "poseCorrectiveMeshes": 22,
+  "morph": "24% radial artistic envelope, taper to zero at endpoints; not physiological",
+  "scope": "left arm, original independent meshes; rest of body static"
+}

@@ -1,0 +1,245 @@
+{
+  "file": "public/models/anatomy-curl.glb",
+  "validator": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "skinnedMeshes": 47,
+  "joints": [
+    "UpperArm",
+    "Forearm"
+  ],
+  "clips": [
+    {
+      "name": "Scene",
+      "duration": 4,
+      "tracks": [
+        "humeral_head_of_left_flexor_carpi_ulnaris.morphTargetInfluences",
+        "humeral_head_of_left_pronator_teres.morphTargetInfluences",
+        "lateral_head_of_left_triceps_brachii.morphTargetInfluences",
+        "left_anconeus.morphTargetInfluences",
+        "left_brachialis.morphTargetInfluences",
+        "left_brachioradialis.morphTargetInfluences",
+        "left_extensor_carpi_radialis_brevis.morphTargetInfluences",
+        "left_extensor_carpi_radialis_longus.morphTargetInfluences",
+        "left_extensor_carpi_ulnaris.morphTargetInfluences",
+        "left_extensor_digiti_minimi.morphTargetInfluences",
+        "left_extensor_digitorum.morphTargetInfluences",
+        "left_flexor_carpi_radialis.morphTargetInfluences",
+        "left_flexor_digitorum_profundus.morphTargetInfluences",
+        "left_flexor_digitorum_superficialis.morphTargetInfluences",
+        "left_palmaris_longus.morphTargetInfluences",
+        "left_supinator.morphTargetInfluences",
+        "UpperArm.position",
+        "UpperArm.quaternion",
+        "UpperArm.scale",
+        "Forearm.position",
+        "Forearm.quaternion",
+        "Forearm.scale",
+        "long_head_of_left_biceps_brachii.morphTargetInfluences",
+        "long_head_of_left_triceps_brachii.morphTargetInfluences",
+        "medial_head_of_left_triceps_brachii.morphTargetInfluences",
+        "short_head_of_left_biceps_brachii.morphTargetInfluences",
+        "ulnar_head_of_left_flexor_carpi_ulnaris.morphTargetInfluences",
+        "ulnar_head_of_left_pronator_teres.morphTargetInfluences"
+      ]
+    }
+  ],
+  "blendedVertices": 934,
+  "independentMorphDisplacement": 0.0004920576305974451,
+  "posedRaycastHits": 2,
+  "snapshots": [
+    {
+      "angle": 0,
+      "measuredAngle": 0,
+      "time": 0,
+      "morphWeights": [
+        0,
+        0
+      ],
+      "upperPosition": [
+        0.1730000227689743,
+        1.3049999475479126,
+        0.06700000166893005
+      ],
+      "elbowPosition": [
+        0.2130000410758383,
+        1.0339999112168998,
+        0.05999996696458785
+      ],
+      "probeVertex": [
+        0.27814104431113856,
+        0.8178939262995251,
+        0.11397694557357857
+      ],
+      "compressedEdges": 0,
+      "edgesMeasured": 12000,
+      "compressedSamples": [],
+      "edgeRatio": {
+        "min": 1,
+        "p50": 1,
+        "p95": 1,
+        "max": 1
+      }
+    },
+    {
+      "angle": 45,
+      "measuredAngle": 45.00285780171432,
+      "time": 0.8391387534896676,
+      "morphWeights": [
+        0.3750235700312627,
+        0.3750235700312627
+      ],
+      "upperPosition": [
+        0.1730000227689743,
+        1.3049999475479126,
+        0.06700000166893005
+      ],
+      "elbowPosition": [
+        0.2130000410758383,
+        1.0339999112168998,
+        0.05999996696458785
+      ],
+      "probeVertex": [
+        0.27814104339698686,
+        0.9193669166387555,
+        0.25098317834523676
+      ],
+      "compressedEdges": 0,
+      "edgesMeasured": 12000,
+      "compressedSamples": [],
+      "edgeRatio": {
+        "min": 0.5405773127054309,
+        "p50": 0.9999999933554141,
+        "p95": 1,
+        "max": 1.1377099016596046
+      }
+    },
+    {
+      "angle": 90,
+      "measuredAngle": 90.00000762108975,
+      "time": 1.3333333333333333,
+      "morphWeights": [
+        0.7499999725762486,
+        0.7499999725762486
+      ],
+      "upperPosition": [
+        0.1730000227689743,
+        1.3049999475479126,
+        0.06700000166893005
+      ],
+      "elbowPosition": [
+        0.2130000410758383,
+        1.0339999112168998,
+        0.05999996696458785
+      ],
+      "probeVertex": [
+        0.27814104794947686,
+        1.0879769247160287,
+        0.2761059608646004
+      ],
+      "compressedEdges": 105,
+      "edgesMeasured": 12000,
+      "compressedSamples": [
+        {
+          "restLength": 0.0017826184392064788,
+          "ratio": 0.165733509496754
+        },
+        {
+          "restLength": 0.0018092280367400274,
+          "ratio": 0.19329314622324825
+        },
+        {
+          "restLength": 0.0017826184392064788,
+          "ratio": 0.165733509496754
+        }
+      ],
+      "edgeRatio": {
+        "min": 0.059103884167675313,
+        "p50": 1.0000000291945084,
+        "p95": 1.0000000845395807,
+        "max": 1.2962590766144266
+      }
+    },
+    {
+      "angle": 120,
+      "measuredAngle": 120.00002191302171,
+      "time": 2,
+      "morphWeights": [
+        1,
+        1
+      ],
+      "upperPosition": [
+        0.1730000227689743,
+        1.3049999475479126,
+        0.06700000166893005
+      ],
+      "elbowPosition": [
+        0.2130000410758383,
+        1.0339999112168998,
+        0.05999996696458785
+      ],
+      "probeVertex": [
+        0.27814105636966957,
+        1.1887983798733304,
+        0.2201646664817335
+      ],
+      "compressedEdges": 57,
+      "edgesMeasured": 12000,
+      "compressedSamples": [
+        {
+          "restLength": 0.008916277473340029,
+          "ratio": 0.18616606896191396
+        },
+        {
+          "restLength": 0.008916277473340029,
+          "ratio": 0.18616606896191396
+        },
+        {
+          "restLength": 0.009068427888969085,
+          "ratio": 0.1130102185333529
+        }
+      ],
+      "edgeRatio": {
+        "min": 0.06103152809276992,
+        "p50": 0.9999998705456151,
+        "p95": 1.006736107140951,
+        "max": 1.4340402494033868
+      }
+    },
+    {
+      "angle": 0,
+      "measuredAngle": 0,
+      "time": 4,
+      "morphWeights": [
+        0,
+        0
+      ],
+      "upperPosition": [
+        0.1730000227689743,
+        1.3049999475479126,
+        0.06700000166893005
+      ],
+      "elbowPosition": [
+        0.2130000410758383,
+        1.0339999112168998,
+        0.05999996696458785
+      ],
+      "probeVertex": [
+        0.27814104431113856,
+        0.8178939262995251,
+        0.11397694557357857
+      ],
+      "compressedEdges": 0,
+      "edgesMeasured": 12000,
+      "compressedSamples": [],
+      "edgeRatio": {
+        "min": 1,
+        "p50": 1,
+        "p95": 1,
+        "max": 1
+      }
+    }
+  ],
+  "limitation": "edge ratios are diagnostics, not proof of physiological correctness or absence of all collisions"
+}

@@ -15,3 +15,7 @@ React + TypeScript + Vite；R3F/Drei + Three.js；Zustand；Dexie IndexedDB sche
 
 ## 数据安全
 浏览器 IndexedDB 绑定 origin。不上传记录。导出 JSON 后自行备份。尚无导入恢复、撤销或删除 UI。日期按本地日历，不将 UTC 截断作为本地日期。未来迁移须兼容导出 schemaVersion 并测试恢复。
+
+## 2026-10-15 动画管线更新（覆盖上文原型状态）
+动作模式切换到rigged资产，Scene使用SkeletonUtils.clone隔离骨架、AnimationMixer同时采样骨骼与形态键，支持末端后反向拖动和React StrictMode重新挂载。更新skinned bounds以支持变形后的点击。旧椭球模型已从运行时代码移除。状态增加focus与独立morph控制；只覆盖BicepsBulge，不改变肘部姿态修正targets。定性参与角色只显示已知主要/协同/稳定分类，不将整条rigged手臂统一当协同肌。
+下载器升级为SHA256缓存优先、有限退避、安全Range恢复、验证后原子替换；Python测试覆盖失败路径。两份网络与动作资产在本地加载，仍无后端。

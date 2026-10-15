@@ -8,3 +8,7 @@ public/models/*.tmp
 public/models/anatomy-verified.glb
 artifacts/*.blend
 artifacts/*.blend1
+
+__pycache__/
+*.pyc
+public/models/*.part
