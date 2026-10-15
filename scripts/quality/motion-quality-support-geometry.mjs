@@ -23,7 +23,8 @@ export function inspectSupport(points,triangles,solid){
  let interiorVertices=0,triangleCandidates=0,confirmedInteriorTriangles=0,maxVertexDepth_m=0;
  for(const point of points){const depth=solid.type==='cylinder'?cylinderDepth(point,solid):Math.min(...point.toArray().map((v,i)=>Math.min(v-solid.box.min.getComponent(i),solid.box.max.getComponent(i)-v)));if(depth>EPSILON_M){interiorVertices++;maxVertexDepth_m=Math.max(maxVertexDepth_m,depth)}}
  for(const [ia,ib,ic]of triangles){const a=points[ia],b=points[ib],c=points[ic];if(!triangleBox(a,b,c,solid.broadBox))continue;triangleCandidates++;if(solid.type==='box'?triangleBox(a,b,c,solid.innerBox):cylinderTriangleInterior(a,b,c,solid))confirmedInteriorTriangles++}
- return {interiorVertices,triangleCandidates,confirmedInteriorTriangles,maxVertexDepth_m,status:interiorVertices||confirmedInteriorTriangles?'AUTO FAIL':'INCONCLUSIVE'};
+ if(solid.type==='cylinder')return {interiorVertices:0,triangleCandidates,confirmedInteriorTriangles:0,maxVertexDepth_m:0,analyticEnvelopeInteriorVertices:interiorVertices,analyticEnvelopeInteriorTriangles:confirmedInteriorTriangles,analyticEnvelopeMaxVertexDepth_m:maxVertexDepth_m,representation:'Circumscribed analytic cylinder envelope; rendered Beam is a12-sided prism. Envelope hits alone do not prove rendered-polyhedron penetration.',status:'INCONCLUSIVE'};
+ return {interiorVertices,triangleCandidates,confirmedInteriorTriangles,maxVertexDepth_m,representation:'Production axis-aligned box solid',status:interiorVertices||confirmedInteriorTriangles?'AUTO FAIL':'INCONCLUSIVE'};
 }
 export function supportFaceGap(points,solid,face){
  if(solid.type!=='box')throw Error('Face gap requires box');const samples=[];for(const p of points)if(p.x>=solid.box.min.x&&p.x<=solid.box.max.x&&p.z>=solid.box.min.z&&p.z<=solid.box.max.z)samples.push(face==='top'?p.y-solid.box.max.y:solid.box.min.y-p.y);
@@ -48,7 +49,7 @@ export function connectionWitness(a,b){
  for(const endpoint of [b.from,b.to])if(cylinderDepth(endpoint,a)>=0)return {method:'Cylinder endpoint lies within other finite cylinder',point_m:endpoint.toArray()};return null;
 }
 export function supportConnections(solids){
- const witnesses=[];for(let i=0;i<solids.length;i++)for(let j=i+1;j<solids.length;j++){const witness=connectionWitness(solids[i],solids[j]);if(witness)witnesses.push({solidIds:[solids[i].id,solids[j].id],...witness})}
+ const witnesses=[];for(let i=0;i<solids.length;i++)for(let j=i+1;j<solids.length;j++){const witness=connectionWitness(solids[i],solids[j]);if(witness)witnesses.push({solidIds:[solids[i].id,solids[j].id],representation:solids[i].type==='box'&&solids[j].type==='box'?'Exact box geometry':'Analytic cylinder outer-envelope candidate; not rendered12-sided prism proof',...witness})}
  const reached=new Set(['pedestal']);for(let i=0;i<solids.length;i++)for(const {solidIds:[a,b]}of witnesses)if(reached.has(a)||reached.has(b)){reached.add(a);reached.add(b)}
- return {witnesses,connectedToPedestal:[...reached],noWitnessPathToPedestal:solids.filter(s=>!reached.has(s.id)).map(s=>s.id),status:'INCONCLUSIVE',limits:'Exact geometric witness graph only; absence of a witness is not proof of disconnection. No strength, welding, floor anchorage or physical load support validation.'};
+ return {witnesses,envelopeCandidateConnectedToPedestal:[...reached],noEnvelopeWitnessPathToPedestal:solids.filter(s=>!reached.has(s.id)).map(s=>s.id),status:'INCONCLUSIVE',limits:'Boxes have exact geometric witnesses; cylinder graph edges use analytic circumscribed envelopes and are only candidates for actual12-sided Beam contact. Absence of a witness is not proof of disconnection. No strength, welding, floor anchorage or physical load support validation.'};
 }
