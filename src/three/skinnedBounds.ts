@@ -3,13 +3,22 @@ import * as THREE from 'three';
 /** A conservative enclosure of linear-blend skinning, without visiting vertices per pose.
  * Every positively weighted bone receives the vertex in that bone's bind space.
  * A union AABB contains every transformed influence and therefore its convex blend.
- * This applies to normalized nonnegative skin weights and geometry without morphs.
+ * Unmorphed geometry requires normalized nonnegative skin weights. Morph-bearing
+ * meshes use current exact deformed vertices, without assumptions about weights.
  */
 export function createSkinnedBounds(mesh:THREE.SkinnedMesh){
  const positions=mesh.geometry.getAttribute('position');
  const indices=mesh.geometry.getAttribute('skinIndex');
  const weights=mesh.geometry.getAttribute('skinWeight');
- if(!positions||!indices||!weights||Object.keys(mesh.geometry.morphAttributes).length)throw new Error('Conservative skin bounds require unmorphed linear-blend geometry');
+ if(!positions||!indices||!weights)throw new Error('Skin bounds require position, skinIndex and skinWeight');
+ if(mesh.geometry.morphAttributes.position?.length){
+  return ()=>{
+   // getVertexPosition includes current relative/absolute morphs before skinning.
+   // Only the morph-bearing cuffs pay this vertex scan, on changed poses.
+   mesh.computeBoundingBox();mesh.boundingBox!.expandByScalar(1e-6);
+   mesh.boundingSphere??=new THREE.Sphere();mesh.boundingBox!.getBoundingSphere(mesh.boundingSphere);
+  };
+ }
  const boxes=new Map<number,THREE.Box3>(),vertex=new THREE.Vector3(),point=new THREE.Vector3();
  for(let i=0;i<positions.count;i++){
   vertex.fromBufferAttribute(positions,i).applyMatrix4(mesh.bindMatrix);

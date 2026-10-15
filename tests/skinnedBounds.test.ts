@@ -23,3 +23,22 @@ it('encloses every actual blended vertex under changing bone transforms and mesh
   }
  }
 });
+
+
+it.each([true,false])('bounds actual morph+skin vertices at interpolation and extrapolation weights (relative=%s)',relative=>{
+ const geometry=new THREE.BufferGeometry();
+ geometry.setAttribute('position',new THREE.Float32BufferAttribute([0,0,0,1,0,0,0,1,0],3));
+ geometry.setAttribute('skinIndex',new THREE.Uint16BufferAttribute([0,0,0,0,0,0,0,0,0,0,0,0],4));
+ geometry.setAttribute('skinWeight',new THREE.Float32BufferAttribute([1,0,0,0,1,0,0,0,1,0,0,0],4));
+ geometry.morphAttributes.position=[new THREE.Float32BufferAttribute([2,0,1,3,1,2,-1,3,0],3),new THREE.Float32BufferAttribute([-2,3,-1,0,0,4,2,-1,3],3)];
+ geometry.morphTargetsRelative=relative;
+ const bone=new THREE.Bone(),mesh=new THREE.SkinnedMesh(geometry,new THREE.MeshBasicMaterial());mesh.add(bone);mesh.bind(new THREE.Skeleton([bone]));
+ const update=createSkinnedBounds(mesh),point=new THREE.Vector3();
+ for(const [i,weights] of [[0,0],[1,0],[0,1],[.25,.75],[.5,.5],[.75,.25],[-.3,1.4]].entries()){
+  mesh.morphTargetInfluences!.splice(0,2,...weights);bone.rotation.set(i*.2,-i*.3,i*.1);bone.position.set(.2*i,-.1*i,.3);mesh.updateMatrixWorld(true);update();
+  for(let vertex=0;vertex<3;vertex++){
+   mesh.getVertexPosition(vertex,point);expect(mesh.boundingBox!.containsPoint(point)).toBe(true);
+   expect(point.distanceTo(mesh.boundingSphere!.center)).toBeLessThanOrEqual(mesh.boundingSphere!.radius+1e-6);
+  }
+ }
+});

@@ -23,13 +23,13 @@ test('finished non-loop playback restarts and paused source picking survives non
   }
   throw Error('Production R3F scene missing');
  });
- for(const [index,time] of [0,2,4,1,3,0].entries()){
+ for(const [index,time] of [0,2,4,.37,1.13,3.47,1,3,0].entries()){
   await page.getByRole('button',{name:index%2===0?'Clean Tech':'Real Anatomy',exact:true}).click();
   await slider.fill(String(time));await page.waitForTimeout(120);
   const result=await page.evaluate(()=>{
    const s=(window as any).runtimeScene,m=s.scene.getObjectByName('left_latissimus_dorsi');
-   const point=s.camera.position.clone().set(0,0,0);let n=0,maxOutside=-Infinity,sourceMeshes=0,checkedVertices=0;
-   s.scene.traverse((mesh:any)=>{if(!mesh.isSkinnedMesh||!mesh.userData.entry)return;sourceMeshes++;
+   const point=s.camera.position.clone().set(0,0,0);let n=0,maxOutside=-Infinity,sourceMeshes=0,checkedVertices=0,morphMeshes=0;
+   s.scene.traverse((mesh:any)=>{if(!mesh.isSkinnedMesh||!mesh.userData.entry)return;sourceMeshes++;if(mesh.geometry.morphAttributes.position?.length)morphMeshes++;
     for(let i=0;i<mesh.geometry.attributes.position.count;i++){
      const vertex=mesh.getVertexPosition(i,s.camera.position.clone().set(0,0,0));checkedVertices++;
      maxOutside=Math.max(maxOutside,vertex.distanceTo(mesh.boundingSphere.center)-mesh.boundingSphere.radius);
@@ -42,9 +42,9 @@ test('finished non-loop playback restarts and paused source picking survives non
     if(i%20===0){point.add(m.localToWorld(vertex));n++;}
    }
    point.divideScalar(n).project(s.camera);const rect=s.gl.domElement.getBoundingClientRect();
-   return {maxOutside,sourceMeshes,checkedVertices,x:rect.x+(point.x+1)*rect.width/2,y:rect.y+(1-point.y)*rect.height/2};
+   return {maxOutside,sourceMeshes,checkedVertices,morphMeshes,x:rect.x+(point.x+1)*rect.width/2,y:rect.y+(1-point.y)*rect.height/2};
   });
-  expect(result.sourceMeshes).toBe(467);expect(result.checkedVertices).toBeGreaterThan(100000);
+  expect(result.sourceMeshes).toBe(467);expect(result.morphMeshes).toBe(8);expect(result.checkedVertices).toBeGreaterThan(100000);
   expect(result.maxOutside).toBeLessThan(1e-5);
   await page.mouse.click(result.x,result.y);
   await expect(page.locator('aside.right')).toContainText('z-anatomy:unmapped:left_latissimus_dorsi');
