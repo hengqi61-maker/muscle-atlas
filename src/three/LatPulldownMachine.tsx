@@ -1,6 +1,8 @@
 import {useMemo} from 'react';
 import * as THREE from 'three';
 import {latPulldownFrame} from './pulldownMotion';
+import {useAtlas} from '../stores/useAtlas';
+import {DURATION} from './animation';
 type V3 = [number,number,number];
 const STEEL='#596a77', FRAME='#26343e', DARK='#101b24', CHROME='#b3c7d2', PAD='#17242d';
 function Beam({from,to,r=.025,color=STEEL}:{from:V3;to:V3;r?:number;color?:string}){
@@ -23,8 +25,9 @@ function Pulley({z}:{z:number}){
  </group>;
 }
 /** Equipment-only proof of motion. Does NOT deform, skin or animate the 467 anatomical meshes. */
-export default function LatPulldownMachine({progress}:{progress:number}){
- const {barY,weightY}=latPulldownFrame(progress);
+export default function LatPulldownMachine(){
+ const time=useAtlas(s=>s.time);
+ const {barY,weightY}=latPulldownFrame(time/DURATION);
  return <group name="LatPulldownMachine" dispose={null}>
   {/* Dual-upright cable tower and stabilizing feet */}
   {[-.76,.76].map(x=><group key={x}>
