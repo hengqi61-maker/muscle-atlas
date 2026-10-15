@@ -116,3 +116,13 @@ Title: BROWSER-TEST-ISOLATION
 ### WD-2026-10-15-0007 durable verification
 - Dedicatedowned5175,strictPort,reuseExistingServer=false,test-modeHMRoff isolatefrom5173preview. RegisterGLBresponsebeforepage.goto fixes lost-eventrace;responseandvisualassertionsretained.
 - Exactoriginalatlasflow and failingpulldownplayflow passed in fullclean3testChrome run;subsequentfullfinalrun3passed. No retry option,extra timeout,disabledassertionor fallback was used. StatusRESOLVED.
+
+### MODEL-RIG user-directed hand correction
+- User rejected procedural hand orientation and explicitly requested original source hands. Removed generated hand/palm/finger/nail surfaces, UI toggle and all distal source-hand folding; rebuilt both motionGLBs. Source anatomical hands remain bound to the motion skeleton; upgraded dumbbell and seatedpulldown retained.
+- This supersedes the presentation-hand workaround. Do not mark original openhand as a verified closedgrip or claim skin quality resolution. MODEL-RIG staysDEFERRED for anatomical finger grasp and previous soft-tissue quality; user preference recorded in projectAGENTS.
+
+### MODEL-RIG shoulder/back correctness review
+- Reproduction: select high pulldown, seek0/2seconds; lats/rhomboids/trapezius have no skin modifier, shoulder centers are constant. Original renderer screenshots and generator retained in Git. Existing qualitative color can be mistaken for activation; selected and primary colors identical.
+- Compared shoulder-girdle plus attachment-aware skinning (selected), appearance-only bulge keys (cannot repair attachment), full calibrated musculoskeletal simulation (requires unavailable subject/load inputs). No workaround introduced; implementing structural rig correction. Original-hand preference remains mandatory. Verification will measure actual Three.js deformed vertices, shoulders and contacts, plus back/side screenshots.
+- Structural correction verified in exported GLB/Three runtime:16bones,467source meshes; lat upper insertion mean displacement92.46mm, lower sampled lumbar origin0mm, shoulder excursion41.46mm;121frames max palm marker error0.0284mm, hand-axis error0.000048degrees;Validator0errors/0warnings. This resolves the observed missing back skinning/fixed shoulder cause, not physiological calibration.
+- MODEL-RIG remains DEFERRED for uncalibrated shoulder motion, linear-blend/local soft tissue artifacts and original open-hand grasp. Evidence/parameters/alternatives: docs/pulldown-motion-review.md; next: localized weight/pose correction and attachment/collision QA; reopen upon visible distortion or calibrated motion-data availability. No ACCEPTED_RISK. No new workaround.

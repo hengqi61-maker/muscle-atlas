@@ -1,5 +1,8 @@
 # 哑铃、握持与高位下拉 · 2026-10-15
 
+> 最新更正：按用户要求，已撤销自建手掌/手指表面与远端折叠，恢复原始解剖手部。保留六角哑铃与坐姿高位下拉联动。下文闭合手部表面描述为已撤销的历史实现，不代表当前版本。
+
+
 ## 用户反馈对应的实改
 原圆柱哑铃替换为原创六角橡胶头模型：倒角胶头、几何滚花28mm金属握柄、连接肩、端面徽片和无品牌8字标记。胶头与握柄同轴；外部来源不是已经下载的资产。独立文件public/models/equipment/detailed-hex-dumbbell.glb，尺寸和哈希见docs/evidence/equipment-manifest.json，生成器scripts/build-equipment-preview.py。显示用标记不会改写用户实录重量。
 

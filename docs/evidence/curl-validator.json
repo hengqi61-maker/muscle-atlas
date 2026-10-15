@@ -2,11 +2,11 @@
   "uri": "public/models/anatomy-curl.glb",
   "mimeType": "model/gltf-binary",
   "validatorVersion": "2.0.0-dev.3.10",
-  "validatedAt": "2026-10-15T01:28:45.789Z",
+  "validatedAt": "2026-10-15T01:33:27.953Z",
   "issues": {
     "numErrors": 0,
     "numWarnings": 0,
-    "numInfos": 16,
+    "numInfos": 11,
     "numHints": 0,
     "messages": [
       {
@@ -70,36 +70,6 @@
         "pointer": "/meshes/27/primitives/0/attributes/TEXCOORD_0"
       },
       {
-        "code": "UNUSED_OBJECT",
-        "message": "This object may be unused.",
-        "severity": 2,
-        "pointer": "/meshes/44/primitives/0/attributes/TEXCOORD_0"
-      },
-      {
-        "code": "UNUSED_OBJECT",
-        "message": "This object may be unused.",
-        "severity": 2,
-        "pointer": "/meshes/45/primitives/0/attributes/TEXCOORD_0"
-      },
-      {
-        "code": "UNUSED_OBJECT",
-        "message": "This object may be unused.",
-        "severity": 2,
-        "pointer": "/meshes/46/primitives/0/attributes/TEXCOORD_0"
-      },
-      {
-        "code": "UNUSED_OBJECT",
-        "message": "This object may be unused.",
-        "severity": 2,
-        "pointer": "/meshes/47/primitives/0/attributes/TEXCOORD_0"
-      },
-      {
-        "code": "UNUSED_OBJECT",
-        "message": "This object may be unused.",
-        "severity": 2,
-        "pointer": "/meshes/48/primitives/0/attributes/TEXCOORD_0"
-      },
-      {
         "code": "NODE_EMPTY",
         "message": "Empty node encountered.",
         "severity": 2,
@@ -116,18 +86,18 @@
         "pointer": "/buffers/0",
         "mimeType": "application/gltf-buffer",
         "storage": "glb",
-        "byteLength": 30263688
+        "byteLength": 28276944
       }
     ],
     "animationCount": 1,
-    "materialCount": 7,
+    "materialCount": 5,
     "hasMorphTargets": true,
     "hasSkins": true,
     "hasTextures": false,
     "hasDefaultScene": true,
-    "drawCallCount": 483,
-    "totalVertexCount": 818892,
-    "totalTriangleCount": 1177656,
+    "drawCallCount": 478,
+    "totalVertexCount": 787170,
+    "totalTriangleCount": 1114620,
     "maxUVs": 1,
     "maxInfluences": 4,
     "maxAttributes": 5

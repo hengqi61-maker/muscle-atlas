@@ -17,5 +17,5 @@ export const latPulldown:Exercise={
  equipment:'高位滑轮训练器',relations:[],
  instructions:['坐稳并固定大腿，胸椎自然伸展。','从头顶将横杆拉向上胸，肘部朝下，避免明显后仰。','控制回程，手臂逐渐伸展。'],
  errors:['横杆绕到颈后','利用腰背大幅后仰借力'],
- animation:'anatomy-pulldown',source:'真实解剖坐姿蒙皮与双臂 IK 烘焙；握点共用器械时间轴。软组织与手表面为近似示意，肌群角色不代表实测激活。'
+ animation:'anatomy-pulldown',source:'真实解剖坐姿蒙皮与双臂 IK 烘焙；握点共用器械时间轴。肩胛带与软组织为未标定运动示意，手部沿用原始网格，肌群角色不代表实测激活。'
 };

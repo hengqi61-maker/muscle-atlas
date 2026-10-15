@@ -32,7 +32,6 @@ function Anatomy({model}:{model:'anatomy'|'rigged'|'pulldown'}){
  },[root,animations,animated]);
  const box=useMemo(()=>new THREE.Box3().setFromObject(root),[root]);
  const size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3()),factor=3.5/size.y;
- const handSkin=useAtlas(s=>s.handSkin);
  const style=useAtlas(s=>s.style),selected=useAtlas(s=>s.selected),hovered=useAtlas(s=>s.hovered),hidden=useAtlas(s=>s.hidden),mode=useAtlas(s=>s.mode);
  useEffect(()=>{
   const materials:THREE.Material[]=[];
@@ -41,13 +40,13 @@ function Anatomy({model}:{model:'anatomy'|'rigged'|'pulldown'}){
    const role=seated&&mode==='exercise'?latPulldownAnatomyRelations.find(r=>r.anatomyId===entry?.anatomyId)?.role:animated&&mode==='exercise'&&name.includes('left')?
     name.includes('biceps brachii')?'primary':(name.includes('brachialis')||name.includes('brachioradialis'))?'secondary':(name.includes('deltoid')||((name.includes('flexor')||name.includes('extensor'))&&o.userData.rigRegion))?'stabilizer':undefined:undefined;
    const state=resolveState(o.userData.anatomyId,selected,hovered,hidden,role);
-   if(!entry){o.visible=o.userData.visualLayer==='contact-marker'?false:o.userData.visualLayer==='grip-skin'?handSkin:true;return;}
-   const a=appearance(state,style);o.visible=a.visible&&!(handSkin&&o.userData.coveredByGripSkin);
+   if(!entry){o.visible=o.userData.visualLayer!=='contact-marker';return;}
+   const a=appearance(state,style);o.visible=a.visible;
    const color=entry.isTendon&&(state==='default'||state==='dimmed')?'#d4c5ad':a.color;
    const material=new THREE.MeshStandardMaterial({...a,color});materials.push(material);o.material=material;
   }});
   return ()=>materials.forEach(m=>m.dispose());
- },[root,style,selected,hovered,hidden,animated,mode,seated,handSkin]);
+ },[root,style,selected,hovered,hidden,animated,mode,seated]);
  useEffect(()=>{if(animated){if(!animations.length)throw new Error('动画资源缺少 clip');const action=mixer.clipAction(animations[0]);action.setLoop(THREE.LoopOnce,1);action.clampWhenFinished=true;action.reset().play();}return ()=>{mixer.stopAllAction();mixer.uncacheRoot(root);};},[mixer,root,animated,animations]);
  useFrame(()=>{if(!animated)return;
   const s=useAtlas.getState();const action=mixer.clipAction(animations[0]);action.paused=false;action.enabled=true;mixer.setTime(Math.min(s.time,DURATION));root.updateMatrixWorld(true);
@@ -72,6 +71,8 @@ function CameraControls(){
  useEffect(()=>{const controls=ref.current;if(!controls)return;
   if(focus==='grip'){controls.object.position.set(.95,1.15,1.55);controls.target.set(.40,.90,.55);}
   else if(focus==='arm'){controls.object.position.set(1.7,1.25,2.1);controls.target.set(.44,.90,.15);}
+  else if(focus==='back'){controls.object.position.set(-.4,1.1,-3.3);controls.target.set(0,.30,.10);}
+  else if(focus==='side'){controls.object.position.set(4,1.1,.1);controls.target.set(0,.30,.10);}
   else if(model==='pulldown'){controls.object.position.set(3,1.4,5.3);controls.target.set(0,.15,.1);}
   else{controls.object.position.set(0,1,5.8);controls.target.set(0,.3,0);}
   controls.update();

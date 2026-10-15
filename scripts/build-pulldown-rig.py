@@ -4,7 +4,7 @@ Fixed bone lengths, no reach clamping or stretch fallback: unreachable geometry 
 import bpy,json,math,pathlib,sys,hashlib
 from mathutils import Vector,Matrix,Quaternion
 root=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(root/'scripts'))
-from grip_geometry import create_grip_hand,fold_source_hand,contact_marker
+from grip_geometry import contact_marker
 config=json.loads((root/'src/data/pulldown-config.json').read_text());T=Vector(config['bodyTranslation']);offset=Vector(config['palmOffsetBlender'])
 source=root/'public/models/anatomy.glb';assert hashlib.sha256(source.read_bytes()).hexdigest()=='6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f'
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False);bpy.ops.import_scene.gltf(filepath=str(source))
@@ -22,12 +22,14 @@ def bone(name,head,tail,parent=None):
  if parent:b.parent=armature.edit_bones[parent]
  return b
 bone('SpineRoot',Vector((0,-.1,.95))+T,Vector((0,-.1,1.35))+T)
+bone('Thorax',Vector((0,-.1,.95))+T,Vector((0,-.1,1.40))+T,'SpineRoot')
 landmarks={}
 for side,label in [(1,'Left'),(-1,'Right')]:
  s=Vector((side*.173,-.067,1.305))+T;e=Vector((side*.213,-.060,1.034))+T;w=Vector((side*.231,-.105,.802))+T
  grip=w+offset
  u='UpperArm' if side==1 else 'RightUpperArm';f='Forearm' if side==1 else 'RightForearm';h=label+'Hand'
- bone(u,s,e,'SpineRoot');bone(f,e,w,u);bone(h,w,grip,f)
+ scap=label+'Scapula';bone(scap,Vector((side*.055,-.015,1.22))+T,s,'Thorax')
+ bone(u,s,e,scap);bone(f,e,w,u);bone(h,w,grip,f)
  hip=Vector((side*.10,-.10,.83))+T;knee=Vector((side*.11,-.08,.45))+T;ankle=Vector((side*.10,-.08,.09))+T;toe=Vector((side*.10,-.23,.04))+T
  bone(label+'Thigh',hip,knee,'SpineRoot');bone(label+'Shin',knee,ankle,label+'Thigh');bone(label+'Foot',ankle,toe,label+'Shin')
  landmarks[side]={'shoulder':s,'elbow':e,'wrist':w,'grip':grip,'hip':hip,'knee':knee,'ankle':ankle,'toe':toe,'names':(u,f,h)}
@@ -43,16 +45,18 @@ def skin(o,weights):
 arm_names=[];leg_names=[]
 for o in meshes:
  side=1 if 'left' in o.name else -1 if 'right' in o.name else 0
- if not side:continue
+ if not side:
+  skin(o,lambda co:{'Thorax':smooth((co.z-T.z-.9)/.20),'SpineRoot':1-smooth((co.z-T.z-.9)/.20)})
+  continue
  label='Left' if side==1 else 'Right';lm=landmarks[side];u,f,h=lm['names']
  pts=[v.co-T for v in o.data.vertices];minz=min(v.z for v in pts);maxz=max(v.z for v in pts);maxx=max(abs(v.x) for v in pts)
  upper=any(k in o.name for k in ['biceps brachii','triceps brachii','brachialis','deltoid'])
  distal=maxx>.175 and maxz<1.175 and minz>.60
  if upper or distal:
-  fold_source_hand(o,lm['grip'],lm['wrist'].z);o['rigRegion']=label.lower()+'-arm';arm_names.append(o.name)
-  def weights(co,u=u,f=f,h=h):
+  o['rigRegion']=label.lower()+'-arm';arm_names.append(o.name)
+  def weights(co,u=u,f=f,h=h,label=label):
    z=co.z-T.z;shoulder=smooth((1.335-z)/.12);fore=smooth((1.092-z)/.092);hand=smooth((.830-z)/.050)
-   return {'SpineRoot':1-shoulder,u:shoulder*(1-fore),f:shoulder*fore*(1-hand),h:shoulder*fore*hand}
+   return {label+'Scapula':1-shoulder,u:shoulder*(1-fore),f:shoulder*fore*(1-hand),h:shoulder*fore*hand}
   skin(o,weights)
  elif maxz<1.0 and minz<.60:
   o['rigRegion']=label.lower()+'-leg';leg_names.append(o.name)
@@ -60,8 +64,24 @@ for o in meshes:
    z=co.z-T.z;thigh=smooth((.86-z)/.12);shin=smooth((.51-z)/.10);foot=smooth((.15-z)/.09)
    return {'SpineRoot':1-thigh,label+'Thigh':thigh*(1-shin),label+'Shin':thigh*shin*(1-foot),label+'Foot':thigh*shin*foot}
   skin(o,weights)
+ else:
+  # Qualitative attachment masks: medial origins stay on thorax/root;
+  # lateral insertions follow humerus or shoulder girdle. No activation morph.
+  def weights(co,name=o.name,label=label,u=u):
+   v=co-T;chest=smooth((v.z-.9)/.20);lateral=smooth((abs(v.x)-.045)/.12)
+   if 'latissimus' in name:
+    attach=smooth((v.z-1.08)/.18)*smooth((abs(v.x)-.08)/.10)*.85;target=u
+   elif 'teres major' in name:
+    attach=smooth((abs(v.x)-.09)/.075);return {label+'Scapula':1-attach,u:attach}
+   elif any(n in name for n in ['rhomboid','trapezius','levator scapulae','serratus anterior']):
+    attach=lateral*.8;target=label+'Scapula'
+   elif 'pectoralis major' in name:
+    attach=smooth((abs(v.x)-.10)/.08)*smooth((v.z-1.15)/.12)*.65;target=u
+   else:attach=0;target=label+'Scapula'
+   return {'SpineRoot':(1-attach)*(1-chest),'Thorax':(1-attach)*chest,target:attach}
+  skin(o,weights)
 for side,label in [(1,'Left'),(-1,'Right')]:
- lm=landmarks[side];create_grip_hand(lm['grip'],rig,label+'Hand',side,label+'GripSurface');contact_marker(lm['grip'],rig,label+'Hand',label+'PalmContact')
+ lm=landmarks[side];contact_marker(lm['grip'],rig,label+'Hand',label+'PalmContact')
 # Transform a bone's rest axes to a desired head/direction, then key its local basis.
 def pose_direction(name,head,tail):
  rest=armature.bones[name];delta=(rest.tail_local-rest.head_local).rotation_difference(tail-head)
@@ -80,9 +100,17 @@ scene=bpy.context.scene;scene.render.fps=30;scene.frame_start=0;scene.frame_end=
 samples=[]
 for frame in range(121):
  phase=(1-math.cos(2*math.pi*frame/120))/2;bar=config['barTopY']-config['barTravel']*phase
+ chest_rotation=Quaternion((1,0,0),math.radians(-6))
+ chest_head=armature.bones['Thorax'].head_local.copy()
+ pose_hand('Thorax',chest_head,chest_rotation);key('Thorax',frame)
  for side,label in [(1,'Left'),(-1,'Right')]:
-  lm=landmarks[side];u,f,h=lm['names'];grip=Vector((side*config['gripHalfWidth'],-config['gripZ'],bar-config['gripDrop']));hand_rotation=Quaternion((0,1,0),side*math.atan2(.126,.16));w=grip-hand_rotation@offset;s=lm['shoulder']
-  e=solve(s,w,(lm['elbow']-s).length,(lm['wrist']-lm['elbow']).length,Vector((side*.8,.15,-.8)))
+  lm=landmarks[side];u,f,h=lm['names'];grip=Vector((side*config['gripHalfWidth'],-config['gripZ'],bar-config['gripDrop']));hand_rotation=Quaternion((0,1,0),side*math.atan2(.126,.16));w=grip-hand_rotation@offset;scap=label+'Scapula'
+  scap_rest=armature.bones[scap].head_local
+  scap_head=chest_head+chest_rotation@(scap_rest-chest_head)+Vector((0,.004*phase,.010-.014*phase))
+  scap_rotation=chest_rotation@Quaternion((0,1,0),-side*math.radians(15-12*phase))
+  s=scap_head+scap_rotation@(lm['shoulder']-scap_rest)
+  pose_hand(scap,scap_head,scap_rotation);key(scap,frame)
+  e=solve(s,w,(lm['elbow']-lm['shoulder']).length,(lm['wrist']-lm['elbow']).length,Vector((side*.8,.15,-.8)))
   pose_direction(u,s,e);pose_direction(f,e,w);pose_hand(h,w,hand_rotation)
   for name in [u,f,h]:key(name,frame)
   hip=lm['hip'];thigh_length=(lm['knee']-hip).length;shin_length=(lm['ankle']-lm['knee']).length
@@ -91,4 +119,4 @@ for frame in range(121):
   if frame in [0,30,60,90,120]:samples.append({'frame':frame,'side':label,'targetGrip':list(grip),'wrist':list(w),'elbow':list(e),'ankle':list(ankle),'shoulderWristDistance':(w-s).length})
 scene.frame_set(0);(root/'artifacts').mkdir(exist_ok=True);bpy.ops.wm.save_as_mainfile(filepath=str(root/'artifacts/pulldown-rig.blend'))
 bpy.ops.export_scene.gltf(filepath=str(root/'public/models/anatomy-pulldown.glb'),export_format='GLB',export_animation_mode='SCENE',export_animations=True,export_frame_range=True,export_force_sampling=True,export_skins=True,export_morph=True,export_extras=True,export_yup=True,export_anim_scene_split_object=False)
-(root/'docs/evidence/pulldown-build.json').write_text(json.dumps({'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'sourceMeshes':len(meshes),'armMeshes':arm_names,'legMeshes':leg_names,'samples':samples,'config':config,'scope':'Baked two-arm analytic IK, fixed bone lengths, static closed grip surface; approximate shoulders and seated anatomy, no force simulation'},indent=2))
+(root/'docs/evidence/pulldown-build.json').write_text(json.dumps({'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'sourceMeshes':len(meshes),'armMeshes':arm_names,'legMeshes':leg_names,'samples':samples,'config':config,'scope':'Baked two-arm analytic IK, fixed bone lengths, moving shoulder girdle and attachment-aware back skinning; original source hands; illustrative uncalibrated shoulder angles, no force or activation simulation'},indent=2))

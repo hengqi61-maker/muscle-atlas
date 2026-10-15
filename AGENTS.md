@@ -7,3 +7,5 @@ Label procedural prototype clearly. Do not silently replace failed model loading
 Run build, unit tests and real browser checks before claims of working functionality; update docs/roadmap.md.
 Record workarounds immediately in .codex/workaround-debt.md. Apply user recurring-failure policy: compare durable routes, verify original path, end task debt RESOLVED, DEFERRED or user-approved ACCEPTED_RISK.
 OAuth, paid assets and destructive operations require user authorization. Calendar writes only to managed or explicitly linked events.
+
+Use the original source anatomical hand meshes in motion scenes. The user rejected procedural hands and skin surfaces; do not reintroduce them or fold source hand vertices without an explicit request. Preserve the upgraded dumbbell and pulldown linkage.

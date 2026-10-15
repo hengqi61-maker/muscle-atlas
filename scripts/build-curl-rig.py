@@ -6,7 +6,7 @@ import bpy,math,json,pathlib,hashlib,sys
 from mathutils import Vector,Quaternion,Matrix
 root=pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(root/'scripts'))
-from grip_geometry import create_grip_hand,create_hex_dumbbell,fold_source_hand,contact_marker
+from grip_geometry import create_hex_dumbbell,contact_marker
 source=root/'public/models/anatomy.glb'
 assert hashlib.sha256(source.read_bytes()).hexdigest()=='6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f'
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
@@ -38,7 +38,6 @@ for o in meshes:
  distal='left' in o.name and maxx>.175 and maxz<1.175 and minz>.60
  if 'left' not in o.name or not(upper_muscle or distal):continue
  arm.append(o);o['rigRegion']='left-arm'
- fold_source_hand(o,(.231,-.134,.754),.802)
  u=o.vertex_groups.new(name='UpperArm');f=o.vertex_groups.new(name='Forearm')
  for v in o.data.vertices:
   # Shared transition plane provides continuous weights across mesh boundaries.
@@ -83,7 +82,6 @@ for o in arm:
 
 # Shared shaft/palm anchor in forearm rest frame. The raw atlas remains unchanged.
 grip=Vector((.231,-.134,.754))
-hand=create_grip_hand(grip,rig,'Forearm')
 equipment=create_hex_dumbbell(grip,rig,'Forearm')
 contact_marker(grip,rig,'Forearm','CurlPalmAnchor')
 contact_marker(grip,rig,'Forearm','CurlHandleAnchor')
@@ -106,5 +104,5 @@ scene.frame_set(0)
 bpy.ops.wm.save_as_mainfile(filepath=str(root/'artifacts/curl-rig.blend'))
 # Scene mode bakes bones and morph weights into the same glTF clip.
 bpy.ops.export_scene.gltf(filepath=str(root/'public/models/anatomy-curl.glb'),export_format='GLB',export_animations=True,export_animation_mode='SCENE',export_frame_range=True,export_frame_step=1,export_force_sampling=True,export_skins=True,export_morph=True,export_morph_animation=True,export_extras=True,export_yup=True,export_anim_scene_split_object=False)
-report={'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'sourceMeshes':len(meshes),'armMeshes':len(arm),'bicepsMeshes':[o.name for o in biceps],'riggedMeshes':[o.name for o in arm],'bones':['UpperArm','Forearm'],'landmarks':{'shoulder':list(shoulder),'elbow':list(elbow),'wrist':list(wrist)},'duration':4,'gripCenter':list(grip),'handSurface':'original closed-grip opaque presentation layer','equipment':'original bevelled hex; no downloaded asset claim','poseCorrectiveMeshes':len(corrected),'morph':'24% radial artistic envelope, taper to zero at endpoints; not physiological','scope':'left arm, original independent meshes; rest of body static'}
+report={'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'sourceMeshes':len(meshes),'armMeshes':len(arm),'bicepsMeshes':[o.name for o in biceps],'riggedMeshes':[o.name for o in arm],'bones':['UpperArm','Forearm'],'landmarks':{'shoulder':list(shoulder),'elbow':list(elbow),'wrist':list(wrist)},'duration':4,'gripCenter':list(grip),'handSurface':'original source anatomy, no fabricated surface or distal folding','equipment':'original bevelled hex; no downloaded asset claim','poseCorrectiveMeshes':len(corrected),'morph':'24% radial artistic envelope, taper to zero at endpoints; not physiological','scope':'left arm, original independent meshes; rest of body static'}
 (root/'docs/evidence/curl-build.json').write_text(json.dumps(report,indent=2))

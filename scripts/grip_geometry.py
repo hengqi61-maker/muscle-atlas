@@ -1,5 +1,5 @@
-"""Original closed-grip surface and detailed hex equipment. Metres, Blender Z-up.
-Surface hand is a presentation layer, not a replacement anatomical dataset.
+"""Original detailed hex equipment and contact markers. Metres, Blender Z-up.
+Anatomical hand geometry comes exclusively from the source atlas.
 """
 import bpy,math
 from mathutils import Vector,Quaternion
@@ -17,58 +17,6 @@ def bind(o,rig,bone):
  mod=o.modifiers.new('GripAttachment','ARMATURE');mod.object=rig;o.parent=None
  for p in o.data.polygons:p.use_smooth=True
  return o
-
-def sphere(name,position,scale,parts):
- bpy.ops.mesh.primitive_uv_sphere_add(segments=24,ring_count=16,location=position)
- o=bpy.context.object;o.name=name;o.scale=scale;bpy.ops.object.transform_apply(location=False,rotation=False,scale=True);parts.append(o);return o
-
-def tube(name,points,radius,parts):
- c=bpy.data.curves.new(name,'CURVE');c.dimensions='3D';c.bevel_depth=radius;c.bevel_resolution=3;c.resolution_u=3;c.use_fill_caps=True
- spline=c.splines.new('POLY');spline.points.add(len(points)-1)
- for p,v in zip(spline.points,points):p.co=(*v,1)
- o=bpy.data.objects.new(name,c);bpy.context.collection.objects.link(o);bpy.context.view_layer.objects.active=o;o.select_set(True);bpy.ops.object.convert(target='MESH');o=bpy.context.object;parts.append(o);return o
-
-def create_grip_hand(center,rig,bone,side=1,name='GripHand'):
- center=Vector(center);parts=[]
- def at(x,y,z):return center+Vector((side*x,y,z))
- sphere('Palm',at(0,.032,.011),(.041,.019,.032),parts)
- sphere('ThenarPad',at(-.024,.018,.024),(.020,.020,.024),parts)
- sphere('WristBridge',at(0,.028,.048),(.026,.019,.029),parts)
- # Four separate arcs wrap a 28mm handle; inner finger surface meets its radius.
- for index,x in enumerate([-.027,-.009,.009,.027]):
-  r=.0235;end=-224+(index==3)*9
-  pts=[at(x,r*math.cos(math.radians(a)),r*math.sin(math.radians(a))) for a in [(-20+(end+20)*i/32) for i in range(33)]]
-  tube(f'Finger{index}',pts,.0084 if index<3 else .0076,parts)
-  sphere(f'FingerTip{index}',pts[-1],(.0082,.0082,.0082),parts)
- # Opposing thumb crosses the finger pads rather than protruding away from the grip.
- points=[at(-.030,.022,.035),at(-.045,.004,.026),at(-.041,-.018,.017),at(-.023,-.026,.014),at(-.007,-.024,.013)]
- tube('OpposingThumb',points,.010,parts);sphere('ThumbTip',points[-1],(.010,.009,.009),parts)
- bpy.ops.object.select_all(action='DESELECT')
- for o in parts:o.select_set(True)
- bpy.context.view_layer.objects.active=parts[0];bpy.ops.object.join();hand=bpy.context.object;hand.name=name
- # Union the palm, thumb and finger roots into one closed surface; retain finger channels.
- hand.data.remesh_voxel_size=.00135;bpy.ops.object.voxel_remesh()
- smooth=hand.modifiers.new('SurfaceRelax','SMOOTH');smooth.factor=.35;smooth.iterations=3;bpy.ops.object.modifier_apply(modifier=smooth.name)
- hand.data.materials.clear();hand.data.materials.append(material('HandSurfaceWarm',(.50,.34,.24),0,.58))
- # Subtle fingernails make finger orientation readable without a texture dependency.
- nail_material=material('NailNatural',(.62,.46,.36),0,.38)
- for index,x in enumerate([-.027,-.009,.009,.027]):
-  a=math.radians(-224+(index==3)*9);normal=Vector((0,math.cos(a),math.sin(a)))
-  nail_parts=[];nail=sphere(f'{name}_Nail{index}',at(x,.0313*math.cos(a),.0313*math.sin(a)),(.0056,.0066,.0008),nail_parts)
-  nail.rotation_mode='QUATERNION';nail.rotation_quaternion=Vector((0,0,1)).rotation_difference(normal);nail.data.materials.clear();nail.data.materials.append(nail_material);nail['visualLayer']='grip-skin';bind(nail,rig,bone)
- hand['visualLayer']='grip-skin';hand['description']='Original posed skin surface; source anatomy retained separately';bind(hand,rig,bone)
- return hand
-
-def fold_source_hand(o,center,wrist_height):
- """Place animation-only distal source tissue inside the closed surface; raw atlas unchanged."""
- center=Vector(center)
- for v in o.data.vertices:
-  if v.co.z<wrist_height-.010:
-   t=max(0,min(1,(wrist_height-.010-v.co.z)/.065))
-   target=Vector((center.x+max(-.031,min(.031,v.co.x-center.x)),center.y+.028,center.z+.013+.013*math.cos(t*math.pi)))
-   blend=min(1,t*4);v.co=v.co.lerp(target,blend)
- if max(v.co.z for v in o.data.vertices)<wrist_height+.015:o['coveredByGripSkin']=True
- o.data.update()
 
 def contact_marker(center,rig,bone,name):
  bpy.ops.mesh.primitive_uv_sphere_add(segments=8,ring_count=4,radius=.0005,location=center)

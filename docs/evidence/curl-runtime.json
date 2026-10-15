@@ -5,7 +5,7 @@
     "errors": 0,
     "warnings": 0
   },
-  "skinnedMeshes": 60,
+  "skinnedMeshes": 55,
   "joints": [
     "UpperArm",
     "Forearm"

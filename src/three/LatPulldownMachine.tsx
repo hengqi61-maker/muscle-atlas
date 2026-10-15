@@ -27,9 +27,10 @@ function Pulley({z}:{z:number}){
 }
 /** Machine presentation driven by the same configuration and time as the baked seated rig. */
 export default function LatPulldownMachine(){
- const time=useAtlas(s=>s.time);
+ const time=useAtlas(s=>s.time);const focus=useAtlas(s=>s.focus);const inspect=focus==='back'||focus==='side';
  const {barY,weightY}=latPulldownFrame(time/DURATION);
  return <group name="LatPulldownMachine">
+  <group visible={!inspect}>
   {/* Dual-upright cable tower and stabilizing feet */}
   {[-.76,.76].map(x=><group key={x}>
     <Box position={[x,1.12,-.60]} size={[.085,2.23,.09]}/>
@@ -54,6 +55,7 @@ export default function LatPulldownMachine(){
    {Array.from({length:6},(_,i)=><Box key={i} position={[0,i*.064,0]} size={[.50,.049,.26]} color={i===5?'#607482':'#1c2a34'}/>)}
    <Beam from={[0,.00,0]} to={[0,.69,0]} r={.011} color={CHROME}/>
   </group>
+  </group>
   {/* Wide lat bar with angled outer grips; bar and raised weights share one progress signal */}
   <group name="MovingLatBar" position={[0,barY,config.gripZ]}>
    <Beam from={[-.30,0,0]} to={[.30,0,0]} r={.019} color={CHROME}/>
@@ -65,7 +67,7 @@ export default function LatPulldownMachine(){
   </group>
   {/* Cable is connected to the moving endpoints; it is a straight taut demonstration, not pulley dynamics. */}
   <Beam from={[0,2.20,.42]} to={[0,barY+.09,config.gripZ]} r={.005} color={CHROME}/>
-  <Beam from={[0,2.288,-.62]} to={[0,2.288,.42]} r={.005} color={CHROME}/>
-  <Beam from={[0,2.20,-.62]} to={[0,weightY+.69,-.68]} r={.005} color={CHROME}/>
+  <group visible={!inspect}><Beam from={[0,2.288,-.62]} to={[0,2.288,.42]} r={.005} color={CHROME}/>
+  <Beam from={[0,2.20,-.62]} to={[0,weightY+.69,-.68]} r={.005} color={CHROME}/></group>
  </group>;
 }
