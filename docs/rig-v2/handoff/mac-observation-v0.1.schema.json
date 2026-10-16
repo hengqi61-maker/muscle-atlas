@@ -1,0 +1,20 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "$id":"urn:muscle-atlas:initial-mac-observation:0.1.0",
+ "title":"Initial Mac observation 0.1 draft, not Windows final standard",
+ "type":"object",
+ "required":["format","version","status","source","conventions","bones","reference","skins","blenderReference","clips"],
+ "properties":{
+  "format":{"const":"muscle-atlas.initial-mac-observation"},
+  "version":{"const":"0.1.0"},
+  "source":{"type":"object","required":["assetCommit","modelPath","modelSha256","canonicalSha256"],"properties":{"modelSha256":{"type":"string","pattern":"^[a-f0-9]{64}$"},"canonicalSha256":{"type":"string","pattern":"^[a-f0-9]{64}$"}}},
+  "bones":{"type":"array","minItems":27,"maxItems":27,"items":{"type":"object","required":["index","name","parentBone","parentNode"]}},
+  "reference":{"type":"array","minItems":27,"items":{"$ref":"#/$defs/observation"}},
+  "clips":{"type":"array","items":{"type":"object","required":["name","durationSeconds","trackCount","kind","fixedPhaseFrameIndices","frames"],"properties":{"frames":{"type":"array","minItems":121,"maxItems":121,"items":{"type":"object","required":["index","timeSeconds","phase","bones"],"properties":{"bones":{"type":"array","minItems":27,"maxItems":27,"items":{"$ref":"#/$defs/observation"}}}}}}}}
+ },
+ "$defs":{
+  "matrix":{"type":"array","minItems":16,"maxItems":16,"items":{"type":"number"}},
+  "quaternion":{"type":"array","minItems":4,"maxItems":4,"items":{"type":"number"}},
+  "observation":{"type":"object","required":["name","localMatrix","worldMatrix","parentWorldMatrix","localQuaternionXyzw","worldQuaternionXyzw"],"properties":{"name":{"type":"string"},"localMatrix":{"$ref":"#/$defs/matrix"},"worldMatrix":{"$ref":"#/$defs/matrix"},"parentWorldMatrix":{"$ref":"#/$defs/matrix"},"localQuaternionXyzw":{"$ref":"#/$defs/quaternion"},"worldQuaternionXyzw":{"$ref":"#/$defs/quaternion"}}}
+ }
+}
