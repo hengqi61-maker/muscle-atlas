@@ -224,3 +224,22 @@ Title: Project debt ledger parser compatibility
 Oct16 follow-up WD0013: authorized wsl-codex endpoint now192.168.1.105:2222 was checked once with existing strict host verification; connection timed out. No message delivered, no remote/network modifications. GitHub handoff remains the retrievable alternative, receipt unconfirmed.
 
 Oct16 follow-up WD0014: capacity returned and exact maker/test paths resumed, followed by four new final independent reviews. Quota limits themselves are normal external capacity constraints, not repaired by this project; future limit risk remains deferred. Current results are actual executed evidence, not inferred from resumed capacity.
+
+## WD-2026-10-16-0017
+Status: RESOLVED
+Title: V2 viewer temporary disabled skinned frustum culling
+- Original risk/reproduction: animate or seek a SkinnedMesh beyond its bind-pose bounds, then orbit/pick; stale mesh bounds can cull or reject the actual deformed surface. This viewer inherited a preventative `frustumCulled=false` while refreshing spheres; no browser failure has yet been observed.
+- Temporary workaround: disable skinned-mesh frustum culling; it avoids rendering rejection but removes a renderer feature and is not a durable bounds solution. Scope is the isolated V2 viewer only, never the formal Scene.
+- Evidence: initial src/experimental/rig-v2/main.tsx updateBounds explicitly set frustumCulled=false. Asset now stable and actual browser checks can run.
+- Durable routes compared: existing validated createSkinnedBounds conservative per-influence boxes (selected: normalized nonnegative GLB weights, pose-cost proportional to influences); exact all-vertex computeBoundingBox/sphere after every changed pose (correct but unnecessarily scans all467 meshes each frame). Invalid weights must throw visibly rather than trigger a hidden fallback.
+- Durable fix: reused createSkinnedBounds for every actual skin; restored frustumCulled=true. Geometry is not scanned per-frame unless the validated helper requires exact morph handling. Removed the disabled-culling workaround.
+- Durable verification: isolated production build PASS, TypeScript PASS; fresh production Chrome Playwright PASS2/2 (21.0s), actual posed canvas picking PASS; every deformed vertex inside conservative box+sphere at peak of CurlProbe and PulldownProbe, all467 skins culling enabled, unique actual source IDs467. Front/Side/Back at five keyframes per clip produced30PNG plus actual browser video. Evidence artifacts/rig-v2/browser/production-browser.log and results/. GLB SHA256 ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274. This verifies bounds/picking, not motion acceptance.
+
+## WD-2026-10-16-0018
+Status: OPEN
+Title: V2 independent source preservation precision assertion
+- Original reproduction: Blender Agent runpy scripts/rig-v2/verify_source.py after build.py; independent fresh original GLB import versus saved native base vertices fails assertion at 1e-7 metre tolerance.
+- Workaround: none; geometry preservation claim requires independent test. Initial build hashes only prove no subsequent base edit and are not substituted for this test.
+- Evidence: verify_source.py now preserves per-mesh deviation/topology failures to artifacts/rig-v2/source-verification-initial-failure.json before asserting. No source or exported asset changes.
+- Investigation: compare transformation precision/dtypes and mesh/topology, then choose exact float32 transform emulation versus numeric epsilon bound derived from observed source magnitude. Do not relax threshold without identifying cause.
+- Impact: independent source geometry proof pending; no full completion claim.
