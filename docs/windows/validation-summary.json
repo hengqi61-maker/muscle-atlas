@@ -1,0 +1,823 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "projectCommit": "7a0d258b59e9a2acc32021e8ab66f7098ff025ea",
+  "qualityInfrastructureBase": "9c9c97125c1ea902478894f164669764677d3563",
+  "finalChecks": [
+    {
+      "name": "health",
+      "exit": 0
+    },
+    {
+      "name": "ruff",
+      "exit": 0
+    },
+    {
+      "name": "python-infra",
+      "exit": 0
+    },
+    {
+      "name": "python-assets",
+      "exit": 0
+    },
+    {
+      "name": "build",
+      "exit": 0
+    },
+    {
+      "name": "unit",
+      "exit": 0
+    },
+    {
+      "name": "quality",
+      "exit": 0
+    },
+    {
+      "name": "asset-negative-tests",
+      "exit": 0
+    },
+    {
+      "name": "derived-assets",
+      "exit": 0
+    },
+    {
+      "name": "curl",
+      "exit": 0
+    },
+    {
+      "name": "pulldown",
+      "exit": 0
+    },
+    {
+      "name": "mujoco",
+      "exit": 0
+    },
+    {
+      "name": "tools",
+      "exit": 0
+    },
+    {
+      "name": "opensim",
+      "exit": 0
+    },
+    {
+      "name": "chrome",
+      "exit": 0
+    }
+  ],
+  "counts": {
+    "vitest": 9,
+    "originalPython": 8,
+    "qualityGates": 12,
+    "newPython": 10,
+    "newAssetTests": 4,
+    "chrome": 3
+  },
+  "historicalEvidencePreserved": true,
+  "rawSourceValidation": {
+    "errors": 887,
+    "warnings": 0,
+    "infos": 42,
+    "truncated": false,
+    "codes": [
+      "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+      "ACCESSOR_VECTOR3_NON_UNIT"
+    ]
+  },
+  "mujoco": {
+    "version": "3.16.0",
+    "dof": 2,
+    "jacobian_max_error": 2.6578839299601364e-07,
+    "inverse_torque_Nm": [
+      0.9237945184166544,
+      -0.1602728968573781
+    ],
+    "simulation_seconds": 1.0000000000000007,
+    "scope": "Synthetic rigid links, CPU dynamics; no muscles, EMG or human calibration."
+  },
+  "openSim": {
+    "version": "4.6-py311np24",
+    "model": "official arm26.osim",
+    "coordinates": 2,
+    "muscles": 6,
+    "bodyKinematicsRows": 1,
+    "nativeOwnershipFix": "model.addAnalysis; three focused repetitions and final full runner passed",
+    "geometryWarnings": "missing display VTP files; no GUI completeness claim"
+  },
+  "browser": {
+    "version": "155.0.8059.40",
+    "renderer": "ANGLE (AMD, AMD Radeon(TM) 780M (0x000015BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "canvas": {
+      "width": 865,
+      "height": 832,
+      "pixelRatio": 1.0000000298023224
+    },
+    "gpuElapsed_ms": null,
+    "warnings": [
+      {
+        "scenario": "atlas-paused",
+        "type": "error",
+        "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "location": {
+          "url": "http://127.0.0.1:5187/favicon.ico",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      }
+    ],
+    "pageErrors": [],
+    "scenarios": [
+      {
+        "scenario": "atlas-paused",
+        "medianRafPerSecond": 82.628133482369,
+        "runs": [
+          {
+            "repeat": 0,
+            "fps": 82.606700321236,
+            "frame_ms": {
+              "p50": 12.100000000000364,
+              "p95": 12.5,
+              "p99": 12.699999999999818
+            },
+            "drawCalls": {
+              "min": 468,
+              "max": 468
+            },
+            "triangles": {
+              "min": 1092419,
+              "max": 1092419
+            },
+            "rendererMemory": {
+              "geometries": 468,
+              "textures": 0
+            },
+            "jsHeap": {
+              "used": 73249848,
+              "total": 96261400,
+              "limit": 4395630592
+            },
+            "mainThreadTaskTime_s": 1.720769,
+            "resources": [
+              {
+                "name": "http://127.0.0.1:5187/assets/index-B2yErgwU.js",
+                "duration_ms": 40.19999999925494,
+                "transferSize": 387553,
+                "decodedBodySize": 1396177
+              },
+              {
+                "name": "http://127.0.0.1:5187/models/anatomy.glb",
+                "duration_ms": 207.69999999925494,
+                "transferSize": 25133868,
+                "decodedBodySize": 25133568
+              }
+            ],
+            "camera": {
+              "position": [
+                0,
+                1,
+                5.8
+              ],
+              "fov": 42,
+              "target": [
+                0,
+                0.3,
+                0
+              ]
+            }
+          },
+          {
+            "repeat": 1,
+            "fps": 82.62978264774564,
+            "frame_ms": {
+              "p50": 12.100000000000364,
+              "p95": 12.5,
+              "p99": 12.699999999999818
+            },
+            "drawCalls": {
+              "min": 468,
+              "max": 468
+            },
+            "triangles": {
+              "min": 1092419,
+              "max": 1092419
+            },
+            "rendererMemory": {
+              "geometries": 468,
+              "textures": 0
+            },
+            "jsHeap": {
+              "used": 75242433,
+              "total": 87872785,
+              "limit": 4395630592
+            },
+            "mainThreadTaskTime_s": 1.730558,
+            "resources": [
+              {
+                "name": "http://127.0.0.1:5187/assets/index-B2yErgwU.js",
+                "duration_ms": 6.100000001490116,
+                "transferSize": 300,
+                "decodedBodySize": 1396177
+              },
+              {
+                "name": "http://127.0.0.1:5187/models/anatomy.glb",
+                "duration_ms": 181.29999999701977,
+                "transferSize": 25133868,
+                "decodedBodySize": 25133568
+              }
+            ],
+            "camera": {
+              "position": [
+                0,
+                1,
+                5.8
+              ],
+              "fov": 42,
+              "target": [
+                0,
+                0.3,
+                0
+              ]
+            }
+          },
+          {
+            "repeat": 2,
+            "fps": 82.628133482369,
+            "frame_ms": {
+              "p50": 12.100000000000364,
+              "p95": 12.5,
+              "p99": 12.700000000000273
+            },
+            "drawCalls": {
+              "min": 468,
+              "max": 468
+            },
+            "triangles": {
+              "min": 1092419,
+              "max": 1092419
+            },
+            "rendererMemory": {
+              "geometries": 468,
+              "textures": 0
+            },
+            "jsHeap": {
+              "used": 73299344,
+              "total": 100193552,
+              "limit": 4395630592
+            },
+            "mainThreadTaskTime_s": 1.9729130000000001,
+            "resources": [
+              {
+                "name": "http://127.0.0.1:5187/assets/index-B2yErgwU.js",
+                "duration_ms": 5.899999998509884,
+                "transferSize": 300,
+                "decodedBodySize": 1396177
+              },
+              {
+                "name": "http://127.0.0.1:5187/models/anatomy.glb",
+                "duration_ms": 183.60000000149012,
+                "transferSize": 25133868,
+                "decodedBodySize": 25133568
+              }
+            ],
+            "camera": {
+              "position": [
+                0,
+                1,
+                5.8
+              ],
+              "fov": 42,
+              "target": [
+                0,
+                0.3,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "scenario": "curl-playing",
+        "medianRafPerSecond": 82.41210041102602,
+        "runs": [
+          {
+            "repeat": 0,
+            "fps": 82.41210041102602,
+            "frame_ms": {
+              "p50": 12.100000000000364,
+              "p95": 12.300000000000182,
+              "p99": 12.399999999999636
+            },
+            "drawCalls": {
+              "min": 396,
+              "max": 396
+            },
+            "triangles": {
+              "min": 956587,
+              "max": 956587
+            },
+            "rendererMemory": {
+              "geometries": 398,
+              "textures": 77
+            },
+            "jsHeap": {
+              "used": 84540608,
+              "total": 120078820,
+              "limit": 4395630592
+            },
+            "mainThreadTaskTime_s": 4.910597,
+            "resources": [
+              {
+                "name": "http://127.0.0.1:5187/assets/index-B2yErgwU.js",
+                "duration_ms": 7.099999997764826,
+                "transferSize": 300,
+                "decodedBodySize": 1396177
+              },
+              {
+                "name": "http://127.0.0.1:5187/models/anatomy-curl.glb",
+                "duration_ms": 232.30000000074506,
+                "transferSize": 28741892,
+                "decodedBodySize": 28741592
+              }
+            ],
+            "camera": {
+              "position": [
+                1.700000000000001,
+                1.2500000000000009,
+                2.100000000000004
+              ],
+              "fov": 42,
+              "target": [
+                0.44,
+                0.9,
+                0.15
+              ]
+            }
+          },
+          {
+            "repeat": 1,
+            "fps": 82.44829513694802,
+            "frame_ms": {
+              "p50": 12.100000000000364,
+              "p95": 12.300000000000182,
+              "p99": 12.400000000000091
+            },
+            "drawCalls": {
+              "min": 396,
+              "max": 396
+            },
+            "triangles": {
+              "min": 956587,
+              "max": 956587
+            },
+            "rendererMemory": {
+              "geometries": 398,
+              "textures": 77
+            },
+            "jsHeap": {
+              "used": 93790143,
+              "total": 121652747,
+              "limit": 4395630592
+            },
+            "mainThreadTaskTime_s": 4.754948,
+            "resources": [
+              {
+                "name": "http://127.0.0.1:5187/assets/index-B2yErgwU.js",
+                "duration_ms": 5.900000002235174,
+                "transferSize": 300,
+                "decodedBodySize": 1396177
+              },
+              {
+                "name": "http://127.0.0.1:5187/models/anatomy-curl.glb",
+                "duration_ms": 269.80000000074506,
+                "transferSize": 28741892,
+                "decodedBodySize": 28741592
+              }
+            ],
+            "camera": {
+              "position": [
+                1.700000000000001,
+                1.2500000000000009,
+                2.100000000000004
+              ],
+              "fov": 42,
+              "target": [
+                0.44,
+                0.9,
+                0.15
+              ]
+            }
+          },
+          {
+            "repeat": 2,
+            "fps": 81.31218284249375,
+            "frame_ms": {
+              "p50": 12.100000000000364,
+              "p95": 12.300000000000182,
+              "p99": 24.300000000000182
+            },
+            "drawCalls": {
+              "min": 396,
+              "max": 396
+            },
+            "triangles": {
+              "min": 956587,
+              "max": 956587
+            },
+            "rendererMemory": {
+              "geometries": 398,
+              "textures": 77
+            },
+            "jsHeap": {
+              "used": 87985660,
+              "total": 120340440,
+              "limit": 4395630592
+            },
+            "mainThreadTaskTime_s": 5.019698,
+            "resources": [
+              {
+                "name": "http://127.0.0.1:5187/assets/index-B2yErgwU.js",
+                "duration_ms": 5.699999999254942,
+                "transferSize": 300,
+                "decodedBodySize": 1396177
+              },
+              {
+                "name": "http://127.0.0.1:5187/models/anatomy-curl.glb",
+                "duration_ms": 200.19999999925494,
+                "transferSize": 28741892,
+                "decodedBodySize": 28741592
+              }
+            ],
+            "camera": {
+              "position": [
+                1.700000000000001,
+                1.2500000000000009,
+                2.100000000000004
+              ],
+              "fov": 42,
+              "target": [
+                0.44,
+                0.9,
+                0.15
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "scenario": "pulldown-paused",
+        "medianRafPerSecond": 14.384177404850378,
+        "runs": [
+          {
+            "repeat": 0,
+            "fps": 14.384177404850378,
+            "frame_ms": {
+              "p50": 72.69999999999982,
+              "p95": 73.10000000000036,
+              "p99": 109.10000000000036
+            },
+            "drawCalls": {
+              "min": 507,
+              "max": 507
+            },
+            "triangles": {
+              "min": 1093414,
+              "max": 1093414
+            },
+            "rendererMemory": {
+              "geometries": 509,
+              "textures": 469
+            },
+            "jsHeap": {
+              "used": 162757008,
+              "total": 173234492,
+              "limit": 4395630592
+            },
+            "mainThreadTaskTime_s": 5.15813,
+            "resources": [
+              {
+                "name": "http://127.0.0.1:5187/assets/index-B2yErgwU.js",
+                "duration_ms": 6.300000000745058,
+                "transferSize": 300,
+                "decodedBodySize": 1396177
+              },
+              {
+                "name": "http://127.0.0.1:5187/models/anatomy-pulldown.glb",
+                "duration_ms": 314.6000000014901,
+                "transferSize": 41004872,
+                "decodedBodySize": 41004572
+              }
+            ],
+            "camera": {
+              "position": [
+                2.999999999999999,
+                1.3999999999999997,
+                5.299999999999998
+              ],
+              "fov": 42,
+              "target": [
+                0,
+                0.15,
+                0.1
+              ]
+            }
+          },
+          {
+            "repeat": 1,
+            "fps": 14.223065070526884,
+            "frame_ms": {
+              "p50": 72.69999999999982,
+              "p95": 84.90000000000009,
+              "p99": 97
+            },
+            "drawCalls": {
+              "min": 507,
+              "max": 507
+            },
+            "triangles": {
+              "min": 1093414,
+              "max": 1093414
+            },
+            "rendererMemory": {
+              "geometries": 509,
+              "textures": 469
+            },
+            "jsHeap": {
+              "used": 144235526,
+              "total": 176117642,
+              "limit": 4395630592
+            },
+            "mainThreadTaskTime_s": 5.218147,
+            "resources": [
+              {
+                "name": "http://127.0.0.1:5187/assets/index-B2yErgwU.js",
+                "duration_ms": 6.600000001490116,
+                "transferSize": 300,
+                "decodedBodySize": 1396177
+              },
+              {
+                "name": "http://127.0.0.1:5187/models/anatomy-pulldown.glb",
+                "duration_ms": 286.20000000298023,
+                "transferSize": 41004872,
+                "decodedBodySize": 41004572
+              }
+            ],
+            "camera": {
+              "position": [
+                2.999999999999999,
+                1.3999999999999997,
+                5.299999999999998
+              ],
+              "fov": 42,
+              "target": [
+                0,
+                0.15,
+                0.1
+              ]
+            }
+          },
+          {
+            "repeat": 2,
+            "fps": 14.387339141555433,
+            "frame_ms": {
+              "p50": 72.69999999999982,
+              "p95": 72.90000000000055,
+              "p99": 84.89999999999964
+            },
+            "drawCalls": {
+              "min": 507,
+              "max": 507
+            },
+            "triangles": {
+              "min": 1093414,
+              "max": 1093414
+            },
+            "rendererMemory": {
+              "geometries": 509,
+              "textures": 469
+            },
+            "jsHeap": {
+              "used": 162702549,
+              "total": 173496637,
+              "limit": 4395630592
+            },
+            "mainThreadTaskTime_s": 5.153118,
+            "resources": [
+              {
+                "name": "http://127.0.0.1:5187/assets/index-B2yErgwU.js",
+                "duration_ms": 6.5,
+                "transferSize": 300,
+                "decodedBodySize": 1396177
+              },
+              {
+                "name": "http://127.0.0.1:5187/models/anatomy-pulldown.glb",
+                "duration_ms": 288.3999999985099,
+                "transferSize": 41004872,
+                "decodedBodySize": 41004572
+              }
+            ],
+            "camera": {
+              "position": [
+                2.999999999999999,
+                1.3999999999999997,
+                5.299999999999998
+              ],
+              "fov": 42,
+              "target": [
+                0,
+                0.15,
+                0.1
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "scenario": "pulldown-playing",
+        "medianRafPerSecond": 13.747758517632995,
+        "runs": [
+          {
+            "repeat": 0,
+            "fps": 14.16091587218433,
+            "frame_ms": {
+              "p50": 72.69999999999982,
+              "p95": 84.80000000000018,
+              "p99": 85
+            },
+            "drawCalls": {
+              "min": 507,
+              "max": 507
+            },
+            "triangles": {
+              "min": 1093414,
+              "max": 1093414
+            },
+            "rendererMemory": {
+              "geometries": 509,
+              "textures": 469
+            },
+            "jsHeap": {
+              "used": 106555525,
+              "total": 143864021,
+              "limit": 4395630592
+            },
+            "mainThreadTaskTime_s": 5.163779999999999,
+            "resources": [
+              {
+                "name": "http://127.0.0.1:5187/assets/index-B2yErgwU.js",
+                "duration_ms": 6.300000000745058,
+                "transferSize": 300,
+                "decodedBodySize": 1396177
+              },
+              {
+                "name": "http://127.0.0.1:5187/models/anatomy-pulldown.glb",
+                "duration_ms": 296.5,
+                "transferSize": 41004872,
+                "decodedBodySize": 41004572
+              }
+            ],
+            "camera": {
+              "position": [
+                2.999999999999999,
+                1.3999999999999997,
+                5.299999999999998
+              ],
+              "fov": 42,
+              "target": [
+                0,
+                0.15,
+                0.1
+              ]
+            }
+          },
+          {
+            "repeat": 1,
+            "fps": 13.747758517632995,
+            "frame_ms": {
+              "p50": 72.70000000000027,
+              "p95": 84.90000000000009,
+              "p99": 109.10000000000036
+            },
+            "drawCalls": {
+              "min": 507,
+              "max": 507
+            },
+            "triangles": {
+              "min": 1093414,
+              "max": 1093414
+            },
+            "rendererMemory": {
+              "geometries": 509,
+              "textures": 469
+            },
+            "jsHeap": {
+              "used": 104773502,
+              "total": 144104266,
+              "limit": 4395630592
+            },
+            "mainThreadTaskTime_s": 5.1744270000000006,
+            "resources": [
+              {
+                "name": "http://127.0.0.1:5187/assets/index-B2yErgwU.js",
+                "duration_ms": 5.600000001490116,
+                "transferSize": 300,
+                "decodedBodySize": 1396177
+              },
+              {
+                "name": "http://127.0.0.1:5187/models/anatomy-pulldown.glb",
+                "duration_ms": 282.80000000074506,
+                "transferSize": 41004872,
+                "decodedBodySize": 41004572
+              }
+            ],
+            "camera": {
+              "position": [
+                2.999999999999999,
+                1.3999999999999997,
+                5.299999999999998
+              ],
+              "fov": 42,
+              "target": [
+                0,
+                0.15,
+                0.1
+              ]
+            }
+          },
+          {
+            "repeat": 2,
+            "fps": 13.07319005645048,
+            "frame_ms": {
+              "p50": 72.80000000000018,
+              "p95": 97,
+              "p99": 109
+            },
+            "drawCalls": {
+              "min": 507,
+              "max": 507
+            },
+            "triangles": {
+              "min": 1093414,
+              "max": 1093414
+            },
+            "rendererMemory": {
+              "geometries": 509,
+              "textures": 469
+            },
+            "jsHeap": {
+              "used": 119299428,
+              "total": 142198576,
+              "limit": 4395630592
+            },
+            "mainThreadTaskTime_s": 5.203675,
+            "resources": [
+              {
+                "name": "http://127.0.0.1:5187/assets/index-B2yErgwU.js",
+                "duration_ms": 7.100000001490116,
+                "transferSize": 300,
+                "decodedBodySize": 1396177
+              },
+              {
+                "name": "http://127.0.0.1:5187/models/anatomy-pulldown.glb",
+                "duration_ms": 290,
+                "transferSize": 41004872,
+                "decodedBodySize": 41004572
+              }
+            ],
+            "camera": {
+              "position": [
+                2.999999999999999,
+                1.3999999999999997,
+                5.299999999999998
+              ],
+              "fov": 42,
+              "target": [
+                0,
+                0.15,
+                0.1
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "assetHashes": {
+    "anatomy.glb": "6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f",
+    "anatomy-curl.glb": "0b579c7256a0500b51b5f14506813285ebddc04046106451c55e84ccfba1585f",
+    "anatomy-pulldown.glb": "56b3ca231dda14100d64233758da2116282547b472afd4fc9b24160f345fee05"
+  },
+  "localEvidence": {
+    "finalChecks": "artifacts/windows/final-confirmed/results.json",
+    "performance": "artifacts/windows/performance-final.json",
+    "initialLintFailure": "artifacts/windows/checks/results.json",
+    "nativeFailure": "artifacts/windows/final-all/results.json"
+  },
+  "milestone": "M1 FAIL / WAIT_OWNER_SCOPE; no M2 or motion repair"
+}

@@ -1,0 +1,42 @@
+name: Independent infrastructure checks
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  headless:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.14.0'
+          cache: npm
+      - run: python -m pip install -r scripts/infra/requirements-ci.txt
+      - run: python -m ruff check scripts/infra tests/infra
+      - run: python -m pytest tests/infra -q
+      - run: python -m unittest discover -s tests -p 'test_*.py'
+      - run: npm ci
+      - run: node --test tests/infra/*.node.mjs
+      - run: node scripts/infra/validate-assets.mjs public/models/anatomy-curl.glb public/models/anatomy-pulldown.glb
+      - run: npm run test:quality
+      - run: python scripts/infra/health.py --profile ci
+  opensim-windows:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-activate-base: false
+      - name: Install isolated official OpenSim build
+        shell: pwsh
+        run: conda create --prefix "$env:RUNNER_TEMP/opensim-infra" --file scripts/infra/opensim-win-64.explicit.txt -y
+      - name: Official model without a display
+        shell: pwsh
+        run: conda run --prefix "$env:RUNNER_TEMP/opensim-infra" python scripts/infra/opensim_smoke.py
