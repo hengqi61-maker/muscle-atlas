@@ -1,0 +1,11 @@
+{
+  "packet": "gltf-PulldownProbe.packet.json",
+  "phase": "0.25",
+  "sampleTimeSeconds": 1,
+  "method": "Actual inverse A/B mapping, bpy pose write, isolated save, reopen, evaluated read",
+  "maxMatrixElementError": 2.384185791015625e-07,
+  "predeclaredTolerance": 2e-05,
+  "passed": true,
+  "sourceShaUnchanged": true,
+  "isolatedNativePath": "artifacts/rig-v2/exchange-v1-gltf-import.blend"
+}

@@ -1,0 +1,61 @@
+{
+  "status": "Numerical exchange validated; anatomy and OpenSim equivalence unproven",
+  "macAdapterCommit": "b8a065c",
+  "windowsContractCommit": "c12e30eed644e797206fe1296010b252c9325de3",
+  "assetSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+  "files": {
+    "docs/rig-v2/handoff/v1/README.md": {
+      "bytes": 4330,
+      "sha256": "c1368e12e06d8b2dbb0246502cb311fc9f747bbec4699746ac36eeeaa985a5b4"
+    },
+    "docs/rig-v2/handoff/v1/blender-CurlProbe.packet.json": {
+      "bytes": 166287,
+      "sha256": "ca825835e98db21b1c18974ad380f37d4f979a2f9458f7b78f1b93e65e8b9d5d"
+    },
+    "docs/rig-v2/handoff/v1/blender-PulldownProbe.packet.json": {
+      "bytes": 166348,
+      "sha256": "7883b01e5ccc6a22a6f374f8c0a8a1f8dad5c97a6dbcdd0f22732062574abf59"
+    },
+    "docs/rig-v2/handoff/v1/blender-rest.packet.json": {
+      "bytes": 27948,
+      "sha256": "2b18d5f1afdb5916f7cff6670a478cffc8990234b0161f8a4f0b7628745c9149"
+    },
+    "docs/rig-v2/handoff/v1/gltf-CurlProbe.packet.json": {
+      "bytes": 167681,
+      "sha256": "a6207558d8aec22334ff04adc3b76e9153f6496aa3097471874496452365ef63"
+    },
+    "docs/rig-v2/handoff/v1/gltf-PulldownProbe.packet.json": {
+      "bytes": 166886,
+      "sha256": "d70d9cdb0affbfe2168b05c04e2d7fd45a6c580195117d2c141fc68eef8c4d78"
+    },
+    "docs/rig-v2/handoff/v1/gltf-bind.packet.json": {
+      "bytes": 28513,
+      "sha256": "a474e102747971d3394bfa0adac59facdeb126edbbd5a4128aa2f8d9b75f8222"
+    },
+    "docs/rig-v2/handoff/v1/gltf-default.packet.json": {
+      "bytes": 28032,
+      "sha256": "e344224755f1adf7ebce527cf5862ddf93ccbfc87425aff077e22ef6d0a8b3ba"
+    },
+    "docs/rig-v2/handoff/v1/native-gltf-import-report.json": {
+      "bytes": 395,
+      "sha256": "aa396d0aa884a4e5d4ffce49475d3ac84c32cde393b32fabef664922ddd0eb29"
+    },
+    "docs/rig-v2/handoff/v1/native-gltf-mapping.json": {
+      "bytes": 14429,
+      "sha256": "7ee8f567b3aae555a7f123ee69ef58fce9d6048a6cbc57ed2960798076935892"
+    },
+    "docs/rig-v2/handoff/v1/native-observations.json": {
+      "bytes": 360057,
+      "sha256": "3f8aa5b09c8eeb81968ded3088be66a242bf31efeaa4fc06c5ab7c6f1d14fe38"
+    },
+    "docs/rig-v2/handoff/v1/validation-report.json": {
+      "bytes": 1190,
+      "sha256": "17abbd469983ced570ab90d4e75e2e4518364e5bdcbff378d34b8e098e8dd277"
+    },
+    "docs/rig-v2/handoff/v1/windows-receipt.md": {
+      "bytes": 1361,
+      "sha256": "203f48cd1847066cf46162b237c5a4689306536b4cd94e13265a8864a7281d50"
+    }
+  },
+  "windowsReceiptCommit": "9c363d965d1437cbde94d3c9fc05a29e559bce64"
+}

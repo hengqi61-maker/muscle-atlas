@@ -15,3 +15,6 @@ public/models/*.part
 
 # Generated immutable audit packets / recordings are local evidence, not source.
 /artifacts/
+
+# Isolated experimental viewer build.
+/dist-rig-v2/
