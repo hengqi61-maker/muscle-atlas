@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "variant": "seated-front-pulldown",
+  "requiredJoints": ["SpineRoot", "Thorax", "LeftScapula", "RightScapula", "UpperArm", "Forearm", "LeftHand", "RightUpperArm", "RightForearm", "RightHand"],
+  "angleLimits": [],
+  "calibrationStatus": "UNAVAILABLE: rig quaternions are not anatomical joint angles",
+  "references": [
+    {
+      "id": "andersen-2014",
+      "title": "Effects of grip width on muscle strength and activation in the lat pull-down",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24662157/",
+      "doi": "10.1097/JSC.0000000000000232",
+      "accessed": "2026-10-15",
+      "evidenceType": "primary-abstract",
+      "supports": "Grip-width comparison of strength and EMG in 15 men; context for qualitative variant metadata.",
+      "doesNotSupport": "Individual activation, force, universal joint ranges, current model calibration or M1 approval."
+    },
+    {
+      "id": "scapula-load-2021",
+      "title": "Scapular kinematics during unloaded and maximal loaded isokinetic concentric and eccentric shoulder flexion and extension movements",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33493783/",
+      "accessed": "2026-10-15",
+      "evidenceType": "primary-abstract",
+      "supports": "Load/task context for considering scapular kinematics; shoulder-flexion study context must be retained.",
+      "doesNotSupport": "Direct seated-pulldown trajectory validation, fixed scapulohumeral ratio or numeric angle thresholds."
+    }
+  ]
+}
