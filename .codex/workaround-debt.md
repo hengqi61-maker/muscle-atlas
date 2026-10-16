@@ -236,10 +236,14 @@ Title: V2 viewer temporary disabled skinned frustum culling
 - Durable verification: isolated production build PASS, TypeScript PASS; fresh production Chrome Playwright PASS2/2 (21.0s), actual posed canvas picking PASS; every deformed vertex inside conservative box+sphere at peak of CurlProbe and PulldownProbe, all467 skins culling enabled, unique actual source IDs467. Front/Side/Back at five keyframes per clip produced30PNG plus actual browser video. Evidence artifacts/rig-v2/browser/production-browser.log and results/. GLB SHA256 ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274. This verifies bounds/picking, not motion acceptance.
 
 ## WD-2026-10-16-0018
-Status: OPEN
+Status: RESOLVED
 Title: V2 independent source preservation precision assertion
 - Original reproduction: Blender Agent runpy scripts/rig-v2/verify_source.py after build.py; independent fresh original GLB import versus saved native base vertices fails assertion at 1e-7 metre tolerance.
 - Workaround: none; geometry preservation claim requires independent test. Initial build hashes only prove no subsequent base edit and are not substituted for this test.
 - Evidence: verify_source.py now preserves per-mesh deviation/topology failures to artifacts/rig-v2/source-verification-initial-failure.json before asserting. No source or exported asset changes.
 - Investigation: compare transformation precision/dtypes and mesh/topology, then choose exact float32 transform emulation versus numeric epsilon bound derived from observed source magnitude. Do not relax threshold without identifying cause.
 - Impact: independent source geometry proof pending; no full completion claim.
+
+- Root cause measured: original verifier computed float64 divide by1000, while Blender mathutils Vector stores float32 and multiplies float32 reciprocal. All467 polygon vertex orders matched,279 meshes exceeded an arbitrary1e-7 threshold by at most1.3519e-7m.
+- Durable paths compared: tolerance derived from magnitude/ULP versus exact emulation of documented float32 conversion. Selected exact float32 reciprocal model, removing tolerance entirely.
+- Verification: exact original Blender Agent runpy verify_source.py rerun in a fresh background process PASS467/467 with zero coordinate difference and unchanged polygon index order. Initial failure evidence preserved; independent-source-preservation.json and source-verification-float32-comparison.json record success. No workaround or asset modification.

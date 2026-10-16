@@ -7,9 +7,10 @@ bpy.ops.wm.read_factory_settings(use_empty=True);bpy.ops.import_scene.gltf(filep
 rows=[]
 for o in bpy.context.scene.objects:
  if o.type!='MESH':continue
- b=base[o.name];raw=np.array([v.co[:] for v in o.data.vertices]);expected=raw[:,[0,2,1]]/1000;expected[:,2]*=-1
+ b=base[o.name];raw=np.array([v.co[:] for v in o.data.vertices]);expected=raw[:,[0,2,1]].astype(np.float32)*np.float32(1/1000);expected[:,2]*=-1
  delta=np.linalg.norm(expected-b['coordinates'],axis=1);topology=b['polygons']==[tuple(p.vertices) for p in o.data.polygons]
- rows.append({'name':o.name,'vertices':len(raw),'maximumCanonicalDeviationM':float(delta.max()),'polygonVertexOrderUnchanged':topology,'baseGeometryPreservedWithinFloat32Roundoff':bool(delta.max()<1e-7 and topology),'sourceIds':b['ids']})
+ rows.append({'name':o.name,'vertices':len(raw),'maximumCanonicalDeviationM':float(delta.max()),'polygonVertexOrderUnchanged':topology,'baseGeometryPreservedWithinFloat32Roundoff':bool(delta.max()==0 and topology),'sourceIds':b['ids']})
+(OUT/'source-verification-float32-comparison.json').write_text(json.dumps({'meshCount':len(rows),'failures':[r for r in rows if not r['baseGeometryPreservedWithinFloat32Roundoff']]},indent=2))
 assert len(rows)==467 and all(r['baseGeometryPreservedWithinFloat32Roundoff'] for r in rows)
-(OUT/'independent-source-preservation.json').write_text(json.dumps({'method':'fresh original GLB import compared against saved native base mesh; full vertices and polygon indices; no evaluated deformation','sourceSha256':hashlib.sha256((ROOT/'public/models/anatomy.glb').read_bytes()).hexdigest(),'all467Passed':True,'maximumToleranceM':1e-7,'meshes':rows},indent=2))
+(OUT/'independent-source-preservation.json').write_text(json.dumps({'method':'fresh original GLB import compared against saved native base mesh; full vertices and polygon indices; no evaluated deformation','sourceSha256':hashlib.sha256((ROOT/'public/models/anatomy.glb').read_bytes()).hexdigest(),'all467Passed':True,'maximumToleranceM':0,'precisionModel':'Blender Vector float32 reciprocal multiplication, exact coordinate equality','meshes':rows},indent=2))
 print('INDEPENDENT_SOURCE_467_PASS')
