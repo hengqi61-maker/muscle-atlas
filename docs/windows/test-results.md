@@ -54,4 +54,6 @@
 
 新增 GitHub Actions 分开执行 Linux CPU/结构检查与 Windows headless OpenSim；真实桌面/GPU benchmark 不加入 GPU 不存在的 runner。远端 CI 是否实际通过应以 PR checks 为准，未运行的 job 不算本机已验证。
 
+远端首次运行：Core Quality通过；Windows headless OpenSim安装与官方模型测试通过；Linux所有数值/资源测试通过，但health误用完整Windows工具要求，因CI刻意未安装CMake/Ninja/FFmpeg而失败。修正为显式`--profile ci`（仍要求MuJoCo/NumPy/pytest/ruff/Python3.11/Node/Git），完整本地profile仍要求工具包。已用新建的最小CI环境验证：ci profile exit0，full profile按预期exit1；没有为消除CI失败安装无用依赖或隐藏必需依赖缺失。初次失败run为38827986582，修正后的远端状态见PR#4。
+
 优先事项：取得可授权共享的原始参考/标定数据；在现有 owner gate 下确定 M2 范围；追踪肩/腕解剖轴与接触验证；为原始法线问题建立可追溯派生修复；之后做受控 CPU/GPU 对照和 trace。当前不统一骨架、不新增动作、不开展大型优化。

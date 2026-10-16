@@ -1,4 +1,5 @@
 """Machine-readable non-admin environment probe; failed commands remain visible."""
+import argparse
 import importlib.metadata
 import json
 import platform
@@ -17,6 +18,9 @@ def run(command):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--profile", choices=["full", "ci"], default="full")
+    args = parser.parse_args()
     result = {"platform": platform.platform(), "python": sys.version,
               "executable": sys.executable, "packages": {}, "commands": {}}
     for package in ["mujoco", "numpy", "pytest", "ruff", "cmake", "ninja", "imageio-ffmpeg"]:
@@ -30,7 +34,11 @@ if __name__ == "__main__":
                     ["nvcc", "--version"]]:
         key = "git-lfs" if command[:2] == ["git", "lfs"] else command[0]
         result["commands"][key] = {"path": shutil.which(command[0]), **run(command)}
-    result["requiredFailures"] = [name for name, version in result["packages"].items() if version == "MISSING"]
+    required = ["mujoco", "numpy", "pytest", "ruff"]
+    if args.profile == "full":
+        required += ["cmake", "ninja", "imageio-ffmpeg"]
+    result["profile"] = args.profile
+    result["requiredFailures"] = [name for name in required if result["packages"][name] == "MISSING"]
     if sys.version_info[:2] != (3, 11):
         result["requiredFailures"].append("Dedicated Python 3.11 required")
     for name in ["git", "node"]:

@@ -25,7 +25,7 @@ jobs:
       - run: node --test tests/infra/*.node.mjs
       - run: node scripts/infra/validate-assets.mjs public/models/anatomy-curl.glb public/models/anatomy-pulldown.glb
       - run: npm run test:quality
-      - run: python scripts/infra/health.py
+      - run: python scripts/infra/health.py --profile ci
   opensim-windows:
     runs-on: windows-latest
     timeout-minutes: 20
