@@ -1,0 +1,57 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://github.com/hengqi61-maker/muscle-atlas/schemas/kinematics/packet-v1.schema.json",
+  "title":"Muscle Atlas kinematics exchange 1.0.0",
+  "type":"object",
+  "required":["schemaVersion","experimentId","source","coordinates","referencePose","coverage","evidence","nodes","samples","attachments"],
+  "additionalProperties":false,
+  "properties":{
+    "schemaVersion":{"const":"1.0.0"},
+    "experimentId":{"type":"string","minLength":1},
+    "source":{"type":"object","required":["kind","uri","sha256","gitCommit","software","licenseStatus"],"additionalProperties":false,"properties":{
+      "kind":{"enum":["blender-export","gltf-observation","opensim-model","synthetic-test"]},
+      "uri":{"type":"string","minLength":1},"sha256":{"$ref":"#/$defs/sha256"},
+      "gitCommit":{"type":"string","pattern":"^[0-9a-f]{40}$"},
+      "software":{"type":"string","minLength":1},"licenseStatus":{"type":"string","minLength":1},
+      "assetSha256":{"$ref":"#/$defs/sha256"},"producerCommit":{"type":"string","pattern":"^[0-9a-f]{40}$"}
+    }},
+    "coordinates":{"type":"object","required":["lengthUnit","timeUnit","handedness","axes","matrixStorage","vectorConvention","transformMeaning","rotationConvention"],"additionalProperties":false,"properties":{
+      "lengthUnit":{"const":"m"},"timeUnit":{"const":"s"},"handedness":{"const":"right"},
+      "axes":{"type":"object","required":["x","y","z"],"additionalProperties":false,"properties":{"x":{"type":"string"},"y":{"type":"string"},"z":{"type":"string"}}},
+      "matrixStorage":{"const":"column-major-16"},"vectorConvention":{"const":"column-vectors"},
+      "transformMeaning":{"const":"T_parent_from_local; T_world_from_local"},
+      "rotationConvention":{"const":"active-right-handed-matrix"}
+    }},
+    "referencePose":{"type":"object","required":["kind","description","anatomicallyCalibrated"],"additionalProperties":false,"properties":{
+      "kind":{"enum":["default-node","inverse-bind-derived","animation-time0","model-default","operator-specified","synthetic-test"]},
+      "description":{"type":"string","minLength":1},"anatomicallyCalibrated":{"type":"boolean"}
+    }},
+    "coverage":{"type":"object","required":["sides","mirrored","independentlyValidated"],"additionalProperties":false,"properties":{
+      "sides":{"type":"array","minItems":1,"uniqueItems":true,"items":{"enum":["left","right","midline"]}},
+      "mirrored":{"type":"boolean"},"independentlyValidated":{"type":"boolean"}
+    }},
+    "evidence":{"$ref":"#/$defs/evidence"},
+    "nodes":{"type":"array","minItems":1,"items":{"type":"object","required":["id","parentId","side","localMatrix","worldMatrix","anatomicalAxesKnown"],"additionalProperties":false,"properties":{
+      "id":{"type":"string","minLength":1},"parentId":{"type":["string","null"]},"side":{"enum":["left","right","midline","unknown"]},
+      "localMatrix":{"$ref":"#/$defs/matrix"},"worldMatrix":{"$ref":"#/$defs/matrix"},"anatomicalAxesKnown":{"type":"boolean"}
+    }}},
+    "samples":{"type":"array","items":{"type":"object","required":["timeSeconds","phase","transforms","origin"],"additionalProperties":false,"properties":{
+      "timeSeconds":{"type":"number","minimum":0},"phase":{"type":"string","minLength":1},
+      "origin":{"enum":["model-provided","script-derived","operator-specified","physiological-hypothesis"]},
+      "transforms":{"type":"object","additionalProperties":{"type":"object","required":["localMatrix","worldMatrix"],"additionalProperties":false,"properties":{"localMatrix":{"$ref":"#/$defs/matrix"},"worldMatrix":{"$ref":"#/$defs/matrix"}}}}
+    }}},
+    "attachments":{"type":"array","items":{"type":"object","required":["muscleId","pathPointId","parentFrame","position_m","evidence"],"additionalProperties":false,"properties":{
+      "muscleId":{"type":"string"},"pathPointId":{"type":"string"},"parentFrame":{"type":"string"},
+      "position_m":{"type":"array","minItems":3,"maxItems":3,"items":{"type":"number"}},"evidence":{"$ref":"#/$defs/evidence"}
+    }}}
+  },
+  "$defs":{
+    "sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "matrix":{"type":"array","minItems":16,"maxItems":16,"items":{"type":"number"}},
+    "evidence":{"type":"object","required":["type","confidence","uncertainties"],"additionalProperties":false,"properties":{
+      "type":{"enum":["model-provided","script-derived","operator-specified","physiological-hypothesis"]},
+      "confidence":{"enum":["high-numerical","limited","unvalidated"]},
+      "uncertainties":{"type":"array","minItems":1,"items":{"type":"string","minLength":1}}
+    }}
+  }
+}
