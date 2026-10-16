@@ -51,6 +51,11 @@
     "docs/rig-v2/handoff/v1/validation-report.json": {
       "bytes": 1190,
       "sha256": "17abbd469983ced570ab90d4e75e2e4518364e5bdcbff378d34b8e098e8dd277"
+    },
+    "docs/rig-v2/handoff/v1/windows-receipt.md": {
+      "bytes": 1361,
+      "sha256": "203f48cd1847066cf46162b237c5a4689306536b4cd94e13265a8864a7281d50"
     }
-  }
+  },
+  "windowsReceiptCommit": "9c363d965d1437cbde94d3c9fc05a29e559bce64"
 }

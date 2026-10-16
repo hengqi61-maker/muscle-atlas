@@ -16,7 +16,7 @@ Windows-owned v1 contract is used directly from its independent checkout. Seven 
 
 ## Actual checks
 - npm build PASS; Vitest13PASS; existing quality test26PASS.
-- R1 handoff/quality Node tests8PASS; Mac exchange3PASS; Windows contract22PASS.
+- R1 handoff/quality Node tests8PASS; Mac exchange3PASS; Windows initial contract22PASS, newer Windows9c363d9 suite29PASS.
 - RealChrome complete suite7PASS in52.9s, including original anatomy/pulldown and isolatedR1; actual frames/videos archived.
 - Khronos GLB Validator0errors/0warnings; one informational empty node at/nodes/37.
 - Numeric exchange max native/glTF matrix element error6.998322887863395e-7; actual Blender write/save/reopen/read2.384185791015625e-7; predeclared tolerance2e-5. These element errors are not anatomical angle/clinical tolerances.
@@ -33,6 +33,6 @@ Four independent review roles are recorded under reviews/58f5d6b. Reports are co
 - Documentation-only hand authorization inconsistency corrected after review; original ES05 preserved.
 
 ## Debt and next owner gate
-Primary exchange goal completed with real GitHub data and executable adapters. No retained workaround introduced by the exchange. V2 temporary disabled culling WD0017 permanently removed using validated posed bounds; float precision verifier WD0018 permanently corrected by exact float32 conversion model. Ledger checker reports0OPEN. Existing MODEL-RIG, grip/anatomical calibration and historical download/other deferred entries remain deferred; no new ACCEPTED_RISK.
+Primary exchange goal completed with real GitHub data and executable adapters. No retained workaround introduced by the exchange. The isolated viewer replay follow-up additionally passed a fresh production build and all3R1browser tests in25.1s; independent verification PASS is recorded in reviews/58f5d6b/playback-followup.md and WD0019 is permanently resolved. V2 temporary disabled culling WD0017 permanently removed using validated posed bounds; float precision verifier WD0018 permanently corrected by exact float32 conversion model. Ledger checker reports0OPEN. Existing MODEL-RIG, grip/anatomical calibration and historical download/other deferred entries remain deferred; no new ACCEPTED_RISK.
 
 Durable paths for deformation: calibrate attachment/shoulder landmarks with independent references, redistribute shared weights and evaluate reusable clip-independent corrections; avoid more one-action patches. Windows should first assess reference frames/model applicability and independent landmarks. No formal replacement, finger animation integration or face-pull starts without Owner decision. This report does not grant approval.
