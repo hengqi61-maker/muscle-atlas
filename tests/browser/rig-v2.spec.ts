@@ -76,3 +76,28 @@ test('production R1 evidence: actual clip keyframes in front, side and back',asy
     await page.getByRole('button',{name:'Pause',exact:true}).click();
   }
 });
+
+test('non-loop completion re-arms actual clips for replay and seeking',async({page})=>{
+  await page.goto('/rig-v2.html');
+  await expect(page.getByTestId('identity-count')).toHaveText('467',{timeout:120000});
+  await page.getByLabel('Loop',{exact:true}).uncheck();
+  for(const clip of ['CurlProbe','PulldownProbe']){
+    await page.getByLabel('Animation',{exact:true}).selectOption(clip);
+    const seek=page.getByLabel('Seek',{exact:true});
+    const duration=Number(await seek.getAttribute('max'));
+    await seek.fill(String(duration-.01));
+    await page.getByRole('button',{name:'Play',exact:true}).click();
+    await expect(page.getByRole('button',{name:'Play',exact:true})).toBeVisible();
+    await expect(page.getByTestId('clip-time')).toHaveText(`${duration.toFixed(3)} / ${duration.toFixed(3)} s`);
+    await page.getByRole('button',{name:'Play',exact:true}).click();
+    await expect.poll(async()=>Number((await page.getByTestId('clip-time').textContent())!.split(' / ')[0])).toBeGreaterThan(0);
+    await page.getByRole('button',{name:'Pause',exact:true}).click();
+    const replayTime=Number((await page.getByTestId('clip-time').textContent())!.split(' / ')[0]);
+    expect(replayTime).toBeLessThan(duration-.01);
+    await seek.fill('1');
+    await expect(page.getByTestId('clip-time')).toContainText('1.000 /');
+    await page.getByRole('button',{name:'Play',exact:true}).click();
+    await expect.poll(async()=>Number((await page.getByTestId('clip-time').textContent())!.split(' / ')[0])).toBeGreaterThan(1);
+    await page.getByRole('button',{name:'Pause',exact:true}).click();
+  }
+});

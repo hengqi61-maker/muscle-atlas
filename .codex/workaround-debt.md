@@ -247,3 +247,14 @@ Title: V2 independent source preservation precision assertion
 - Root cause measured: original verifier computed float64 divide by1000, while Blender mathutils Vector stores float32 and multiplies float32 reciprocal. All467 polygon vertex orders matched,279 meshes exceeded an arbitrary1e-7 threshold by at most1.3519e-7m.
 - Durable paths compared: tolerance derived from magnitude/ULP versus exact emulation of documented float32 conversion. Selected exact float32 reciprocal model, removing tolerance entirely.
 - Verification: exact original Blender Agent runpy verify_source.py rerun in a fresh background process PASS467/467 with zero coordinate difference and unchanged polygon index order. Initial failure evidence preserved; independent-source-preservation.json and source-verification-float32-comparison.json record success. No workaround or asset modification.
+
+## WD-2026-10-16-0019
+Status: OPEN
+Title: V2 non-loop finished action cannot replay
+- Original reproduction independently confirmed by Software QA on old dist: select CurlProbe, disable Loop, seek3.99s, Play300ms reaches4.000 but button remains Pause; Pause then Play300ms remains4.000 (mixer global4.6308).
+- Cause: LoopOnce clamp pauses AnimationAction internally while React playing remains true; toggling state alone never re-arms the clamped action. Seeking after finish also needs action reset before setTime.
+- Compared durable paths: state-only finished handler (corrects label but cannot resume internally paused action), versus finished handler plus explicit reset/play at terminal restart and before seeks (selected, addresses both actual mixer and UI lifecycle).
+- Workaround: none retained; no asset changes or threshold relaxation. Impact confined to isolated R1 viewer, existing M2 report unchanged.
+- Verification pending: exact original browser path, replay on both clips, pause/seek/loop and existing R1 tests after clean production build.
+
+Oct16 V2 follow-up WD0014: playback maker turn returned account usage-limit error after writing code/tests, before reporting build/browser verification. User reports quota refreshed; preserve current changes as explicitly unverified checkpoint, resume the same maker and run exact original path. No passing result inferred from files on disk and no alternate-account workaround. WD0019 remains OPEN until durable verification.
