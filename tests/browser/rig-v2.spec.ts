@@ -99,5 +99,8 @@ test('non-loop completion re-arms actual clips for replay and seeking',async({pa
     await page.getByRole('button',{name:'Play',exact:true}).click();
     await expect.poll(async()=>Number((await page.getByTestId('clip-time').textContent())!.split(' / ')[0])).toBeGreaterThan(1);
     await page.getByRole('button',{name:'Pause',exact:true}).click();
+    // Same target is a new seek command even after playback advanced from it.
+    await seek.fill('1');
+    await expect(page.getByTestId('clip-time')).toContainText('1.000 /');
   }
 });

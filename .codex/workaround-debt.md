@@ -249,7 +249,7 @@ Title: V2 independent source preservation precision assertion
 - Verification: exact original Blender Agent runpy verify_source.py rerun in a fresh background process PASS467/467 with zero coordinate difference and unchanged polygon index order. Initial failure evidence preserved; independent-source-preservation.json and source-verification-float32-comparison.json record success. No workaround or asset modification.
 
 ## WD-2026-10-16-0019
-Status: OPEN
+Status: RESOLVED
 Title: V2 non-loop finished action cannot replay
 - Original reproduction independently confirmed by Software QA on old dist: select CurlProbe, disable Loop, seek3.99s, Play300ms reaches4.000 but button remains Pause; Pause then Play300ms remains4.000 (mixer global4.6308).
 - Cause: LoopOnce clamp pauses AnimationAction internally while React playing remains true; toggling state alone never re-arms the clamped action. Seeking after finish also needs action reset before setTime.
@@ -258,3 +258,9 @@ Title: V2 non-loop finished action cannot replay
 - Verification pending: exact original browser path, replay on both clips, pause/seek/loop and existing R1 tests after clean production build.
 
 Oct16 V2 follow-up WD0014: playback maker turn returned account usage-limit error after writing code/tests, before reporting build/browser verification. User reports quota refreshed; preserve current changes as explicitly unverified checkpoint, resume the same maker and run exact original path. No passing result inferred from files on disk and no alternate-account workaround. WD0019 remains OPEN until durable verification.
+
+WD0019 verification follow-up: first production Chrome run passed existing2 tests, new regression exposed repeated seek request dropped when requested numeric time equals previous seek state although actual playback has advanced. The control now carries an explicit seek revision; identical requested times remain distinct commands, but the subsequent actual revision-only browser run still failed because the controlled range React onChange did not deliver the input request. A single-variable native onInput/currentTarget change then passed the exact enhanced browser test for both clips (4.9s). First failing log/video preserved in artifacts/rig-v2/replay-browser-initial-failure.log and replay-results-initial-failure/. No test target changed or assertion relaxed.
+
+WD0019 final maker verification: fresh production build exit0 (2.34s), followed by complete production Chrome R1 suite PASS3/3 (25.1s). Exact non-loop terminal replay tested on CurlProbe and PulldownProbe; pause, seek after finish, seek1→play→same seek1, original picking/material/rest checks and30 front/side/back clip frames all passed. Logs artifacts/rig-v2/replay-build.log, replay-input-browser.log, replay-browser-final.log; actual videos/frames replay-results/. The native input event path plus explicit seek revision delivers every request; no disabled feature, retry masking or changed asset. GLB remains SHA256 ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274. Independent QA confirmation pending before closure.
+
+WD0019 independent verification: Software QA /root/r1_software_review fresh actual Chrome exact original path PASS for both clips:3.99→4.000 automatically returns Play; replay advances0.468/0.300s; seek1→play/pause1.250/1.233→same seek1 settles1.000 and holds100ms. Read-only execution tool chunk ef7f5c delivered to coordinator. No historical review changed; no retained workaround.
