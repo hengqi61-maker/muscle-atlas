@@ -1,0 +1,19 @@
+{
+  "schemaVersion":"1.0.0",
+  "status":"uncalibrated-diagnostic",
+  "sourceAnchor":"Thorax",
+  "worldAlignment":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+  "pairs":[
+    {"source":"Thorax","target":"thorax"},
+    {"source":"RightClavicle","target":"clavicle"},
+    {"source":"RightScapula","target":"scapula"},
+    {"source":"RightHumerus","target":"humerus"}
+  ],
+  "uncertainties":[
+    "Identity world alignment is an operator diagnostic assumption, not anatomical registration",
+    "Per-frame offsets align numeric reference frames only",
+    "Mac scapula is parented through clavicle; OpenSim scapula has a thorax joint and an AC point constraint",
+    "OpenSim separates ulna/radius and welds hand; Mac forearm/wrist/finger sockets have different topology",
+    "Left side is deliberately unmapped; no mirroring"
+  ]
+}

@@ -10,6 +10,16 @@ ROOT = Path(__file__).resolve().parents[2]
 SCHEMA = ROOT / "schemas/kinematics/packet-v1.schema.json"
 
 
+def rotation_from_xyzw(values):
+    q = np.asarray(values, dtype=float)
+    if q.shape != (4,) or not np.isfinite(q).all() or not np.isclose(np.linalg.norm(q), 1, atol=1e-4):
+        raise ValueError("Unit xyzw quaternion required")
+    x, y, z, w = q / np.linalg.norm(q)
+    return np.array([[1 - 2 * (y*y + z*z), 2 * (x*y - z*w), 2 * (x*z + y*w)],
+                     [2 * (x*y + z*w), 1 - 2 * (x*x + z*z), 2 * (y*z - x*w)],
+                     [2 * (x*z - y*w), 2 * (y*z + x*w), 1 - 2 * (x*x + y*y)]])
+
+
 def matrix(values):
     """glTF/Three flat column-major representation -> 4x4 ndarray."""
     m = np.asarray(values, dtype=float).reshape((4, 4), order="F")
@@ -89,4 +99,7 @@ def validate(packet):
     times = [s["timeSeconds"] for s in packet["samples"]]
     if not all(np.isfinite(times)) or any(b <= a for a, b in pairwise(times)):
         issues.append("Sample times must be finite and strictly increasing")
+    for point in packet["attachments"]:
+        if not np.isfinite(point["position_m"]).all():
+            issues.append(f"Nonfinite attachment {point['muscleId']}:{point['pathPointId']}")
     return issues
