@@ -1,0 +1,172 @@
+[
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1918
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1923.4000000022352
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1932.699999999255
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1943.199999999255
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1844.8999999985099
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1851.699999999255
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1751.699999999255
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1761.199999999255
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 511.3999999985099
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1739.5999999977648
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1825.0999999977648
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1848
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1787.699999999255
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1795.0999999977648
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 482.5
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1793.800000000745
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 518.4000000022352
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1951.699999999255
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1799.800000000745
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1807.199999999255
+    },
+    "errors": []
+  }
+]

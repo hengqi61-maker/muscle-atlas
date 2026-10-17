@@ -1,0 +1,215 @@
+{
+  "schemaVersion": "1.0.0",
+  "coordinates": "right-handed-metres-seconds-column-major-active",
+  "variant": "synthetic-truth",
+  "provenance": "Synthetic coordinates; frames are explicit fixture definitions; no anatomy",
+  "toleranceM": 1e-09,
+  "samples": [
+    {
+      "timeSeconds": 0,
+      "prop": {
+        "id": "cube",
+        "worldMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "dimensionsM": [
+          2,
+          2,
+          2
+        ],
+        "vertices": [
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            -1
+          ],
+          [
+            -1,
+            1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            1
+          ],
+          [
+            1,
+            -1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            -1,
+            1,
+            1
+          ]
+        ],
+        "triangles": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            4,
+            6,
+            5
+          ],
+          [
+            4,
+            7,
+            6
+          ],
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            0,
+            5,
+            1
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            1,
+            6,
+            2
+          ],
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            2,
+            7,
+            3
+          ],
+          [
+            3,
+            7,
+            4
+          ],
+          [
+            3,
+            4,
+            0
+          ]
+        ]
+      },
+      "hands": [
+        {
+          "side": "left",
+          "skeletonId": "synthetic",
+          "wristWorldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "palmWorldMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "sources": [
+            {
+              "sourceId": "synthetic-triangle",
+              "originalMeshSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "posedWorldVertices": [
+                [
+                  -2,
+                  0,
+                  0
+                ],
+                [
+                  2,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  0
+                ]
+              ],
+              "triangles": [
+                [
+                  0,
+                  1,
+                  2
+                ]
+              ]
+            }
+          ],
+          "frameStatus": "provided"
+        }
+      ]
+    }
+  ]
+}

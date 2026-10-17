@@ -1,0 +1,38 @@
+
+> muscle-atlas@0.1.0 test:quality
+> node --test tests/quality/*.node.mjs tests/quality/motion/*.node.mjs
+
+✔ complete audit allowed while owner pending (1.2939ms)
+✔ owner pending prevents release (0.225ms)
+✔ FAIL remains a valid completed review but blocks release (0.1324ms)
+✔ inconclusive cannot be relabeled as release (0.1241ms)
+✔ duplicate reviewer contexts rejected (0.2407ms)
+✔ self approval rejected (0.1848ms)
+✔ third rework cycle rejected (1.0656ms)
+✔ few samples rejected (0.1403ms)
+✔ P1 blocks despite passing reviewer fields (0.3072ms)
+✔ M1 always waits owner even with supplied repair flag (0.2921ms)
+✔ third repair cycle cannot run (0.1002ms)
+✔ clean candidate still cannot auto approve M3 (0.0825ms)
+✔ SAT finds crossing triangle with all vertices outside box (0.8688ms)
+✔ area detects flattening independently of translation and initial posture (0.1792ms)
+✔ collapse alarms use either absolute or relative affected-triangle count (0.0859ms)
+✔ component localization keeps disconnected source components and remains inconclusive (0.6623ms)
+✔ interface evidence distinguishes crossing triangles from interior vertices (0.1983ms)
+✔ opposite wrist proximity is a side diagnostic and never an automatic anatomical verdict (0.1262ms)
+✔ support AABBs change with production config without legacy hardcoded heights (1.2944ms)
+✔ positive proxy gap remains inconclusive; negative solid penetration is detected at unchanged precision (0.395ms)
+✔ box SAT detects true interior crossing without inside vertices (0.3631ms)
+✔ oriented capped cylinder interior differs from conservative AABB overlap (0.4466ms)
+✔ analytic-cylinder edge crossing remains candidate evidence without rendered-prism proof (0.2107ms)
+✔ positive triangle gap calibration clips crossing faces instead of relying only on contained vertices (0.2805ms)
+✔ connection witness detects cylinder cap contact with box and does not invent remote connections (0.3559ms)
+✔ radial cylinder/box tangency can supply a connection witness between remote endpoints (0.1868ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 141.9221

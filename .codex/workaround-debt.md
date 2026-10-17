@@ -233,3 +233,6 @@ Title: Windows MoBL package acquisition / cross-model anatomical calibration
 Oct16 follow-up WD0013: authorized wsl-codex endpoint now192.168.1.105:2222 was checked once with existing strict host verification; connection timed out. No message delivered, no remote/network modifications. GitHub handoff remains the retrievable alternative, receipt unconfirmed.
 
 Oct16 follow-up WD0014: capacity returned and exact maker/test paths resumed, followed by four new final independent reviews. Quota limits themselves are normal external capacity constraints, not repaired by this project; future limit risk remains deferred. Current results are actual executed evidence, not inferred from resumed capacity.
+
+## WD-2026-10-17-WV2 — RESOLVED
+Independent peer-packet verifier initially hit missing promisor blobs and direct GitHub connection failure. Retried the original git-show path with process-local Git config using the existing Windows system proxy; seven original packets were fetched and verified. No global proxy, firewall or repository credential changes. Chrome original readiness race remains a reported upstream test issue; independent observation harness is diagnostic, not a production workaround.

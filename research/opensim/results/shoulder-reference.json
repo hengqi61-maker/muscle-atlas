@@ -1,0 +1,391 @@
+{
+  "modelSha256": "892bd333a1e1e6a2b77902b54218f12727eefd2306ca82bbda81621c926271fe",
+  "opensim": "version 4.6-2026-03-31-d6972f9e6, build date 21:24:14 Mar 31 2026",
+  "coordinateCount": 17,
+  "unlockedCoordinates": [
+    "ground_thorax_rot_x",
+    "ground_thorax_rot_y",
+    "ground_thorax_rot_z",
+    "clav_prot",
+    "clav_elev",
+    "scapula_abduction",
+    "scapula_elevation",
+    "scapula_upward_rot",
+    "scapula_winging",
+    "plane_elv",
+    "shoulder_elv",
+    "axial_rot"
+  ],
+  "lockedCoordinates": [
+    "ground_thorax_tx",
+    "ground_thorax_ty",
+    "ground_thorax_tz",
+    "elbow_flexion",
+    "pro_sup"
+  ],
+  "constraintXml": "<PointConstraint name=\"AC\">\n\t\t\t\t\t\n\t\t\t\t\t<isEnforced>true</isEnforced>\n\t\t\t\t\t\n\t\t\t\t\t<socket_body_1>/bodyset/clavicle</socket_body_1>\n\t\t\t\t\t\n\t\t\t\t\t<socket_body_2>/bodyset/scapula</socket_body_2>\n\t\t\t\t\t\n\t\t\t\t\t<location_body_1>-0.029239999999999999 0.020240000000000001 0.12005</location_body_1>\n\t\t\t\t\t\n\t\t\t\t\t<location_body_2>-0.01357 0.00011 -0.01523</location_body_2>\n\t\t\t\t</PointConstraint>\n\t\t\t",
+  "assembledConstraintResidualM": [
+    -2.7755575615628914e-17,
+    0.0,
+    0.0
+  ],
+  "localRankChecks": [
+    {
+      "step": 1e-05,
+      "jacobian": [
+        [
+          0.0,
+          -1.3877787807814455e-12,
+          -1.3877787807814455e-12,
+          0.10289878001751294,
+          0.022719178430913308,
+          -0.05933936871385658,
+          -0.06823070361483552,
+          0.007350980049669608,
+          -0.03971283102574552,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.7347234759768068e-13,
+          0.0,
+          -0.01681368539362127,
+          0.12199003581857963,
+          0.013484696702488473,
+          -0.15736829535734076,
+          -0.05210107808135966,
+          0.007776865009953559,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.3877787807814455e-12,
+          0.0,
+          0.06907424841273713,
+          -0.002744414483168977,
+          -0.03115851176932471,
+          0.0002715751026838298,
+          0.03621200171666228,
+          0.05122850733063621,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "singularValues": [
+        0.21670235748184957,
+        0.14803884150748603,
+        0.06788160731377338
+      ],
+      "rankAtTolerance1eMinus8": 3,
+      "localTangentDimension": 9
+    },
+    {
+      "step": 1e-06,
+      "jacobian": [
+        [
+          0.0,
+          6.938893903907228e-12,
+          0.0,
+          0.10289878001057406,
+          0.022719178427443865,
+          -0.05933936870344825,
+          -0.06823070361483552,
+          0.007350980046894051,
+          -0.03971283102366385,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          5.204170427930421e-12,
+          -3.469446951953614e-12,
+          -3.469446951953614e-12,
+          -0.016813685395355993,
+          0.121990035819447,
+          0.013484696704743615,
+          -0.15736829536185104,
+          -0.052101078082053554,
+          0.007776865009606615,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.3877787807814457e-11,
+          0.0,
+          0.06907424841828824,
+          -0.0027444144595767384,
+          -0.03115851178459028,
+          0.00027157506798936026,
+          0.03621200170278449,
+          0.05122850733896289,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "singularValues": [
+        0.21670235748388303,
+        0.14803884150283156,
+        0.06788160731896524
+      ],
+      "rankAtTolerance1eMinus8": 3,
+      "localTangentDimension": 9
+    },
+    {
+      "step": 1e-07,
+      "jacobian": [
+        [
+          -6.938893903907228e-11,
+          1.3877787807814457e-10,
+          0.0,
+          0.10289877998281849,
+          0.022719178413566077,
+          -0.059339368696509354,
+          -0.06823070358707994,
+          0.007350980102405202,
+          -0.039712831009786065,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -1.734723475976807e-11,
+          -1.734723475976807e-11,
+          3.469446951953614e-11,
+          -0.01681368537453931,
+          0.12199003581597756,
+          0.013484696709947785,
+          -0.1573682953219524,
+          -0.05210107810460496,
+          0.007776864985320486,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          2.7755575615628914e-10,
+          0.0,
+          0.0,
+          0.06907424868196621,
+          -0.002744414417943375,
+          -0.031158511881734796,
+          0.0002715751235005115,
+          0.03621200173054007,
+          0.05122850726957395,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "singularValues": [
+        0.21670235744320387,
+        0.14803884163579661,
+        0.06788160726161613
+      ],
+      "rankAtTolerance1eMinus8": 3,
+      "localTangentDimension": 9
+    }
+  ],
+  "joints": [
+    {
+      "name": "ground_thorax",
+      "type": "CustomJoint",
+      "definitionXml": "<CustomJoint name=\"ground_thorax\">\n\t\t\t\t\t\n\t\t\t\t\t<socket_parent_frame>ground_offset</socket_parent_frame>\n\t\t\t\t\t\n\t\t\t\t\t<socket_child_frame>thorax_offset</socket_child_frame>\n\t\t\t\t\t\n\t\t\t\t\t<coordinates>\n\t\t\t\t\t\t<Coordinate name=\"ground_thorax_rot_x\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>0.0697165594726359</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-3.1415926500000002 3.1415926500000002</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>false</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>false</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t\t<Coordinate name=\"ground_thorax_rot_y\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>-0.063169559111135185</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-3.1415926500000002 3.1415926500000002</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>false</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>false</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t\t<Coordinate name=\"ground_thorax_rot_z\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>-0.18216708121948549</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-3.1415926500000002 3.1415926500000002</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>false</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>false</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t\t<Coordinate name=\"ground_thorax_tx\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>-0.0042313069906338074</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-3.1415926500000002 3.1415926500000002</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>false</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>true</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t\t<Coordinate name=\"ground_thorax_ty\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>0.0040303597703426784</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-3.1415926500000002 3.1415926500000002</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>false</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>true</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t\t<Coordinate name=\"ground_thorax_tz\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>-0.00078351846075070297</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-3.1415926500000002 3.1415926500000002</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>false</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>true</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t</coordinates>\n\t\t\t\t\t\n\t\t\t\t\t<frames>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"ground_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/ground</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>0 0 0</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 0 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"thorax_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/thorax</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>0 0 0</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 0 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t</frames>\n\t\t\t\t\t\n\t\t\t\t\t<SpatialTransform>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<TransformAxis name=\"rotation1\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>ground_thorax_rot_x</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>1 0 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"rotation2\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>ground_thorax_rot_y</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 1 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"rotation3\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>ground_thorax_rot_z</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 0 1</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<TransformAxis name=\"translation1\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>ground_thorax_tx</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>1 0 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"translation2\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>ground_thorax_ty</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 1 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"translation3\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>ground_thorax_tz</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 0 1</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t</SpatialTransform>\n\t\t\t\t</CustomJoint>\n\t\t\t\t",
+      "evidence": "model-provided"
+    },
+    {
+      "name": "sternoclavicular",
+      "type": "CustomJoint",
+      "definitionXml": "<CustomJoint name=\"sternoclavicular\">\n\t\t\t\t\t\n\t\t\t\t\t<socket_parent_frame>thorax_offset</socket_parent_frame>\n\t\t\t\t\t\n\t\t\t\t\t<socket_child_frame>clavicle_offset</socket_child_frame>\n\t\t\t\t\t\n\t\t\t\t\t<coordinates>\n\t\t\t\t\t\t<Coordinate name=\"clav_prot\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>-0.29989174549359238</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-3.1415926500000002 3.1415926500000002</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>true</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>false</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t\t<Coordinate name=\"clav_elev\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>-0.064737252651681301</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-3.1415926500000002 3.1415926500000002</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>true</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>false</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t</coordinates>\n\t\t\t\t\t\n\t\t\t\t\t<frames>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"thorax_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/thorax</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>0.006324976528009351 0.0069300434097705312 0.025464431687451307</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 0 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"clavicle_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/clavicle</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>0 0 0</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 0 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t</frames>\n\t\t\t\t\t\n\t\t\t\t\t<SpatialTransform>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<TransformAxis name=\"rotation1\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>clav_prot</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0.015299999999999999 0.98929869999999998 -0.14509996</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"rotation2\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>clav_elev</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>-0.99447253999999996 0 -0.10499695000000001</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"rotation3\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 1 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<Constant name=\"function\">\n\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<TransformAxis name=\"translation1\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>1 0 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<MultiplierFunction name=\"function\">\n\t\t\t\t\t\t\t\t<function>\n\t\t\t\t\t\t\t\t\t<Constant>\n\t\t\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t\t\t</function>\n\t\t\t\t\t\t\t\t<scale>0.99999644921000319</scale>\n\t\t\t\t\t\t\t</MultiplierFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"translation2\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 1 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<MultiplierFunction name=\"function\">\n\t\t\t\t\t\t\t\t<function>\n\t\t\t\t\t\t\t\t\t<Constant>\n\t\t\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t\t\t</function>\n\t\t\t\t\t\t\t\t<scale>1.000006693199808</scale>\n\t\t\t\t\t\t\t</MultiplierFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"translation3\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 0 1</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<MultiplierFunction name=\"function\">\n\t\t\t\t\t\t\t\t<function>\n\t\t\t\t\t\t\t\t\t<Constant>\n\t\t\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t\t\t</function>\n\t\t\t\t\t\t\t\t<scale>0.99997632556685589</scale>\n\t\t\t\t\t\t\t</MultiplierFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t</SpatialTransform>\n\t\t\t\t</CustomJoint>\n\t\t\t\t",
+      "evidence": "model-provided"
+    },
+    {
+      "name": "scapulothoracic",
+      "type": "ScapulothoracicJoint",
+      "definitionXml": "<ScapulothoracicJoint name=\"scapulothoracic\">\n\t\t\t\t\t\n\t\t\t\t\t<socket_parent_frame>thorax_offset</socket_parent_frame>\n\t\t\t\t\t\n\t\t\t\t\t<socket_child_frame>scapula_offset</socket_child_frame>\n\t\t\t\t\t\n\t\t\t\t\t<coordinates>\n\t\t\t\t\t\t<Coordinate name=\"scapula_abduction\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>-0.31156113764349197</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-3.1415926500000002 3.1415926500000002</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>true</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>false</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t\t<Coordinate name=\"scapula_elevation\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>-0.050497870894562202</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-3.1415926500000002 3.1415926500000002</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>true</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>false</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t\t<Coordinate name=\"scapula_upward_rot\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>0.20820491154386678</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-3.1415926500000002 3.1415926500000002</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>true</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>false</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t\t<Coordinate name=\"scapula_winging\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>0.27358519522900637</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-1.5707963300000001 1.5707963300000001</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>false</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>false</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t</coordinates>\n\t\t\t\t\t\n\t\t\t\t\t<frames>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"thorax_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/thorax</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>-0.029422884944949112 -0.017300088530082611 0.070285568667052628</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 -0.87 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"scapula_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/scapula</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>-0.059819622317908099 -0.039041599498770452 -0.055980238178321401</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>-0.5181 -1.1415999999999999 -0.28539999999999999</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t</frames>\n\t\t\t\t\t\n\t\t\t\t\t<thoracic_ellipsoid_radii_x_y_z>0.082997500000000002 0.199991 0.083001000000000005</thoracic_ellipsoid_radii_x_y_z>\n\t\t\t\t\t\n\t\t\t\t\t<scapula_winging_axis_origin>0 0</scapula_winging_axis_origin>\n\t\t\t\t\t\n\t\t\t\t\t<scapula_winging_axis_direction>0</scapula_winging_axis_direction>\n\t\t\t\t</ScapulothoracicJoint>\n\t\t\t\t",
+      "evidence": "model-provided"
+    },
+    {
+      "name": "GlenoHumeral",
+      "type": "CustomJoint",
+      "definitionXml": "<CustomJoint name=\"GlenoHumeral\">\n\t\t\t\t\t\n\t\t\t\t\t<socket_parent_frame>scapula_offset</socket_parent_frame>\n\t\t\t\t\t\n\t\t\t\t\t<socket_child_frame>humerus_offset</socket_child_frame>\n\t\t\t\t\t\n\t\t\t\t\t<coordinates>\n\t\t\t\t\t\t<Coordinate name=\"plane_elv\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>2.8442048906321777e-11</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>1</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-1.5 3.1415926500000002</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>true</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>false</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t\t<Coordinate name=\"shoulder_elv\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>0.32163306016770637</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-0.78000000000000003 2.5299999999999998</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>false</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>false</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t\t<Coordinate name=\"axial_rot\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>1.0288316440818757</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>1</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-1.5707950000000199 1.5707950000000199</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>true</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>false</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t</coordinates>\n\t\t\t\t\t\n\t\t\t\t\t<frames>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"scapula_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/scapula</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>-0.0095499447834722345 -0.034001364113029092 0.008996821850851211</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 0 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"humerus_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/humerus</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>0 0 0</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 0 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t</frames>\n\t\t\t\t\t\n\t\t\t\t\t<SpatialTransform>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<TransformAxis name=\"rotation1\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>plane_elv</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 1 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"rotation2\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>shoulder_elv</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>-1 0 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"rotation3\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>axial_rot</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>-0.084599999999999995 0.99470000000000003 -0.058400000000000001</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<TransformAxis name=\"translation1\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>1 0 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<MultiplierFunction name=\"function\">\n\t\t\t\t\t\t\t\t<function>\n\t\t\t\t\t\t\t\t\t<Constant>\n\t\t\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t\t\t</function>\n\t\t\t\t\t\t\t\t<scale>0.99999397216424735</scale>\n\t\t\t\t\t\t\t</MultiplierFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"translation2\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 1 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<MultiplierFunction name=\"function\">\n\t\t\t\t\t\t\t\t<function>\n\t\t\t\t\t\t\t\t\t<Constant>\n\t\t\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t\t\t</function>\n\t\t\t\t\t\t\t\t<scale>1.0000402623835893</scale>\n\t\t\t\t\t\t\t</MultiplierFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"translation3\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 0 1</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<MultiplierFunction name=\"function\">\n\t\t\t\t\t\t\t\t<function>\n\t\t\t\t\t\t\t\t\t<Constant>\n\t\t\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t\t\t</function>\n\t\t\t\t\t\t\t\t<scale>0.99964647686094243</scale>\n\t\t\t\t\t\t\t</MultiplierFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t</SpatialTransform>\n\t\t\t\t</CustomJoint>\n\t\t\t\t",
+      "evidence": "model-provided"
+    },
+    {
+      "name": "elbow",
+      "type": "CustomJoint",
+      "definitionXml": "<CustomJoint name=\"elbow\">\n\t\t\t\t\t\n\t\t\t\t\t<socket_parent_frame>humerus_offset</socket_parent_frame>\n\t\t\t\t\t\n\t\t\t\t\t<socket_child_frame>ulna_offset</socket_child_frame>\n\t\t\t\t\t\n\t\t\t\t\t<coordinates>\n\t\t\t\t\t\t<Coordinate name=\"elbow_flexion\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>5.1934881151822426e-24</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>0 2.2689280300000001</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>false</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>true</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t</coordinates>\n\t\t\t\t\t\n\t\t\t\t\t<frames>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"humerus_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/humerus</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>0.0061000044831427585 -0.29040116109488806 -0.01229988504701285</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 0 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"ulna_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/ulna</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>0 0 0</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 0 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t</frames>\n\t\t\t\t\t\n\t\t\t\t\t<SpatialTransform>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<TransformAxis name=\"rotation1\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>1 0 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<Constant name=\"function\">\n\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"rotation2\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 1 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<Constant name=\"function\">\n\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"rotation3\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>elbow_flexion</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0.049400010000000001 0.036600010000000002 0.99810825000000003</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<TransformAxis name=\"translation1\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>1 0 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<MultiplierFunction name=\"function\">\n\t\t\t\t\t\t\t\t<function>\n\t\t\t\t\t\t\t\t\t<Constant>\n\t\t\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t\t\t</function>\n\t\t\t\t\t\t\t\t<scale>1.0000002849560037</scale>\n\t\t\t\t\t\t\t</MultiplierFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"translation2\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 1 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<MultiplierFunction name=\"function\">\n\t\t\t\t\t\t\t\t<function>\n\t\t\t\t\t\t\t\t\t<Constant>\n\t\t\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t\t\t</function>\n\t\t\t\t\t\t\t\t<scale>1.0000053431078386</scale>\n\t\t\t\t\t\t\t</MultiplierFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"translation3\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 0 1</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<MultiplierFunction name=\"function\">\n\t\t\t\t\t\t\t\t<function>\n\t\t\t\t\t\t\t\t\t<Constant>\n\t\t\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t\t\t</function>\n\t\t\t\t\t\t\t\t<scale>0.99999410549189738</scale>\n\t\t\t\t\t\t\t</MultiplierFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t</SpatialTransform>\n\t\t\t\t</CustomJoint>\n\t\t\t\t",
+      "evidence": "model-provided"
+    },
+    {
+      "name": "radioulnar",
+      "type": "CustomJoint",
+      "definitionXml": "<CustomJoint name=\"radioulnar\">\n\t\t\t\t\t\n\t\t\t\t\t<socket_parent_frame>ulna_offset</socket_parent_frame>\n\t\t\t\t\t\n\t\t\t\t\t<socket_child_frame>radius_offset</socket_child_frame>\n\t\t\t\t\t\n\t\t\t\t\t<coordinates>\n\t\t\t\t\t\t<Coordinate name=\"pro_sup\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_value>0.59899699928445393</default_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<default_speed_value>0</default_speed_value>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<range>-1.5707963300000001 1.5707963300000001</range>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<clamped>false</clamped>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<locked>true</locked>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed_function />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<prescribed>false</prescribed>\n\t\t\t\t\t\t</Coordinate>\n\t\t\t\t\t</coordinates>\n\t\t\t\t\t\n\t\t\t\t\t<frames>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"ulna_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/ulna</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>0.00040000000000000002 -0.011502999999999999 0.019998999999999999</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 0 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"radius_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/radius</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>0 0 0</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 0 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t</frames>\n\t\t\t\t\t\n\t\t\t\t\t<SpatialTransform>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<TransformAxis name=\"rotation1\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>1 0 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<Constant name=\"function\">\n\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"rotation2\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates>pro_sup</coordinates>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>-0.017160990000000001 0.99266564000000002 -0.11966796</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<LinearFunction name=\"function\">\n\t\t\t\t\t\t\t\t<coefficients> 1 0</coefficients>\n\t\t\t\t\t\t\t</LinearFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"rotation3\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 0 1</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<Constant name=\"function\">\n\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<TransformAxis name=\"translation1\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>1 0 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<MultiplierFunction name=\"function\">\n\t\t\t\t\t\t\t\t<function>\n\t\t\t\t\t\t\t\t\t<Constant>\n\t\t\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t\t\t</function>\n\t\t\t\t\t\t\t\t<scale>1</scale>\n\t\t\t\t\t\t\t</MultiplierFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"translation2\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 1 0</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<MultiplierFunction name=\"function\">\n\t\t\t\t\t\t\t\t<function>\n\t\t\t\t\t\t\t\t\t<Constant>\n\t\t\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t\t\t</function>\n\t\t\t\t\t\t\t\t<scale>1</scale>\n\t\t\t\t\t\t\t</MultiplierFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t\t<TransformAxis name=\"translation3\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<coordinates />\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<axis>0 0 1</axis>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<MultiplierFunction name=\"function\">\n\t\t\t\t\t\t\t\t<function>\n\t\t\t\t\t\t\t\t\t<Constant>\n\t\t\t\t\t\t\t\t\t\t<value>0</value>\n\t\t\t\t\t\t\t\t\t</Constant>\n\t\t\t\t\t\t\t\t</function>\n\t\t\t\t\t\t\t\t<scale>1</scale>\n\t\t\t\t\t\t\t</MultiplierFunction>\n\t\t\t\t\t\t</TransformAxis>\n\t\t\t\t\t</SpatialTransform>\n\t\t\t\t</CustomJoint>\n\t\t\t\t",
+      "evidence": "model-provided"
+    },
+    {
+      "name": "rc",
+      "type": "WeldJoint",
+      "definitionXml": "<WeldJoint name=\"rc\">\n\t\t\t\t\t\n\t\t\t\t\t<socket_parent_frame>radius_offset</socket_parent_frame>\n\t\t\t\t\t\n\t\t\t\t\t<socket_child_frame>hand_offset</socket_child_frame>\n\t\t\t\t\t\n\t\t\t\t\t<frames>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"radius_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/radius</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>0.017999999999999999 -0.24199999999999999 0.025000000000000001</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 0 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t\t<PhysicalOffsetFrame name=\"hand_offset\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<FrameGeometry name=\"frame_geometry\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<socket_frame>..</socket_frame>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>\n\t\t\t\t\t\t\t</FrameGeometry>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<socket_parent>/bodyset/hand</socket_parent>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<translation>0 0 0</translation>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<orientation>0 0 0</orientation>\n\t\t\t\t\t\t</PhysicalOffsetFrame>\n\t\t\t\t\t</frames>\n\t\t\t\t</WeldJoint>\n\t\t\t",
+      "evidence": "model-provided"
+    }
+  ],
+  "rotatorCuffPaths": [
+    {
+      "muscleId": "Infraspinatus_I",
+      "evidence": "model-provided",
+      "points": [
+        {
+          "name": "Infraspinatus3-P1",
+          "type": "PathPoint",
+          "role": "first-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Infraspinatus3-P1\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/scapula</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>-0.099069480462564738 -0.080853263486170973 -0.081261223309262887</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t\t"
+        },
+        {
+          "name": "Infraspinatus3-P2",
+          "type": "PathPoint",
+          "role": "last-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Infraspinatus3-P2\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/humerus</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>-0.017162031747030893 -0.0057299955321240209 0.024807138325052238</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t"
+        }
+      ]
+    },
+    {
+      "muscleId": "Infraspinatus_S",
+      "evidence": "model-provided",
+      "points": [
+        {
+          "name": "Infraspinatus5-P1",
+          "type": "PathPoint",
+          "role": "first-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Infraspinatus5-P1\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/scapula</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>-0.083429499432317811 -0.032271286292091625 -0.086879319969381641</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t\t"
+        },
+        {
+          "name": "Infraspinatus5-P2",
+          "type": "PathPoint",
+          "role": "last-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Infraspinatus5-P2\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/humerus</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>-0.014333616543501905 0.0027190845035771852 0.022203973006599511</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t"
+        }
+      ]
+    },
+    {
+      "muscleId": "TeresMinor",
+      "evidence": "model-provided",
+      "points": [
+        {
+          "name": "TeresMinor2-P1",
+          "type": "PathPoint",
+          "role": "first-path-endpoint",
+          "definitionXml": "<PathPoint name=\"TeresMinor2-P1\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/scapula</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>-0.084369434351197634 -0.066052653225416508 -0.042285021713615541</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t\t"
+        },
+        {
+          "name": "TeresMinor2-P2",
+          "type": "PathPoint",
+          "role": "last-path-endpoint",
+          "definitionXml": "<PathPoint name=\"TeresMinor2-P2\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/humerus</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>-0.015870007597970491 -0.0093600497382424104 0.010849886809777699</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t"
+        }
+      ]
+    },
+    {
+      "muscleId": "Subscapularis_S",
+      "evidence": "model-provided",
+      "points": [
+        {
+          "name": "Subscapularis3-P1",
+          "type": "PathPoint",
+          "role": "first-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Subscapularis3-P1\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/scapula</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>-0.078789527055875025 -0.031271199112899918 -0.090268111570563608</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t\t"
+        },
+        {
+          "name": "Subscapularis3-P2",
+          "type": "PathPoint",
+          "role": "last-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Subscapularis3-P2\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/humerus</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>0.018000095195681718 -0.00023000183974550295 -0.011999885411722819</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t"
+        }
+      ]
+    },
+    {
+      "muscleId": "Subscapularis_M",
+      "evidence": "model-provided",
+      "points": [
+        {
+          "name": "Subscapularis4-P1",
+          "type": "PathPoint",
+          "role": "first-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Subscapularis4-P1\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/scapula</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>-0.083569504633555378 -0.054912196042631707 -0.074743547427343598</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t\t"
+        },
+        {
+          "name": "Subscapularis4-P2",
+          "type": "PathPoint",
+          "role": "last-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Subscapularis4-P2\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/humerus</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>0.016391104563919189 0.00095780581170388059 -0.019435076372750954</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t"
+        }
+      ]
+    },
+    {
+      "muscleId": "Subscapularis_I",
+      "evidence": "model-provided",
+      "points": [
+        {
+          "name": "Subscapularis9-P1",
+          "type": "PathPoint",
+          "role": "first-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Subscapularis9-P1\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/scapula</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>-0.095069431859492709 -0.097653948106590768 -0.085369758259368406</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t\t"
+        },
+        {
+          "name": "Subscapularis9-P2",
+          "type": "PathPoint",
+          "role": "last-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Subscapularis9-P2\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/humerus</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>0.010983836047368828 -0.0034073409555911483 -0.019525776262486971</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t"
+        }
+      ]
+    },
+    {
+      "muscleId": "Supraspinatus_P",
+      "evidence": "model-provided",
+      "points": [
+        {
+          "name": "Supraspinatus2-P1",
+          "type": "PathPoint",
+          "role": "first-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Supraspinatus2-P1\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/scapula</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>-0.060529648695612823 -0.0013800523081562756 -0.049452565861000421</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t\t"
+        },
+        {
+          "name": "Supraspinatus2-P2",
+          "type": "PathPoint",
+          "role": "last-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Supraspinatus2-P2\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/humerus</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>0.010169740787382579 0.0095677577211598953 0.020050375624730808</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t"
+        }
+      ]
+    },
+    {
+      "muscleId": "Supraspinatus_A",
+      "evidence": "model-provided",
+      "points": [
+        {
+          "name": "Supraspinatus4-P1",
+          "type": "PathPoint",
+          "role": "first-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Supraspinatus4-P1\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/scapula</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>-0.048993120109923384 0.0013557026203117424 -0.069247307314771744</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t\t"
+        },
+        {
+          "name": "Supraspinatus4-P2",
+          "type": "PathPoint",
+          "role": "last-path-endpoint",
+          "definitionXml": "<PathPoint name=\"Supraspinatus4-P2\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<socket_parent_frame>/bodyset/humerus</socket_parent_frame>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<location>0.01777999647719139 0.017640077967619992 0.0096499482685446329</location>\n\t\t\t\t\t\t\t\t</PathPoint>\n\t\t\t\t\t\t\t"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Local finite-difference tangent rank at assembled default only, not global mobility proof",
+    "Path endpoints are model references, not calibrated 467-mesh anatomical attachments",
+    "XML rotation axes/functions retain their original OpenSim definition; no Euler-to-Mac equivalence asserted"
+  ]
+}

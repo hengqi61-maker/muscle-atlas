@@ -1,0 +1,57 @@
+
+[WebServer] (node:33552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 10 tests using 1 worker
+
+(node:42796) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/10] research\contact\chrome-diagnostic.spec.ts:3:1 › record original discovery predicate and await observed readiness
+
+(node:4724) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[2/10] research\contact\chrome-diagnostic.spec.ts:3:1 › record original discovery predicate and await observed readiness
+
+(node:13396) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[3/10] research\contact\chrome-diagnostic.spec.ts:3:1 › record original discovery predicate and await observed readiness
+
+(node:29912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[4/10] research\contact\chrome-diagnostic.spec.ts:3:1 › record original discovery predicate and await observed readiness
+(node:7868) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[5/10] research\contact\chrome-diagnostic.spec.ts:3:1 › record original discovery predicate and await observed readiness
+(node:36660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[6/10] research\contact\chrome-diagnostic.spec.ts:3:1 › record original discovery predicate and await observed readiness
+
+(node:32652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[7/10] research\contact\chrome-diagnostic.spec.ts:3:1 › record original discovery predicate and await observed readiness
+
+(node:1116) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[8/10] research\contact\chrome-diagnostic.spec.ts:3:1 › record original discovery predicate and await observed readiness
+
+(node:8592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[9/10] research\contact\chrome-diagnostic.spec.ts:3:1 › record original discovery predicate and await observed readiness
+
+(node:7344) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[10/10] research\contact\chrome-diagnostic.spec.ts:3:1 › record original discovery predicate and await observed readiness
+  10 passed (33.5s)
