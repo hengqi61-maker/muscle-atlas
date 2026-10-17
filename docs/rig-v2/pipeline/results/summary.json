@@ -85,7 +85,8 @@
   "newUnitTests": {
     "node": 16,
     "pythonComparison": 7,
-    "pythonRealValidatorFailure": 1
+    "pythonRealValidatorFailure": 1,
+    "archiveIntegrity": 1
   },
   "originalRegression": {
     "appBuild": "PASS",

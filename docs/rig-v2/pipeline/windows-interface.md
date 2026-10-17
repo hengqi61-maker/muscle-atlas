@@ -43,3 +43,8 @@ git show ff7fc70:research/opensim/mac-r1/import-report.json
 ```
 
 Real local result: structural AUTO PASS; four tests PASS (real asset, alternate-skin/non-joint target rejection, duplicate source identity/morph/missing-clip rejection, explicit sparse-accessor rejection). This does not close R1 shoulder/axilla/elbow P1, true gripping, or OWNER_APPROVAL. No asset was edited, and no workaround or test threshold relaxation was introduced.
+
+## Final delivery refresh: Windows fd1701f
+The newer Windows commitfd1701fc87ab00787056cb24f4e398d1f04c26c7 now publishes W1/W3 reports and an actual7-node/10prescribed-pose OpenSim packet. Mac read the published packet and reran the existing numerical schema/semantic validator:0issues. This is a data-contract recheck, not a MacOpenSimrun or anatomical calibration. There is still no dedicated contact schema in this revision.
+
+Transport provenance distinction: published GitLF packetSHA242fa6bd38b754e74de1acc32bbcd9fb9949080e9eaeb57d2115ffe6b153c9c5 differs from validation.json exportSHA62e1f48249d78ad4811a2a8b83e420e0e38d3e21c11e9c01b89e73106124c0a8. Exact LF→CRLF reproduction yields the latter; no numeric content difference is inferred. Mac preserves published bytes and records both identities, requesting upstream label clarification rather than rewriting Windows results or silently normalizing. See results/windows-receipt.json.

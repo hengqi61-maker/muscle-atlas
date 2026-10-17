@@ -35,7 +35,7 @@
 
 独立结构检测证明冻结 R1 两 Clip共享一套skin、27joint、467源节点与实际positions/joints/weights/inverse-bind buffers；各81个相同joint目标通道。没有每动作重新绑定。**当前没有独立形态修正层，不能说它已通过跨动作修正验证。** 结构复用不意味着解剖连续性已满足。
 
-Windows ff7fc70尚未发布通用contact schema。已在PR6提交具体数据请求及 [接口清单](windows-interface.md)。本阶段未私创不兼容规范、未虚构IK适配成功。原生 [轨迹说明](trajectory-format.md) 是内部观察，不是新的Windows交换格式；真正互通继续使用既有W2规范和A/B对齐。真实抓握与道具接触仍INCONCLUSIVE，未改变手指姿态。
+初次核对ff7fc70，最终fd1701f仍未发布通用contact schema（新增W3真实packet已只读做数值规范检查，0issues；并非Mac重跑OpenSim）。已在PR6提交具体数据请求及 [接口清单](windows-interface.md)。本阶段未私创不兼容规范、未虚构IK适配成功。原生 [轨迹说明](trajectory-format.md) 是内部观察，不是新的Windows交换格式；真正互通继续使用既有W2规范和A/B对齐。真实抓握与道具接触仍INCONCLUSIVE，未改变手指姿态。
 
 ## M-E：独立审查与实际验证
 
@@ -44,7 +44,7 @@ Windows ff7fc70尚未发布通用contact schema。已在PR6提交具体数据请
 |层级|实际结论|
 |---|---|
 |BUILD|PASS：重复结构、源/权重、字节buffer、121轨迹|
-|SOFTWARE_TEST|PASS：24项新增回归；原app构建、13Vitest、26旧质量测试；实际Chrome消费；Khronos0errors/0warnings|
+|SOFTWARE_TEST|PASS：25项新增回归（含归档完整性）；原app构建、13Vitest、26旧质量测试；实际Chrome消费；Khronos0errors/0warnings|
 |MOTION_GEOMETRY|FAIL：完整三角面保持原报警|
 |BIOMECHANICS / VISUAL|FAIL：工程形变/训练展示不合格；定位证据有效|
 |EXERCISE SCIENCE|INCONCLUSIVE：附着/握持未标定，诊断声明边界合格|
@@ -66,6 +66,7 @@ python3 scripts/rig-v2/pipeline/compare.py artifacts/motion-pipeline/repro-a art
 node --test tests/rig-v2/pipeline.node.mjs tests/rig-v2/attribution.node.mjs tests/rig-v2/reuse.node.mjs tests/rig-v2/pipeline-review.node.mjs
 python3 tests/rig-v2/pipeline_compare.py
 python3 tests/rig-v2/pipeline_failure.py
+python3 tests/rig-v2/package_evidence.py
 node scripts/quality/pipeline-review.mjs artifacts/motion-pipeline/cold-cli-a/manifest.json --review=docs/rig-v2/pipeline/reviews/review.json --candidate=19ba4ee4d1e9ab06238f95ecb8422b877c7652f6
 ```
 
@@ -73,7 +74,7 @@ node scripts/quality/pipeline-review.mjs artifacts/motion-pipeline/cold-cli-a/ma
 
 ## 债务与停止点
 
-主目标：E3重复构建实验、已知P1归因、统一复用核验、Windows数据清单和自动审查交付已完成。保留workaround：无；WD0020世界节点/退出码、WD0021捕获器重复计算/取消后误写结果、WD0022候选绑定、WD0023失败状态落盘已实证RESOLVED。项目检查0OPEN、无新增ACCEPTED_RISK；历史解剖/抓握等DEFERRED没有被关闭。
+主目标：E3重复构建实验、已知P1归因、统一复用核验、Windows数据清单和自动审查交付已完成。保留workaround：无；WD0020世界节点/退出码、WD0021捕获器重复计算/取消后误写结果、WD0022候选绑定、WD0023失败状态落盘已实证RESOLVED。项目检查0OPEN、无新增ACCEPTED_RISK；历史解剖/抓握等DEFERRED没有被关闭。另WD0024延期的是Windows原始CRLF导出与GitLF文件SHA标签澄清，数值内容差异未发现；Mac保留原字节并显式记录双哈希，未私改对端规范。
 
 当前结果满足源网格完整与结构复用，**没有同时满足解剖连续性**。已停止权重/形变修改，等待Owner选择后续实验：
 
@@ -81,3 +82,9 @@ node scripts/quality/pipeline-review.mjs artifacts/motion-pipeline/cold-cli-a/ma
 2. 可复用姿态空间修正：保留基底源几何、按关节姿态而非动作名索引，验证两Clip及插值；风险是过拟合或掩盖错误端点，须与附着依据一起审查。
 
 不自行换正式骨架、改手指、开始面拉或合并main。
+
+## 可自动归档
+
+`python3 scripts/quality/package-pipeline-evidence.py --output artifacts/new-evidence.zip --folder artifacts/motion-pipeline/cold-cli-a --folder artifacts/motion-pipeline/cold-cli-b --extra docs/assets-and-licenses.md --candidate 19ba4ee4d1e9ab06238f95ecb8422b877c7652f6`
+
+归档入口先核已登记文件SHA、限制项目内路径、拒绝覆盖，输出ZIP、SHA256及PACKAGE-MANIFEST。归档成功只证明文件完整，Owner字段始终PENDING，不替代专业审查。完整媒体发布为证据预发布：https://github.com/hengqi61-maker/muscle-atlas/releases/tag/evidence-e3-19ba4ee 。
