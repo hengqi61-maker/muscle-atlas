@@ -21,6 +21,8 @@ export function stageReport(manifest,review){
 export function verifyInventory(manifest){
  const errors=[],entries=manifest.files??[], refs=new Set(Array.isArray(entries)?entries.map(e=>e.path):Object.keys(entries));
  for(const name of ['glb','blend','trajectory','video'])if(typeof manifest.outputs?.[name]!=='string'||!refs.has(manifest.outputs[name]))errors.push('missing inventoried output '+name);
+ if(typeof manifest.outputs?.browser!=='string'||!refs.has(manifest.outputs.browser+'/report.json'))errors.push('inventoried actual Three consumer report required');
+ if(!refs.has('validator.json'))errors.push('inventoried GLB validator report required');
  const frames=manifest.outputs?.keyframes;if(!Array.isArray(frames)||frames.length<50||new Set(frames).size!==frames.length||frames.some(p=>!refs.has(p)))errors.push('50 unique inventoried keyframes required');
  return errors;
 }
