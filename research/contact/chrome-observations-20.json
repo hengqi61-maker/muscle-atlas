@@ -1,0 +1,342 @@
+[
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 0,
+      "controls": 0,
+      "seat": false,
+      "at": 430.6000000014901
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1779.6000000014901
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 0,
+      "controls": 0,
+      "seat": false,
+      "at": 444.6000000014901
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1837.6000000014901
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 0,
+      "controls": 0,
+      "seat": false,
+      "at": 433.5
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1768.3999999985099
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1752
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1760.9000000022352
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 503
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1742.7000000029802
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 496.4000000022352
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1778.9000000022352
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 497.30000000074506
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1750.300000000745
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 503.8999999985099
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1752.5999999977648
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 491.5
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1773.199999999255
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 500.4000000022352
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1756.4000000022352
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 525
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1769.4000000022352
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 540.3999999985099
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1795.6000000014901
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 543.2000000029802
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1885.800000000745
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 518.8000000007451
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 2116.199999999255
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 0,
+      "controls": 0,
+      "seat": false,
+      "at": 472.80000000074506
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1919.5
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 549.1999999992549
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 2044.199999999255
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1739.8999999985099
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1748
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 478.80000000074506
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1752.1000000014901
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": false,
+      "at": 532.2999999970198
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1787.2999999970198
+    },
+    "errors": []
+  },
+  {
+    "initial": {
+      "canvas": true,
+      "stores": 0,
+      "controls": 0,
+      "seat": false,
+      "at": 396.4000000022352
+    },
+    "final": {
+      "canvas": true,
+      "stores": 1,
+      "controls": 1,
+      "seat": true,
+      "at": 1657.5
+    },
+    "errors": []
+  }
+]

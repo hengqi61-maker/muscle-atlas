@@ -1,0 +1,100 @@
+{
+  "left": {
+    "inputSha256": "2545fb2cdeab60e468b0c7a71f6f5f0c385ae6709b2941d2706e73fd232a8145",
+    "fullReportSha256": "606646abe21277ce43cff11dd1c6c21ab332032b1cc81f99d8a830ba538642bd",
+    "counts": {
+      "penetration-candidate": 121968,
+      "disjoint": 48884
+    },
+    "sampleTimes": 121,
+    "selectedPhases": [
+      {
+        "timeSeconds": 0,
+        "penetratingTriangles": 1008,
+        "maximumWitnessDepthLowerBoundM": 0.022807821781489296
+      },
+      {
+        "timeSeconds": 1,
+        "penetratingTriangles": 1008,
+        "maximumWitnessDepthLowerBoundM": 0.022807886248303943
+      },
+      {
+        "timeSeconds": 2,
+        "penetratingTriangles": 1008,
+        "maximumWitnessDepthLowerBoundM": 0.02280773272805833
+      },
+      {
+        "timeSeconds": 3,
+        "penetratingTriangles": 1008,
+        "maximumWitnessDepthLowerBoundM": 0.022807886248303943
+      },
+      {
+        "timeSeconds": 4,
+        "penetratingTriangles": 1008,
+        "maximumWitnessDepthLowerBoundM": 0.022807821781489296
+      }
+    ],
+    "provenance": "commit=0914d4fad3fbe107ea90c08473b6d2a448345ba6; GLB=1e0af33c14cd74b5b353c0d9e8e2c030d9559e2c561c96ae831c4bf666f4a2ab; originalGLB=6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f; config=426b7108552bb09bf9a2078b79c68f67c2a208b2289589aa63ec6e4f08318a58; coordinates in shared equipment/anatomy model-root metres before common presentation scale 1.45 and translation [0,-1.45,0]; wrist/palm frames UNKNOWN, unused by detector; side assigned by posed centroid X, not anatomical calibration",
+    "originalSources": [
+      {
+        "sourceId": "oblique head of left adductor pollicis",
+        "originalMeshSha256": "a14a8ea97f726a8e7939e5fb51eb987feb8ce92c3281b1780a61944bfb60b518",
+        "triangleCount": 658
+      },
+      {
+        "sourceId": "transverse head of left adductor pollicis",
+        "originalMeshSha256": "be69fd6a5d7f6ed7ba670e0d154bcadc2cf18e62823e38231a5e2f4cb4489478",
+        "triangleCount": 754
+      }
+    ]
+  },
+  "right": {
+    "inputSha256": "744e595dbeebbac1c276559452c60fe484eec29be8db4f319e18e5efd056fe3f",
+    "fullReportSha256": "31131847887875ae6ac304521f504e0cf771065ff37f992f05b1cecd45d5e7f0",
+    "counts": {
+      "penetration-candidate": 121968,
+      "disjoint": 48884
+    },
+    "sampleTimes": 121,
+    "selectedPhases": [
+      {
+        "timeSeconds": 0,
+        "penetratingTriangles": 1008,
+        "maximumWitnessDepthLowerBoundM": 0.022807734362677197
+      },
+      {
+        "timeSeconds": 1,
+        "penetratingTriangles": 1008,
+        "maximumWitnessDepthLowerBoundM": 0.022807798829423985
+      },
+      {
+        "timeSeconds": 2,
+        "penetratingTriangles": 1008,
+        "maximumWitnessDepthLowerBoundM": 0.022807645309292978
+      },
+      {
+        "timeSeconds": 3,
+        "penetratingTriangles": 1008,
+        "maximumWitnessDepthLowerBoundM": 0.022807798829423985
+      },
+      {
+        "timeSeconds": 4,
+        "penetratingTriangles": 1008,
+        "maximumWitnessDepthLowerBoundM": 0.022807734362677197
+      }
+    ],
+    "provenance": "commit=0914d4fad3fbe107ea90c08473b6d2a448345ba6; GLB=1e0af33c14cd74b5b353c0d9e8e2c030d9559e2c561c96ae831c4bf666f4a2ab; originalGLB=6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f; config=426b7108552bb09bf9a2078b79c68f67c2a208b2289589aa63ec6e4f08318a58; coordinates in shared equipment/anatomy model-root metres before common presentation scale 1.45 and translation [0,-1.45,0]; wrist/palm frames UNKNOWN, unused by detector; side assigned by posed centroid X, not anatomical calibration",
+    "originalSources": [
+      {
+        "sourceId": "oblique head of right adductor pollicis",
+        "originalMeshSha256": "22b908e271496bd179b565be0c60f45acda9423657bf39b45efdf156da9f2049",
+        "triangleCount": 658
+      },
+      {
+        "sourceId": "transverse head of right adductor pollicis",
+        "originalMeshSha256": "40a540938354604bbc7d3c1ab9afaa1c4bb3770831d125f014760fa85d7dcb52",
+        "triangleCount": 754
+      }
+    ]
+  }
+}

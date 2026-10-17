@@ -1,0 +1,152 @@
+[
+  {
+    "sourceId": "transverse head of left adductor pollicis",
+    "triangleIndex": 114,
+    "timeSeconds": 0,
+    "side": "left",
+    "propId": "M2-grip-1",
+    "classification": "penetration-candidate",
+    "depthLowerBoundM": 0.022807821781489296,
+    "toleranceM": 1e-08,
+    "positionWorldM": [
+      0.416344473616293,
+      1.5953856867197223,
+      0.4596138599173437
+    ]
+  },
+  {
+    "sourceId": "transverse head of left adductor pollicis",
+    "triangleIndex": 114,
+    "timeSeconds": 1,
+    "side": "left",
+    "propId": "M2-grip-1",
+    "classification": "penetration-candidate",
+    "depthLowerBoundM": 0.022807886248303943,
+    "toleranceM": 1e-08,
+    "positionWorldM": [
+      0.4163446353536757,
+      1.375385877269751,
+      0.4596139935834801
+    ]
+  },
+  {
+    "sourceId": "transverse head of left adductor pollicis",
+    "triangleIndex": 114,
+    "timeSeconds": 2,
+    "side": "left",
+    "propId": "M2-grip-1",
+    "classification": "penetration-candidate",
+    "depthLowerBoundM": 0.02280773272805833,
+    "toleranceM": 1e-08,
+    "positionWorldM": [
+      0.41634461360847286,
+      1.1553859388691685,
+      0.4596138440101007
+    ]
+  },
+  {
+    "sourceId": "transverse head of left adductor pollicis",
+    "triangleIndex": 114,
+    "timeSeconds": 3,
+    "side": "left",
+    "propId": "M2-grip-1",
+    "classification": "penetration-candidate",
+    "depthLowerBoundM": 0.022807886248303943,
+    "toleranceM": 1e-08,
+    "positionWorldM": [
+      0.4163446353536757,
+      1.375385877269751,
+      0.4596139935834801
+    ]
+  },
+  {
+    "sourceId": "transverse head of left adductor pollicis",
+    "triangleIndex": 114,
+    "timeSeconds": 4,
+    "side": "left",
+    "propId": "M2-grip-1",
+    "classification": "penetration-candidate",
+    "depthLowerBoundM": 0.022807821781489296,
+    "toleranceM": 1e-08,
+    "positionWorldM": [
+      0.416344473616293,
+      1.5953856867197223,
+      0.4596138599173437
+    ]
+  },
+  {
+    "sourceId": "transverse head of right adductor pollicis",
+    "triangleIndex": 114,
+    "timeSeconds": 0,
+    "side": "right",
+    "propId": "M2-grip--1",
+    "classification": "penetration-candidate",
+    "depthLowerBoundM": 0.022807734362677197,
+    "toleranceM": 1e-08,
+    "positionWorldM": [
+      -0.4163444250326374,
+      1.5953861548979869,
+      0.45961385991718906
+    ]
+  },
+  {
+    "sourceId": "transverse head of right adductor pollicis",
+    "triangleIndex": 114,
+    "timeSeconds": 1,
+    "side": "right",
+    "propId": "M2-grip--1",
+    "classification": "penetration-candidate",
+    "depthLowerBoundM": 0.022807798829423985,
+    "toleranceM": 1e-08,
+    "positionWorldM": [
+      -0.4163445867701536,
+      1.375386345448091,
+      0.4596139935832932
+    ]
+  },
+  {
+    "sourceId": "transverse head of right adductor pollicis",
+    "triangleIndex": 114,
+    "timeSeconds": 2,
+    "side": "right",
+    "propId": "M2-grip--1",
+    "classification": "penetration-candidate",
+    "depthLowerBoundM": 0.022807645309292978,
+    "toleranceM": 1e-08,
+    "positionWorldM": [
+      -0.4163445650250565,
+      1.1553864070474007,
+      0.4596138440100273
+    ]
+  },
+  {
+    "sourceId": "transverse head of right adductor pollicis",
+    "triangleIndex": 114,
+    "timeSeconds": 3,
+    "side": "right",
+    "propId": "M2-grip--1",
+    "classification": "penetration-candidate",
+    "depthLowerBoundM": 0.022807798829423985,
+    "toleranceM": 1e-08,
+    "positionWorldM": [
+      -0.4163445867701536,
+      1.375386345448091,
+      0.4596139935832932
+    ]
+  },
+  {
+    "sourceId": "transverse head of right adductor pollicis",
+    "triangleIndex": 114,
+    "timeSeconds": 4,
+    "side": "right",
+    "propId": "M2-grip--1",
+    "classification": "penetration-candidate",
+    "depthLowerBoundM": 0.022807734362677197,
+    "toleranceM": 1e-08,
+    "positionWorldM": [
+      -0.4163444250326374,
+      1.5953861548979869,
+      0.45961385991718906
+    ]
+  }
+]

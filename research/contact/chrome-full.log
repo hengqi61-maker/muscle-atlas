@@ -1,0 +1,32 @@
+[WebServer] (node:37596) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 5 tests using 1 worker
+
+(node:31344) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/5] tests\browser\atlas.spec.ts:2:1 › real model, joint playback, selection and persistence
+[2/5] tests\browser\atlas.spec.ts:22:1 › rigged source anatomy angle and independent morph evidence
+[3/5] tests\browser\pulldown.spec.ts:2:1 › seated anatomy and lat machine share timeline and survive exercise switches
+[4/5] tests\browser\runtime.spec.ts:3:1 › finished non-loop playback restarts and paused source picking survives nonmonotonic seeks
+[5/5] tests\browser\supports.spec.ts:4:1 › production support solids retain configured fit and remain visible in inspection views
+  1) tests\browser\supports.spec.ts:4:1 › production support solids retain configured fit and remain visible in inspection views 
+
+    Error: page.evaluate: Error: Production scene missing
+        at eval (eval at evaluate (:370:30), <anonymous>:15:11)
+        at UtilityScript.evaluate (<anonymous>:372:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:370:30), <anonymous>:15:11)
+        at UtilityScript.evaluate (<anonymous>:372:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at D:\codex\muscle-atlas-validation-v2\tests\browser\supports.spec.ts:8:13
+
+    Error Context: test-results\supports-production-suppor-2c800-visible-in-inspection-views\error-context.md
+
+
+  1 failed
+    tests\browser\supports.spec.ts:4:1 › production support solids retain configured fit and remain visible in inspection views 
+  4 passed (28.2s)

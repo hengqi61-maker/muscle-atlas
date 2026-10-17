@@ -1,0 +1,620 @@
+{
+  "peerCommit": "fcb27068232ed1204786fd901bb8c58aa575a686",
+  "packets": {
+    "blender-CurlProbe.packet.json": {
+      "sha256": "ca825835e98db21b1c18974ad380f37d4f979a2f9458f7b78f1b93e65e8b9d5d",
+      "jointCount": 27,
+      "samples": 5,
+      "issues": [],
+      "coordinates": {
+        "lengthUnit": "m",
+        "timeUnit": "s",
+        "handedness": "right",
+        "axes": {
+          "x": "numeric X; anatomical axes uncalibrated",
+          "y": "numeric Y; native front is -Y",
+          "z": "up"
+        },
+        "matrixStorage": "column-major-16",
+        "vectorConvention": "column-vectors",
+        "transformMeaning": "T_parent_from_local; T_world_from_local",
+        "rotationConvention": "active-right-handed-matrix"
+      },
+      "referencePose": {
+        "kind": "animation-time0",
+        "description": "Actual animation-time0; not anatomical calibration; non-bone parent folded into root local",
+        "anatomicallyCalibrated": false
+      },
+      "segmentLengthRangeM": {
+        "Spine": [
+          0.1499999761581421,
+          0.1499999761581421
+        ],
+        "Thorax": [
+          0.19104978442192092,
+          0.19104978442192092
+        ],
+        "Neck": [
+          0.22038371860980988,
+          0.22038371860980988
+        ],
+        "Head": [
+          0.10000002384185792,
+          0.10000002384185792
+        ],
+        "LeftClavicle": [
+          0.17049630171478833,
+          0.17049630171478833
+        ],
+        "LeftScapula": [
+          0.09000000357627888,
+          0.09000000357627888
+        ],
+        "LeftHumerus": [
+          0.0831504613161132,
+          0.0831504613161132
+        ],
+        "LeftForearm": [
+          0.27402547001839006,
+          0.27402547001839006
+        ],
+        "LeftWrist": [
+          0.2242989391088495,
+          0.2242989987134964
+        ],
+        "LeftHand": [
+          0.020615492016078325,
+          0.020615508779886486
+        ],
+        "LeftFingerSocket": [
+          0.06462196260690704,
+          0.06462199240923046
+        ],
+        "RightClavicle": [
+          0.17049630171478833,
+          0.17049630171478833
+        ],
+        "RightScapula": [
+          0.0900000035762789,
+          0.0900000035762789
+        ],
+        "RightHumerus": [
+          0.0831504613161132,
+          0.0831504613161132
+        ],
+        "RightForearm": [
+          0.27402547001839006,
+          0.27402547001839006
+        ],
+        "RightWrist": [
+          0.2242989391088495,
+          0.2242989987134964
+        ],
+        "RightHand": [
+          0.02061549201608881,
+          0.020615508779988294
+        ],
+        "RightFingerSocket": [
+          0.0646219626069188,
+          0.06462199240925168
+        ],
+        "LeftThigh": [
+          0.10440305829529264,
+          0.10440305829529264
+        ],
+        "LeftShin": [
+          0.380657434463501,
+          0.380657434463501
+        ],
+        "LeftAnkle": [
+          0.3401470184326173,
+          0.3401470184326173
+        ],
+        "LeftFoot": [
+          0.0400000028312214,
+          0.0400000028312214
+        ],
+        "RightThigh": [
+          0.10440305829529264,
+          0.10440305829529264
+        ],
+        "RightShin": [
+          0.380657434463501,
+          0.380657434463501
+        ],
+        "RightAnkle": [
+          0.3401470184326173,
+          0.3401470184326173
+        ],
+        "RightFoot": [
+          0.0400000028312212,
+          0.0400000028312212
+        ]
+      },
+      "maxSampledJointTranslationStepM": 0.26035074258765717
+    },
+    "blender-PulldownProbe.packet.json": {
+      "sha256": "7883b01e5ccc6a22a6f374f8c0a8a1f8dad5c97a6dbcdd0f22732062574abf59",
+      "jointCount": 27,
+      "samples": 5,
+      "issues": [],
+      "coordinates": {
+        "lengthUnit": "m",
+        "timeUnit": "s",
+        "handedness": "right",
+        "axes": {
+          "x": "numeric X; anatomical axes uncalibrated",
+          "y": "numeric Y; native front is -Y",
+          "z": "up"
+        },
+        "matrixStorage": "column-major-16",
+        "vectorConvention": "column-vectors",
+        "transformMeaning": "T_parent_from_local; T_world_from_local",
+        "rotationConvention": "active-right-handed-matrix"
+      },
+      "referencePose": {
+        "kind": "animation-time0",
+        "description": "Actual animation-time0; not anatomical calibration; non-bone parent folded into root local",
+        "anatomicallyCalibrated": false
+      },
+      "segmentLengthRangeM": {
+        "Spine": [
+          0.1499999761581421,
+          0.1499999761581421
+        ],
+        "Thorax": [
+          0.19104978442192092,
+          0.19104978442192092
+        ],
+        "Neck": [
+          0.22038371860980988,
+          0.22038371860980988
+        ],
+        "Head": [
+          0.10000002384185792,
+          0.10000002384185792
+        ],
+        "LeftClavicle": [
+          0.17049630171478833,
+          0.17049630171478833
+        ],
+        "LeftScapula": [
+          0.09000000357627888,
+          0.09000001102685955
+        ],
+        "LeftHumerus": [
+          0.08315044641504878,
+          0.08315047621731121
+        ],
+        "LeftForearm": [
+          0.27402544021610664,
+          0.27402549982071356
+        ],
+        "LeftWrist": [
+          0.2242989093065412,
+          0.2242990732194587
+        ],
+        "LeftHand": [
+          0.02061549015348668,
+          0.020615547895824978
+        ],
+        "LeftFingerSocket": [
+          0.06462196260690849,
+          0.06462216377260677
+        ],
+        "RightClavicle": [
+          0.17049630171478833,
+          0.17049630171478833
+        ],
+        "RightScapula": [
+          0.0900000035762789,
+          0.09000001102685955
+        ],
+        "RightHumerus": [
+          0.08315044641504878,
+          0.08315047621731121
+        ],
+        "RightForearm": [
+          0.27402541041375333,
+          0.2740254998207134
+        ],
+        "RightWrist": [
+          0.2242989093065412,
+          0.2242989838123401
+        ],
+        "RightHand": [
+          0.02061541378542006,
+          0.020615540445149575
+        ],
+        "RightFingerSocket": [
+          0.0646219551567373,
+          0.0646219998601193
+        ],
+        "LeftThigh": [
+          0.10440305829529264,
+          0.10440305829529264
+        ],
+        "LeftShin": [
+          0.380657434463501,
+          0.380657434463501
+        ],
+        "LeftAnkle": [
+          0.3401470184326173,
+          0.3401470184326173
+        ],
+        "LeftFoot": [
+          0.0400000028312214,
+          0.0400000028312214
+        ],
+        "RightThigh": [
+          0.10440305829529264,
+          0.10440305829529264
+        ],
+        "RightShin": [
+          0.380657434463501,
+          0.380657434463501
+        ],
+        "RightAnkle": [
+          0.3401470184326173,
+          0.3401470184326173
+        ],
+        "RightFoot": [
+          0.0400000028312212,
+          0.0400000028312212
+        ]
+      },
+      "maxSampledJointTranslationStepM": 0.3633234313149321
+    },
+    "blender-rest.packet.json": {
+      "sha256": "2b18d5f1afdb5916f7cff6670a478cffc8990234b0161f8a4f0b7628745c9149",
+      "jointCount": 27,
+      "samples": 0,
+      "issues": [],
+      "coordinates": {
+        "lengthUnit": "m",
+        "timeUnit": "s",
+        "handedness": "right",
+        "axes": {
+          "x": "numeric X; anatomical axes uncalibrated",
+          "y": "numeric Y; native front is -Y",
+          "z": "up"
+        },
+        "matrixStorage": "column-major-16",
+        "vectorConvention": "column-vectors",
+        "transformMeaning": "T_parent_from_local; T_world_from_local",
+        "rotationConvention": "active-right-handed-matrix"
+      },
+      "referencePose": {
+        "kind": "model-default",
+        "description": "Actual model-default; not anatomical calibration; non-bone parent folded into root local",
+        "anatomicallyCalibrated": false
+      },
+      "segmentLengthRangeM": {},
+      "maxSampledJointTranslationStepM": 0
+    },
+    "gltf-CurlProbe.packet.json": {
+      "sha256": "a6207558d8aec22334ff04adc3b76e9153f6496aa3097471874496452365ef63",
+      "jointCount": 27,
+      "samples": 5,
+      "issues": [],
+      "coordinates": {
+        "lengthUnit": "m",
+        "timeUnit": "s",
+        "handedness": "right",
+        "axes": {
+          "x": "numeric X; anatomical axes uncalibrated",
+          "y": "up",
+          "z": "numeric Z"
+        },
+        "matrixStorage": "column-major-16",
+        "vectorConvention": "column-vectors",
+        "transformMeaning": "T_parent_from_local; T_world_from_local",
+        "rotationConvention": "active-right-handed-matrix"
+      },
+      "referencePose": {
+        "kind": "animation-time0",
+        "description": "Actual animation-time0; not anatomical calibration; non-bone parent folded into root local",
+        "anatomicallyCalibrated": false
+      },
+      "segmentLengthRangeM": {
+        "LeftThigh": [
+          0.10440305401348035,
+          0.10440305401348035
+        ],
+        "LeftShin": [
+          0.3806574344635011,
+          0.3806574344635011
+        ],
+        "LeftAnkle": [
+          0.34014701843261735,
+          0.34014701843261735
+        ],
+        "LeftFoot": [
+          0.040000002831221695,
+          0.040000002831221695
+        ],
+        "RightThigh": [
+          0.10440305401348035,
+          0.10440305401348035
+        ],
+        "RightShin": [
+          0.3806574344635011,
+          0.3806574344635011
+        ],
+        "RightAnkle": [
+          0.3401470184326174,
+          0.3401470184326174
+        ],
+        "RightFoot": [
+          0.040000002831221564,
+          0.040000002831221564
+        ],
+        "Spine": [
+          0.14999991655349745,
+          0.14999991655349745
+        ],
+        "Thorax": [
+          0.19104976952076008,
+          0.19104976952076008
+        ],
+        "LeftClavicle": [
+          0.17049630179131503,
+          0.17049630179131503
+        ],
+        "LeftScapula": [
+          0.09000000357627926,
+          0.09000000357627926
+        ],
+        "LeftHumerus": [
+          0.08315042406320626,
+          0.08315042406320626
+        ],
+        "LeftForearm": [
+          0.27402552962303595,
+          0.27402552962303595
+        ],
+        "LeftWrist": [
+          0.22429901361465582,
+          0.22429901361465582
+        ],
+        "LeftHand": [
+          0.02061550319195006,
+          0.02061550319195006
+        ],
+        "LeftFingerSocket": [
+          0.06462192535400882,
+          0.06462192535400882
+        ],
+        "Neck": [
+          0.2203837186098101,
+          0.2203837186098101
+        ],
+        "Head": [
+          0.10000002384185792,
+          0.10000002384185792
+        ],
+        "RightClavicle": [
+          0.17049630179131503,
+          0.17049630179131503
+        ],
+        "RightScapula": [
+          0.09000000357627926,
+          0.09000000357627926
+        ],
+        "RightHumerus": [
+          0.08315042406320626,
+          0.08315042406320626
+        ],
+        "RightForearm": [
+          0.27402552962303595,
+          0.27402552962303595
+        ],
+        "RightWrist": [
+          0.2242990136146578,
+          0.2242990136146578
+        ],
+        "RightHand": [
+          0.02061550132931387,
+          0.02061550132931387
+        ],
+        "RightFingerSocket": [
+          0.0646219924092418,
+          0.0646219924092418
+        ]
+      },
+      "maxSampledJointTranslationStepM": 0.26035082626257783
+    },
+    "gltf-PulldownProbe.packet.json": {
+      "sha256": "d70d9cdb0affbfe2168b05c04e2d7fd45a6c580195117d2c141fc68eef8c4d78",
+      "jointCount": 27,
+      "samples": 5,
+      "issues": [],
+      "coordinates": {
+        "lengthUnit": "m",
+        "timeUnit": "s",
+        "handedness": "right",
+        "axes": {
+          "x": "numeric X; anatomical axes uncalibrated",
+          "y": "up",
+          "z": "numeric Z"
+        },
+        "matrixStorage": "column-major-16",
+        "vectorConvention": "column-vectors",
+        "transformMeaning": "T_parent_from_local; T_world_from_local",
+        "rotationConvention": "active-right-handed-matrix"
+      },
+      "referencePose": {
+        "kind": "animation-time0",
+        "description": "Actual animation-time0; not anatomical calibration; non-bone parent folded into root local",
+        "anatomicallyCalibrated": false
+      },
+      "segmentLengthRangeM": {
+        "LeftThigh": [
+          0.10440305401348035,
+          0.10440305401348035
+        ],
+        "LeftShin": [
+          0.3806574344635011,
+          0.3806574344635011
+        ],
+        "LeftAnkle": [
+          0.34014701843261735,
+          0.34014701843261735
+        ],
+        "LeftFoot": [
+          0.040000002831221695,
+          0.040000002831221695
+        ],
+        "RightThigh": [
+          0.10440305401348035,
+          0.10440305401348035
+        ],
+        "RightShin": [
+          0.3806574344635011,
+          0.3806574344635011
+        ],
+        "RightAnkle": [
+          0.3401470184326174,
+          0.3401470184326174
+        ],
+        "RightFoot": [
+          0.040000002831221564,
+          0.040000002831221564
+        ],
+        "Spine": [
+          0.14999991655349745,
+          0.14999991655349745
+        ],
+        "Thorax": [
+          0.19104976952076008,
+          0.19104976952076008
+        ],
+        "LeftClavicle": [
+          0.17049630179131503,
+          0.17049630179131503
+        ],
+        "LeftScapula": [
+          0.09000001102686143,
+          0.09000001102686143
+        ],
+        "LeftHumerus": [
+          0.0831503793598444,
+          0.0831503793598444
+        ],
+        "LeftForearm": [
+          0.2740255892276783,
+          0.2740255892276783
+        ],
+        "LeftWrist": [
+          0.2242991179228886,
+          0.2242991179228886
+        ],
+        "LeftHand": [
+          0.02061552181863039,
+          0.02061552181863039
+        ],
+        "LeftFingerSocket": [
+          0.06462211161854035,
+          0.06462211161854035
+        ],
+        "Neck": [
+          0.2203837186098101,
+          0.2203837186098101
+        ],
+        "Head": [
+          0.10000002384185792,
+          0.10000002384185792
+        ],
+        "RightClavicle": [
+          0.17049630179131503,
+          0.17049630179131503
+        ],
+        "RightScapula": [
+          0.09000001102686142,
+          0.09000001102686142
+        ],
+        "RightHumerus": [
+          0.0831503793598444,
+          0.0831503793598444
+        ],
+        "RightForearm": [
+          0.2740254998207129,
+          0.2740254998207129
+        ],
+        "RightWrist": [
+          0.22429911792278337,
+          0.22429911792278337
+        ],
+        "RightHand": [
+          0.020615350455603837,
+          0.020615350455603837
+        ],
+        "RightFingerSocket": [
+          0.0646220892668804,
+          0.0646220892668804
+        ]
+      },
+      "maxSampledJointTranslationStepM": 0.3633236370184208
+    },
+    "gltf-bind.packet.json": {
+      "sha256": "a474e102747971d3394bfa0adac59facdeb126edbbd5a4128aa2f8d9b75f8222",
+      "jointCount": 27,
+      "samples": 0,
+      "issues": [],
+      "coordinates": {
+        "lengthUnit": "m",
+        "timeUnit": "s",
+        "handedness": "right",
+        "axes": {
+          "x": "numeric X; anatomical axes uncalibrated",
+          "y": "up",
+          "z": "numeric Z"
+        },
+        "matrixStorage": "column-major-16",
+        "vectorConvention": "column-vectors",
+        "transformMeaning": "T_parent_from_local; T_world_from_local",
+        "rotationConvention": "active-right-handed-matrix"
+      },
+      "referencePose": {
+        "kind": "inverse-bind-derived",
+        "description": "Actual inverse-bind-derived; not anatomical calibration; non-bone parent folded into root local",
+        "anatomicallyCalibrated": false
+      },
+      "segmentLengthRangeM": {},
+      "maxSampledJointTranslationStepM": 0
+    },
+    "gltf-default.packet.json": {
+      "sha256": "e344224755f1adf7ebce527cf5862ddf93ccbfc87425aff077e22ef6d0a8b3ba",
+      "jointCount": 27,
+      "samples": 0,
+      "issues": [],
+      "coordinates": {
+        "lengthUnit": "m",
+        "timeUnit": "s",
+        "handedness": "right",
+        "axes": {
+          "x": "numeric X; anatomical axes uncalibrated",
+          "y": "up",
+          "z": "numeric Z"
+        },
+        "matrixStorage": "column-major-16",
+        "vectorConvention": "column-vectors",
+        "transformMeaning": "T_parent_from_local; T_world_from_local",
+        "rotationConvention": "active-right-handed-matrix"
+      },
+      "referencePose": {
+        "kind": "default-node",
+        "description": "Actual default-node; not anatomical calibration; non-bone parent folded into root local",
+        "anatomicallyCalibrated": false
+      },
+      "segmentLengthRangeM": {},
+      "maxSampledJointTranslationStepM": 0
+    }
+  },
+  "limits": [
+    "Five clip samples cannot establish between-sample continuity",
+    "Proper matrix handedness does not calibrate anatomical left/right labels",
+    "Length variation is numeric description, not a physiological rejection threshold"
+  ],
+  "sameClipSkeletonTopology": true
+}

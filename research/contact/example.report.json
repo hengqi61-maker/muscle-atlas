@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "results": [
+    {
+      "sourceId": "synthetic-triangle",
+      "triangleIndex": 0,
+      "timeSeconds": 0,
+      "side": "left",
+      "propId": "cube",
+      "classification": "penetration-candidate",
+      "depthLowerBoundM": 0.33333333333333337,
+      "toleranceM": 1e-09,
+      "positionWorldM": [
+        0.0,
+        0.6666666666666666,
+        0.0
+      ]
+    }
+  ],
+  "scope": "discrete triangle surface versus supplied closed convex prop mesh",
+  "uncertainty": [
+    "No continuous-time or grasp-quality certification",
+    "No tissue mechanics, force or exact minimum translation depth",
+    "Disjoint surfaces do not exclude a prop enclosed by a closed hand volume",
+    "Tolerance-expanded clipping; gap is separating-plane lower bound only"
+  ],
+  "inputSha256": "6ca1289f3d605dda6a4bf76289d121ceabe39fd4aa428fc2f1d9ca91d2070546"
+}

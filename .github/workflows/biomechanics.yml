@@ -16,6 +16,7 @@ jobs:
       - run: python -m pip install -r research/opensim/requirements.lock.txt
       - run: python -m ruff check scripts/biomechanics tests/biomechanics
       - run: python -m pytest tests/biomechanics -q
+      - run: python scripts/biomechanics/contact_packet.py research/contact/example.contact.json artifacts/contact-example.json
   shoulder-model-windows:
     runs-on: windows-latest
     timeout-minutes: 20
@@ -33,3 +34,10 @@ jobs:
       - name: Real headless pose and muscle-path experiment
         shell: pwsh
         run: conda run --prefix "$env:RUNNER_TEMP/opensim-shoulder" python scripts/biomechanics/opensim_experiment.py artifacts/opensim-models/ThoracoscapularShoulderModel.osim --source-commit 52094cc61c3e795552c658e34a73d083f4662c6b --out artifacts/ci-shoulder
+      - name: Shoulder frames and local constraint rank
+        shell: pwsh
+        run: conda run --prefix "$env:RUNNER_TEMP/opensim-shoulder" python scripts/biomechanics/shoulder_reference.py artifacts/opensim-models/ThoracoscapularShoulderModel.osim artifacts/ci-shoulder/reference.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: independent-shoulder-results
+          path: artifacts/ci-shoulder
