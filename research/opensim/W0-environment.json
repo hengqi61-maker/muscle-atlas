@@ -1,0 +1,17 @@
+{
+  "milestone":"W0",
+  "status":"executed",
+  "commonBaseline":"0914d4fad3fbe107ea90c08473b6d2a448345ba6",
+  "platform":"Windows 11 x86_64; WSL2 Ubuntu 24.04.4 available but not required",
+  "opensim":"4.6-py311np24; native version 4.6-2026-03-31-d6972f9e6",
+  "python":"3.11.17",
+  "numpy":"2.4.6",
+  "environment":"D:/codex/.muscle-atlas-opensim (isolated official Conda)",
+  "toolEnvironment":"D:/codex/.muscle-atlas-biomechanics (isolated uv venv)",
+  "officialPackage":"https://anaconda.org/opensim-org/opensim",
+  "existingSetupPR":"https://github.com/hengqi61-maker/muscle-atlas/pull/4",
+  "setupCommit":"ca08512f45e423c959daed5df6879bea7f4b27e9",
+  "officialExample":{"name":"arm26.osim","sha256":"5247bde715582aa2ad462e5ee2a099ef30b53d21bccc58d4527073313cdecb29","coordinates":2,"muscles":6,"bodyKinematicsRows":1},
+  "executedCommands":["conda run -p D:/codex/.muscle-atlas-opensim python scripts/infra/opensim_smoke.py (in PR4 tree)","conda run -p D:/codex/.muscle-atlas-opensim python -c import/version/model/API probe"],
+  "limits":["Display VTP files missing for arm26; headless numerical test only","No system Python/PATH or driver changes","No CUDA, EMG or individual force validation","Independent BodyKinematics ownership bug was corrected with model.addAnalysis; repeated tests passed"]
+}

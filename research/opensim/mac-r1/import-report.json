@@ -1,0 +1,24 @@
+[
+  {
+    "clip": "CurlProbe",
+    "validatedFrames": 121,
+    "exportedFrames": 5,
+    "nodes": 27,
+    "issues": [],
+    "inputSha256": "cf27f3ff63c5dd73fef0d5ae29657bf296879cd02531f4494ac0d5f173bf117c",
+    "assetSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+    "producerCommit": "ccf51104e309303ea3853df41a4697928a541147",
+    "scope": "Independent numerical import/serialization check; no anatomy or motion-quality approval"
+  },
+  {
+    "clip": "PulldownProbe",
+    "validatedFrames": 121,
+    "exportedFrames": 5,
+    "nodes": 27,
+    "issues": [],
+    "inputSha256": "cf27f3ff63c5dd73fef0d5ae29657bf296879cd02531f4494ac0d5f173bf117c",
+    "assetSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+    "producerCommit": "ccf51104e309303ea3853df41a4697928a541147",
+    "scope": "Independent numerical import/serialization check; no anatomy or motion-quality approval"
+  }
+]

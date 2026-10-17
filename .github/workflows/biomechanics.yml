@@ -1,0 +1,35 @@
+name: OpenSim exchange and shoulder experiment
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exchange-cpu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r research/opensim/requirements.lock.txt
+      - run: python -m ruff check scripts/biomechanics tests/biomechanics
+      - run: python -m pytest tests/biomechanics -q
+  shoulder-model-windows:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-activate-base: false
+      - name: Isolated official OpenSim
+        shell: pwsh
+        run: conda create --prefix "$env:RUNNER_TEMP/opensim-shoulder" --file research/opensim/opensim-win-64.explicit.txt -y
+      - name: Fetch pinned official model
+        shell: pwsh
+        run: python scripts/biomechanics/fetch_model.py
+      - name: Real headless pose and muscle-path experiment
+        shell: pwsh
+        run: conda run --prefix "$env:RUNNER_TEMP/opensim-shoulder" python scripts/biomechanics/opensim_experiment.py artifacts/opensim-models/ThoracoscapularShoulderModel.osim --source-commit 52094cc61c3e795552c658e34a73d083f4662c6b --out artifacts/ci-shoulder

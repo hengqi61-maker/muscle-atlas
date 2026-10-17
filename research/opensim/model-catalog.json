@@ -1,0 +1,46 @@
+{
+  "asOf":"2026-10-16",
+  "candidates":[
+    {
+      "name":"Upper Extremity Dynamic Model / MoBL-ARMS",
+      "source":"https://mobl.wordpress.ncsu.edu/resources/",
+      "releasePage":"https://simtk.org/frs/?group_id=657",
+      "attemptedPackage":"https://simtk.org/frs/download_confirm.php/file/6322/MobL_ARMS_OpenSim41_unimanual_tutorial.zip?group_id=657",
+      "acquisition":"NOT_ACQUIRED: HTTP200 login-redirect JavaScript, not ZIP",
+      "compatibility":"OpenSim4.1 package advertised; 4.6 not tested",
+      "license":"Official model directory says MIT; package license uninspected",
+      "coverage":"Directory describes right dynamic upper limb; actual package DOFs/paths unverified",
+      "validationPaper":"https://pubmed.ncbi.nlm.nih.gov/24995410/",
+      "limits":["Do not treat same model family names as independent evidence","No login/account creation or control bypass attempted"]
+    },
+    {
+      "name":"ScapulothoracicJointPlugin (historical)",
+      "source":"https://github.com/opensim-org/ScapulothoracicJointPlugin",
+      "acquisition":"Source browsed; no plugin binary installed or compiled",
+      "license":"Apache-2.0 repository",
+      "compatibility":"Historical3.x tutorial is not proof of4.6 binary ABI compatibility",
+      "validationPaper":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4712143/"
+    },
+    {
+      "name":"ThoracoscapularShoulderModel, official core4.6 test file",
+      "source":"https://github.com/opensim-org/opensim-core/blob/52094cc61c3e795552c658e34a73d083f4662c6b/OpenSim/Tests/shared/ThoracoscapularShoulderModel.osim",
+      "sha256":"892bd333a1e1e6a2b77902b54218f12727eefd2306ca82bbda81621c926271fe",
+      "acquisition":"ACQUIRED_AND_EXECUTED",
+      "opensim":"4.6-py311np24",
+      "counts":{"bodies":7,"jointObjects":7,"coordinates":17,"defaultLockedCoordinates":5,"muscles":33,"pathPoints":78},
+      "constraint":"AC PointConstraint; coordinate count is not free independent DOF count",
+      "coverage":"single right upper limb plus thorax; no left-side validation; wrist WeldJoint, no fingers",
+      "license":"core repository Apache-2.0; model credits preserved; no model/geometry redistribution in this PR",
+      "credits":"Ajay Seth, Meilin Dong, Ricardo Matias, Scott Delp; parameters van der Helm/Klein-Breteler",
+      "status":"Selected for prescribed shoulder/scapula pose and path tests; no normative exercise claim"
+    },
+    {
+      "name":"Kinematic Arm Model with Articulated Hand",
+      "source":"https://opensimconfluence.atlassian.net/wiki/spaces/OpenSim/pages/53090607/Mus",
+      "acquisition":"Catalog inspected; not downloaded",
+      "coverage":"Catalog describes right hand20additionalDOFs, no muscles; package unverified",
+      "license":"Catalog None; redistribution not cleared",
+      "status":"Not selected"
+    }
+  ]
+}
