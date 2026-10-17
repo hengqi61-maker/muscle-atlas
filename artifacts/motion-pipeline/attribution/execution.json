@@ -1,0 +1,59 @@
+{
+  "node": "v26.5.0",
+  "stages": [
+    {
+      "command": "node scripts/rig-v2/attribution/analyze.mjs > /tmp/attribution-final.log 2>&1",
+      "executedScriptSnapshot": "artifacts/motion-pipeline/attribution/analyze-executed-frozen.mjs",
+      "scriptSha256": "2f17b90e181ec9e9569afa48dcbe13c025a77d10135fba01a58621ea096f8097",
+      "sourceSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+      "note": "First stage was launched before CLI parameterization. This exact archived source was copied before editing the entrypoint, while its process continued. Later entrypoint hash is not claimed as that execution.",
+      "status": "COMPLETED",
+      "log": "analyze.log"
+    },
+    {
+      "command": "node scripts/rig-v2/attribution/capture-views.mjs",
+      "scriptSha256": "a2e98a20bf25336bab6451c7cbb2172593bb421504bda3fad49092fbb2edf440",
+      "sharedMetricsModuleSha256": "c9628d5b2d6faa27f8d33fd19dfeabe9d481304596f193441eaa7e3d31aca714",
+      "startedAt": "2026-10-17T07:46:23.693Z",
+      "endedAt": "2026-10-17T07:46:24.457Z",
+      "exitCode": 0,
+      "status": "COMPLETED"
+    },
+    {
+      "command": "node scripts/rig-v2/attribution/trace-stretch.mjs",
+      "scriptSha256": "e803232439808ae5efaf38c35c0deaba2c223a08d8fcc5f099fa6dcd06d52c92",
+      "sharedMetricsModuleSha256": "c9628d5b2d6faa27f8d33fd19dfeabe9d481304596f193441eaa7e3d31aca714",
+      "startedAt": "2026-10-17T07:46:24.460Z",
+      "endedAt": "2026-10-17T07:46:29.737Z",
+      "exitCode": 0,
+      "status": "COMPLETED"
+    },
+    {
+      "command": "node scripts/rig-v2/attribution/map-source.mjs",
+      "scriptSha256": "bb7f871d8fc7856d24f2df6861a75ded21ea05ae820cebb8422787b71bf99e97",
+      "sharedMetricsModuleSha256": "c9628d5b2d6faa27f8d33fd19dfeabe9d481304596f193441eaa7e3d31aca714",
+      "startedAt": "2026-10-17T07:46:29.756Z",
+      "endedAt": "2026-10-17T07:46:30.809Z",
+      "exitCode": 0,
+      "status": "COMPLETED"
+    },
+    {
+      "command": "node scripts/rig-v2/attribution/render.mjs",
+      "scriptSha256": "9894b4e8d9dc350684c8b233137370041a7d91ae2aefaee73dfa1db9b9292a07",
+      "sharedMetricsModuleSha256": "c9628d5b2d6faa27f8d33fd19dfeabe9d481304596f193441eaa7e3d31aca714",
+      "startedAt": "2026-10-17T07:46:30.812Z",
+      "endedAt": "2026-10-17T07:46:40.597Z",
+      "exitCode": 0,
+      "status": "COMPLETED"
+    },
+    {
+      "command": "node scripts/rig-v2/attribution/summarize.mjs",
+      "scriptSha256": "a550d783d4e7fc62d44b0d407d772a68e525e46be36b906907a055796ba8104f",
+      "sharedMetricsModuleSha256": "c9628d5b2d6faa27f8d33fd19dfeabe9d481304596f193441eaa7e3d31aca714",
+      "startedAt": "2026-10-17T07:46:40.604Z",
+      "endedAt": "2026-10-17T07:46:40.829Z",
+      "exitCode": 0,
+      "status": "COMPLETED"
+    }
+  ]
+}

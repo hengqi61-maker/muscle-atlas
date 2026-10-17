@@ -1,0 +1,49 @@
+{
+  "milestone": "E3 isolated production experiment; not a third M2 repair",
+  "commit": "19ba4ee4d1e9ab06238f95ecb8422b877c7652f6",
+  "anatomyGlbSha256": "65a3dcb59257394e2b97bc3ddb15a94fd923ffc43972ef6014dfdc1513395f25",
+  "sampleCount": 121,
+  "reworkCycles": 2,
+  "historicalM2ReworkCycles": 2,
+  "historicalM2Acceptance": "FAIL/frozen",
+  "producerSessions": [
+    "/root",
+    "/root/pipeline_maker",
+    "/root/p1_attribution_maker",
+    "/root/pipeline_contract_qa"
+  ],
+  "reviews": {
+    "biomechanics": {
+      "session": "/root/e3_biomechanics_reviewer",
+      "verdict": "FAIL"
+    },
+    "visual": {
+      "session": "/root/e3_visual_reviewer",
+      "verdict": "FAIL"
+    },
+    "exerciseScience": {
+      "session": "/root/e3_science_reviewer",
+      "verdict": "INCONCLUSIVE"
+    },
+    "softwareQa": {
+      "session": "/root/e3_software_reviewer",
+      "verdict": "PASS"
+    }
+  },
+  "userApproval": "pending",
+  "readyForMerge": false,
+  "defects": [
+    {
+      "id": "R1-shoulder-axilla-elbow",
+      "severity": "P1",
+      "status": "DEFERRED",
+      "reason": "Mesh-level evidence established; no anatomical/weight repair authorized in final asset"
+    },
+    {
+      "id": "original-grip",
+      "severity": "P1",
+      "status": "DEFERRED",
+      "reason": "No equipment contact/digit pose change in diagnostic scope"
+    }
+  ]
+}

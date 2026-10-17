@@ -1,0 +1,105 @@
+{
+  "reviewCandidate": "19ba4ee4d1e9ab06238f95ecb8422b877c7652f6",
+  "coldCliExecutedBeforeLifecyclePatch": "1f6db60e02de8bf604d1213aa2caa716c80eb655",
+  "postColdPatchScope": "Only metadata IN_PROGRESS/atomicPASSorFAIL; actual failure/success finalization regression, no native rerender",
+  "runs": [
+    {
+      "run": "run-a",
+      "nativeOrTotalSeconds": 782.2106680870056,
+      "provenance": "Both measured runs used native build then serial finalize/browser; integrated current build_motion.py browser stage added afterwards and not claimed as initially executed",
+      "manifestSha256": "c918f692e11ee373e8764d4e9f558e07726243f88028e02ec79ed79b9f0cfe23",
+      "assetSha256": "65a3dcb59257394e2b97bc3ddb15a94fd923ffc43972ef6014dfdc1513395f25",
+      "nativeKeyframes": 50,
+      "browserKeyframes": 50,
+      "build": "BUILD_PASS",
+      "software": "SOFTWARE_TEST_PASS",
+      "geometry": "MOTION_GEOMETRY_FAIL",
+      "geometryFailPoses": [
+        39
+      ]
+    },
+    {
+      "run": "run-b",
+      "nativeOrTotalSeconds": 753.1879858970642,
+      "provenance": "Both measured runs used native build then serial finalize/browser; integrated current build_motion.py browser stage added afterwards and not claimed as initially executed",
+      "manifestSha256": "6889195e179c8ae668c5bcef9aace22ae7ac5d1b6274a6dd6ee65ecd5ecee3fc",
+      "assetSha256": "65a3dcb59257394e2b97bc3ddb15a94fd923ffc43972ef6014dfdc1513395f25",
+      "nativeKeyframes": 50,
+      "browserKeyframes": 50,
+      "build": "BUILD_PASS",
+      "software": "SOFTWARE_TEST_PASS",
+      "geometry": "MOTION_GEOMETRY_FAIL",
+      "geometryFailPoses": [
+        39
+      ]
+    },
+    {
+      "run": "cold-cli-a",
+      "nativeOrTotalSeconds": 565.1460311412811,
+      "provenance": "Measured complete build_motion.py CLI execution: native reconstruction, encode, browser, geometry and finalize/validator",
+      "manifestSha256": "8e1033280cc610baa08628d0fa56246f39d3080cefc56e337a51aa46e81e42ec",
+      "assetSha256": "65a3dcb59257394e2b97bc3ddb15a94fd923ffc43972ef6014dfdc1513395f25",
+      "nativeKeyframes": 50,
+      "browserKeyframes": 50,
+      "build": "BUILD_PASS",
+      "software": "SOFTWARE_TEST_PASS",
+      "geometry": "MOTION_GEOMETRY_FAIL",
+      "geometryFailPoses": [
+        39
+      ]
+    },
+    {
+      "run": "cold-cli-b",
+      "nativeOrTotalSeconds": 568.4507281780243,
+      "provenance": "Measured complete build_motion.py CLI execution: native reconstruction, encode, browser, geometry and finalize/validator",
+      "manifestSha256": "f527b0e17682cd78673a84ad556013b3900c20b3e40f6f396cb7242f576dd26b",
+      "assetSha256": "65a3dcb59257394e2b97bc3ddb15a94fd923ffc43972ef6014dfdc1513395f25",
+      "nativeKeyframes": 50,
+      "browserKeyframes": 50,
+      "build": "BUILD_PASS",
+      "software": "SOFTWARE_TEST_PASS",
+      "geometry": "MOTION_GEOMETRY_FAIL",
+      "geometryFailPoses": [
+        39
+      ]
+    }
+  ],
+  "comparison": {
+    "status": "BUILD_PASS",
+    "executionStageHashesMatch": true,
+    "sourceGeometryAndFaceHashesExact": true,
+    "glbStructureIdentitySkinInverseBindAnimationsExact": true,
+    "binaryBufferExact": true,
+    "binaryBufferSha256": [
+      "6a6ee5f7a9166b3436427171c16d3a3c583b29775e2b862bf7dacc49b06c274c",
+      "6a6ee5f7a9166b3436427171c16d3a3c583b29775e2b862bf7dacc49b06c274c"
+    ],
+    "baseWeightsRegistryExact": true,
+    "trajectory121SamplesMaxMatrixError": 0,
+    "predeclaredTolerance": 2e-05,
+    "bothRuns50KeyframesAndRealVideo": true,
+    "geometryQuality": "FAIL or INCONCLUSIVE preserved independently; repeatability does not imply anatomy acceptance",
+    "byteHashEqualityRequired": true,
+    "binaryRequirementReason": "Both current independent outputs are byte-identical; require exact buffer equality instead of accepting accessor descriptions without numeric content comparison"
+  },
+  "newUnitTests": {
+    "node": 16,
+    "pythonComparison": 7,
+    "pythonRealValidatorFailure": 1,
+    "archiveIntegrity": 1
+  },
+  "originalRegression": {
+    "appBuild": "PASS",
+    "vitest": 13,
+    "quality": 26
+  },
+  "geometryThresholds": {
+    "areaRatioStrictlyLess": 0.05,
+    "countStrictlyGreater": 3,
+    "fractionStrictlyGreater": 0.01,
+    "edgeRatioStrictlyGreater": 2
+  },
+  "ownerApproval": "PENDING",
+  "mainMerged": false,
+  "sourceHandChanged": false
+}

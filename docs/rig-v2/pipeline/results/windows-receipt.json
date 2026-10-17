@@ -1,0 +1,11 @@
+{
+  "windowsCommit": "fd1701fc87ab00787056cb24f4e398d1f04c26c7",
+  "packetSha256": "242fa6bd38b754e74de1acc32bbcd9fb9949080e9eaeb57d2115ffe6b153c9c5",
+  "nodes": 7,
+  "samples": 10,
+  "issues": [],
+  "scope": "Mac numerical schema/semantic recheck only; no OpenSim rerun, no anatomy/contact approval",
+  "windowsReportedExportSha256": "62e1f48249d78ad4811a2a8b83e420e0e38d3e21c11e9c01b89e73106124c0a8",
+  "lineEndingEvidence": "Exact CRLF rendering of published LF blob hashes to the Windows reported export SHA. Published Git blob retained unchanged; no silent normalization.",
+  "upstreamMetadataClarification": "Requested Windows distinguish raw export CRLF from published Git LF byte identity"
+}

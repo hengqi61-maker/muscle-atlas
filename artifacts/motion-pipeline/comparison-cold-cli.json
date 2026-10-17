@@ -1,0 +1,18 @@
+{
+  "status": "BUILD_PASS",
+  "executionStageHashesMatch": true,
+  "sourceGeometryAndFaceHashesExact": true,
+  "glbStructureIdentitySkinInverseBindAnimationsExact": true,
+  "binaryBufferExact": true,
+  "binaryBufferSha256": [
+    "6a6ee5f7a9166b3436427171c16d3a3c583b29775e2b862bf7dacc49b06c274c",
+    "6a6ee5f7a9166b3436427171c16d3a3c583b29775e2b862bf7dacc49b06c274c"
+  ],
+  "baseWeightsRegistryExact": true,
+  "trajectory121SamplesMaxMatrixError": 0,
+  "predeclaredTolerance": 2e-05,
+  "bothRuns50KeyframesAndRealVideo": true,
+  "geometryQuality": "FAIL or INCONCLUSIVE preserved independently; repeatability does not imply anatomy acceptance",
+  "byteHashEqualityRequired": true,
+  "binaryRequirementReason": "Both current independent outputs are byte-identical; require exact buffer equality instead of accepting accessor descriptions without numeric content comparison"
+}

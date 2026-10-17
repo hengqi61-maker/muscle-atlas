@@ -264,3 +264,62 @@ WD0019 verification follow-up: first production Chrome run passed existing2 test
 WD0019 final maker verification: fresh production build exit0 (2.34s), followed by complete production Chrome R1 suite PASS3/3 (25.1s). Exact non-loop terminal replay tested on CurlProbe and PulldownProbe; pause, seek after finish, seek1→play→same seek1, original picking/material/rest checks and30 front/side/back clip frames all passed. Logs artifacts/rig-v2/replay-build.log, replay-input-browser.log, replay-browser-final.log; actual videos/frames replay-results/. The native input event path plus explicit seek revision delivers every request; no disabled feature, retry masking or changed asset. GLB remains SHA256 ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274. Independent QA confirmation pending before closure.
 
 WD0019 independent verification: Software QA /root/r1_software_review fresh actual Chrome exact original path PASS for both clips:3.99→4.000 automatically returns Play; replay advances0.468/0.300s; seek1→play/pause1.250/1.233→same seek1 settles1.000 and holds100ms. Read-only execution tool chunk ef7f5c delivered to coordinator. No historical review changed; no retained workaround.
+
+## WD-2026-10-17-0020
+Status: RESOLVED
+Title: Fresh pipeline world-node assumption and Blender exception exit status
+- Original failure: cold build_motion run-a/run-b imported and rebuilt467 source meshes and exported GLB, then new World had no Background node in Blender5.2; Python KeyError aborted native rendering. Blender default exited0; driver then attempted ffmpeg without frames, which exited254. No PASS manifest generated.
+- Exact reproduction: original native_build.py world.node_tree.nodes['Background'] after bpy.data.worlds.new with use_nodes=True, Blender -b --python without --python-exit-code. Logs retained artifacts/motion-pipeline/initial-failure-a/build.log and initial-failure-b/build.log, plus encode.log.
+- Workaround: none; failed dirs preserved, no old/new result mixing, fresh directories required. Root cause is implicit startup-world assumption and missing strict child failure propagation.
+- Durable paths compared: explicit ShaderNodeBackground/ShaderNodeOutputWorld and link creation (selected, portable) versus dependency on startup template world (rejected implicit state). For failure propagation explicit --python-exit-code1 (selected) versus log-text grep (rejected brittle).
+- Fix: explicit world nodes, Blender --python-exit-code1, checked subprocess execution before encode and manifest. No source anatomy or alarm threshold change.
+- Verification pending: injected native exception must exit nonzero and block encode/PASS; two fresh complete original builds including all native renders.
+
+## WD-2026-10-17-0021
+Status: RESOLVED
+Title: E3 browser evidence redundant bounds recomputation and cancelled late report
+- Original reproduction: E3_BROWSER_ASSET=public/experimental/rig-v2/unified-rig-prototype.glb E3_BROWSER_OUT=artifacts/rig-v2/pipeline/three-consumer-frozen-smoke node --test tests/rig-v2/pipeline-browser.node.mjs. Real Chrome exceeded240000ms at240432.884ms with54 screenshots then cancelled; task completed late367702.709ms. Its late report is not a passing test. Evidence preserved, renamed cancelled-late-report.json.
+- Cause: pose() rescanned every skinned vertex for exact box and sphere on every style/view call, including camera-only updates; initial test lacked abort cleanup and could write a late PASS-shaped report after cancellation.
+- Temporary workaround considered:600s budget, not used as closure. Compared durable A increasing timeout (retains redundant work) versus B pose-dirty exact-bounds cache (selected). Every changed pose, including121 sampled times, still recomputes actual skinned bounds; unchanged material/camera changes only render. Culling stays enabled, no quality threshold changes.
+- Durable fix: dirty pose cache, AbortSignal browser cleanup, no PASS report if cancelled. Restore original240s budget. Initial single-clip attempt exposed immediate missing test-context parameter in new cleanup code; corrected directly, no asset or fallback involved.
+- Verification pending: original two-clip frozen smoke within original240s, plus actual fresh run-a/run-b derivedGLB capture.
+- Impact: capture tooling only; no evidence of anatomical quality or true grip implied.
+
+WD0021 intermediate verification: first dirty-cache-only original two-clip command still exceeded240s (240566.706ms), cleanup ended250602.393ms and emitted no PASS. Exact log retained in three-consumer-frozen-smoke/retest.log and copied initial-dirty-evidence. Final durable cache also recognizes identical clip/time and computes exact box plus sphere from one full skinning sample buffer rather than re-skinning twice. Standard Three computeBoundingBox/Sphere midpoint comparison must agree within1e-12m before accepting this mathematical equivalence. No sample count/culling/alarm change.
+
+WD0020 durable verification: actual deliberate Blender RuntimeError fixture returned1; checked sequencing prevented encoding and PASS creation (artifacts/motion-pipeline/failure-fixture/result.json). Two new fresh background native processes reran the original operation with explicit shader/output nodes and --python-exit-code1, both completed all467 meshes/27bones,50 native keyframes,31 video frames and encoded MP4 plus saved Blend: run-a782.21s, run-b753.19s. Exact source/face hashes, skin/inverse-bind/animation structure and full GLB bytes match;121 world trajectory maximum difference0 against predeclared2e-5. Failed initial dirs preserved, no skipped render or source anatomy edits. Full post-export geometry/Chrome stages remain separately pending; this closure concerns world creation and failure propagation only.
+
+WD0021 equivalence test correctly rejected an experimental bbox-center sphere algorithm (22533.420ms, final-test.log); it differs from Three SkinnedMesh sequential expandByPoint. Final implementation uses the identical stock box.expandByPoint and sphere.expandByPoint sequence over each actual getVertexPosition once, plus identical-pose cache. No comparison tolerance changed. Root clarified240s is an arbitrary harness budget, not user SLA or geometry quality threshold; final explicitly recorded workload budgets are300s one clip /600s two clips. Exact source/viewer SHA logged before every fixed-code execution. Remaining verification uses actual fresh a,b then full frozen two-clip command, no further algorithm edits.
+
+WD0021 durable verification: fixed consumer commit5394379, testSHA bf4d9558bdee1a0f710a831e6448c08178f29ed6f4200d38e802d80230761556 and viewerSHA8353616e524665bac9958a08186b4e3c347ebb4e4752af8a506ee9ddc54fcff6. Actual fresh run-a PASS32.488s and run-b PASS26.667s (each467meshes,121poses,50PNGs, full actual canvas cycleWebM, stockbox/sphere midpoint equality<1e-12m, original-source triangle pick and paused freeze). Fresh browser process on exact original frozen two-clip functional command PASS47.863s/exit0 with242sampledposes,100PNGs,two fullcycleWebMs; log durable-final.log and report.json retain source/assetSHA,Chrome155.0.8059.84/Nodev26.5.0. Last execution explicitly used600s workload deadline (not240s SLA), actual measured47.863s. No motion geometry threshold, culling, sample count or original asset changed;600s is documented per-workload harness policy, not fallback or performance certification. Initial and intermediate failures/cancelledlate report retained. No hidden retries or mock assets in passing runs.
+
+
+## WD-2026-10-17-0022
+Status: RESOLVED
+Title: Pipeline review metadata did not bind frozen commit
+- Independent software review identified an applicability gap: valid40character review.commit was not compared with fixed candidate. Exact real manifest command with review.commit=aaaa... and --candidate=b50d35e... returned0/evidenceErrors[] (before.json). GeometryFAIL/ownerpending still blocked actual release; no wrong review was used for release.
+- Reproduction evidence: artifacts/motion-pipeline/review-binding/{wrong-commit.json,before.json}. No workaround or approval bypass.
+- Durable alternatives: infer producer commit from mutable working HEAD (rejected: historical asset reviews and docs-only commits differ), versus require explicit fixed candidate parameter and validate review commit plus asset hash (selected, portable read-only metadata).
+- Fix and exact rerun pending; add negative wrong/missing candidate tests, retain four independent review identities and owner gate.
+
+WD0022 durable verification: exact original wrong-commit CLI rerun now exits1 with evidenceErrors=[review commit mismatch] in after.json; six review gate testsPASS include wrong/missing candidate and wrong asset, plus prior self-review/owner/geometry/hash guards. No temporary bypass. Subsequent independent Software QA will review this narrow fix and updated candidate; no anatomical asset or original review report changed.
+
+
+## WD-2026-10-17-0023
+Status: RESOLVED
+Title: Validator failure leaves provisional software PASS on disk
+- Independent Software QA identified phase-label failure propagation gap. Actual isolated synthetic invalid-scene GLB makes real Khronos failUNRESOLVED_REFERENCE; finalizer exits1 but provisional manifest remains SOFTWARE_TEST_PASS. No actual candidate GLB validator failure; current complete evidence gate still blocks incomplete inventory.
+- Exact reproduction: python3 tests/rig-v2/pipeline_failure.py; before.log in artifacts/motion-pipeline/finalizer-failure/ shows failed negative assertion. Synthetic prerequisites only reach the real validator; never used as motion evidence or runtime fallback.
+- Durable paths: provisional IN_PROGRESS then atomic final PASS/FAIL updates (selected) versus pending-only filename renamed after all stages (more invasive API change). Error propagation must cover disk labels, not only child exit.
+- Current true cold CLI processes are executing unchanged driver; preserve their code provenance. Await their successful completion, then make metadata-only lifecycle correction and run actual success finalization plus exact invalid-scene regression without re-rendering immutable models. No workaround, no source asset change, geometryFAIL/ownerpending still block release.
+
+WD0023 durable verification: after both complete actual coldCLI executions had ended successfully, changed only lifecycle metadata: driver emitsIN_PROGRESS; finalizer atomic writesIN_PROGRESS then terminalSOFTWARE_TEST_PASS/EVIDENCE_COMPLETE or SOFTWARE_TEST_FAIL/FAILED on exception. Exact real invalid-scene validator regression nowPASS (actual finalizer nonzero and disk labelFAIL). Successful finalization of a copy of actual cold-cli-a output using checked join stages produced complete hash inventory with zero evidence errors, retained geometryFAIL and ownerpending (lifecycle-success; this is metadata-only regression, not a new native build). Before/after/success logs in artifacts/motion-pipeline/finalizer-failure. No render/source/weight/threshold edits. Expensive native/Chrome work not silently replayed or relabelled: two fullcoldCLI successful executions belong to unchanged input/native/consumer versions at1f6; lifecycle patch verified separately.
+
+
+## WD-2026-10-17-0024
+Status: DEFERRED
+Title: Windows published packet export/Git hash provenance clarification
+- Ancillary contact-readiness refresh found Windowsfd1701f validation.json packetSha62e1... while actual Gitblob shoulder.packet.json SHA242f.... Exact publishedLF→CRLF yields62e1..., so evidence supports export line ending conversion, not numeric content corruption. Mac semantic validator0issues/7nodes/10samples; no OpenSimrerun claim.
+- No workaround/normalization applied to input. Published Gitbytes and own computed SHA retained; both identities and evidence recorded in docs/rig-v2/pipeline/results/windows-receipt.json. Core E3 inputs do not depend on this external packet.
+- Compared paths: normalize packet to match exporthash (rejected changes transportbytes) versus preserve rawGitbytes and explicitly distinguish export/transportSHA (selected). Windows owns result metadata, no remote edits byMac.
+- Deferred only upstream label clarification: ask Windows publish both rawexportCRLF and GitLF SHA or binary-stable transport. Nextaction GitHubPR6 comment; reopen when Windows metadata update arrives or packetbytes change. Not an anatomy approval or accepted risk; no remaining task OPEN entry.
