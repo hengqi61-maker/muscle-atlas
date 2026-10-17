@@ -276,7 +276,7 @@ Title: Fresh pipeline world-node assumption and Blender exception exit status
 - Verification pending: injected native exception must exit nonzero and block encode/PASS; two fresh complete original builds including all native renders.
 
 ## WD-2026-10-17-0021
-Status: OPEN
+Status: RESOLVED
 Title: E3 browser evidence redundant bounds recomputation and cancelled late report
 - Original reproduction: E3_BROWSER_ASSET=public/experimental/rig-v2/unified-rig-prototype.glb E3_BROWSER_OUT=artifacts/rig-v2/pipeline/three-consumer-frozen-smoke node --test tests/rig-v2/pipeline-browser.node.mjs. Real Chrome exceeded240000ms at240432.884ms with54 screenshots then cancelled; task completed late367702.709ms. Its late report is not a passing test. Evidence preserved, renamed cancelled-late-report.json.
 - Cause: pose() rescanned every skinned vertex for exact box and sphere on every style/view call, including camera-only updates; initial test lacked abort cleanup and could write a late PASS-shaped report after cancellation.
@@ -290,3 +290,16 @@ WD0021 intermediate verification: first dirty-cache-only original two-clip comma
 WD0020 durable verification: actual deliberate Blender RuntimeError fixture returned1; checked sequencing prevented encoding and PASS creation (artifacts/motion-pipeline/failure-fixture/result.json). Two new fresh background native processes reran the original operation with explicit shader/output nodes and --python-exit-code1, both completed all467 meshes/27bones,50 native keyframes,31 video frames and encoded MP4 plus saved Blend: run-a782.21s, run-b753.19s. Exact source/face hashes, skin/inverse-bind/animation structure and full GLB bytes match;121 world trajectory maximum difference0 against predeclared2e-5. Failed initial dirs preserved, no skipped render or source anatomy edits. Full post-export geometry/Chrome stages remain separately pending; this closure concerns world creation and failure propagation only.
 
 WD0021 equivalence test correctly rejected an experimental bbox-center sphere algorithm (22533.420ms, final-test.log); it differs from Three SkinnedMesh sequential expandByPoint. Final implementation uses the identical stock box.expandByPoint and sphere.expandByPoint sequence over each actual getVertexPosition once, plus identical-pose cache. No comparison tolerance changed. Root clarified240s is an arbitrary harness budget, not user SLA or geometry quality threshold; final explicitly recorded workload budgets are300s one clip /600s two clips. Exact source/viewer SHA logged before every fixed-code execution. Remaining verification uses actual fresh a,b then full frozen two-clip command, no further algorithm edits.
+
+WD0021 durable verification: fixed consumer commit5394379, testSHA bf4d9558bdee1a0f710a831e6448c08178f29ed6f4200d38e802d80230761556 and viewerSHA8353616e524665bac9958a08186b4e3c347ebb4e4752af8a506ee9ddc54fcff6. Actual fresh run-a PASS32.488s and run-b PASS26.667s (each467meshes,121poses,50PNGs, full actual canvas cycleWebM, stockbox/sphere midpoint equality<1e-12m, original-source triangle pick and paused freeze). Fresh browser process on exact original frozen two-clip functional command PASS47.863s/exit0 with242sampledposes,100PNGs,two fullcycleWebMs; log durable-final.log and report.json retain source/assetSHA,Chrome155.0.8059.84/Nodev26.5.0. Last execution explicitly used600s workload deadline (not240s SLA), actual measured47.863s. No motion geometry threshold, culling, sample count or original asset changed;600s is documented per-workload harness policy, not fallback or performance certification. Initial and intermediate failures/cancelledlate report retained. No hidden retries or mock assets in passing runs.
+
+
+## WD-2026-10-17-0022
+Status: RESOLVED
+Title: Pipeline review metadata did not bind frozen commit
+- Independent software review identified an applicability gap: valid40character review.commit was not compared with fixed candidate. Exact real manifest command with review.commit=aaaa... and --candidate=b50d35e... returned0/evidenceErrors[] (before.json). GeometryFAIL/ownerpending still blocked actual release; no wrong review was used for release.
+- Reproduction evidence: artifacts/motion-pipeline/review-binding/{wrong-commit.json,before.json}. No workaround or approval bypass.
+- Durable alternatives: infer producer commit from mutable working HEAD (rejected: historical asset reviews and docs-only commits differ), versus require explicit fixed candidate parameter and validate review commit plus asset hash (selected, portable read-only metadata).
+- Fix and exact rerun pending; add negative wrong/missing candidate tests, retain four independent review identities and owner gate.
+
+WD0022 durable verification: exact original wrong-commit CLI rerun now exits1 with evidenceErrors=[review commit mismatch] in after.json; six review gate testsPASS include wrong/missing candidate and wrong asset, plus prior self-review/owner/geometry/hash guards. No temporary bypass. Subsequent independent Software QA will review this narrow fix and updated candidate; no anatomical asset or original review report changed.

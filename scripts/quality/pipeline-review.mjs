@@ -18,6 +18,15 @@ export function stageReport(manifest,review){
   if(!approved)releaseErrors.push('owner approval pending');
   return {BUILD:build?'BUILD_PASS':'BUILD_FAIL_OR_INCONCLUSIVE',SOFTWARE_TEST:software?'SOFTWARE_TEST_PASS':'SOFTWARE_TEST_FAIL_OR_INCONCLUSIVE',MOTION_GEOMETRY:geometry,BIOMECHANICS_REVIEW:review?.reviews?.biomechanics?.verdict??'PENDING',VISUAL_REVIEW:review?.reviews?.visual?.verdict??'PENDING',EXERCISE_SCIENCE_REVIEW:review?.reviews?.exerciseScience?.verdict??'PENDING',SOFTWARE_QA_REVIEW:review?.reviews?.softwareQa?.verdict??'PENDING',OWNER_APPROVAL:approved?'RECORDED_REQUIRES_HUMAN_PROVENANCE_CHECK':'PENDING',metadataErrors,releaseErrors:[...new Set(releaseErrors)],mayRelease:releaseErrors.length===0};
 }
+export function verifyReviewBinding(manifest,review,candidate){
+ if(!review)return [];
+ const errors=[];
+ if(!/^[a-f0-9]{40}$/.test(candidate??''))errors.push('explicit full frozen candidate required');
+ else if(review.commit!==candidate)errors.push('review commit mismatch');
+ const asset=Array.isArray(manifest.files)?manifest.files.find(f=>f.path===manifest.outputs?.glb):null;
+ if(!asset||review.anatomyGlbSha256!==asset.sha256)errors.push('review asset mismatch');
+ return errors;
+}
 export function verifyInventory(manifest){
  const errors=[],entries=manifest.files??[], refs=new Set(Array.isArray(entries)?entries.map(e=>e.path):Object.keys(entries));
  for(const name of ['glb','blend','trajectory','video'])if(typeof manifest.outputs?.[name]!=='string'||!refs.has(manifest.outputs[name]))errors.push('missing inventoried output '+name);
@@ -42,8 +51,8 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
  const file=path.resolve(process.argv[2]??''),manifest=JSON.parse(fs.readFileSync(file)),reviewPath=process.argv.find(a=>a.startsWith('--review='))?.slice(9),review=reviewPath?JSON.parse(fs.readFileSync(reviewPath)):null;
  const report={evidenceErrors:[...verifyInventory(manifest),...verifyFiles(path.dirname(file),manifest.files)],...stageReport(manifest,review)};
  // A review declaring a different fixed asset/commit is never applicable.
- const asset=(manifest.files??[]).find(f=>f.path===manifest.outputs?.glb);
- if(review&&asset&&review.anatomyGlbSha256!==asset.sha256)report.evidenceErrors.push('review asset mismatch');
+ const candidate=process.argv.find(a=>a.startsWith('--candidate='))?.slice(12);
+ report.evidenceErrors.push(...verifyReviewBinding(manifest,review,candidate));
  report.mayRelease=report.mayRelease&&report.evidenceErrors.length===0;
  console.log(JSON.stringify(report,null,2));if(report.evidenceErrors.length||process.argv.includes('--release')&&!report.mayRelease)process.exitCode=1;
 }
