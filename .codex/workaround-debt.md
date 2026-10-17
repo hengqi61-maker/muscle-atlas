@@ -303,3 +303,14 @@ Title: Pipeline review metadata did not bind frozen commit
 - Fix and exact rerun pending; add negative wrong/missing candidate tests, retain four independent review identities and owner gate.
 
 WD0022 durable verification: exact original wrong-commit CLI rerun now exits1 with evidenceErrors=[review commit mismatch] in after.json; six review gate testsPASS include wrong/missing candidate and wrong asset, plus prior self-review/owner/geometry/hash guards. No temporary bypass. Subsequent independent Software QA will review this narrow fix and updated candidate; no anatomical asset or original review report changed.
+
+
+## WD-2026-10-17-0023
+Status: RESOLVED
+Title: Validator failure leaves provisional software PASS on disk
+- Independent Software QA identified phase-label failure propagation gap. Actual isolated synthetic invalid-scene GLB makes real Khronos failUNRESOLVED_REFERENCE; finalizer exits1 but provisional manifest remains SOFTWARE_TEST_PASS. No actual candidate GLB validator failure; current complete evidence gate still blocks incomplete inventory.
+- Exact reproduction: python3 tests/rig-v2/pipeline_failure.py; before.log in artifacts/motion-pipeline/finalizer-failure/ shows failed negative assertion. Synthetic prerequisites only reach the real validator; never used as motion evidence or runtime fallback.
+- Durable paths: provisional IN_PROGRESS then atomic final PASS/FAIL updates (selected) versus pending-only filename renamed after all stages (more invasive API change). Error propagation must cover disk labels, not only child exit.
+- Current true cold CLI processes are executing unchanged driver; preserve their code provenance. Await their successful completion, then make metadata-only lifecycle correction and run actual success finalization plus exact invalid-scene regression without re-rendering immutable models. No workaround, no source asset change, geometryFAIL/ownerpending still block release.
+
+WD0023 durable verification: after both complete actual coldCLI executions had ended successfully, changed only lifecycle metadata: driver emitsIN_PROGRESS; finalizer atomic writesIN_PROGRESS then terminalSOFTWARE_TEST_PASS/EVIDENCE_COMPLETE or SOFTWARE_TEST_FAIL/FAILED on exception. Exact real invalid-scene validator regression nowPASS (actual finalizer nonzero and disk labelFAIL). Successful finalization of a copy of actual cold-cli-a output using checked join stages produced complete hash inventory with zero evidence errors, retained geometryFAIL and ownerpending (lifecycle-success; this is metadata-only regression, not a new native build). Before/after/success logs in artifacts/motion-pipeline/finalizer-failure. No render/source/weight/threshold edits. Expensive native/Chrome work not silently replayed or relabelled: two fullcoldCLI successful executions belong to unchanged input/native/consumer versions at1f6; lifecycle patch verified separately.
