@@ -89,6 +89,25 @@ def test_mirror_and_negative_unit_conversion_rejected():
         convert_units(np.eye(4), -1)
 
 
+def test_blender_z_up_to_gltf_y_up_conjugation():
+    c = rotation("x", -90)
+    source = rotation("z", 37)
+    source[:3, 3] = [.3, .4, .5]
+    converted = map_transform(source, c, np.linalg.inv(c))
+    point = np.array([.1, .2, .3, 1])
+    np.testing.assert_allclose(converted @ (c @ point), c @ (source @ point), atol=1e-12)
+    np.testing.assert_allclose(c @ [0, 0, 1, 0], [0, 1, 0, 0], atol=1e-12)
+
+
+def test_roundtrip_with_units_and_nonzero_frame_offsets():
+    source = rotation("x", 90)
+    source[:3, 3] = [1000, 2000, -500]
+    a, b = rotation("y", 90), rotation("z", -90)
+    b[:3, 3] = [.1, .2, .3]
+    mapped = map_transform(source, a, b, .001)
+    np.testing.assert_allclose(unmap_transform(mapped, a, b, .001), source, atol=1e-10)
+
+
 @pytest.mark.parametrize("fault", ["missing-parent", "duplicate", "cycle", "world", "nan", "sha", "mirrored", "units", "joint-set", "time"])
 def test_bad_packet_rejected(fault):
     data = copy.deepcopy(packet())

@@ -1,0 +1,12 @@
+{
+  "method": "Independent Python glTF JSON/TRS reconstruction; no Three/Blender evaluation",
+  "glbSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+  "skins": 1,
+  "jointPaletteSizes": [
+    27
+  ],
+  "sourceNodes": 467,
+  "jointsCompared": 27,
+  "maximumWorldMatrixDifference": 1.624502630193092e-07,
+  "scope": "Default node reference only; animation interpolation, weights and soft-tissue quality are separate"
+}

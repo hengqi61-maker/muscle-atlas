@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-16",
+  "commonBaseline": "0914d4fad3fbe107ea90c08473b6d2a448345ba6",
+  "experimentCodeCommit": "9c363d965d1437cbde94d3c9fc05a29e559bce64",
+  "opensim": "version 4.6-2026-03-31-d6972f9e6, build date 21:24:14 Mar 31 2026",
+  "modelSha256": "892bd333a1e1e6a2b77902b54218f12727eefd2306ca82bbda81621c926271fe",
+  "scriptSha256": "c246983d2c0c14b9afd43d3da26aa7d8a4ade3053063ada02d9f2977c7253d90",
+  "modelCounts": {
+    "bodies": 7,
+    "joints": 7,
+    "coordinates": 17,
+    "lockedCoordinates": 5,
+    "constraints": [
+      {
+        "name": "AC",
+        "type": "PointConstraint"
+      }
+    ],
+    "muscles": 33,
+    "pathPoints": 78
+  },
+  "prescribedPoses": 10,
+  "packetIssues": [],
+  "repeatedPacketByteIdentical": true,
+  "packetSha256": "62e1f48249d78ad4811a2a8b83e420e0e38d3e21c11e9c01b89e73106124c0a8",
+  "musclePathMaximumRepeatDelta_m": 0.0,
+  "macR1": {
+    "producerCommit": "ccf51104e309303ea3853df41a4697928a541147",
+    "originalObservationSha256": "cf27f3ff63c5dd73fef0d5ae29657bf296879cd02531f4494ac0d5f173bf117c",
+    "independentlyVerifiedGlbSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+    "independentlyVerifiedCanonicalSha256": "4acb41a3f8a9541a84ad3dea729fe71132c3c025460b95cdb46cd8db3df731fc",
+    "clips": 2,
+    "validatedFramesPerClip": 121,
+    "joints": 27,
+    "committedKeyframesPerClip": 5
+  },
+  "pytestTests": 34,
+  "mappingRows": 20,
+  "mappingRoundtripMaxAbs": 2.220446049250313e-16,
+  "motionVerdict": "INCONCLUSIVE",
+  "mayApproveMotion": false,
+  "initialFailure": "setTime after realizePosition invalidated SimTK Position cache; fixed order and original command repeated successfully",
+  "formalHandoffs": [
+    "https://github.com/hengqi61-maker/muscle-atlas/pull/5#issuecomment-6205064964",
+    "https://github.com/hengqi61-maker/muscle-atlas/pull/6"
+  ],
+  "publishedBrowserBaseline": {
+    "passed": 4,
+    "failed": 1,
+    "failure": "supports.spec.ts:8 Production scene missing; original test unchanged"
+  }
+}

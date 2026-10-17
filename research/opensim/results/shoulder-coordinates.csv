@@ -1,0 +1,11 @@
+experiment,sampleIndex,coordinate,commanded_deg,actual_rad
+prescribed-GH-elevation,0,shoulder_elv,0,-2.800982488557657e-26
+prescribed-GH-elevation,1,shoulder_elv,15,0.2617993877991494
+prescribed-GH-elevation,2,shoulder_elv,30,0.5235987755982988
+prescribed-GH-elevation,3,shoulder_elv,45,0.7853981633974483
+prescribed-GH-elevation,4,shoulder_elv,60,1.0471975511965976
+prescribed-scapula-upward,5,scapula_upward_rot,0,0.03297903436146996
+prescribed-scapula-upward,6,scapula_upward_rot,3,0.07783455847766635
+prescribed-scapula-upward,7,scapula_upward_rot,6,0.12212825966406618
+prescribed-scapula-upward,8,scapula_upward_rot,9,0.16590683794936817
+prescribed-scapula-upward,9,scapula_upward_rot,12,0.20922129210744042

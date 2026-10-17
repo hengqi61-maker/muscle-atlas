@@ -1,0 +1,51 @@
+Traceback (most recent call last):
+
+  File "D:\codex\muscle-atlas-opensim\scripts\biomechanics\opensim_experiment.py", line 127, in <module>
+
+    execute(args.model, args.out, args.source_commit)
+
+  File "D:\codex\muscle-atlas-opensim\scripts\biomechanics\opensim_experiment.py", line 86, in execute
+
+    lengths = {muscles.get(i).getName(): muscles.get(i).getLength(state) for i in range(muscles.getSize())}
+
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "D:\codex\muscle-atlas-opensim\scripts\biomechanics\opensim_experiment.py", line 86, in <dictcomp>
+
+    lengths = {muscles.get(i).getName(): muscles.get(i).getLength(state) for i in range(muscles.getSize())}
+
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "D:\codex\.muscle-atlas-opensim\Lib\opensim\simulation.py", line 32011, in getLength
+
+    return _simulation.PathActuator_getLength(self, s)
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+RuntimeError: std::exception in 'double OpenSim::PathActuator::getLength(SimTK::State const &) const': SimTK Exception thrown at State.cpp:964:
+
+  Expected stage to be at least Position in getCacheEntry but current stage was Instance
+
+
+ERROR conda.cli.main_run:execute(49): `conda run python scripts/biomechanics/opensim_experiment.py artifacts/opensim-models/ThoracoscapularShoulderModel.osim --source-commit 52094cc61c3e795552c658e34a73d083f4662c6b --out artifacts/shoulder-experiment` failed. (See above for error)
+[info] Updating Model file from 40000 to latest format...
+
+[info] Loaded model ThoracoscapularShoulderModel from file artifacts\opensim-models\ThoracoscapularShoulderModel.osim
+
+[warning] Couldn't find file 'thorax.vtp'.
+
+[warning] Couldn't find file 'groundspine.vtp'.
+
+[warning] Couldn't find file 'clavicle.vtp'.
+
+[warning] Couldn't find file 'scapula.vtp'.
+
+[warning] Couldn't find file 'humerus.vtp'.
+
+[warning] Couldn't find file 'ulna.vtp'.
+
+[warning] Couldn't find file 'radius.vtp'.
+
+Found simbody-visualizer, setting SIMBODY_HOME env var to  D:\codex\.muscle-atlas-opensim\Lib\opensim
+
+

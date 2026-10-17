@@ -221,6 +221,15 @@ Title: Project debt ledger parser compatibility
 - Correction: move only inline heading titles to separate Title fields; do not alter historical review reports or semantic debt outcomes. Rerun original failing stock checker before closure.
 - Durable verification: exact original stock checker now exits0 and reports WD0015 RESOLVED. Only heading presentation changed; same semantic debt content and original reports preserved.
 
+## WD-2026-10-16-0090
+Status: DEFERRED
+Title: Windows MoBL package acquisition / cross-model anatomical calibration
+- Original reproduction: official lab resource links to SimTK group657; OpenSim4.1 unimanual download_confirm returns HTTP200 containing account/login.php redirect JavaScript rather than ZIP. No account creation or access-control bypass.
+- Routes compared: acquire licensed MoBL after legitimate account access; use the immutable official OpenSim4.6 core shoulder test model with builtin ScapulothoracicJoint. Selected the latter for current prescribed pose/path experiments, not as a claim that MoBL was installed.
+- Actual evidence: docs/biomechanics/model-assessment.md; selected model SHA892bd333a1e1e6a2b77902b54218f12727eefd2306ca82bbda81621c926271fe; 7bodies/17coordinates/33muscles/78pathpoints; 10prescribed poses and two independent-process identical packets. Original MoBL route remains auth-gated.
+- Impact/defer reason: named candidate package and version-specific license/DOFs remain uninspected; real Mac R1 trajectories and schema import work, but anatomical axes, proportions, matching task and independent reference data are not calibrated. Comparison correctly remains INCONCLUSIVE.
+- Next/reopen: legitimate model access and package license review, or calibrated reference/subject/landmark data supplied. No mirrored left-side validation, no physiology PASS and no M2 gate override. No task-related OPEN or ACCEPTED_RISK.
+
 Oct16 follow-up WD0013: authorized wsl-codex endpoint now192.168.1.105:2222 was checked once with existing strict host verification; connection timed out. No message delivered, no remote/network modifications. GitHub handoff remains the retrievable alternative, receipt unconfirmed.
 
 Oct16 follow-up WD0014: capacity returned and exact maker/test paths resumed, followed by four new final independent reviews. Quota limits themselves are normal external capacity constraints, not repaired by this project; future limit risk remains deferred. Current results are actual executed evidence, not inferred from resumed capacity.
