@@ -1,0 +1,12 @@
+{
+ "schema":"phase2-preregister-v1",
+ "baseline":"ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+ "status":"engineering hypotheses, not anatomical calibration",
+ "frozen":["467 POSITION/index identities","27 bone rest/inverse-bind","original hand geometry and weights","121 samples per clip","area<0.05/count>3 or fraction>0.01/edge>2 gates"],
+ "experiments":[
+  {"id":"E01-local-gradient","variable":"lambda=0.5 single Jacobi neighbor-average weight step","scope":"right subscapularis exported source triangle914, edge456-466, closed 2-ring vertex neighborhood; boundary and all other muscles unchanged","hypothesis":"local weight gradient contributes to short-edge amplification under two-bone differential motion","basis":"actual measured edge1.190418797mm, output4.747911965mm, humeral weight difference0.017621696","uncertainty":"topological neighborhood is engineering region, not attachment landmark; smoothing can move peaks to boundary and compress tissue","heldOut":"CurlProbe; left side and all other meshes must be identical"},
+  {"id":"E02-elbow-axis","variable":"alpha=1 change Forearm rotation-axis direction to same-side reference bone local X, closest sign; preserve rotation angle","scope":"both Forearm quaternion channels in both diagnostic clips; no weight/rest/other channel changes","hypothesis":"existing rest-world-X driver differs4.698654degrees from rest bone localX; geometric sensitivity is measurable","basis":"canonical rest matrices and actual quaternion tracks","uncertainty":"neither axis is anatomically calibrated; apparent improvement may be pose/path change; not medical correction","heldOut":"PulldownProbe; wrist displacement and bilateral results reported"}
+ ],
+ "alternativesNotExecuted":["Humerus ancestor-increment compensation changes intended amplitude and contact; compare later after trajectory semantics agreed","Pose-space correction design only; can conceal underlying attachment error if used before calibration"],
+ "selection":"No winner by aggregate count alone. Full121/all triangles/two clips, local identities, adverse changes and independent review required. FAIL remains visible."
+}
