@@ -323,3 +323,13 @@ Title: Windows published packet export/Git hash provenance clarification
 - No workaround/normalization applied to input. Published Gitbytes and own computed SHA retained; both identities and evidence recorded in docs/rig-v2/pipeline/results/windows-receipt.json. Core E3 inputs do not depend on this external packet.
 - Compared paths: normalize packet to match exporthash (rejected changes transportbytes) versus preserve rawGitbytes and explicitly distinguish export/transportSHA (selected). Windows owns result metadata, no remote edits byMac.
 - Deferred only upstream label clarification: ask Windows publish both rawexportCRLF and GitLF SHA or binary-stable transport. Nextaction GitHubPR6 comment; reopen when Windows metadata update arrives or packetbytes change. Not an anatomy approval or accepted risk; no remaining task OPEN entry.
+
+## WD-2026-10-18-0025
+Status: RESOLVED
+Title: Experimental GLB elbow rotation must remove bind-local orientation before changing basis axis
+- Original reproduction: node scripts/rig-v2/phase2/derive.mjs E02-elbow-axis artifacts/phase2/E02-elbow-axis. Initial experimental quaternion edit used full GLB local animation quaternion as if it were Blender matrix_basis. Report max axis delta15.872deg and Curl angle113.005deg disagrees with actual basis100deg /4.698654deg expectation.
+- Initial candidate is INVALID_EXPERIMENT, preserved separately; no geometry scan/render or quality verdict based on it. No production assets affected. No runtime bypass used.
+- Compare durable paths: derive rest-local quaternion from actual inverse-bind parent-child matrices, subtract/restcompose around basis-only edit (selected, retains exact binary provenance), versus rebuild all animations in Blender basis space (larger export identity surface). Independent read-only axis review requested.
+- Fix must retain preregistered angle and exact untouched bytes, assert measured axis delta and rotation-angle invariance, then rerun exact generator path in fresh output. Remains OPEN until true validation.
+
+WD0025 durable verification: independent axis Agent reconstructed inverse-bind matrices and confirmed restLocal inverse times track gives actual basis. Fixed generator edits basis only, then restLocal times basis; near-identity samples preserved. Exact fresh E02-elbow-axis-basis rerun produces d60a589aff96eea65fe84da64f288af231e95b3b278fcb428c1c6fb0747bf55d; four channels all121samples, axis delta4.698685–4.698688deg, Curl amplitude100.000012deg and Pulldown90.000018deg, max angle difference9.3e-14rad. Assertions enforce expected axis/amplitude invariance; untouched bytes exact. Initial invalid candidate preserved/excluded; no workaround retained.
