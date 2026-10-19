@@ -1,0 +1,38 @@
+
+> muscle-atlas@0.1.0 test:quality
+> node --test tests/quality/*.node.mjs tests/quality/motion/*.node.mjs
+
+✔ complete audit allowed while owner pending (1.630916ms)
+✔ owner pending prevents release (0.151792ms)
+✔ FAIL remains a valid completed review but blocks release (0.097792ms)
+✔ inconclusive cannot be relabeled as release (0.183292ms)
+✔ duplicate reviewer contexts rejected (0.128167ms)
+✔ self approval rejected (0.098833ms)
+✔ third rework cycle rejected (0.097625ms)
+✔ few samples rejected (0.089917ms)
+✔ P1 blocks despite passing reviewer fields (0.158167ms)
+✔ M1 always waits owner even with supplied repair flag (0.2285ms)
+✔ third repair cycle cannot run (0.102916ms)
+✔ clean candidate still cannot auto approve M3 (0.08825ms)
+✔ SAT finds crossing triangle with all vertices outside box (0.661583ms)
+✔ area detects flattening independently of translation and initial posture (0.131291ms)
+✔ collapse alarms use either absolute or relative affected-triangle count (0.065583ms)
+✔ component localization keeps disconnected source components and remains inconclusive (0.637875ms)
+✔ interface evidence distinguishes crossing triangles from interior vertices (0.269166ms)
+✔ opposite wrist proximity is a side diagnostic and never an automatic anatomical verdict (0.185042ms)
+✔ support AABBs change with production config without legacy hardcoded heights (0.910667ms)
+✔ positive proxy gap remains inconclusive; negative solid penetration is detected at unchanged precision (0.256084ms)
+✔ box SAT detects true interior crossing without inside vertices (0.293042ms)
+✔ oriented capped cylinder interior differs from conservative AABB overlap (0.305875ms)
+✔ analytic-cylinder edge crossing remains candidate evidence without rendered-prism proof (0.124083ms)
+✔ positive triangle gap calibration clips crossing faces instead of relying only on contained vertices (0.166583ms)
+✔ connection witness detects cylinder cap contact with box and does not invent remote connections (0.222417ms)
+✔ radial cylinder/box tangency can supply a connection witness between remote endpoints (0.098125ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 97.677083

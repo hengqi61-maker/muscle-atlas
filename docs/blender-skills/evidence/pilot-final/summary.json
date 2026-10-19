@@ -1,0 +1,122 @@
+{
+  "status": "BUILD_AND_COMPARISON_PASS",
+  "anatomyStatus": "NOT_APPLICABLE_DISPOSABLE_CUBES",
+  "skillQa": "EXPECTED_FAIL_DETACHED_FIXTURE",
+  "fixtureSha256": "fc261ebaaaf6fa74ff82a3d6b5ee420ce98b62716fe13dd64b3237e0066c27ee",
+  "upstream": "71d031dab8bc6729504d11a78cbe91945401045f",
+  "records": [
+    {
+      "label": "fixture",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--disable-autoexec",
+        "--python-exit-code",
+        "1",
+        "-P",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/scripts/blender-skills/fixture.py",
+        "--",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/artifacts/blender-skills/pilot-final"
+      ],
+      "exitCode": 0,
+      "seconds": 4.530983459
+    },
+    {
+      "label": "baseline-1",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--disable-autoexec",
+        "--python-exit-code",
+        "1",
+        "-P",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/scripts/blender-skills/probe.py",
+        "--",
+        "baseline",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/artifacts/blender-skills/pilot-final/fixture.blend",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/artifacts/blender-skills/pilot-final/baseline-1"
+      ],
+      "exitCode": 0,
+      "seconds": 1.4333422919999999
+    },
+    {
+      "label": "skill-1",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--disable-autoexec",
+        "--python-exit-code",
+        "1",
+        "-P",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/scripts/blender-skills/probe.py",
+        "--",
+        "skill",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/artifacts/blender-skills/pilot-final/fixture.blend",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/artifacts/blender-skills/pilot-final/skill-1"
+      ],
+      "exitCode": 0,
+      "seconds": 0.9918500410000002
+    },
+    {
+      "label": "baseline-2",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--disable-autoexec",
+        "--python-exit-code",
+        "1",
+        "-P",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/scripts/blender-skills/probe.py",
+        "--",
+        "baseline",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/artifacts/blender-skills/pilot-final/fixture.blend",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/artifacts/blender-skills/pilot-final/baseline-2"
+      ],
+      "exitCode": 0,
+      "seconds": 1.2029692500000007
+    },
+    {
+      "label": "skill-2",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--disable-autoexec",
+        "--python-exit-code",
+        "1",
+        "-P",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/scripts/blender-skills/probe.py",
+        "--",
+        "skill",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/artifacts/blender-skills/pilot-final/fixture.blend",
+        "/Users/qi-heng/.codex/worktrees/blender-skills-study/\u808c\u8089\u8ba1\u5212/artifacts/blender-skills/pilot-final/skill-2"
+      ],
+      "exitCode": 0,
+      "seconds": 1.1862970419999996
+    }
+  ],
+  "outputSha256": "f500f3e1b1429bedb3d803b8420344dcbed6a9a3f195a10deab1e159f16a7a42",
+  "inventory": {
+    "objects": {
+      "MESH": 2
+    },
+    "tris": 24,
+    "materials": 2,
+    "images": 0,
+    "missing_images": [],
+    "actions": 0
+  },
+  "comparison": "four GLBs byte-identical; fixture read-only; additive QA detects intentional floating cube; no anatomy improvement claim",
+  "manualInterventions": 0,
+  "executedScriptHashes": {
+    "scripts/blender-skills/run_pilot.py": "bce533a86c18a4ad641c3f5763ebfd4a90c0bcd98de890d1d53db20540bc8655",
+    "scripts/blender-skills/probe.py": "e03d85a8beaaf72ad539302133a2e54ba4cd67ca30bc7ec964e577c1f51ce639",
+    "scripts/blender-skills/fixture.py": "e25927bdf9295a00d903f6c3bf222c13a6dcfba375f7739698c243f0a2e6657c"
+  },
+  "blender": "5.2.0 LTS",
+  "blenderBuild": "fbe6228777e7"
+}

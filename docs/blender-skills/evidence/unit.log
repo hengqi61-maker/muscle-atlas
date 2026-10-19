@@ -1,0 +1,13 @@
+
+> muscle-atlas@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.4 /Users/qi-heng/.codex/worktrees/blender-skills-study/肌肉计划
+
+
+ Test Files  3 passed (3)
+      Tests  13 passed (13)
+   Start at  10:22:07
+   Duration  178ms (transform 47%, import 42%, tests 7%, worker 3%)
+
