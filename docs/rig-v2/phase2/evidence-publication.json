@@ -1,0 +1,14 @@
+{
+  "path": "artifacts/phase2-8dc8661-evidence.zip",
+  "bytes": 535692307,
+  "sha256": "43c93433f328972c05771fc306f6c5e72af6c3adcf6137c7e17d26310e8ca990",
+  "files": 857,
+  "url": "https://github.com/hengqi61-maker/muscle-atlas/releases/tag/evidence-phase2-8dc8661",
+  "sourceCodeCandidate": "2a16291",
+  "deliveryCommit": "8dc866103111c9eea45c419838835b0e35d6a109",
+  "quality": "FAIL both candidates",
+  "ownerApproval": "PENDING",
+  "invalidCandidate": "E02-elbow-axis initialwholelocal-edit preserved INVALID; excluded from comparison",
+  "windowsResumeNotice": "https://github.com/hengqi61-maker/muscle-atlas/issues/11#issuecomment-6258286886",
+  "windowsExecutionAcknowledged": false
+}
