@@ -75,3 +75,8 @@ Mac已采用Windows PR6固定c12e30e的v1合同，真实导出7份27骨骼packet
 
 ## 2026-10-17 · E3流水线与P1网格级归因
 独立PR8基于PR5，原source/R1/手部/正式资产不变。两次分阶段重建＋两次统一入口全冷启动完成，同GLB字节与121矩阵差0，每次50native＋50Three关键帧和完整视频。24新增测试、原build/13Vitest/26quality通过。权威全三角检查仍FAIL：新Curl39/121，冻结R1完整覆盖Curl39/Pulldown91；旧抽样42保留。四独立专业审查阻止正式放行。WD0020–23耐久修复；待Owner选择附着/骨轴与局部权重敏感性，或可复用姿态修正。Windowscontact规范待发布，未造假适配。完整报告docs/rig-v2/pipeline/PHASE-1-report.md。
+
+## Phase2 isolated sensitivity evidence
+- Fresh frozen baseline reproduced39/91; two preregistered local-weight/Forearm-axis experiments executed across2clips/121all-triangle poses. Both FAIL with adverse regressions, not production repairs.
+- Actual native/Three evidence, source seam regression detector, wrist trajectory comparison and three independent role reviews added under docs/rig-v2/phase2. Owner approval pending, no production/finger/main changes.
+- Issue13 fixture-only Blender Skills pilot stays separate PR14; not automatically integrated into animation assets.

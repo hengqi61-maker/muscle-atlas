@@ -333,3 +333,53 @@ Title: Experimental GLB elbow rotation must remove bind-local orientation before
 - Fix must retain preregistered angle and exact untouched bytes, assert measured axis delta and rotation-angle invariance, then rerun exact generator path in fresh output. Remains OPEN until true validation.
 
 WD0025 durable verification: independent axis Agent reconstructed inverse-bind matrices and confirmed restLocal inverse times track gives actual basis. Fixed generator edits basis only, then restLocal times basis; near-identity samples preserved. Exact fresh E02-elbow-axis-basis rerun produces d60a589aff96eea65fe84da64f288af231e95b3b278fcb428c1c6fb0747bf55d; four channels all121samples, axis delta4.698685–4.698688deg, Curl amplitude100.000012deg and Pulldown90.000018deg, max angle difference9.3e-14rad. Assertions enforce expected axis/amplitude invariance; untouched bytes exact. Initial invalid candidate preserved/excluded; no workaround retained.
+
+## WD-2026-10-18-0026
+Status: DEFERRED
+Title: GitHub Issue progress comment TLS handshake timeout
+- Original exact command: gh issue comment 10 --body-file /tmp/phase2-progress.md. gh returned1: POST https://api.github.com/graphql net/http TLS handshake timeout. DraftPR12 and Git push had succeeded earlier. The body is preserved; no assertion that failed delivery succeeded.
+- No configuration or transport workaround applied. Compare bounded unchanged exact command after same-host health read versus switching REST/client (would obscure original GraphQL failure); selected read-only health + one evidence-preserving exact retry. Do not mutate proxy/security or loop retries. Local CPU/native experiments continue independent of network.
+- Root cause not established; transient network path/remote TLS remains plausible. Scope limited to communication. Next action preserve actual gh result/comment URL; reopen on next failure, then controlled proxy diagnosis with permission before disruption. DEFERRED transport investigation, never treat retry as permanent resolution.
+
+## WD-2026-10-18-0027
+Status: RESOLVED
+Title: Native import total meshes differs from original anatomy identity count
+- Actual render worker initial import stopped before GPU/render on total meshCount==467 assertion; log artifacts/phase2/native-baseline/blender.log preserved. Frozen GLB imports469 mesh objects,467 unique sourceName identities plus2 additional objects. Distinguish total imported geometry from source anatomy; do not hide or delete extras.
+- Compared durable identity-based set+name/hash verification versus filtering/deleting extras (rejected). Maker correcting source-identity gate while preserving all scene objects visible. Exact native-baseline-v2 rerun pending; no motion/visual PASS claim.
+
+## WD-2026-10-18-0028
+Status: RESOLVED
+Title: Recurrent Blender new diagnostic material has no implicit Principled node
+- Renderer v2 stopped strictly before rendering because new material lacked implicit Principled node; evidence native-baseline-v2 log retained by render maker. Same class as earlier WD0020 world-node assumption.
+- Durable paths: explicitly construct Principled and Output nodes/link (selected) versus depend on factory template/get node by translated/default name (rejected). No material substitute or omitted mesh. v3 actual native frames produced after explicit nodes; full fixed-run verification pending.
+
+## WD-2026-10-18-0029
+Status: DEFERRED
+Title: Bounded diagnostic render uses explicit eight samples instead of default64
+- Actual512px EEVEE factory default64 samples measured about40s/frame,122images/asset implies roughly80min each/4h three assets. Partial real native-baseline-v3 data/log/PNGs/121trajectories retained; stopped withTERM under coordinator authorization, never marked complete.
+- Compared durable production options: retain64 about4h, fixed8 at identical512px/camera/material/frame settings (selected bounded engineering diagnostic), lower resolution (rejected harms local detail). Three sets must share8 samples; no geometric threshold/sample-frame/culling/identity change. This is explicit rendering-budget adaptation, not proof default64 pipeline performance fixed.
+- Maker executes new native-baseline-v4 then same E01/E02 runs; actual times and quality review pending. High-sample production visual validation deferred; reopen if independent VisualReviewer finds8-sample noise insufficient, then render required regions64 with evidence. No accepted risk or anatomy PASS claimed.
+
+WD0026 delivery follow-up: same-host curl health HTTP200; exact original gh issue comment rerun succeeded https://github.com/hengqi61-maker/muscle-atlas/issues/10#issuecomment-6251322684 . Delivery now confirmed but underlying transient TLS cause remains DEFERRED; retry not permanent resolution.
+
+WD0027 corrected evidence and durable verification: initial469 count came from probe retaining default Cube. Factory-startup + deleting scene + frozen GLB import actually468=467 unique original sourceName identities plus1 Icosphere (localized name棱角球), not2extras. Correct source-set validation preserves it visible. Actual native-baseline-v4 completed both real clips/121nonstatic matrix samples with467identities/27bones, no meshes hidden. Old failed probes are retained; no source modifications.
+
+WD0028 durable verification: explicitPrincipled/Output construction in renderer eliminated implicit-node assumption. Actual native-baseline-v4 completed both diagnostic clips, produced actual frames/video/Blend under explicit8samples; sourceShaef803.../467identities/27bones fixed. Camera/framing quality is separate and not implied by this material-node closure. No template fallback remains.
+
+## WD-2026-10-19-0030
+Status: RESOLVED
+Title: Native full-body framing used bounds before individual NLA activation
+- Old baseline-v4 kept actual frames/videos but initial framing was calculated with simultaneously imported NLA state, not a full-cycle bound; source pose framing could crop. No final framing approval based on it.
+- Compared fixed guessed ortho scale versus measured full-cycle eval-mesh bbox union (selected); bone-only bounds rejected for hands/tissue. New camera-calibration-v2 independently activates2clips for each3assets, samplesall121 evaluated mesh bounds and verifies eachclip firstpose against all actual evaluated vertices (difference0m). Contract adds10percent margin, clipping proof0.90909 maximum extent.
+- Actual3smoke images preserve fullbody; independent fullvertex camera projection max0.875751, image tissueYfront40–334/back31–330/side30–333. Root actually viewed back hand tips with>30pxmargin. No contract change after maker initially misread smoke; corrected against pixel+projection evidence. Fixed contract applied uniformly; pending fullvideos are separate work. No geometry threshold, source or finger edits.
+
+## WD-2026-10-19-0031
+Status: DEFERRED
+Title: E01 experimental local exported weights introduce coincident-source seam separation
+- Full candidatef7324... retained unchanged/FAIL. SoftwareReviewer actualLBS detected11 source-equivalent groups split; pair441/1288 separates3.179553mm atPulldownframe0 (baseline0). Original2byte-scope unit tests pass but do not test continuity. Fulltriangle metric worsenspeak3.988438→6.469800 even though severeframesremain91. No adoption or hidden workaround.
+- New seam-check.mjs measures1785 same-mesh exactoriginalPOSITION/JOINTS/WEIGHTS duplicate pairs over121actualLBS samples/two clips, outputsAUTOFAIL/exit1onE01; E02newseamcheckAUTOPASSonlyfor thissourcegroup screen. Threshold1micrometre explicitly numericalregression, not medicalgapallowance.
+- Durable alternatives for next separately numbered experiment: preserve verified same-source equivalence classes duringlocalweight changes; or move experiments to native source-index registry with topology provenance beforeexport. Pose-space correction third alternative remainsdesignonly and cannot conceal seam. Uncalibrated attachment regions mean no anatomical fix selected. Reopen when owner/calibration reference supports next experiment. Priorcandidate/reportneveroverwritten; remainingmotionqualityFAIL and ownerpending.
+
+Final WD0027 scope clarification: frozenGLB JSON exactly467 meshes/nodes. bpy.data and scene contain an importer-created Icosphere/棱角球 custom_shape referenced by27bones, linked to glTF_not_exported collection with importer-default hide_render/hide_viewport; it is not an original extra asset or prop. Renderer never hides originalsource meshes (all467 hide_render=False). Earlier temporary extra-asset count interpretations superseded by binaryJSON + native helper-inspection/visibility logs. Camera contract included helper bbox conservatively, causing spare whitespace only; identicalcontract preserved for scientific comparison. No helper or source was deleted/hidden by this work.
+
+WD0029 measurement caveat: initial64sample40s/frame and later8sample5.7s/frame occurred under heavy concurrent fulltriangle scans; with scansfinished native-baseline-v5 71.59s total and E01 58.54s total. Do not attribute speed difference solely to sample count; no controlled FPS/performance improvement claim. Explicit8-sample diagnostic imagery remains reviewed only for gross shape; micro-seams/high-sample productionvisual validation DEFERRED.
