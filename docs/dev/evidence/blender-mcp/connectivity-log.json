@@ -1,0 +1,271 @@
+{
+  "log": [
+    {
+      "step": "ping",
+      "seconds": 0.037,
+      "cmdType": "ping",
+      "result": {
+        "status": "success",
+        "result": {
+          "pong": true
+        }
+      }
+    },
+    {
+      "step": "scene_before",
+      "seconds": 0.06,
+      "cmdType": "get_scene_info",
+      "result": {
+        "status": "success",
+        "result": {
+          "name": "Scene",
+          "object_count": 3,
+          "objects": [
+            {
+              "name": "Cube",
+              "type": "MESH",
+              "location": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "Light",
+              "type": "LIGHT",
+              "location": [
+                4.08,
+                1.01,
+                5.9
+              ]
+            },
+            {
+              "name": "Camera",
+              "type": "CAMERA",
+              "location": [
+                7.36,
+                -6.93,
+                4.96
+              ]
+            }
+          ],
+          "materials_count": 2
+        }
+      }
+    },
+    {
+      "step": "create_cube",
+      "seconds": 0.093,
+      "cmdType": "execute_code",
+      "result": {
+        "status": "success",
+        "result": {
+          "executed": true,
+          "result": "CREATED MCP_TEST_CUBE\n"
+        }
+      }
+    },
+    {
+      "step": "move_material",
+      "seconds": 0.105,
+      "cmdType": "execute_code",
+      "result": {
+        "status": "success",
+        "result": {
+          "executed": true,
+          "result": "UPDATED MCP_TEST_CUBE (1.5, -0.5, 2.0) MCP_TEST_MAT\n"
+        }
+      }
+    },
+    {
+      "step": "object_info",
+      "seconds": 0.027,
+      "cmdType": "get_object_info",
+      "result": {
+        "status": "success",
+        "result": {
+          "name": "MCP_TEST_CUBE",
+          "type": "MESH",
+          "location": [
+            1.5,
+            -0.5,
+            2.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "visible": true,
+          "materials": [
+            "MCP_TEST_MAT"
+          ],
+          "world_bounding_box": [
+            [
+              0.5,
+              -1.5,
+              1.0
+            ],
+            [
+              2.5,
+              0.5,
+              3.0
+            ]
+          ],
+          "mesh": {
+            "vertices": 8,
+            "edges": 12,
+            "polygons": 6
+          }
+        }
+      }
+    },
+    {
+      "step": "screenshot_cube",
+      "seconds": 0.622,
+      "cmdType": "get_viewport_screenshot",
+      "result": {
+        "status": "success",
+        "result": {
+          "success": true,
+          "width": 800,
+          "height": 453,
+          "filepath": "~/.codex/tools/mcp-for-blender/runtime/workspace/evidence/viewport-cube.png",
+          "method": "offscreen",
+          "file": "",
+          "scene": "Scene",
+          "scene_count": 1,
+          "view": {
+            "file": "",
+            "scene": "Scene",
+            "view_matrix": [
+              [
+                0.40403029322624207,
+                0.9147456288337708,
+                -1.2411510397214442e-07,
+                0.05046229436993599
+              ],
+              [
+                -0.40777426958084106,
+                0.18010829389095306,
+                0.8951430916786194,
+                -0.0007478409679606557
+              ],
+              [
+                0.8188282251358032,
+                -0.36166489124298096,
+                0.4457789361476898,
+                -18.38804817199707
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "window_matrix": [
+              [
+                1.3888888359069824,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                2.4486069679260254,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -1.0000200271606445,
+                -0.02000020071864128
+              ],
+              [
+                0.0,
+                0.0,
+                -1.0,
+                0.0
+              ]
+            ],
+            "width": 800,
+            "height": 453
+          }
+        }
+      }
+    },
+    {
+      "step": "save_blend",
+      "seconds": 0.082,
+      "cmdType": "execute_code",
+      "result": {
+        "status": "success",
+        "result": {
+          "executed": true,
+          "result": "Info: Saved as \"mcp-connectivity-test.blend\"\nSAVED ~/.codex/tools/mcp-for-blender/runtime/workspace/mcp-connectivity-test.blend\n"
+        }
+      }
+    }
+  ],
+  "persist": {
+    "blendExists": true,
+    "blendBytes": 106839,
+    "blendSha256": "665417d278dd7ebd39522421e8ce345c87269f1e4823867f976b53d34bffcf04",
+    "screenshotExists": true,
+    "screenshotBytes": 191008,
+    "screenshotSha256": "a55f8425c57511e7a170bcdb7a6b8133b209ec89af4a3351b982b66117e4931c"
+  },
+  "reopen": {
+    "sceneObjectNames": [
+      "MCP_TEST_CUBE"
+    ],
+    "cube": {
+      "name": "MCP_TEST_CUBE",
+      "type": "MESH",
+      "location": [
+        1.5,
+        -0.5,
+        2.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "visible": true,
+      "materials": [
+        "MCP_TEST_MAT"
+      ],
+      "world_bounding_box": [
+        [
+          0.5,
+          -1.5,
+          1.0
+        ],
+        [
+          2.5,
+          0.5,
+          3.0
+        ]
+      ],
+      "mesh": {
+        "vertices": 8,
+        "edges": 12,
+        "polygons": 6
+      }
+    },
+    "status": "PASS"
+  }
+}

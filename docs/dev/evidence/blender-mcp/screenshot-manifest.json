@@ -1,0 +1,27 @@
+[
+  {
+    "file": "screenshots/viewport-atlas-detail.png",
+    "bytes": 256769,
+    "sha256": "4792d23435f88344e7e8e29bd823e446d327e975d7534f5ceab0639f7d2c178b"
+  },
+  {
+    "file": "screenshots/viewport-cube.png",
+    "bytes": 191008,
+    "sha256": "a55f8425c57511e7a170bcdb7a6b8133b209ec89af4a3351b982b66117e4931c"
+  },
+  {
+    "file": "screenshots/viewport-atlas-back.png",
+    "bytes": 257470,
+    "sha256": "b76461836be2a9e0e2afa70b521f4d1d84b4126b29765273582d9fec73bc259f"
+  },
+  {
+    "file": "screenshots/viewport-atlas-side.png",
+    "bytes": 258966,
+    "sha256": "89a5bfbad521f8d026917fa455895a35bff80bd5ef9e590c4b59a07234f8315f"
+  },
+  {
+    "file": "screenshots/viewport-atlas-front.png",
+    "bytes": 257694,
+    "sha256": "8f8a4506b73e34ced312e3224f292d541b7392616d8c6a9932712204960193b4"
+  }
+]
