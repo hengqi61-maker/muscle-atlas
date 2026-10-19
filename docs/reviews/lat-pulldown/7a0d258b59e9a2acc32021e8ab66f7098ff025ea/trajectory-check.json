@@ -1,0 +1,39 @@
+{
+  "samples": 121,
+  "failures": [],
+  "segments": [
+    {
+      "from": "UpperArm",
+      "to": "Forearm",
+      "min_m": 0.274025488604774,
+      "max_m": 0.274025557794728,
+      "range_m": 6.918995398841332e-8
+    },
+    {
+      "from": "Forearm",
+      "to": "LeftHand",
+      "min_m": 0.23700816197289212,
+      "max_m": 0.23700826270403977,
+      "range_m": 1.0073114764530544e-7
+    },
+    {
+      "from": "RightUpperArm",
+      "to": "RightForearm",
+      "min_m": 0.274025488604774,
+      "max_m": 0.274025557794728,
+      "range_m": 6.918995398841332e-8
+    },
+    {
+      "from": "RightForearm",
+      "to": "RightHand",
+      "min_m": 0.23700816197289212,
+      "max_m": 0.23700826270403977,
+      "range_m": 1.0073114764530544e-7
+    }
+  ],
+  "maxStepDistance_m": 0.01151388880930514,
+  "maxStepAngle_deg": 3.489331043808083,
+  "maxSpeed_m_s": 0.3454166642791554,
+  "endpointMaxDistance_m": 0,
+  "method": "Adjacent sampled world transforms; absolute quaterniondot handles sign. Fixedsegment tolerance1mm is modelrig invariant, not human criterion. Step/speed metrics are descriptive with no universal physiological cutoff. Samples can miss intersample snapping. Does not certify muscleforce,actualsurfacecontact,shouldercoordination."
+}

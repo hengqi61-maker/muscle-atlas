@@ -1,0 +1,34 @@
+{
+  "windowsOwnerCommit": "c12e30eed644e797206fe1296010b252c9325de3",
+  "contractRoot": "/Users/qi-heng/.codex/worktrees/v2-exchange-integration/\u808c\u8089\u8ba1\u5212",
+  "contractCommit": "0dbf67ddc886b2ec0482a1e1a38aa84a45222d6c",
+  "schemaSha256": "86ab769b15029bb53f84c8af894dcc7c0f934a9297e58da2d2f5ca9623a2d18b",
+  "librarySha256": "36df023dc05aaee4238e41b2e3641aca1c1c5fa0f25454aaca879ee5cc6aef28",
+  "packetsValidated": [
+    "blender-rest",
+    "gltf-default",
+    "gltf-bind",
+    "blender-CurlProbe",
+    "blender-PulldownProbe",
+    "gltf-CurlProbe",
+    "gltf-PulldownProbe"
+  ],
+  "nodesPerPacket": 27,
+  "samplesPerClip": 5,
+  "mathematicalRoundtripMaxError": 6.661338147750939e-16,
+  "actualNativeToGltfPhaseMaxElementError": 6.998322887863395e-07,
+  "predeclaredTolerance": 2e-05,
+  "nativeWriteRead": {
+    "sourceFrame": "PulldownProbe 25%",
+    "isolatedNativePath": "artifacts/rig-v2/exchange-v1-roundtrip.blend",
+    "maxMatrixElementError": 2.384185791015625e-07,
+    "tolerance": 2e-05,
+    "passed": true,
+    "sourceShaUnchanged": true
+  },
+  "notProven": [
+    "Anatomical calibration",
+    "OpenSim model equivalence",
+    "Physiological motion quality"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "attribution-evidence-manifest-v1",
+  "assetSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+  "files": [
+    {
+      "path": "analyze-executed-frozen.mjs",
+      "bytes": 7751,
+      "sha256": "2f17b90e181ec9e9569afa48dcbe13c025a77d10135fba01a58621ea096f8097"
+    },
+    {
+      "path": "analyze.log",
+      "bytes": 240,
+      "sha256": "311cebcee423d5595a6638318ec9641132823611e0e702c5d47e705b18c026c5"
+    },
+    {
+      "path": "capture-views.log",
+      "bytes": 27,
+      "sha256": "31119363e35bf4cd16d9fa93e05c2ef40160c6bd4c4bddddc7afe9bcc57dba6b"
+    },
+    {
+      "path": "closeup-00-CurlProbe-BP8244.png",
+      "bytes": 100998,
+      "sha256": "2ddfcd87c38c218bab20220ecb3d13f207c405a1050ad47426066a0f9e74ec02"
+    },
+    {
+      "path": "closeup-01-CurlProbe-BP8816.png",
+      "bytes": 74228,
+      "sha256": "b303eb4b3dd19987cbb93a11757dbc95438ff6dc8c624296b45904e334f2db6b"
+    },
+    {
+      "path": "closeup-02-CurlProbe-BP5566.png",
+      "bytes": 74272,
+      "sha256": "40a0a471ecdf34b24dcdcacd59436fc84f3c98d99e15e853b3def713ba0ff79c"
+    },
+    {
+      "path": "closeup-03-CurlProbe-BP4833.png",
+      "bytes": 115521,
+      "sha256": "5d684cba129a8edec25fbdc7710876b2cd27a0612917a2366e1c26bd7cda2d54"
+    },
+    {
+      "path": "closeup-04-PulldownProbe-BP8259.png",
+      "bytes": 123398,
+      "sha256": "567d8c78fa90a204757423ed10767a4a0749fecc6354993cfd2fff3215d94da0"
+    },
+    {
+      "path": "closeup-05-PulldownProbe-BP7573.png",
+      "bytes": 116777,
+      "sha256": "80f16bec7b560a063ed3be8138770b5ed451c2fafa22125d43bc871ed97de67c"
+    },
+    {
+      "path": "closeup-06-PulldownProbe-BP8244.png",
+      "bytes": 77079,
+      "sha256": "2acf79381de8b99915f2713211538544d9319b1095f82d522b6950c1ce941b4f"
+    },
+    {
+      "path": "closeup-07-PulldownProbe-BP8376.png",
+      "bytes": 53166,
+      "sha256": "31d98fa9d7f6d6ab78c6bbb51af36de76dc603d738ad912d64fc087e1be9a2ce"
+    },
+    {
+      "path": "closeup-08-PulldownProbe-BP4833.png",
+      "bytes": 91817,
+      "sha256": "aaa2304709438201338f93776142f40948dbab2fb6b5f150bd8e4cc97c189436"
+    },
+    {
+      "path": "closeup-09-PulldownProbe-BP4791.png",
+      "bytes": 61742,
+      "sha256": "3d2566e8bc714ed38c823f31192171df15dec4d2a1b2c7af89ed5f0142a4abae"
+    },
+    {
+      "path": "execution.json",
+      "bytes": 2785,
+      "sha256": "19bf946de5943a6af091aabaf524159376fccb20477df143c0c21494d51173f8"
+    },
+    {
+      "path": "map-source.log",
+      "bytes": 572,
+      "sha256": "7ea1b6dbdb75d24650f533851722c38899dfde35748dc780037af1347b49e97f"
+    },
+    {
+      "path": "render-input.json",
+      "bytes": 2462009,
+      "sha256": "651aa5eccb2dde5295bb18550dd38b49a86ff327fc56c85d4084ea1abd1e1a62"
+    },
+    {
+      "path": "render.log",
+      "bytes": 75,
+      "sha256": "7afbffc60c8ca7cad3e260e078a76c82b912050564ed36b241f88afe3876d4f1"
+    },
+    {
+      "path": "report.json",
+      "bytes": 1720831,
+      "sha256": "6e7d9b2d54613b50eaf62b5893456959b6427b706f5905db9413e04d2c8ecc0e"
+    },
+    {
+      "path": "summarize.log",
+      "bytes": 179,
+      "sha256": "08db987238bc09d3aea64cb5a2a90affd45ac4328a06562dee86ebf8aa962ad4"
+    },
+    {
+      "path": "trace-stretch.log",
+      "bytes": 1149,
+      "sha256": "4a780854fc1997f806eef69a46f80c24eef66616fdcbb64764f739196a6c87ec"
+    }
+  ]
+}

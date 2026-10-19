@@ -1,0 +1,43 @@
+{
+  "candidateGit": "baa407752cb46ac3b83f85b75262cebb08529e65",
+  "assetSha256": "44109e516dc44ee1767beec7a5cb61504c804c83b952fee92e9d1120c9021cea",
+  "status": "REVIEW_CYCLE_1_NOT_ACCEPTED",
+  "videoDuration_s": 36.6,
+  "sourceIdentityInvariant": "467 index-expanded source base meshes exactly preserved per source-preservation-c.json",
+  "tests": {
+    "vitest": {
+      "passed": 13
+    },
+    "qualityMathAndGates": {
+      "passed": 18
+    },
+    "chromeFullSuite": {
+      "passed": 4,
+      "wallTime_s": 27.5
+    },
+    "GLBValidator": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "motionQuality": {
+      "exitCode": 1,
+      "sampleCount": 121,
+      "reason": "non-cuff geometry collapse; anatomy/contact incomplete"
+    }
+  },
+  "performanceLimit": "Existing baseline controlled matrix preserved. Current capture rAF is a smoke observation, not controlled FPS/GPU measurement; no specialty FPS work per current scope.",
+  "reviewers": {
+    "visual": {
+      "path": "reviews/visual.md",
+      "sha256": "1833ef1dd74269f7bbb9cf7159553943d7908f218cc51b29de55641ae322d7e8"
+    },
+    "exercise-science": {
+      "path": "reviews/exercise-science.md",
+      "sha256": "2d0761d17cda59547cdefb7b685f8ca2efff202dcb6b1ab5db1396da1b621834"
+    },
+    "biomechanics": {
+      "path": "reviews/biomechanics.md",
+      "sha256": "33043f6becc4680581cf5278f06d2e87125b1013ec8538a5ff3c1c201a0556d0"
+    }
+  }
+}

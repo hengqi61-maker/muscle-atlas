@@ -1,0 +1,2127 @@
+{
+  "status": "MOTION_GEOMETRY_FAIL",
+  "assetSha256": "65a3dcb59257394e2b97bc3ddb15a94fd923ffc43972ef6014dfdc1513395f25",
+  "meshCount": 467,
+  "triangleCount": 1092000,
+  "thresholds": {
+    "areaRatio": 0.05,
+    "severeAbsoluteStrictlyGreater": 3,
+    "severeFractionStrictlyGreater": 0.01,
+    "edgeRatioStrictlyGreater": 2
+  },
+  "coverage": "Every actual derived GLB triangle and edge at121 inclusive times; engineering screen only, not attachment/biomechanics/contact acceptance",
+  "nativeScreen": "geometry.json retains earlier5-phase >3 provisional screen for provenance; this full121 >2 derived GLB stage is authoritative",
+  "clips": [
+    {
+      "name": "CurlProbe",
+      "samples": [
+        {
+          "frame": 0,
+          "timeSeconds": 0,
+          "maximumEdgeRatio": 1.010961976927553,
+          "failures": []
+        },
+        {
+          "frame": 1,
+          "timeSeconds": 0.03333333333333333,
+          "maximumEdgeRatio": 1.010961976927553,
+          "failures": []
+        },
+        {
+          "frame": 2,
+          "timeSeconds": 0.06666666666666667,
+          "maximumEdgeRatio": 1.010961976927553,
+          "failures": []
+        },
+        {
+          "frame": 3,
+          "timeSeconds": 0.1,
+          "maximumEdgeRatio": 1.010961976927553,
+          "failures": []
+        },
+        {
+          "frame": 4,
+          "timeSeconds": 0.13333333333333333,
+          "maximumEdgeRatio": 1.010961976927553,
+          "failures": []
+        },
+        {
+          "frame": 5,
+          "timeSeconds": 0.16666666666666666,
+          "maximumEdgeRatio": 1.010961976927553,
+          "failures": []
+        },
+        {
+          "frame": 6,
+          "timeSeconds": 0.2,
+          "maximumEdgeRatio": 1.015061469825706,
+          "failures": []
+        },
+        {
+          "frame": 7,
+          "timeSeconds": 0.23333333333333334,
+          "maximumEdgeRatio": 1.020509417948924,
+          "failures": []
+        },
+        {
+          "frame": 8,
+          "timeSeconds": 0.26666666666666666,
+          "maximumEdgeRatio": 1.0267975668030795,
+          "failures": []
+        },
+        {
+          "frame": 9,
+          "timeSeconds": 0.3,
+          "maximumEdgeRatio": 1.033924596953385,
+          "failures": []
+        },
+        {
+          "frame": 10,
+          "timeSeconds": 0.3333333333333333,
+          "maximumEdgeRatio": 1.0418819824028946,
+          "failures": []
+        },
+        {
+          "frame": 11,
+          "timeSeconds": 0.36666666666666664,
+          "maximumEdgeRatio": 1.0506585795478642,
+          "failures": []
+        },
+        {
+          "frame": 12,
+          "timeSeconds": 0.4,
+          "maximumEdgeRatio": 1.0602415998354249,
+          "failures": []
+        },
+        {
+          "frame": 13,
+          "timeSeconds": 0.43333333333333335,
+          "maximumEdgeRatio": 1.0706142059451598,
+          "failures": []
+        },
+        {
+          "frame": 14,
+          "timeSeconds": 0.4666666666666667,
+          "maximumEdgeRatio": 1.0817496970610296,
+          "failures": []
+        },
+        {
+          "frame": 15,
+          "timeSeconds": 0.5,
+          "maximumEdgeRatio": 1.0936164510847088,
+          "failures": []
+        },
+        {
+          "frame": 16,
+          "timeSeconds": 0.5333333333333333,
+          "maximumEdgeRatio": 1.106179608471731,
+          "failures": []
+        },
+        {
+          "frame": 17,
+          "timeSeconds": 0.5666666666666667,
+          "maximumEdgeRatio": 1.1193992133461281,
+          "failures": []
+        },
+        {
+          "frame": 18,
+          "timeSeconds": 0.6,
+          "maximumEdgeRatio": 1.13322500755649,
+          "failures": []
+        },
+        {
+          "frame": 19,
+          "timeSeconds": 0.6333333333333333,
+          "maximumEdgeRatio": 1.1476016376730875,
+          "failures": []
+        },
+        {
+          "frame": 20,
+          "timeSeconds": 0.6666666666666666,
+          "maximumEdgeRatio": 1.1624707793637867,
+          "failures": []
+        },
+        {
+          "frame": 21,
+          "timeSeconds": 0.7,
+          "maximumEdgeRatio": 1.1777706957200553,
+          "failures": []
+        },
+        {
+          "frame": 22,
+          "timeSeconds": 0.7333333333333333,
+          "maximumEdgeRatio": 1.1934311707002085,
+          "failures": []
+        },
+        {
+          "frame": 23,
+          "timeSeconds": 0.7666666666666667,
+          "maximumEdgeRatio": 1.209379098345472,
+          "failures": []
+        },
+        {
+          "frame": 24,
+          "timeSeconds": 0.8,
+          "maximumEdgeRatio": 1.2255409080580602,
+          "failures": []
+        },
+        {
+          "frame": 25,
+          "timeSeconds": 0.8333333333333334,
+          "maximumEdgeRatio": 1.2418423185566485,
+          "failures": []
+        },
+        {
+          "frame": 26,
+          "timeSeconds": 0.8666666666666667,
+          "maximumEdgeRatio": 1.258205297584195,
+          "failures": []
+        },
+        {
+          "frame": 27,
+          "timeSeconds": 0.9,
+          "maximumEdgeRatio": 1.2745520987283958,
+          "failures": []
+        },
+        {
+          "frame": 28,
+          "timeSeconds": 0.9333333333333333,
+          "maximumEdgeRatio": 1.2908072838242939,
+          "failures": []
+        },
+        {
+          "frame": 29,
+          "timeSeconds": 0.9666666666666667,
+          "maximumEdgeRatio": 1.30689809950721,
+          "failures": []
+        },
+        {
+          "frame": 30,
+          "timeSeconds": 1,
+          "maximumEdgeRatio": 1.3227536275467164,
+          "failures": []
+        },
+        {
+          "frame": 31,
+          "timeSeconds": 1.0333333333333334,
+          "maximumEdgeRatio": 1.3383064491132037,
+          "failures": []
+        },
+        {
+          "frame": 32,
+          "timeSeconds": 1.0666666666666667,
+          "maximumEdgeRatio": 1.3534932546434437,
+          "failures": []
+        },
+        {
+          "frame": 33,
+          "timeSeconds": 1.1,
+          "maximumEdgeRatio": 1.3682566730555321,
+          "failures": []
+        },
+        {
+          "frame": 34,
+          "timeSeconds": 1.1333333333333333,
+          "maximumEdgeRatio": 1.3841688321284575,
+          "failures": []
+        },
+        {
+          "frame": 35,
+          "timeSeconds": 1.1666666666666667,
+          "maximumEdgeRatio": 1.4003057997952253,
+          "failures": []
+        },
+        {
+          "frame": 36,
+          "timeSeconds": 1.2,
+          "maximumEdgeRatio": 1.4159601335506038,
+          "failures": []
+        },
+        {
+          "frame": 37,
+          "timeSeconds": 1.2333333333333334,
+          "maximumEdgeRatio": 1.4310791422554316,
+          "failures": []
+        },
+        {
+          "frame": 38,
+          "timeSeconds": 1.2666666666666666,
+          "maximumEdgeRatio": 1.4456194626775412,
+          "failures": []
+        },
+        {
+          "frame": 39,
+          "timeSeconds": 1.3,
+          "maximumEdgeRatio": 1.4595428710612635,
+          "failures": []
+        },
+        {
+          "frame": 40,
+          "timeSeconds": 1.3333333333333333,
+          "maximumEdgeRatio": 1.472816191694726,
+          "failures": []
+        },
+        {
+          "frame": 41,
+          "timeSeconds": 1.3666666666666667,
+          "maximumEdgeRatio": 1.4854125361321435,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3267719016804818,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3267707077726887,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 42,
+          "timeSeconds": 1.4,
+          "maximumEdgeRatio": 1.497314268856789,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3364745387046395,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3364736320954071,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 43,
+          "timeSeconds": 1.4333333333333333,
+          "maximumEdgeRatio": 1.5085089924300847,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 21,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3456804007810386,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 19,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3456797804485012,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 44,
+          "timeSeconds": 1.4666666666666666,
+          "maximumEdgeRatio": 1.5189876122929513,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 24,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3543705795178367,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 24,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3543702420333998,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 45,
+          "timeSeconds": 1.5,
+          "maximumEdgeRatio": 1.5287459548360984,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 17,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3625301239206522,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 16,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.362530063548846,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 46,
+          "timeSeconds": 1.5333333333333334,
+          "maximumEdgeRatio": 1.5377875107793697,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.370150744663458,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.370150953560445,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 47,
+          "timeSeconds": 1.5666666666666667,
+          "maximumEdgeRatio": 1.5461190345042097,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2473543231748692,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2473543231741473,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3772270925162595,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3772275608521338,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 48,
+          "timeSeconds": 1.6,
+          "maximumEdgeRatio": 1.553748738232667,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2507895019673698,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2507895019665414,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3837554049420242,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3837561209746663,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 49,
+          "timeSeconds": 1.6333333333333333,
+          "maximumEdgeRatio": 1.5606864556141002,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 7,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.253905292011415,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 7,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2539052920106948,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.389733674505427,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.389734624682816,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 50,
+          "timeSeconds": 1.6666666666666667,
+          "maximumEdgeRatio": 1.5669478724446966,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.256710200924927,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2567102009241125,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 13,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3951653927511374,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 12,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3951665619805795,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 51,
+          "timeSeconds": 1.7,
+          "maximumEdgeRatio": 1.5725488616704189,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2592128713552908,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2592128713561086,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.400054908993415,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4000562807521808,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 52,
+          "timeSeconds": 1.7333333333333334,
+          "maximumEdgeRatio": 1.5775048339521183,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2614218456088715,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2614218456080348,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 12,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.4047625783513333,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 12,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4047511352417,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 53,
+          "timeSeconds": 1.7666666666666666,
+          "maximumEdgeRatio": 1.5818300521942363,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.263345070767876,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2633450707677474,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 13,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.4092325614128154,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 13,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.409220423975564,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 54,
+          "timeSeconds": 1.8,
+          "maximumEdgeRatio": 1.5855416718984976,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 13,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.413098445346286,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of left biceps brachii",
+              "anatomyId": "FMA37687",
+              "bpId": "BP8816",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.375428335365026,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of right biceps brachii",
+              "anatomyId": "FMA37686",
+              "bpId": "BP5566",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3754283353652121,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4130856989454033,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 55,
+          "timeSeconds": 1.8333333333333333,
+          "maximumEdgeRatio": 1.588655275959864,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2663703912364477,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2663703912364304,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.4163638131455494,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 12,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4163505461397556,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 56,
+          "timeSeconds": 1.8666666666666667,
+          "maximumEdgeRatio": 1.5911834210980027,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.26748779318231,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2674877931823072,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.4190306940286082,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of left biceps brachii",
+              "anatomyId": "FMA37687",
+              "bpId": "BP8816",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.382921260206417,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of right biceps brachii",
+              "anatomyId": "FMA37686",
+              "bpId": "BP5566",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3829212602065173,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.419016997515264,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 57,
+          "timeSeconds": 1.9,
+          "maximumEdgeRatio": 1.5931362598256613,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2683496551246614,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2683496551236983,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.4211004803494716,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of left biceps brachii",
+              "anatomyId": "FMA37687",
+              "bpId": "BP8816",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3855474548328588,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of right biceps brachii",
+              "anatomyId": "FMA37686",
+              "bpId": "BP5566",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3855474548330518,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4210864477636036,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 58,
+          "timeSeconds": 1.9333333333333333,
+          "maximumEdgeRatio": 1.594524087267271,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2689614472580568,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2689614472571038,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.4225767596768917,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of left biceps brachii",
+              "anatomyId": "FMA37687",
+              "bpId": "BP8816",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3874243947904792,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of right biceps brachii",
+              "anatomyId": "FMA37686",
+              "bpId": "BP5566",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3874243947906901,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4225624859209078,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 59,
+          "timeSeconds": 1.9666666666666666,
+          "maximumEdgeRatio": 1.5953548020141555,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2693273651981765,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2693273651981745,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.423462552372567,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of left biceps brachii",
+              "anatomyId": "FMA37687",
+              "bpId": "BP8816",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3885521165427954,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of right biceps brachii",
+              "anatomyId": "FMA37686",
+              "bpId": "BP5566",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3885521165431514,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4234481333184232,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 60,
+          "timeSeconds": 2,
+          "maximumEdgeRatio": 1.5956316770648975,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2694492756897269,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.423758129566595,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of left biceps brachii",
+              "anatomyId": "FMA37687",
+              "bpId": "BP8816",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3889286677813808,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of right biceps brachii",
+              "anatomyId": "FMA37686",
+              "bpId": "BP5566",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3889286677815937,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4237436619351975,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 61,
+          "timeSeconds": 2.033333333333333,
+          "maximumEdgeRatio": 1.5953548023026272,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.269327365182319,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2693273651831225,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.4234625520501807,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of left biceps brachii",
+              "anatomyId": "FMA37687",
+              "bpId": "BP8816",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3885521170516315,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of right biceps brachii",
+              "anatomyId": "FMA37686",
+              "bpId": "BP5566",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3885521170518416,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4234481329985327,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 62,
+          "timeSeconds": 2.066666666666667,
+          "maximumEdgeRatio": 1.59452408369551,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2689614424084217,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2689614424075613,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.4225767596324619,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of left biceps brachii",
+              "anatomyId": "FMA37687",
+              "bpId": "BP8816",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3874243905355477,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of right biceps brachii",
+              "anatomyId": "FMA37686",
+              "bpId": "BP5566",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3874243905356514,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4225624858808175,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 63,
+          "timeSeconds": 2.1,
+          "maximumEdgeRatio": 1.5931361519714493,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2683496105331635,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2683496105322185,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.4211003620360358,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of left biceps brachii",
+              "anatomyId": "FMA37687",
+              "bpId": "BP8816",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3855473090706352,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of right biceps brachii",
+              "anatomyId": "FMA37686",
+              "bpId": "BP5566",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3855473090708368,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.421086329467238,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 64,
+          "timeSeconds": 2.1333333333333333,
+          "maximumEdgeRatio": 1.5911834282443145,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2674877963391402,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.267487796338319,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.419030701586846,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of left biceps brachii",
+              "anatomyId": "FMA37687",
+              "bpId": "BP8816",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3829212697853313,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of right biceps brachii",
+              "anatomyId": "FMA37686",
+              "bpId": "BP5566",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.382921269785666,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4190170050723496,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 65,
+          "timeSeconds": 2.1666666666666665,
+          "maximumEdgeRatio": 1.588655285708133,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2663703955484997,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2663703955484782,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.4163638234011888,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 12,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4163505563941203,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 66,
+          "timeSeconds": 2.2,
+          "maximumEdgeRatio": 1.585541712771841,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 13,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.413098499021233,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of left biceps brachii",
+              "anatomyId": "FMA37687",
+              "bpId": "BP8816",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.375428405387203,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "long head of right biceps brachii",
+              "anatomyId": "FMA37686",
+              "bpId": "BP5566",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1426,
+              "maxEdgeRatio": 1.3754284053875765,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4130857526162988,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 67,
+          "timeSeconds": 2.2333333333333334,
+          "maximumEdgeRatio": 1.5818300521942357,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2633450707678717,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2633450707670348,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 13,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.409232561412486,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 13,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.409220423975559,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 68,
+          "timeSeconds": 2.2666666666666666,
+          "maximumEdgeRatio": 1.5775048339521183,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2614218456088715,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2614218456080348,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 12,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.4047625783513333,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 12,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4047511352417,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 69,
+          "timeSeconds": 2.3,
+          "maximumEdgeRatio": 1.5725488616703418,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2592128713559825,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2592128713551478,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.4000549089933312,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.4000562807521018,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 70,
+          "timeSeconds": 2.3333333333333335,
+          "maximumEdgeRatio": 1.566947851146144,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2567101882325336,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2567101882316971,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 13,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3951653784940812,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 12,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3951665477222874,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 71,
+          "timeSeconds": 2.3666666666666667,
+          "maximumEdgeRatio": 1.5606864497971857,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 7,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2539052950964793,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 7,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2539052950963347,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3897336548702666,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 11,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3897346050479744,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 72,
+          "timeSeconds": 2.4,
+          "maximumEdgeRatio": 1.5537487636967127,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2507895134174787,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 5,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2507895134165328,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3837554268097108,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 10,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3837561428431928,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 73,
+          "timeSeconds": 2.433333333333333,
+          "maximumEdgeRatio": 1.5461191970223436,
+          "failures": [
+            {
+              "sourceName": "humeral head of left pronator teres",
+              "anatomyId": "FMA38561",
+              "bpId": "BP8015",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2473543953374315,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "humeral head of right pronator teres",
+              "anatomyId": "FMA38560",
+              "bpId": "BP5568",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 1846,
+              "maxEdgeRatio": 1.2473543953374338,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3772272218574015,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3772276901976868,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 74,
+          "timeSeconds": 2.466666666666667,
+          "maximumEdgeRatio": 1.5377875106582684,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3701507448175392,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3701509537149876,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 75,
+          "timeSeconds": 2.5,
+          "maximumEdgeRatio": 1.528745917182013,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 17,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3625301015291524,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 16,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3625300411563372,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 76,
+          "timeSeconds": 2.533333333333333,
+          "maximumEdgeRatio": 1.518987612292952,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 24,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3543705795178398,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 24,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.354370242033314,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 77,
+          "timeSeconds": 2.566666666666667,
+          "maximumEdgeRatio": 1.508508953635037,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 21,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3456803687404815,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 19,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3456797484069352,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 78,
+          "timeSeconds": 2.6,
+          "maximumEdgeRatio": 1.4973142822526795,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3364745353724021,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 14,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3364736287627663,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 79,
+          "timeSeconds": 2.6333333333333333,
+          "maximumEdgeRatio": 1.4854124163564235,
+          "failures": [
+            {
+              "sourceName": "left brachioradialis",
+              "anatomyId": "FMA38487",
+              "bpId": "BP8244",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 4000,
+              "maxEdgeRatio": 1.3267718068610743,
+              "severeAreaAlarm": true
+            },
+            {
+              "sourceName": "right brachioradialis",
+              "anatomyId": "FMA38486",
+              "bpId": "BP4833",
+              "countBelowFivePercent": 4,
+              "eligibleTriangles": 3999,
+              "maxEdgeRatio": 1.3267706129482573,
+              "severeAreaAlarm": true
+            }
+          ]
+        },
+        {
+          "frame": 80,
+          "timeSeconds": 2.6666666666666665,
+          "maximumEdgeRatio": 1.4728162377109988,
+          "failures": []
+        },
+        {
+          "frame": 81,
+          "timeSeconds": 2.7,
+          "maximumEdgeRatio": 1.459542941958635,
+          "failures": []
+        },
+        {
+          "frame": 82,
+          "timeSeconds": 2.7333333333333334,
+          "maximumEdgeRatio": 1.4456194624995935,
+          "failures": []
+        },
+        {
+          "frame": 83,
+          "timeSeconds": 2.7666666666666666,
+          "maximumEdgeRatio": 1.4310791421691114,
+          "failures": []
+        },
+        {
+          "frame": 84,
+          "timeSeconds": 2.8,
+          "maximumEdgeRatio": 1.4159601335506042,
+          "failures": []
+        },
+        {
+          "frame": 85,
+          "timeSeconds": 2.8333333333333335,
+          "maximumEdgeRatio": 1.4003057934826035,
+          "failures": []
+        },
+        {
+          "frame": 86,
+          "timeSeconds": 2.8666666666666667,
+          "maximumEdgeRatio": 1.3841687733689545,
+          "failures": []
+        },
+        {
+          "frame": 87,
+          "timeSeconds": 2.9,
+          "maximumEdgeRatio": 1.3682566628460262,
+          "failures": []
+        },
+        {
+          "frame": 88,
+          "timeSeconds": 2.933333333333333,
+          "maximumEdgeRatio": 1.3534933081970995,
+          "failures": []
+        },
+        {
+          "frame": 89,
+          "timeSeconds": 2.966666666666667,
+          "maximumEdgeRatio": 1.3383064491132999,
+          "failures": []
+        },
+        {
+          "frame": 90,
+          "timeSeconds": 3,
+          "maximumEdgeRatio": 1.3227535880356733,
+          "failures": []
+        },
+        {
+          "frame": 91,
+          "timeSeconds": 3.033333333333333,
+          "maximumEdgeRatio": 1.3068980127783367,
+          "failures": []
+        },
+        {
+          "frame": 92,
+          "timeSeconds": 3.066666666666667,
+          "maximumEdgeRatio": 1.2908072549764609,
+          "failures": []
+        },
+        {
+          "frame": 93,
+          "timeSeconds": 3.1,
+          "maximumEdgeRatio": 1.2745521374704152,
+          "failures": []
+        },
+        {
+          "frame": 94,
+          "timeSeconds": 3.1333333333333333,
+          "maximumEdgeRatio": 1.2582054536154816,
+          "failures": []
+        },
+        {
+          "frame": 95,
+          "timeSeconds": 3.1666666666666665,
+          "maximumEdgeRatio": 1.2418423477635494,
+          "failures": []
+        },
+        {
+          "frame": 96,
+          "timeSeconds": 3.2,
+          "maximumEdgeRatio": 1.2255409372410582,
+          "failures": []
+        },
+        {
+          "frame": 97,
+          "timeSeconds": 3.2333333333333334,
+          "maximumEdgeRatio": 1.2093790983454757,
+          "failures": []
+        },
+        {
+          "frame": 98,
+          "timeSeconds": 3.2666666666666666,
+          "maximumEdgeRatio": 1.1934311707003131,
+          "failures": []
+        },
+        {
+          "frame": 99,
+          "timeSeconds": 3.3,
+          "maximumEdgeRatio": 1.177770667664057,
+          "failures": []
+        },
+        {
+          "frame": 100,
+          "timeSeconds": 3.3333333333333335,
+          "maximumEdgeRatio": 1.1624707527926763,
+          "failures": []
+        },
+        {
+          "frame": 101,
+          "timeSeconds": 3.3666666666666667,
+          "maximumEdgeRatio": 1.147601586272789,
+          "failures": []
+        },
+        {
+          "frame": 102,
+          "timeSeconds": 3.4,
+          "maximumEdgeRatio": 1.1332251093091372,
+          "failures": []
+        },
+        {
+          "frame": 103,
+          "timeSeconds": 3.433333333333333,
+          "maximumEdgeRatio": 1.1193992381908906,
+          "failures": []
+        },
+        {
+          "frame": 104,
+          "timeSeconds": 3.466666666666667,
+          "maximumEdgeRatio": 1.1061796315625214,
+          "failures": []
+        },
+        {
+          "frame": 105,
+          "timeSeconds": 3.5,
+          "maximumEdgeRatio": 1.09361645167973,
+          "failures": []
+        },
+        {
+          "frame": 106,
+          "timeSeconds": 3.533333333333333,
+          "maximumEdgeRatio": 1.081749710725891,
+          "failures": []
+        },
+        {
+          "frame": 107,
+          "timeSeconds": 3.566666666666667,
+          "maximumEdgeRatio": 1.0706141877537563,
+          "failures": []
+        },
+        {
+          "frame": 108,
+          "timeSeconds": 3.6,
+          "maximumEdgeRatio": 1.0602415740428746,
+          "failures": []
+        },
+        {
+          "frame": 109,
+          "timeSeconds": 3.6333333333333333,
+          "maximumEdgeRatio": 1.050658614001002,
+          "failures": []
+        },
+        {
+          "frame": 110,
+          "timeSeconds": 3.6666666666666665,
+          "maximumEdgeRatio": 1.0418820057654987,
+          "failures": []
+        },
+        {
+          "frame": 111,
+          "timeSeconds": 3.7,
+          "maximumEdgeRatio": 1.0339246108516449,
+          "failures": []
+        },
+        {
+          "frame": 112,
+          "timeSeconds": 3.7333333333333334,
+          "maximumEdgeRatio": 1.0267975728215981,
+          "failures": []
+        },
+        {
+          "frame": 113,
+          "timeSeconds": 3.7666666666666666,
+          "maximumEdgeRatio": 1.0205094155055794,
+          "failures": []
+        },
+        {
+          "frame": 114,
+          "timeSeconds": 3.8,
+          "maximumEdgeRatio": 1.0150614636280288,
+          "failures": []
+        },
+        {
+          "frame": 115,
+          "timeSeconds": 3.8333333333333335,
+          "maximumEdgeRatio": 1.010961976927553,
+          "failures": []
+        },
+        {
+          "frame": 116,
+          "timeSeconds": 3.8666666666666667,
+          "maximumEdgeRatio": 1.010961976927553,
+          "failures": []
+        },
+        {
+          "frame": 117,
+          "timeSeconds": 3.9,
+          "maximumEdgeRatio": 1.010961976927553,
+          "failures": []
+        },
+        {
+          "frame": 118,
+          "timeSeconds": 3.933333333333333,
+          "maximumEdgeRatio": 1.010961976927553,
+          "failures": []
+        },
+        {
+          "frame": 119,
+          "timeSeconds": 3.966666666666667,
+          "maximumEdgeRatio": 1.010961976927553,
+          "failures": []
+        },
+        {
+          "frame": 120,
+          "timeSeconds": 4,
+          "maximumEdgeRatio": 1.010961976927553,
+          "failures": []
+        }
+      ]
+    }
+  ]
+}

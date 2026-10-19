@@ -1,0 +1,61 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 5.492882966995239
+  },
+  {
+    "name": "unit",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.8254950046539307
+  },
+  {
+    "name": "assets",
+    "command": [
+      "npm",
+      "run",
+      "test:assets"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.19017291069030762
+  },
+  {
+    "name": "curl",
+    "command": [
+      "npm",
+      "run",
+      "test:rig"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.6044137477874756
+  },
+  {
+    "name": "pulldown",
+    "command": [
+      "npm",
+      "run",
+      "test:pulldown"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 1.1536297798156738
+  },
+  {
+    "name": "browser",
+    "command": [
+      "npm",
+      "run",
+      "test:e2e"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 33.68573808670044
+  }
+]

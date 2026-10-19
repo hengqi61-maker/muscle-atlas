@@ -1,0 +1,17 @@
+{
+  "seconds": 2.35,
+  "armatures": [
+    "MuscleAtlasV2Rig"
+  ],
+  "rightSubscap": true,
+  "face914": {
+    "verts": [
+      466,
+      468,
+      456
+    ]
+  },
+  "objects": 473,
+  "wallSecondsApprox": 3.97,
+  "note": "Independent Blender --background import of experimental GLB copy; face914 matches MCP triangle."
+}

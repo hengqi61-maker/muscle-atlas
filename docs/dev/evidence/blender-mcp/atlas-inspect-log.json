@@ -1,0 +1,688 @@
+{
+  "sceneObjectCount": 470,
+  "inspect": {
+    "raw": "{\n  \"armatures\": [\n    {\n      \"object\": \"MuscleAtlasV2Rig\",\n      \"boneCount\": 27,\n      \"bonesSample\": [\n        {\n          \"name\": \"Pelvis\",\n          \"parent\": null\n        },\n        {\n          \"name\": \"LeftThigh\",\n          \"parent\": \"Pelvis\"\n        },\n        {\n          \"name\": \"LeftShin\",\n          \"parent\": \"LeftThigh\"\n        },\n        {\n          \"name\": \"LeftAnkle\",\n          \"parent\": \"LeftShin\"\n        },\n        {\n          \"name\": \"LeftFoot\",\n          \"parent\": \"LeftAnkle\"\n        },\n        {\n          \"name\": \"RightThigh\",\n          \"parent\": \"Pelvis\"\n        },\n        {\n          \"name\": \"RightShin\",\n          \"parent\": \"RightThigh\"\n        },\n        {\n          \"name\": \"RightAnkle\",\n          \"parent\": \"RightShin\"\n        },\n        {\n          \"name\": \"RightFoot\",\n          \"parent\": \"RightAnkle\"\n        },\n        {\n          \"name\": \"Spine\",\n          \"parent\": \"Pelvis\"\n        },\n        {\n          \"name\": \"Thorax\",\n          \"parent\": \"Spine\"\n        },\n        {\n          \"name\": \"LeftClavicle\",\n          \"parent\": \"Thorax\"\n        },\n        {\n          \"name\": \"LeftScapula\",\n          \"parent\": \"LeftClavicle\"\n        },\n        {\n          \"name\": \"LeftHumerus\",\n          \"parent\": \"LeftScapula\"\n        },\n        {\n          \"name\": \"LeftForearm\",\n          \"parent\": \"LeftHumerus\"\n        },\n        {\n          \"name\": \"LeftWrist\",\n          \"parent\": \"LeftForearm\"\n        },\n        {\n          \"name\": \"LeftHand\",\n          \"parent\": \"LeftWrist\"\n        },\n        {\n          \"name\": \"LeftFingerSocket\",\n          \"parent\": \"LeftHand\"\n        },\n        {\n          \"name\": \"Neck\",\n          \"parent\": \"Thorax\"\n        },\n        {\n          \"name\": \"Head\",\n          \"parent\": \"Neck\"\n        },\n        {\n          \"name\": \"RightClavicle\",\n          \"parent\": \"Thorax\"\n        },\n        {\n          \"name\": \"RightScapula\",\n          \"parent\": \"RightClavicle\"\n        },\n        {\n          \"name\": \"RightHumerus\",\n          \"parent\": \"RightScapula\"\n        },\n        {\n          \"name\": \"RightForearm\",\n          \"parent\": \"RightHumerus\"\n        },\n        {\n          \"name\": \"RightWrist\",\n          \"parent\": \"RightForearm\"\n        },\n        {\n          \"name\": \"RightHand\",\n          \"parent\": \"RightWrist\"\n        },\n        {\n          \"name\": \"RightFingerSocket\",\n          \"parent\": \"RightHand\"\n        }\n      ]\n    }\n  ],\n  \"meshCount\": 468,\n  \"meshesWithSourceName\": [\n    {\n      \"name\": \"abdominal part of left pectoralis major\",\n      \"sourceName\": \"abdominal part of left pectoralis major\",\n      \"verts\": 1019,\n      \"polys\": 1536\n    },\n    {\n      \"name\": \"abdominal part of right pectoralis major\",\n      \"sourceName\": \"abdominal part of right pectoralis major\",\n      \"verts\": 1019,\n      \"polys\": 1536\n    },\n    {\n      \"name\": \"abductor digiti minimi of left foot\",\n      \"sourceName\": \"abductor digiti minimi of left foot\",\n      \"verts\": 1492,\n      \"polys\": 1276\n    },\n    {\n      \"name\": \"abductor digiti "
+  },
+  "pose": {
+    "actions": [
+      {
+        "name": "CurlProbe",
+        "slots": [
+          "MuscleAtlasV2Rig"
+        ],
+        "slotCount": 1,
+        "fcurvesOrChannels": -1
+      },
+      {
+        "name": "PulldownProbe",
+        "slots": [
+          "MuscleAtlasV2Rig"
+        ],
+        "slotCount": 1,
+        "fcurvesOrChannels": -1
+      }
+    ],
+    "nla": [
+      {
+        "object": "MuscleAtlasV2Rig",
+        "track": "PulldownProbe",
+        "strip": "PulldownProbe",
+        "action": "PulldownProbe",
+        "frame_start": 1.0,
+        "frame_end": 97.0
+      },
+      {
+        "object": "MuscleAtlasV2Rig",
+        "track": "CurlProbe",
+        "strip": "CurlProbe",
+        "action": "CurlProbe",
+        "frame_start": 1.0,
+        "frame_end": 97.0
+      }
+    ],
+    "blender": "5.2.0 LTS",
+    "curlLike": [
+      "CurlProbe"
+    ],
+    "pulldownLike": [
+      "PulldownProbe"
+    ],
+    "shapeKeyHits": []
+  },
+  "subscap": {
+    "targets": [
+      {
+        "name": "left subscapularis",
+        "sourceName": "left subscapularis",
+        "verts": 2759,
+        "polys": 2092,
+        "parent": "MuscleAtlasV2Rig",
+        "armature": "MuscleAtlasV2Rig",
+        "vertexGroups": [
+          "Pelvis",
+          "LeftThigh",
+          "LeftShin",
+          "LeftAnkle",
+          "LeftFoot",
+          "RightThigh",
+          "RightShin",
+          "RightAnkle",
+          "RightFoot",
+          "Spine",
+          "Thorax",
+          "LeftClavicle",
+          "LeftScapula",
+          "LeftHumerus",
+          "LeftForearm",
+          "LeftWrist",
+          "LeftHand",
+          "LeftFingerSocket",
+          "Neck",
+          "Head",
+          "RightClavicle",
+          "RightScapula",
+          "RightHumerus",
+          "RightForearm",
+          "RightWrist",
+          "RightHand",
+          "RightFingerSocket"
+        ],
+        "weightSamples": [
+          {
+            "vert": 0,
+            "weights": [
+              {
+                "group": "LeftHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 1,
+            "weights": [
+              {
+                "group": "LeftHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 2,
+            "weights": [
+              {
+                "group": "LeftHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 3,
+            "weights": [
+              {
+                "group": "LeftHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 4,
+            "weights": [
+              {
+                "group": "LeftHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 5,
+            "weights": [
+              {
+                "group": "LeftHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 6,
+            "weights": [
+              {
+                "group": "LeftHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 7,
+            "weights": [
+              {
+                "group": "LeftHumerus",
+                "w": 1.0
+              }
+            ]
+          }
+        ],
+        "face914": {
+          "polyIndex": 914,
+          "vertIndices": [
+            466,
+            456,
+            468
+          ],
+          "centerLocal": [
+            0.095778,
+            -0.012295,
+            1.196057
+          ],
+          "materialIndex": 0
+        }
+      },
+      {
+        "name": "right subscapularis",
+        "sourceName": "right subscapularis",
+        "verts": 2775,
+        "polys": 2092,
+        "parent": "MuscleAtlasV2Rig",
+        "armature": "MuscleAtlasV2Rig",
+        "vertexGroups": [
+          "Pelvis",
+          "LeftThigh",
+          "LeftShin",
+          "LeftAnkle",
+          "LeftFoot",
+          "RightThigh",
+          "RightShin",
+          "RightAnkle",
+          "RightFoot",
+          "Spine",
+          "Thorax",
+          "LeftClavicle",
+          "LeftScapula",
+          "LeftHumerus",
+          "LeftForearm",
+          "LeftWrist",
+          "LeftHand",
+          "LeftFingerSocket",
+          "Neck",
+          "Head",
+          "RightClavicle",
+          "RightScapula",
+          "RightHumerus",
+          "RightForearm",
+          "RightWrist",
+          "RightHand",
+          "RightFingerSocket"
+        ],
+        "weightSamples": [
+          {
+            "vert": 0,
+            "weights": [
+              {
+                "group": "RightHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 1,
+            "weights": [
+              {
+                "group": "RightHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 2,
+            "weights": [
+              {
+                "group": "RightHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 3,
+            "weights": [
+              {
+                "group": "RightHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 4,
+            "weights": [
+              {
+                "group": "RightHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 5,
+            "weights": [
+              {
+                "group": "RightHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 6,
+            "weights": [
+              {
+                "group": "RightHumerus",
+                "w": 1.0
+              }
+            ]
+          },
+          {
+            "vert": 7,
+            "weights": [
+              {
+                "group": "RightHumerus",
+                "w": 1.0
+              }
+            ]
+          }
+        ],
+        "face914": {
+          "polyIndex": 914,
+          "vertIndices": [
+            466,
+            468,
+            456
+          ],
+          "centerLocal": [
+            -0.095778,
+            -0.012295,
+            1.196057
+          ],
+          "materialIndex": 0
+        }
+      }
+    ],
+    "face914": {
+      "object": "right subscapularis",
+      "polyIndex": 914,
+      "vertIndices": [
+        466,
+        468,
+        456
+      ],
+      "centerLocal": [
+        -0.095778,
+        -0.012295,
+        1.196057
+      ],
+      "materialIndex": 0
+    },
+    "weightSamples": [],
+    "limitations": [],
+    "candidateNames": [
+      "left subscapularis",
+      "right subscapularis"
+    ]
+  },
+  "shots": {
+    "front": {
+      "path": "~/.codex/tools/mcp-for-blender/runtime/workspace/evidence/viewport-atlas-front.png",
+      "bytes": 257694,
+      "sha256": "8f8a4506b73e34ced312e3224f292d541b7392616d8c6a9932712204960193b4",
+      "meta": {
+        "success": true,
+        "width": 1000,
+        "height": 567,
+        "filepath": "~/.codex/tools/mcp-for-blender/runtime/workspace/evidence/viewport-atlas-front.png",
+        "method": "offscreen",
+        "file": "",
+        "scene": "Scene",
+        "scene_count": 1,
+        "view": {
+          "file": "",
+          "scene": "Scene",
+          "view_matrix": [
+            [
+              0.40403029322624207,
+              0.9147456288337708,
+              -1.2411510397214442e-07,
+              0.05046229436993599
+            ],
+            [
+              -0.40777426958084106,
+              0.18010829389095306,
+              0.8951430916786194,
+              -0.0007478409679606557
+            ],
+            [
+              0.8188282251358032,
+              -0.36166489124298096,
+              0.4457789361476898,
+              -18.38804817199707
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "window_matrix": [
+            [
+              1.3888888359069824,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              2.4486069679260254,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0000200271606445,
+              -0.02000020071864128
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ]
+          ],
+          "width": 1000,
+          "height": 567
+        }
+      }
+    },
+    "side": {
+      "path": "~/.codex/tools/mcp-for-blender/runtime/workspace/evidence/viewport-atlas-side.png",
+      "bytes": 258966,
+      "sha256": "89a5bfbad521f8d026917fa455895a35bff80bd5ef9e590c4b59a07234f8315f",
+      "meta": {
+        "success": true,
+        "width": 1000,
+        "height": 567,
+        "filepath": "~/.codex/tools/mcp-for-blender/runtime/workspace/evidence/viewport-atlas-side.png",
+        "method": "offscreen",
+        "file": "",
+        "scene": "Scene",
+        "scene_count": 1,
+        "view": {
+          "file": "",
+          "scene": "Scene",
+          "view_matrix": [
+            [
+              0.40403029322624207,
+              0.9147456288337708,
+              -1.2411510397214442e-07,
+              0.05046229436993599
+            ],
+            [
+              -0.40777426958084106,
+              0.18010829389095306,
+              0.8951430916786194,
+              -0.0007478409679606557
+            ],
+            [
+              0.8188282251358032,
+              -0.36166489124298096,
+              0.4457789361476898,
+              -18.38804817199707
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "window_matrix": [
+            [
+              1.3888888359069824,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              2.4486069679260254,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0000200271606445,
+              -0.02000020071864128
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ]
+          ],
+          "width": 1000,
+          "height": 567
+        }
+      }
+    },
+    "back": {
+      "path": "~/.codex/tools/mcp-for-blender/runtime/workspace/evidence/viewport-atlas-back.png",
+      "bytes": 257470,
+      "sha256": "b76461836be2a9e0e2afa70b521f4d1d84b4126b29765273582d9fec73bc259f",
+      "meta": {
+        "success": true,
+        "width": 1000,
+        "height": 567,
+        "filepath": "~/.codex/tools/mcp-for-blender/runtime/workspace/evidence/viewport-atlas-back.png",
+        "method": "offscreen",
+        "file": "",
+        "scene": "Scene",
+        "scene_count": 1,
+        "view": {
+          "file": "",
+          "scene": "Scene",
+          "view_matrix": [
+            [
+              0.40403029322624207,
+              0.9147456288337708,
+              -1.2411510397214442e-07,
+              0.05046229436993599
+            ],
+            [
+              -0.40777426958084106,
+              0.18010829389095306,
+              0.8951430916786194,
+              -0.0007478409679606557
+            ],
+            [
+              0.8188282251358032,
+              -0.36166489124298096,
+              0.4457789361476898,
+              -18.38804817199707
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "window_matrix": [
+            [
+              1.3888888359069824,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              2.4486069679260254,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0000200271606445,
+              -0.02000020071864128
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ]
+          ],
+          "width": 1000,
+          "height": 567
+        }
+      }
+    },
+    "detail": {
+      "path": "~/.codex/tools/mcp-for-blender/runtime/workspace/evidence/viewport-atlas-detail.png",
+      "bytes": 256769,
+      "sha256": "4792d23435f88344e7e8e29bd823e446d327e975d7534f5ceab0639f7d2c178b",
+      "meta": {
+        "success": true,
+        "width": 1000,
+        "height": 567,
+        "filepath": "~/.codex/tools/mcp-for-blender/runtime/workspace/evidence/viewport-atlas-detail.png",
+        "method": "offscreen",
+        "file": "",
+        "scene": "Scene",
+        "scene_count": 1,
+        "view": {
+          "file": "",
+          "scene": "Scene",
+          "view_matrix": [
+            [
+              0.40403029322624207,
+              0.9147456288337708,
+              -1.2411510397214442e-07,
+              0.05046229436993599
+            ],
+            [
+              -0.40777426958084106,
+              0.18010829389095306,
+              0.8951430916786194,
+              -0.0007478409679606557
+            ],
+            [
+              0.8188282251358032,
+              -0.36166489124298096,
+              0.4457789361476898,
+              -18.38804817199707
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "window_matrix": [
+            [
+              1.3888888359069824,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              2.4486069679260254,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0000200271606445,
+              -0.02000020071864128
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ]
+          ],
+          "width": 1000,
+          "height": 567
+        }
+      }
+    }
+  },
+  "logSteps": [
+    {
+      "step": "ping",
+      "seconds": 0.048
+    },
+    {
+      "step": "import_rig",
+      "seconds": 2.455
+    },
+    {
+      "step": "scene",
+      "seconds": 0.267
+    },
+    {
+      "step": "inspect_hierarchy",
+      "seconds": 0.108
+    },
+    {
+      "step": "pose_clips",
+      "seconds": 0.029
+    },
+    {
+      "step": "subscap_face",
+      "seconds": 0.054
+    },
+    {
+      "step": "object_info_left subscapularis",
+      "seconds": 0.051
+    },
+    {
+      "step": "object_info_right subscapularis",
+      "seconds": 0.051
+    },
+    {
+      "step": "cam_front",
+      "seconds": 0.06
+    },
+    {
+      "step": "shot_front",
+      "seconds": 0.21
+    },
+    {
+      "step": "cam_side",
+      "seconds": 0.026
+    },
+    {
+      "step": "shot_side",
+      "seconds": 0.136
+    },
+    {
+      "step": "cam_back",
+      "seconds": 0.025
+    },
+    {
+      "step": "shot_back",
+      "seconds": 0.109
+    },
+    {
+      "step": "cam_detail",
+      "seconds": 0.025
+    },
+    {
+      "step": "shot_detail",
+      "seconds": 0.112
+    }
+  ],
+  "glbSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274"
+}

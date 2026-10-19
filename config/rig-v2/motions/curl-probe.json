@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "exercise": "isolated-curl-probe",
+  "variant": "R1 authored diagnostic; not validated exercise",
+  "clip": "CurlProbe",
+  "sourceGlb": "public/models/anatomy.glb",
+  "meshMapping": "public/models/mesh_mapping.json",
+  "canonicalRig": "config/rig-v2/canonical-rig.json",
+  "attachmentRegistry": "config/rig-v2/attachment-registry.json",
+  "trajectory": "config/rig-v2/motions/r1-observed-trajectories.json",
+  "reference": "docs/exercises/lat-pulldown/reference.md (existing context only; CurlProbe is diagnostic)",
+  "contactConstraints": {
+    "status": "INCONCLUSIVE",
+    "reason": "No props in CurlProbe; original source hands unchanged; no grip claim"
+  },
+  "blenderExecutable": "/Applications/Blender.app/Contents/MacOS/Blender",
+  "ffmpegExecutable": "/opt/homebrew/bin/ffmpeg",
+  "comparisonTolerance": {
+    "matrixElementAbsolute": 2e-05,
+    "positionM": 2e-05,
+    "sourceGeometry": "exact float32 hashes",
+    "identities": "exact",
+    "weights": "exact registry SHA",
+    "renderPixels": "not required deterministic due GPU"
+  },
+  "inputHashes": {
+    "public/models/anatomy.glb": "6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f",
+    "public/models/mesh_mapping.json": "231a4e8c52cfeab8144e62d6a8ccbfb27ae04361b3a8d0b4f03e50668ce94596",
+    "config/rig-v2/canonical-rig.json": "4acb41a3f8a9541a84ad3dea729fe71132c3c025460b95cdb46cd8db3df731fc",
+    "config/rig-v2/attachment-registry.json": "20c1182fa18cff325377dab76929d979c4d4ace5c4fdbe74a4f6621cfb843451",
+    "config/rig-v2/motions/r1-observed-trajectories.json": "bfc4a72e5c47a1dabbecc4665bfb761d419d3db1f6e5751b431744e4901e50ef",
+    "public/experimental/rig-v2/unified-rig-prototype.glb": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+    "scripts/rig-v2/pipeline/native_build.py": "26be5f6efa4fea6b23511a7117bcde4a4872695082a4a4ea6a259914aeeab439"
+  }
+}

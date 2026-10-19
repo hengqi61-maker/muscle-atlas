@@ -2,7 +2,7 @@
   "uri": "anatomy-pulldown.glb",
   "mimeType": "model/gltf-binary",
   "validatorVersion": "2.0.0-dev.3.10",
-  "validatedAt": "2026-10-15T01:43:46.581Z",
+  "validatedAt": "2026-10-15T11:38:31.578Z",
   "issues": {
     "numErrors": 0,
     "numWarnings": 0,
@@ -38,17 +38,17 @@
         "pointer": "/buffers/0",
         "mimeType": "application/gltf-buffer",
         "storage": "glb",
-        "byteLength": 40451092
+        "byteLength": 47851440
       }
     ],
     "animationCount": 1,
     "materialCount": 2,
-    "hasMorphTargets": false,
+    "hasMorphTargets": true,
     "hasSkins": true,
     "hasTextures": false,
     "hasDefaultScene": true,
     "drawCallCount": 469,
-    "totalVertexCount": 773425,
+    "totalVertexCount": 773482,
     "totalTriangleCount": 1092096,
     "maxUVs": 1,
     "maxInfluences": 4,

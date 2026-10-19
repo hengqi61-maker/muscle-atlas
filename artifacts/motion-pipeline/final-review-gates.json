@@ -1,0 +1,20 @@
+{
+  "evidenceErrors": [],
+  "BUILD": "BUILD_PASS",
+  "SOFTWARE_TEST": "SOFTWARE_TEST_PASS",
+  "MOTION_GEOMETRY": "MOTION_GEOMETRY_FAIL",
+  "BIOMECHANICS_REVIEW": "FAIL",
+  "VISUAL_REVIEW": "FAIL",
+  "EXERCISE_SCIENCE_REVIEW": "INCONCLUSIVE",
+  "SOFTWARE_QA_REVIEW": "PASS",
+  "OWNER_APPROVAL": "PENDING",
+  "metadataErrors": [],
+  "releaseErrors": [
+    "motion geometry not passed",
+    "release requires four PASS verdicts",
+    "explicit owner approval evidence required",
+    "unresolved P0/P1 blocks release",
+    "owner approval pending"
+  ],
+  "mayRelease": false
+}

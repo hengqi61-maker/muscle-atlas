@@ -42,9 +42,16 @@ def skin(o,weights):
   for name,weight in values.items():
    if weight>1e-6:groups[name].add([v.index],weight,'REPLACE')
  modifier=o.modifiers.new('SeatedAnatomySkin','ARMATURE');modifier.object=rig
-arm_names=[];leg_names=[]
+arm_names=[];leg_names=[];attachment_anchors={};side_corrections=[]
+cuff_names={f"{side} {muscle}" for side in ["left","right"] for muscle in ["infraspinatus muscle","subscapularis","supraspinatus","teres minor"]}
 for o in meshes:
  side=1 if 'left' in o.name else -1 if 'right' in o.name else 0
+ # These two BP3D source labels disagree with their source-space side.
+ # Preserve identity and every vertex; motion binding follows actual spatial anatomy.
+ if o.name in ['left flexor pollicis brevis','right flexor pollicis brevis']:
+  named_side=side;side=1 if sum(v.co.x-T.x for v in o.data.vertices)>0 else -1
+  o['sourceLabelSide']=named_side;o['rigSpatialSide']=side
+  side_corrections.append({'name':o.name,'sourceLabelSide':named_side,'rigSpatialSide':side,'sourceModelXBboxM':[min(v.co.x-T.x for v in o.data.vertices),max(v.co.x-T.x for v in o.data.vertices)],'sourceLabelPreserved':True})
  if not side:
   skin(o,lambda co:{'Thorax':smooth((co.z-T.z-.9)/.20),'SpineRoot':1-smooth((co.z-T.z-.9)/.20)})
   continue
@@ -52,7 +59,23 @@ for o in meshes:
  pts=[v.co-T for v in o.data.vertices];minz=min(v.z for v in pts);maxz=max(v.z for v in pts);maxx=max(abs(v.x) for v in pts)
  upper=any(k in o.name for k in ['biceps brachii','triceps brachii','brachialis','deltoid'])
  distal=maxx>.175 and maxz<1.175 and minz>.60
- if upper or distal:
+ if o.name in cuff_names:
+  # Cuff broad scapular fossae/border are medial; narrow humeral tendon is lateral.
+  # Derive reproducible endpoint regions from the retained source geometry.
+  lateral=sorted(side*v.x for v in pts);origin_x=lateral[int(.10*(len(lateral)-1))];insertion_x=lateral[int(.90*(len(lateral)-1))]
+  assert insertion_x-origin_x>.015
+  origin=[v.co.copy() for v in o.data.vertices if side*(v.co.x-T.x)<=origin_x]
+  insertion=[v.co.copy() for v in o.data.vertices if side*(v.co.x-T.x)>=insertion_x]
+  attachment_anchors[o.name]={'originBone':label+'Scapula','insertionBone':u,'originLateralM':origin_x,'insertionLateralM':insertion_x,'originCentroid':list(sum(origin,Vector())/len(origin)),'insertionCentroid':list(sum(insertion,Vector())/len(insertion)),'method':'source medial/lateral decile regions; smooth projected scapula-to-humerus blend; illustrative attachment skinning'}
+  o['rigRegion']=label.lower()+'-rotator-cuff'
+  def weights(co,label=label,u=u,side=side,origin_x=origin_x,insertion_x=insertion_x):
+   attach=smooth((side*(co.x-T.x)-origin_x)/(insertion_x-origin_x))
+   return {label+'Scapula':1-attach,u:attach}
+  skin(o,weights)
+ elif o.name in [x['name'] for x in side_corrections]:
+  o['rigRegion']=label.lower()+'-intrinsic-hand'
+  skin(o,lambda co,h=h:{h:1})
+ elif upper or distal:
   o['rigRegion']=label.lower()+'-arm';arm_names.append(o.name)
   def weights(co,u=u,f=f,h=h,label=label):
    z=co.z-T.z;shoulder=smooth((1.335-z)/.12);fore=smooth((1.092-z)/.092);hand=smooth((.830-z)/.050)
@@ -117,6 +140,49 @@ for frame in range(121):
   knee=hip+Vector((0,-1,-.10)).normalized()*thigh_length;ankle=knee+Vector((0,0,-shin_length));toe=ankle+(lm['toe']-lm['ankle'])
   for name,head,tail in [(label+'Thigh',hip,knee),(label+'Shin',knee,ankle),(label+'Foot',ankle,toe)]:pose_direction(name,head,tail);key(name,frame)
   if frame in [0,30,60,90,120]:samples.append({'frame':frame,'side':label,'targetGrip':list(grip),'wrist':list(w),'elbow':list(e),'ankle':list(ankle),'shoulderWristDistance':(w-s).length})
+# Portable cuff/palmaris correction: keep source base geometry and existing skin bindings.
+# DQ desired posed vertices are inverted through LBS into relative pre-skin morphs.
+from rig_cuff_correctives import prepare as prepare_cuffs,install as install_cuffs
+corrective_names=cuff_names|{'left palmaris longus','right palmaris longus'}
+cuff_objects=[o for o in meshes if o.name in corrective_names]
+cuff_prepared=prepare_cuffs(scene,rig,cuff_objects)
+install_cuffs(cuff_objects,cuff_prepared)
+cuff_correction_report={name:info['report'] for name,info in cuff_prepared.items()}
+# Actual evaluated source surfaces determine platform support height, not ankle origins.
+scene.frame_set(0);depsgraph=bpy.context.evaluated_depsgraph_get();support=[]
+for o in meshes:
+ evaluated=o.evaluated_get(depsgraph);data=evaluated.to_mesh()
+ for v in data.vertices:
+  co=evaluated.matrix_world@v.co
+  if abs(co.x)<.275 and .49 < -co.y < .87 and co.z<.5:
+   support.append((co.z,o.name,v.index))
+ evaluated.to_mesh_clear()
+assert support,'No source foot surface in platform footprint'
+lowest=min(support);config['footPlatformY']=math.floor((lowest[0]-.020-.00001)*1e5)/1e5
+if 'supports' in config:config['supports']['footPlatform']['position'][1]=config['footPlatformY']
+(root/'src/data/pulldown-config.json').write_text(json.dumps(config,indent=2)+'\n')
+support_report={'platformCenterY':config['footPlatformY'],'platformThicknessM':.04,'lowestSurfaceY':lowest[0],'lowestSourceMesh':lowest[1],'lowestVertex':lowest[2],'method':'minimum actual evaluated source vertex within platform XZ footprint; platform top meets lowest represented tissue surface; no invented skin/sole'}
+# Verify moving cuff endpoint regions and within-mesh source edge distortion.
+attachment_checks={}
+for o in meshes:
+ if o.name not in cuff_names and o.name not in [x['name'] for x in side_corrections]:continue
+ rest=[v.co.copy() for v in o.data.vertices];edges=[(e.vertices[0],e.vertices[1]) for e in o.data.edges];ratios=[];edge_samples=[];positions=[]
+ for frame in range(0,121,6):
+  scene.frame_set(frame);evaluated=o.evaluated_get(depsgraph);data=evaluated.to_mesh();positions.append([evaluated.matrix_world@v.co for v in data.vertices])
+  for a,b in edges:
+   length=(rest[a]-rest[b]).length
+   if length>1e-7:
+    posed=(positions[-1][a]-positions[-1][b]).length;ratios.append(posed/length);edge_samples.append((posed/length,length,posed,frame,a,b))
+  evaluated.to_mesh_clear()
+ excursions=[max((sample[i]-positions[0][i]).length for sample in positions) for i in range(len(rest))]
+ check={'sampleFrames':list(range(0,121,6)),'vertexCount':len(rest),'maxVertexExcursionM':max(excursions),'edgeLengthRatioMin':min(ratios),'edgeLengthRatioMax':max(ratios),'sourceGeometryPreserved':True}
+ ordered=sorted(ratios);check['edgeRatioQuantiles']={str(q):ordered[int(q*(len(ordered)-1))] for q in [.01,.05,.5,.95,.99]};check['worstCompressedEdge']=min(edge_samples);check['worstStretchedEdge']=max(edge_samples)
+ if o.name in attachment_anchors:
+  anchors=attachment_anchors[o.name];side=1 if 'left' in o.name else -1
+  for region,op in [('origin',lambda x:x<=anchors['originLateralM']),('insertion',lambda x:x>=anchors['insertionLateralM'])]:
+   ids=[i for i,v in enumerate(rest) if op(side*(v.x-T.x))];check[region+'VertexIndices']=ids
+   check[region+'CentroidTrajectory']=[list(sum((sample[i] for i in ids),Vector())/len(ids)) for sample in positions]
+ attachment_checks[o.name]=check
 scene.frame_set(0);(root/'artifacts').mkdir(exist_ok=True);bpy.ops.wm.save_as_mainfile(filepath=str(root/'artifacts/pulldown-rig.blend'))
 bpy.ops.export_scene.gltf(filepath=str(root/'public/models/anatomy-pulldown.glb'),export_format='GLB',export_animation_mode='SCENE',export_animations=True,export_frame_range=True,export_force_sampling=True,export_skins=True,export_morph=True,export_extras=True,export_yup=True,export_anim_scene_split_object=False)
-(root/'docs/evidence/pulldown-build.json').write_text(json.dumps({'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'sourceMeshes':len(meshes),'armMeshes':arm_names,'legMeshes':leg_names,'samples':samples,'config':config,'scope':'Baked two-arm analytic IK, fixed bone lengths, moving shoulder girdle and attachment-aware back skinning; original source hands; illustrative uncalibrated shoulder angles, no force or activation simulation'},indent=2))
+(root/'docs/evidence/pulldown-build.json').write_text(json.dumps({'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),'sourceMeshes':len(meshes),'cuffCorrectiveMethod':{'method':'DQ posed targets inverted through nonsingular LBS into relative preskin morphs;21linear convex-adjacent weights','knotFrames':list(range(0,121,6)),'weightRange':[0,1],'scope':'eight cuff and two palmaris muscle/aponeurosis meshes only; source base geometry, hand bones and digit articulation unchanged; not a tissue strain or grasp model'},'cuffCorrectiveSurfaceChecks':cuff_correction_report,'supportCalibration':support_report,'attachmentChecks':attachment_checks,'attachmentAnchors':attachment_anchors,'spatialSideCorrections':side_corrections,'armMeshes':arm_names,'legMeshes':leg_names,'samples':samples,'config':config,'scope':'Baked two-arm analytic IK, fixed bone lengths, moving shoulder girdle and attachment-aware back skinning; original source hands; illustrative uncalibrated shoulder angles, no force or activation simulation'},indent=2))

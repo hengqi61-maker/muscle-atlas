@@ -1,0 +1,58 @@
+{
+  "status": "Mac initial observation handoff; no OpenSim validation",
+  "observationCommit": "9369c6c",
+  "assetCommit": "b904b4b200fc838cb7fabbf4ed2ef346faa73b53",
+  "versions": {
+    "blenderObserved": "5.2.0 LTS",
+    "gltfAsset": {
+      "generator": "Khronos glTF Blender I/O v5.2.39",
+      "version": "2.0"
+    },
+    "nodeObserved": "v26.5.0",
+    "threeInstalled": "0.180.0"
+  },
+  "counts": {
+    "actualGltfSkins": 1,
+    "joints": 27,
+    "sourceMeshes": 467,
+    "clips": 2,
+    "framesPerClip": 121
+  },
+  "clarification": "The observation skins array contains467 per-mesh bindings, NOT467 independent skeletons. Actual GLB has one skin palette shared by all467source meshes. No diagnostic trajectory is measured human motion.",
+  "files": {
+    "docs/rig-v2/handoff/mac-observation-v0.1.json": {
+      "bytes": 37579810,
+      "sha256": "cf27f3ff63c5dd73fef0d5ae29657bf296879cd02531f4494ac0d5f173bf117c"
+    },
+    "docs/rig-v2/handoff/mac-observation-v0.1.schema.json": {
+      "bytes": 1902,
+      "sha256": "d5ba661d1c690633694f162cae0371e43ece3ff6a857b670c3bebdd8224599ca"
+    },
+    "config/rig-v2/canonical-rig.json": {
+      "bytes": 44391,
+      "sha256": "4acb41a3f8a9541a84ad3dea729fe71132c3c025460b95cdb46cd8db3df731fc"
+    },
+    "config/rig-v2/attachment-registry.json": {
+      "bytes": 28206909,
+      "sha256": "20c1182fa18cff325377dab76929d979c4d4ace5c4fdbe74a4f6621cfb843451"
+    },
+    "public/experimental/rig-v2/unified-rig-prototype.glb": {
+      "bytes": 41060904,
+      "sha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274"
+    },
+    "scripts/rig-v2/build.py": {
+      "bytes": 14231,
+      "sha256": "412c5e68ff9a86e5e456e913055f43d628ee2c06e13e6d576c8eb159f582856e"
+    },
+    "scripts/rig-v2/export-handoff.mjs": {
+      "bytes": 3745,
+      "sha256": "efc4b88e79bb750f2fee09e3b1f0436ed343550f2561f744bdc8d84babb8eb3f"
+    }
+  },
+  "commands": [
+    "node scripts/rig-v2/export-handoff.mjs",
+    "node --test tests/rig-v2/handoff.node.mjs"
+  ],
+  "windowsRequestedBranch": "codex/opensim-biomechanics",
+  "formalHandoff": "GitHub only; Windows owner will refine final schema and fixtures"
+}

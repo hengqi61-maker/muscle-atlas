@@ -1,0 +1,553 @@
+{
+  "status": "MOTION_GEOMETRY_FAIL",
+  "asset": "public/experimental/rig-v2/unified-rig-prototype.glb",
+  "assetSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+  "totalTriangles": 1092000,
+  "meshCount": 467,
+  "fullReport": {
+    "path": "artifacts/motion-pipeline/attribution/report.json",
+    "sha256": "6e7d9b2d54613b50eaf62b5893456959b6427b706f5905db9413e04d2c8ecc0e"
+  },
+  "scope": {
+    "sampling": "Every exported triangle in every source mesh at all 121 inclusive animation times per clip. No priority surface subsampling.",
+    "alarm": "areaRatio < 0.05; per-mesh severe if count > 3 OR count / eligible > 0.01; unchanged R1/M2 engineering screen, not medical strain bound.",
+    "coordinates": "Metres; canonical GLB POSITION immutable rest coordinates versus actual LBS world-space pose. Exported vertex and triangle indices are not original Blender polygon IDs.",
+    "sourceEvidence": "467 source identities/base geometry verified by frozen R1 independent-source-preservation proof; no claim of original source raw index correspondence. glTF export splits vertices.",
+    "limits": "No calibrated anatomy attachment, tissue force or collision inference. These are authored diagnostic clips. Full triangle coverage is only for 121 temporal samples."
+  },
+  "originalSourceCorrespondence": {
+    "sourceSha256": "6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f",
+    "sourceUnit": "original authored source units, millimetre-scale; normalization from verified R1 builder",
+    "canonicalMapping": "f32(rawX * f32(.001)), f32(rawZ * f32(.001)), f32(-rawY * f32(.001))",
+    "method": "Exact float32 coordinate keys plus original source GLB triangle connectivity. No nearest-neighbour tolerance. Source GLB indices do not assert original upstream Blender authoring IDs.",
+    "vertexRecordsExact": 540,
+    "vertexRecordsAmbiguous": 411,
+    "vertexRecordsInconclusive": 0
+  },
+  "stretchAttribution": [
+    {
+      "clip": "PulldownProbe",
+      "frame": 0,
+      "phase": 0,
+      "sourceName": "right subscapularis",
+      "bpId": "BP4795",
+      "fmaId": "FMA13414",
+      "ratio": 3.9884383355257897,
+      "triangle": 914,
+      "edge": [
+        456,
+        466
+      ],
+      "restEdgeLengthM": 0.0011904187968885009,
+      "vertices": [
+        {
+          "exportedVertex": 466,
+          "immutableCanonicalRestM": [
+            -0.09508690237998962,
+            1.1957300901412964,
+            0.011908301152288914
+          ],
+          "posedWorldM": [
+            -0.17865456639588023,
+            1.2528584739724153,
+            0.011908298486622157
+          ],
+          "influences": [
+            {
+              "bone": "RightScapula",
+              "weight": 0.7316630482673645
+            },
+            {
+              "bone": "RightHumerus",
+              "weight": 0.2683369517326355
+            }
+          ],
+          "originalSourceCorrespondence": {
+            "status": "EXACT_FLOAT32_POSITION_MATCH",
+            "candidates": [
+              {
+                "sourceExportedVertex": 466,
+                "sourceRawCoordinate": [
+                  -95.08689880371094,
+                  -11.908300399780273,
+                  1195.72998046875
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "exportedVertex": 468,
+          "immutableCanonicalRestM": [
+            -0.09599940478801727,
+            1.1969201564788818,
+            0.012905500829219818
+          ],
+          "posedWorldM": [
+            -0.1808846299273006,
+            1.2559251491036112,
+            0.012905498333160252
+          ],
+          "influences": [
+            {
+              "bone": "RightScapula",
+              "weight": 0.7178329229354858
+            },
+            {
+              "bone": "RightHumerus",
+              "weight": 0.28216707706451416
+            }
+          ],
+          "originalSourceCorrespondence": {
+            "status": "EXACT_FLOAT32_POSITION_MATCH",
+            "candidates": [
+              {
+                "sourceExportedVertex": 468,
+                "sourceRawCoordinate": [
+                  -95.99939727783203,
+                  -12.905500411987305,
+                  1196.9200439453125
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "exportedVertex": 456,
+          "immutableCanonicalRestM": [
+            -0.09624740481376648,
+            1.195520043373108,
+            0.01207020040601492
+          ],
+          "posedWorldM": [
+            -0.1822563223394589,
+            1.2559477798300271,
+            0.01207019804467441
+          ],
+          "influences": [
+            {
+              "bone": "RightScapula",
+              "weight": 0.7140413522720337
+            },
+            {
+              "bone": "RightHumerus",
+              "weight": 0.2859586477279663
+            }
+          ],
+          "originalSourceCorrespondence": {
+            "status": "AMBIGUOUS_DUPLICATE_POSITION",
+            "candidates": [
+              {
+                "sourceExportedVertex": 456,
+                "sourceRawCoordinate": [
+                  -96.24739837646484,
+                  -12.070199966430664,
+                  1195.52001953125
+                ]
+              },
+              {
+                "sourceExportedVertex": 1295,
+                "sourceRawCoordinate": [
+                  -96.24739837646484,
+                  -12.070199966430664,
+                  1195.52001953125
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "originalTriangleCandidates": {
+        "status": "POSITION_AND_CONNECTIVITY_MATCH",
+        "candidates": [
+          {
+            "sourceGlbTriangle": 914,
+            "sourceGlbVertexIndices": [
+              466,
+              468,
+              456
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "clips": [
+    {
+      "name": "CurlProbe",
+      "poses": 121,
+      "severeFrameCount": 39,
+      "maxEdgeStretch": 1.5956313673807392,
+      "severeMeshes": [
+        {
+          "name": "humeral_head_of_left_pronator_teres",
+          "sourceName": "humeral head of left pronator teres",
+          "anatomyId": "FMA38561",
+          "bpId": "BP8015",
+          "fmaId": "FMA38561",
+          "eligibleTriangles": 1846,
+          "firstSevereFrame": 47,
+          "firstTriangleCompressionFrame": 42,
+          "maximumCount": 7,
+          "minimumAreaRatio": 0.0012668035666841626,
+          "maxEdgeStretch": 1.269448830526425,
+          "worst": {
+            "frame": 52,
+            "triangle": 1611,
+            "areaM2": 5.8282252292253e-9,
+            "areaRatio": 0.0012668035666841626,
+            "maxEdgeStretch": 0.6052093287656304
+          }
+        },
+        {
+          "name": "humeral_head_of_right_pronator_teres",
+          "sourceName": "humeral head of right pronator teres",
+          "anatomyId": "FMA38560",
+          "bpId": "BP5568",
+          "fmaId": "FMA38560",
+          "eligibleTriangles": 1846,
+          "firstSevereFrame": 47,
+          "firstTriangleCompressionFrame": 42,
+          "maximumCount": 7,
+          "minimumAreaRatio": 0.002888589297103912,
+          "maxEdgeStretch": 1.269448830525545,
+          "worst": {
+            "frame": 52,
+            "triangle": 1611,
+            "areaM2": 1.3356248095551358e-8,
+            "areaRatio": 0.002888589297103912,
+            "maxEdgeStretch": 0.6061811053520008
+          }
+        },
+        {
+          "name": "left_brachioradialis",
+          "sourceName": "left brachioradialis",
+          "anatomyId": "FMA38487",
+          "bpId": "BP8244",
+          "fmaId": "FMA38487",
+          "eligibleTriangles": 4000,
+          "firstSevereFrame": 41,
+          "firstTriangleCompressionFrame": 39,
+          "maximumCount": 24,
+          "minimumAreaRatio": 0.0017843597378211324,
+          "maxEdgeStretch": 1.4237577681736335,
+          "worst": {
+            "frame": 75,
+            "triangle": 3779,
+            "areaM2": 8.737369049228699e-9,
+            "areaRatio": 0.0017843597378211324,
+            "maxEdgeStretch": 0.9603470281615302
+          }
+        },
+        {
+          "name": "long_head_of_left_biceps_brachii",
+          "sourceName": "long head of left biceps brachii",
+          "anatomyId": "FMA37687",
+          "bpId": "BP8816",
+          "fmaId": "FMA37687",
+          "eligibleTriangles": 1426,
+          "firstSevereFrame": 54,
+          "firstTriangleCompressionFrame": 31,
+          "maximumCount": 5,
+          "minimumAreaRatio": 0.019276679813224656,
+          "maxEdgeStretch": 1.3889283216774224,
+          "worst": {
+            "frame": 60,
+            "triangle": 238,
+            "areaM2": 4.639786148709388e-8,
+            "areaRatio": 0.019276679813224656,
+            "maxEdgeStretch": 0.6428691040961235
+          }
+        },
+        {
+          "name": "long_head_of_right_biceps_brachii",
+          "sourceName": "long head of right biceps brachii",
+          "anatomyId": "FMA37686",
+          "bpId": "BP5566",
+          "fmaId": "FMA37686",
+          "eligibleTriangles": 1426,
+          "firstSevereFrame": 54,
+          "firstTriangleCompressionFrame": 31,
+          "maximumCount": 5,
+          "minimumAreaRatio": 0.019417849813167767,
+          "maxEdgeStretch": 1.3889283216774186,
+          "worst": {
+            "frame": 60,
+            "triangle": 238,
+            "areaM2": 4.65711660825837e-8,
+            "areaRatio": 0.019417849813167767,
+            "maxEdgeStretch": 0.6443078705085892
+          }
+        },
+        {
+          "name": "right_brachioradialis",
+          "sourceName": "right brachioradialis",
+          "anatomyId": "FMA38486",
+          "bpId": "BP4833",
+          "fmaId": "FMA38486",
+          "eligibleTriangles": 3999,
+          "firstSevereFrame": 41,
+          "firstTriangleCompressionFrame": 39,
+          "maximumCount": 24,
+          "minimumAreaRatio": 0.0018030505251305823,
+          "maxEdgeStretch": 1.4237433007589386,
+          "worst": {
+            "frame": 75,
+            "triangle": 3778,
+            "areaM2": 8.837001201988339e-9,
+            "areaRatio": 0.0018030505251305823,
+            "maxEdgeStretch": 0.9626962669116508
+          }
+        }
+      ]
+    },
+    {
+      "name": "PulldownProbe",
+      "poses": 121,
+      "severeFrameCount": 91,
+      "maxEdgeStretch": 3.9884383355257897,
+      "severeMeshes": [
+        {
+          "name": "acromial_part_of_left_deltoid",
+          "sourceName": "acromial part of left deltoid",
+          "anatomyId": "FMA34683",
+          "bpId": "BP9075",
+          "fmaId": "FMA34683",
+          "eligibleTriangles": 1300,
+          "firstSevereFrame": 17,
+          "firstTriangleCompressionFrame": 0,
+          "maximumCount": 10,
+          "minimumAreaRatio": 0.005862635369900591,
+          "maxEdgeStretch": 1.6311133781339517,
+          "worst": {
+            "frame": 95,
+            "triangle": 469,
+            "areaM2": 1.193230864834927e-8,
+            "areaRatio": 0.005862635369900591,
+            "maxEdgeStretch": 0.33259946277786
+          }
+        },
+        {
+          "name": "acromial_part_of_right_deltoid",
+          "sourceName": "acromial part of right deltoid",
+          "anatomyId": "FMA34682",
+          "bpId": "BP7571",
+          "fmaId": "FMA34682",
+          "eligibleTriangles": 1300,
+          "firstSevereFrame": 17,
+          "firstTriangleCompressionFrame": 0,
+          "maximumCount": 10,
+          "minimumAreaRatio": 0.005862768644807652,
+          "maxEdgeStretch": 1.6311623216666555,
+          "worst": {
+            "frame": 95,
+            "triangle": 469,
+            "areaM2": 1.193257990474265e-8,
+            "areaRatio": 0.005862768644807652,
+            "maxEdgeStretch": 0.3325994733072934
+          }
+        },
+        {
+          "name": "clavicular_part_of_left_deltoid",
+          "sourceName": "clavicular part of left deltoid",
+          "anatomyId": "FMA34681",
+          "bpId": "BP8259",
+          "fmaId": "FMA34681",
+          "eligibleTriangles": 2206,
+          "firstSevereFrame": 0,
+          "firstTriangleCompressionFrame": 0,
+          "maximumCount": 7,
+          "minimumAreaRatio": 0.00643349953177761,
+          "maxEdgeStretch": 1.6384478865764969,
+          "worst": {
+            "frame": 13,
+            "triangle": 356,
+            "areaM2": 2.6158718473002834e-8,
+            "areaRatio": 0.00643349953177761,
+            "maxEdgeStretch": 0.8461139809028582
+          }
+        },
+        {
+          "name": "clavicular_part_of_right_deltoid",
+          "sourceName": "clavicular part of right deltoid",
+          "anatomyId": "FMA34680",
+          "bpId": "BP7573",
+          "fmaId": "FMA34680",
+          "eligibleTriangles": 2206,
+          "firstSevereFrame": 0,
+          "firstTriangleCompressionFrame": 0,
+          "maximumCount": 7,
+          "minimumAreaRatio": 0.006016437047943476,
+          "maxEdgeStretch": 1.6385111546958462,
+          "worst": {
+            "frame": 13,
+            "triangle": 356,
+            "areaM2": 2.45164122442999e-8,
+            "areaRatio": 0.006016437047943476,
+            "maxEdgeStretch": 0.8461496211601167
+          }
+        },
+        {
+          "name": "humeral_head_of_left_pronator_teres",
+          "sourceName": "humeral head of left pronator teres",
+          "anatomyId": "FMA38561",
+          "bpId": "BP8015",
+          "fmaId": "FMA38561",
+          "eligibleTriangles": 1846,
+          "firstSevereFrame": 55,
+          "firstTriangleCompressionFrame": 43,
+          "maximumCount": 5,
+          "minimumAreaRatio": 0.03160870679275059,
+          "maxEdgeStretch": 1.2497920137328078,
+          "worst": {
+            "frame": 60,
+            "triangle": 1573,
+            "areaM2": 5.5667599532896605e-8,
+            "areaRatio": 0.03160870679275059,
+            "maxEdgeStretch": 0.9327438661826983
+          }
+        },
+        {
+          "name": "humeral_head_of_right_pronator_teres",
+          "sourceName": "humeral head of right pronator teres",
+          "anatomyId": "FMA38560",
+          "bpId": "BP5568",
+          "fmaId": "FMA38560",
+          "eligibleTriangles": 1846,
+          "firstSevereFrame": 55,
+          "firstTriangleCompressionFrame": 43,
+          "maximumCount": 5,
+          "minimumAreaRatio": 0.03146312070722965,
+          "maxEdgeStretch": 1.2497911222933877,
+          "worst": {
+            "frame": 60,
+            "triangle": 1573,
+            "areaM2": 5.541467056733303e-8,
+            "areaRatio": 0.03146312070722965,
+            "maxEdgeStretch": 0.9327341135781955
+          }
+        },
+        {
+          "name": "left_brachioradialis",
+          "sourceName": "left brachioradialis",
+          "anatomyId": "FMA38487",
+          "bpId": "BP8244",
+          "fmaId": "FMA38487",
+          "eligibleTriangles": 4000,
+          "firstSevereFrame": 43,
+          "firstTriangleCompressionFrame": 39,
+          "maximumCount": 23,
+          "minimumAreaRatio": 0.0018190972433051909,
+          "maxEdgeStretch": 1.3819176105007502,
+          "worst": {
+            "frame": 73,
+            "triangle": 3895,
+            "areaM2": 5.571474222253373e-9,
+            "areaRatio": 0.0018190972433051909,
+            "maxEdgeStretch": 0.8732120316666094
+          }
+        },
+        {
+          "name": "left_supraspinatus",
+          "sourceName": "left supraspinatus",
+          "anatomyId": "FMA32545",
+          "bpId": "BP8376",
+          "fmaId": "FMA32545",
+          "eligibleTriangles": 878,
+          "firstSevereFrame": 0,
+          "firstTriangleCompressionFrame": 0,
+          "maximumCount": 7,
+          "minimumAreaRatio": 0.00185972025708024,
+          "maxEdgeStretch": 1.8735781861285714,
+          "worst": {
+            "frame": 105,
+            "triangle": 530,
+            "areaM2": 2.5546266050747664e-8,
+            "areaRatio": 0.00185972025708024,
+            "maxEdgeStretch": 1.0030516317028877
+          }
+        },
+        {
+          "name": "right_brachioradialis",
+          "sourceName": "right brachioradialis",
+          "anatomyId": "FMA38486",
+          "bpId": "BP4833",
+          "fmaId": "FMA38486",
+          "eligibleTriangles": 3999,
+          "firstSevereFrame": 43,
+          "firstTriangleCompressionFrame": 39,
+          "maximumCount": 23,
+          "minimumAreaRatio": 0.001820359894950316,
+          "maxEdgeStretch": 1.3819175250536833,
+          "worst": {
+            "frame": 47,
+            "triangle": 3896,
+            "areaM2": 5.575341432276582e-9,
+            "areaRatio": 0.001820359894950316,
+            "maxEdgeStretch": 0.8732120867724578
+          }
+        },
+        {
+          "name": "right_supraspinatus",
+          "sourceName": "right supraspinatus",
+          "anatomyId": "FMA32544",
+          "bpId": "BP4791",
+          "fmaId": "FMA32544",
+          "eligibleTriangles": 878,
+          "firstSevereFrame": 0,
+          "firstTriangleCompressionFrame": 0,
+          "maximumCount": 7,
+          "minimumAreaRatio": 0.003356233975768693,
+          "maxEdgeStretch": 1.8746228952183368,
+          "worst": {
+            "frame": 15,
+            "triangle": 530,
+            "areaM2": 4.610330276670546e-8,
+            "areaRatio": 0.003356233975768693,
+            "maxEdgeStretch": 1.002185516083422
+          }
+        },
+        {
+          "name": "spinal_part_of_left_deltoid",
+          "sourceName": "spinal part of left deltoid",
+          "anatomyId": "FMA34685",
+          "bpId": "BP8151",
+          "fmaId": "FMA34685",
+          "eligibleTriangles": 1900,
+          "firstSevereFrame": 0,
+          "firstTriangleCompressionFrame": 0,
+          "maximumCount": 9,
+          "minimumAreaRatio": 0.001011787677534568,
+          "maxEdgeStretch": 2.051457872151891,
+          "worst": {
+            "frame": 110,
+            "triangle": 590,
+            "areaM2": 1.3925897010344633e-9,
+            "areaRatio": 0.001011787677534568,
+            "maxEdgeStretch": 0.7864097796438945
+          }
+        },
+        {
+          "name": "spinal_part_of_right_deltoid",
+          "sourceName": "spinal part of right deltoid",
+          "anatomyId": "FMA34684",
+          "bpId": "BP5607",
+          "fmaId": "FMA34684",
+          "eligibleTriangles": 1900,
+          "firstSevereFrame": 0,
+          "firstTriangleCompressionFrame": 0,
+          "maximumCount": 9,
+          "minimumAreaRatio": 0.00101197968331965,
+          "maxEdgeStretch": 2.0514578777390255,
+          "worst": {
+            "frame": 110,
+            "triangle": 590,
+            "areaM2": 1.3928539711820261e-9,
+            "areaRatio": 0.00101197968331965,
+            "maxEdgeStretch": 0.7864096502502803
+          }
+        }
+      ]
+    }
+  ]
+}

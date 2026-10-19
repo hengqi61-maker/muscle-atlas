@@ -1,0 +1,32 @@
+{
+  "candidate": "7a0d258b59e9a2acc32021e8ab66f7098ff025ea",
+  "frozenAt": "2026-10-15T14:38:07.672069+08:00",
+  "allReportsFrozenBeforeHistoricalComparison": true,
+  "reviewerIsolation": "fork_turns=none; all forbidden from historical records; coordinator retained prior conversation, not itself blind. Desktop tool actualagents, no claim of CLI role autoload or OS filesystem isolation.",
+  "reports": {
+    "biomechanics": {
+      "file": "reviews/round1/biomechanics.md",
+      "session": "/root/blind_biomechanics_7a0d258",
+      "sha256": "4f5d1ca87d3b4a5b92fe13a8bf620522a2c4c931904475591ce203b6faf80310",
+      "blindness": "reviewer declared no historical or cross-review access"
+    },
+    "visual": {
+      "file": "reviews/round1/visual.md",
+      "session": "/root/blind_visual_7a0d258",
+      "sha256": "dca2786f8e133238a09fd5898dda9fbd96a4cb0d918f1aa896c97ee77cf0b8fb",
+      "blindness": "reviewer declared no historical or cross-review access"
+    },
+    "exerciseScience": {
+      "file": "reviews/round1/exerciseScience.md",
+      "session": "/root/blind_science_7a0d258",
+      "sha256": "445176caf000ecdabd064bb6a84b1c9275048ecb63bc71a4cca3b8ab5fd607df",
+      "blindness": "reviewer declared no historical or cross-review access"
+    },
+    "softwareQa": {
+      "file": "reviews/round1/softwareQa.md",
+      "session": "/root/blind_software_7a0d258",
+      "sha256": "8eccfd925454bec06ea74cba2548aee8d3368fbf9873c1a3fa2af1a64462c620",
+      "blindness": "reviewer declared no historical or cross-review access"
+    }
+  }
+}

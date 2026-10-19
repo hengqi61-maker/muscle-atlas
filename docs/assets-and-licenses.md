@@ -29,3 +29,15 @@ anatomy-curl.glb 由 scripts/build-curl-rig.py 从固定SHA256的原GLB派生，
 
 ## 2026-10-15 哑铃和手部/坐姿派生更新
 本次哑铃与手部表面为本项目原创程序几何，记录于equipment-and-grip.md，不宣称来自Innerscene/Poly Pizza。外部候选虽页面标CC0，但未取得下载字节；不把其许可套用于原创文件。独立哑铃public/models/equipment/detailed-hex-dumbbell.glb不含第三方人体。动画派生anatomy-curl.glb、anatomy-pulldown.glb仍包含上述BP3D/Z-Anatomy资产，保持各来源署名与适用条款。动作派生中的远端组织握持位移、坐姿与腕部/双臂骨骼为新增变更，原始anatomy.glb不变。
+
+
+## 2026-10-16 M2第二轮状态
+当前动作GLB保留467个来源网格的基底三角形身份，新增十块肌肉的蒙皮姿态修正（八肩袖、双掌长肌），不代表原作者的医学验证。原始解剖手部保留，无替代手壳或源手指折叠。媒体包仅包含自主渲染/测量/报告，不含外部参考录像或教材图片；保留上文BP3D/Z-Anatomy署名和适用ShareAlike义务，不能把整个派生资产改标为代码许可。
+
+
+## 2026-10-16 V2隔离统一骨架派生资产
+`public/experimental/rig-v2/unified-rig-prototype.glb`及对应native blend与自主渲染继承上文401BP3D+66Z-Anatomy网格来源、署名和各自适用ShareAlike条款；不以软件代码许可覆盖。新增变更：米制参考姿态、27节点共享骨架、非标定蒙皮权重及两段原创诊断动画；原始源网格基础几何/拓扑经独立校验保留。非医学验证，不代表原作者认可本项目动画。证据包包括本许可说明、生成脚本和来源映射的仓库链接，不含第三方教学视频。
+
+
+## 2026-10-17 E3可重复构建与归因媒体
+E3派生motion.glb/nativeBlend及自主Blender/Three渲染保留467源网格原署名、映射与各自适用ShareAlike条款；来源与许可沿用上述BP3D/Z-Anatomy固定下载版本。本轮新增是共享参考骨架/权重的重建与旧诊断轨迹烘焙，没有替换手部、修改原始基础几何或复制外部教学视频。隔离源网格正交图仅展示真实三角面rest/LBS对照，不宣称原作者验证了本项目运动。

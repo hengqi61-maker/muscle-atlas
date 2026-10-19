@@ -1,0 +1,5 @@
+# Native trajectory observation (not a replacement Windows exchange schema)
+
+Each run trajectory.json is a raw121-entry Blender observation, frame0..120 at30fps and timeSeconds=frame/30. bones contains27canonical nodes. worldMatrix is flat16column-major, active right-handed transform, column vectors, metre translation, native Blender+Zup/-Yfront/+Xsubjectleft. PoseBone.matrix is armature-object space; the reconstructed rig object has identityworld transform, so these equal scene-world transforms for this experiment. This identity assumption is not general animation retargeting.
+
+The raw array is internal build evidence, not packet-v1.schema.json and not OpenSim angles. canonical-rig.json supplies hierarchy/rest/bone-axis conventions. Existing handoff/v1 adapter and Windows-owned contract must be used for interoperable packets, including explicit reference pose and A/B alignment. Do not relabel rawnative observations as W2compliant or anatomically calibrated. No joint force, torque, EMG or finger closure implied.

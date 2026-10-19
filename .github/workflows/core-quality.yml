@@ -1,0 +1,27 @@
+name: Muscle Atlas Core Quality
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - run: npm run test:quality
+      - name: Validate reviewer bundle script syntax
+        run: node --check scripts/quality/validate-review-bundle.mjs
+      - name: Audit browser test status
+        run: |
+          echo 'Playwright uses Chrome (see playwright.config.ts). Real GPU/web browser test is still mandatory on the owner Mac before motion milestone signoff.'
+          echo 'This CI job does NOT run Playwright or biomechanical checks.'

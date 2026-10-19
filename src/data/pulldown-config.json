@@ -5,7 +5,155 @@
   "gripHalfWidth": 0.37,
   "gripDrop": 0.055,
   "gripZ": 0.46,
-  "bodyTranslation": [0, -0.213, -0.055],
-  "palmOffsetBlender": [0, -0.029, -0.048],
-  "footPlatformY": 0.28
+  "bodyTranslation": [
+    0,
+    -0.213,
+    -0.055
+  ],
+  "palmOffsetBlender": [
+    0,
+    -0.029,
+    -0.048
+  ],
+  "footPlatformY": 0.19416,
+  "supports": {
+    "seat": {
+      "position": [
+        0,
+        0.59261,
+        0.16
+      ],
+      "size": [
+        0.52,
+        0.085,
+        0.22
+      ]
+    },
+    "thighPad": {
+      "position": [
+        0,
+        0.87756,
+        0.575
+      ],
+      "size": [
+        0.46,
+        0.12,
+        0.15
+      ]
+    },
+    "pedestal": {
+      "position": [
+        0,
+        0.285055,
+        0.16
+      ],
+      "size": [
+        0.07,
+        0.53011,
+        0.07
+      ]
+    },
+    "brackets": [
+      {
+        "name": "Left",
+        "from": [
+          -0.27,
+          0.59261,
+          0.16
+        ],
+        "to": [
+          -0.27,
+          1.00256,
+          0.575
+        ],
+        "radius": 0.016
+      },
+      {
+        "name": "Right",
+        "from": [
+          0.27,
+          0.59261,
+          0.16
+        ],
+        "to": [
+          0.27,
+          1.00256,
+          0.575
+        ],
+        "radius": 0.016
+      }
+    ],
+    "crossbar": {
+      "from": [
+        -0.34,
+        1.00256,
+        0.575
+      ],
+      "to": [
+        0.34,
+        1.00256,
+        0.575
+      ],
+      "radius": 0.065
+    },
+    "footPlatform": {
+      "position": [
+        0,
+        0.19416,
+        0.68
+      ],
+      "size": [
+        0.55,
+        0.04,
+        0.38
+      ]
+    }
+  },
+  "supportContactRegions": {
+    "seatSourceNames": [
+      "left gluteus maximus",
+      "right gluteus maximus"
+    ],
+    "seatSourceIds": [
+      "BP8401",
+      "BP5065"
+    ],
+    "thighSourceNames": [
+      "left rectus femoris",
+      "right rectus femoris"
+    ],
+    "thighSourceIds": [
+      "BP8094",
+      "BP5598"
+    ],
+    "seatFootprintXZ": [
+      [
+        -0.26,
+        0.26
+      ],
+      [
+        0.05,
+        0.27
+      ]
+    ],
+    "thighFootprintXZ": [
+      [
+        -0.23,
+        0.23
+      ],
+      [
+        0.5,
+        0.65
+      ]
+    ],
+    "seatClippedSourceLowerY": 0.6351219628633126,
+    "thighClippedSourceUpperY": 0.8175451335837713,
+    "seatProxyGapM": 1.19628633126e-05,
+    "thighProxyGapM": 1.48664162287e-05,
+    "method": "At frozen GLB44109 time0, clip actual posed source triangles against XZ footprint. Posterior bilateral gluteus lower boundary supports seat; anterior bilateral rectus upper boundary fits thigh restraint. Lower-body pose static over rep. All-source collision checks remain independent. Tiny positive gaps isolate float export precision, not anatomical skin thickness.",
+    "limits": "Source muscle surfaces are not skin, loaded soles, seat pressure or soft-tissue compression. Proximity and geometric clearance do not establish physical contact or anatomical validation.",
+    "footSourceEnvelopeY": 0.21417292452720482,
+    "footProxyGapM": 1.29245272048e-05,
+    "footPrecisionNote": "Round1 runtime minimum was 1.07547 micrometres inside platform; move actual solid top to .21416m, leaving 12.9245 micrometres below lowest sampled original foot tissue. Independent collision epsilon unchanged."
+  }
 }

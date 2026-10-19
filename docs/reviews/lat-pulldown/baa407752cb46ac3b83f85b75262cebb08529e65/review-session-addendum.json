@@ -1,0 +1,21 @@
+{
+  "note": "Fourth review arrived after coordinator initial summary; original domain reports unchanged. This addendum lists all four reports.",
+  "reviewers": {
+    "visual": {
+      "path": "reviews/visual.md",
+      "sha256": "1833ef1dd74269f7bbb9cf7159553943d7908f218cc51b29de55641ae322d7e8"
+    },
+    "exercise-science": {
+      "path": "reviews/exercise-science.md",
+      "sha256": "2d0761d17cda59547cdefb7b685f8ca2efff202dcb6b1ab5db1396da1b621834"
+    },
+    "biomechanics": {
+      "path": "reviews/biomechanics.md",
+      "sha256": "33043f6becc4680581cf5278f06d2e87125b1013ec8538a5ff3c1c201a0556d0"
+    },
+    "software-qa": {
+      "path": "reviews/software-qa.md",
+      "sha256": "b0a429a6db08344c2e994a805586331937ccdb562fab20c2e42d9597fbd1901c"
+    }
+  }
+}

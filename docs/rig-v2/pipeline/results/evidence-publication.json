@@ -1,0 +1,13 @@
+{
+  "path": "artifacts/e3-19ba4ee-evidence.zip",
+  "bytes": 408483892,
+  "sha256": "90fafb3d45757ff56e18bf62ba5c138d14f6b50df0d2a7d8d2b55422c095d4b5",
+  "files": 793,
+  "publication": "https://github.com/hengqi61-maker/muscle-atlas/releases/tag/evidence-e3-19ba4ee",
+  "assetUrl": "https://github.com/hengqi61-maker/muscle-atlas/releases/download/evidence-e3-19ba4ee/e3-19ba4ee-evidence.zip",
+  "reviewCandidate": "19ba4ee4d1e9ab06238f95ecb8422b877c7652f6",
+  "packagingCommit": "a80e10b8e1983d24be501f0a9a5b8c525031f126",
+  "ownerApproval": "PENDING",
+  "windowsReceiptComment": "https://github.com/hengqi61-maker/muscle-atlas/pull/6#issuecomment-6231726406",
+  "contains": "Four real native outputs; two full CLI executions; metadata-only positive regression copy; GLB/Blend, native and browser video/keyframes, trajectory, geometry, attribution, independent reports and license notice. Original failed/cancelled capture data remains preserved locally; selected diagnostic logs are included, not every failed intermediate render."
+}

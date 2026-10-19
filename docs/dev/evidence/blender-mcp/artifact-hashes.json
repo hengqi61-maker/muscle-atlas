@@ -1,0 +1,11 @@
+{
+  "mcp_for_blender_wheel_sha256": "160eb5e075b3933ed70d2de58445e27e08db0d5cc589f8f122d6027998ab9ce1",
+  "mcp_for_blender_version": "2.2.0",
+  "addon_blender_mcp_py_sha256": "b4c17eb88e0d4ec2a1cb5ce40b695cef5b9360116ae1707a0cac80fc2f065865",
+  "addon_bl_info_version": [
+    1,
+    8
+  ],
+  "experimental_glb_sha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+  "connectivity_blend_sha256": "665417d278dd7ebd39522421e8ce345c87269f1e4823867f976b53d34bffcf04"
+}
