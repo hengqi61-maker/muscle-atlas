@@ -1,0 +1,65 @@
+{
+  "upstream": "https://github.com/EL4CTEO/blender-skills",
+  "commit": "71d031dab8bc6729504d11a78cbe91945401045f",
+  "license": "MIT",
+  "approvedScope": "disposable fixtures only; no production rig/weights/geometry repair",
+  "skills": [
+    "blender-core",
+    "blender-pipeline-automation",
+    "blender-asset-qa"
+  ],
+  "files": [
+    {
+      "path": ".agents/skills/blender-core/SKILL.md",
+      "sha256": "92ab591e713d8b4cdd3ed591c813ad29df9f7ce3f90f6e84971719a6b1bdc51d"
+    },
+    {
+      "path": ".agents/skills/blender-core/references/api-changes-5x.md",
+      "sha256": "ccf0b52a1d9fd836eb689abcec6a878b0ac57fb32ac600476b5070b9c8d22307"
+    },
+    {
+      "path": ".agents/skills/blender-core/references/bpy-patterns.md",
+      "sha256": "ba7bbc708bf198bdcdfa59d9d41d830a4ae119c24ae9457830b73d9e818e2af8"
+    },
+    {
+      "path": ".agents/skills/blender-core/scripts/_bpyx.py",
+      "sha256": "a3339ba8a678469e8ed29510e32a7331e0235202191ca4edb977af4720819b4b"
+    },
+    {
+      "path": ".agents/skills/blender-core/scripts/env_report.py",
+      "sha256": "e628feed806dd265e0c1ce803d92591aac208a9f463d8c47cbb939476d3b347a"
+    },
+    {
+      "path": ".agents/skills/blender-core/scripts/run_in_blender.py",
+      "sha256": "e97e078c1b52475d386af2b8f9d27c7578a55c250ccd43ff50bed9c33d380355"
+    },
+    {
+      "path": ".agents/skills/blender-pipeline-automation/SKILL.md",
+      "sha256": "590e1159205c68af5c338425456c3ff86837cdb8202e34f2d40a018e96ec79fa"
+    },
+    {
+      "path": ".agents/skills/blender-pipeline-automation/scripts/_bpyx.py",
+      "sha256": "a3339ba8a678469e8ed29510e32a7331e0235202191ca4edb977af4720819b4b"
+    },
+    {
+      "path": ".agents/skills/blender-pipeline-automation/scripts/batch_process.py",
+      "sha256": "baedf17711a939981f3796879e1f32be3203c197c41d9dc3fad8a104b82bfe8e"
+    },
+    {
+      "path": ".agents/skills/blender-asset-qa/SKILL.md",
+      "sha256": "345c5f16c7ae9cfd31b3b58ee0642e31ce9fd406265305c03c0fdffd0fb551eb"
+    },
+    {
+      "path": ".agents/skills/blender-asset-qa/scripts/_bpyx.py",
+      "sha256": "a3339ba8a678469e8ed29510e32a7331e0235202191ca4edb977af4720819b4b"
+    },
+    {
+      "path": ".agents/skills/blender-asset-qa/scripts/qa_check.py",
+      "sha256": "11b4fa11244bfa6719689a06eec58c050a3ad5b6d17ac0f75113f332f97b274b"
+    },
+    {
+      "path": ".agents/skills/blender-asset-qa/scripts/review_shots.py",
+      "sha256": "ffd4361f313592b67c124cdf0ec54b8d9866c9b29eefdac5c47731ce133d3f01"
+    }
+  ]
+}

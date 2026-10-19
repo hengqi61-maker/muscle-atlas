@@ -1,0 +1,12 @@
+✔ real frozen R1 diagnostic clips share immutable skin/geometry (196.9725ms)
+✔ reject per-clip alternate skin and non-joint target (146.811583ms)
+✔ reject identity loss, unsupported morph animation and missing clip (148.301167ms)
+✔ do not silently digest unsupported sparse geometry (17.332333ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 593.993958

@@ -1,0 +1,298 @@
+{
+  "mode": "skill",
+  "inputSha256": "fc261ebaaaf6fa74ff82a3d6b5ee420ce98b62716fe13dd64b3237e0066c27ee",
+  "blender": "5.2.0 LTS",
+  "blenderBuild": "fbe6228777e7",
+  "inventory": {
+    "objects": {
+      "MESH": 2
+    },
+    "tris": 24,
+    "materials": 2,
+    "images": 0,
+    "missing_images": [],
+    "actions": 0
+  },
+  "qa": {
+    "ok": true,
+    "pass": false,
+    "errors": [
+      "floating/detached part in PilotFloater (8 verts at [4.0, 0.0, 1.0])"
+    ],
+    "warnings": [],
+    "ground_z": 0.0,
+    "zfighting": [],
+    "floating": [
+      {
+        "object": "PilotFloater",
+        "island_verts": 8,
+        "center": [
+          4.0,
+          0.0,
+          1.0
+        ]
+      }
+    ],
+    "back_to_back": [],
+    "enclosed": [],
+    "objects": {
+      "PilotBase": {
+        "verts": 8,
+        "faces": 6,
+        "tris": 12,
+        "ngons": 0,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "wire_edges": 0,
+        "loose_verts": 0,
+        "degenerate_faces": 0,
+        "zero_length_edges": 0,
+        "inconsistent_normals_edges": 0,
+        "duplicate_verts": 0,
+        "islands": 1,
+        "inside_out_islands": 0,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": 1
+      },
+      "PilotFloater": {
+        "verts": 8,
+        "faces": 6,
+        "tris": 12,
+        "ngons": 0,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "wire_edges": 0,
+        "loose_verts": 0,
+        "degenerate_faces": 0,
+        "zero_length_edges": 0,
+        "inconsistent_normals_edges": 0,
+        "duplicate_verts": 0,
+        "islands": 1,
+        "inside_out_islands": 0,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": 1
+      }
+    }
+  },
+  "outputSha256": "f500f3e1b1429bedb3d803b8420344dcbed6a9a3f195a10deab1e159f16a7a42",
+  "binarySha256": "70055e8ae6b81273352d0175f57ad5337dfd6c971247c824b735d9996bfd9b45",
+  "gltf": {
+    "asset": {
+      "generator": "Khronos glTF Blender I/O v5.2.39",
+      "version": "2.0"
+    },
+    "scene": 0,
+    "scenes": [
+      {
+        "name": "Scene",
+        "nodes": [
+          0,
+          1
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "mesh": 0,
+        "name": "PilotBase",
+        "translation": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "mesh": 1,
+        "name": "PilotFloater",
+        "translation": [
+          4,
+          1,
+          0
+        ]
+      }
+    ],
+    "materials": [
+      {
+        "doubleSided": true,
+        "name": "M_PilotBase",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "M_PilotFloater",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      }
+    ],
+    "meshes": [
+      {
+        "name": "Cube",
+        "primitives": [
+          {
+            "attributes": {
+              "POSITION": 0,
+              "NORMAL": 1,
+              "TEXCOORD_0": 2
+            },
+            "indices": 3,
+            "material": 0
+          }
+        ]
+      },
+      {
+        "name": "Cube.001",
+        "primitives": [
+          {
+            "attributes": {
+              "POSITION": 4,
+              "NORMAL": 5,
+              "TEXCOORD_0": 6
+            },
+            "indices": 3,
+            "material": 1
+          }
+        ]
+      }
+    ],
+    "accessors": [
+      {
+        "bufferView": 0,
+        "componentType": 5126,
+        "count": 24,
+        "max": [
+          1,
+          1,
+          1
+        ],
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 1,
+        "componentType": 5126,
+        "count": 24,
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 2,
+        "componentType": 5126,
+        "count": 24,
+        "type": "VEC2"
+      },
+      {
+        "bufferView": 3,
+        "componentType": 5123,
+        "count": 36,
+        "type": "SCALAR"
+      },
+      {
+        "bufferView": 4,
+        "componentType": 5126,
+        "count": 24,
+        "max": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "min": [
+          -0.25,
+          -0.25,
+          -0.25
+        ],
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 5,
+        "componentType": 5126,
+        "count": 24,
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 6,
+        "componentType": 5126,
+        "count": 24,
+        "type": "VEC2"
+      }
+    ],
+    "bufferViews": [
+      {
+        "buffer": 0,
+        "byteLength": 288,
+        "byteOffset": 0,
+        "target": 34962
+      },
+      {
+        "buffer": 0,
+        "byteLength": 288,
+        "byteOffset": 288,
+        "target": 34962
+      },
+      {
+        "buffer": 0,
+        "byteLength": 192,
+        "byteOffset": 576,
+        "target": 34962
+      },
+      {
+        "buffer": 0,
+        "byteLength": 72,
+        "byteOffset": 768,
+        "target": 34963
+      },
+      {
+        "buffer": 0,
+        "byteLength": 288,
+        "byteOffset": 840,
+        "target": 34962
+      },
+      {
+        "buffer": 0,
+        "byteLength": 288,
+        "byteOffset": 1128,
+        "target": 34962
+      },
+      {
+        "buffer": 0,
+        "byteLength": 192,
+        "byteOffset": 1416,
+        "target": 34962
+      }
+    ],
+    "buffers": [
+      {
+        "byteLength": 1608
+      }
+    ]
+  },
+  "manualInterventions": 0,
+  "geometryMutated": false
+}

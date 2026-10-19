@@ -1,0 +1,7 @@
+test_pinned_complete (test_registry.Registry) ... ok
+test_protected_bytes_equal_frozen_phase1 (test_registry.Registry) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 2.883s
+
+OK

@@ -1,0 +1,146 @@
+{
+  "purpose": "actual fixture experiment evidence only",
+  "ownerApproval": "PENDING",
+  "files": [
+    {
+      "path": "docs/blender-skills/evidence/browser-smoke.png",
+      "bytes": 502128,
+      "sha256": "052fd6c03d88eccc63a184aa6e975137755f3e7c4b7382326e4eb4086837dc98"
+    },
+    {
+      "path": "docs/blender-skills/evidence/browser.log",
+      "bytes": 510,
+      "sha256": "769e3c37b91db7ea931d5afc0f3def7b3a4591f826418773aeb77a9b5e61f211"
+    },
+    {
+      "path": "docs/blender-skills/evidence/build.log",
+      "bytes": 741,
+      "sha256": "2cfba76417ddf7e0352cc121cf0dd55e30e49a831ed3abd4f32fa1a1dce7a0f8"
+    },
+    {
+      "path": "docs/blender-skills/evidence/fixture-cpu.png",
+      "bytes": 90031,
+      "sha256": "997fceeac130e03fab3d1c764f73f605fb00802329fd0ba6e59efd503fe64616"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/baseline-1/motion.glb",
+      "bytes": 3524,
+      "sha256": "f500f3e1b1429bedb3d803b8420344dcbed6a9a3f195a10deab1e159f16a7a42"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/baseline-1/report.json",
+      "bytes": 4501,
+      "sha256": "c431351ce8219406064c44ec054bb4a5a0e53a64d1ce3f12c5831aa43e1c1d46"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/baseline-1.log",
+      "bytes": 1035,
+      "sha256": "798b1ccc6aa861dc19bbea83ff15d94f372eb87d389a8b85206deb0f246ca5ee"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/baseline-2/motion.glb",
+      "bytes": 3524,
+      "sha256": "f500f3e1b1429bedb3d803b8420344dcbed6a9a3f195a10deab1e159f16a7a42"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/baseline-2/report.json",
+      "bytes": 4501,
+      "sha256": "c431351ce8219406064c44ec054bb4a5a0e53a64d1ce3f12c5831aa43e1c1d46"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/baseline-2.log",
+      "bytes": 1035,
+      "sha256": "782d334f27cc5354f71aaf3d8c6c06775a2323fb668d018a312d7143291e2f42"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/fixture.blend",
+      "bytes": 90090,
+      "sha256": "fc261ebaaaf6fa74ff82a3d6b5ee420ce98b62716fe13dd64b3237e0066c27ee"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/fixture.log",
+      "bytes": 256,
+      "sha256": "9e171023fcbfcf44128011181df377384d3ca806a801558625e4ee8afae1808b"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/skill-1/motion.glb",
+      "bytes": 3524,
+      "sha256": "f500f3e1b1429bedb3d803b8420344dcbed6a9a3f195a10deab1e159f16a7a42"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/skill-1/report.json",
+      "bytes": 5900,
+      "sha256": "0436675eb7f3c54e7753642fe8124dd9de83ed66f4b0c4c27b248c9225b68cc8"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/skill-1.log",
+      "bytes": 1264,
+      "sha256": "6c283936408d0255cd683ef919684e40f34b57438754608e2df278f093082923"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/skill-2/motion.glb",
+      "bytes": 3524,
+      "sha256": "f500f3e1b1429bedb3d803b8420344dcbed6a9a3f195a10deab1e159f16a7a42"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/skill-2/report.json",
+      "bytes": 5900,
+      "sha256": "0436675eb7f3c54e7753642fe8124dd9de83ed66f4b0c4c27b248c9225b68cc8"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/skill-2.log",
+      "bytes": 1264,
+      "sha256": "2e9954120fd268de78da8c7b678d1b188f3391ccf7f99334d3c7ae68ffe162b9"
+    },
+    {
+      "path": "docs/blender-skills/evidence/pilot-final/summary.json",
+      "bytes": 4683,
+      "sha256": "54b088ce750a5c411eb08632514f0c4e0dae3134c0d98f7c62ca8e87a643fe7a"
+    },
+    {
+      "path": "docs/blender-skills/evidence/protected-assets.json",
+      "bytes": 13433,
+      "sha256": "3793f3a916a9c14d37070e5b8529de144cba473d0a311b8273b1f9efc20f0fbe"
+    },
+    {
+      "path": "docs/blender-skills/evidence/quality.log",
+      "bytes": 2254,
+      "sha256": "3c543c0bde14e9c09d871ca80bad47e39d98ebd9b7f47069bd2094dd8a62a599"
+    },
+    {
+      "path": "docs/blender-skills/evidence/registry-tests-final.log",
+      "bytes": 224,
+      "sha256": "dbfc9bca8ba9ea73b4c78af1a970b899a89c8c0fca23e94478acb28412b1276b"
+    },
+    {
+      "path": "docs/blender-skills/evidence/render.log",
+      "bytes": 385,
+      "sha256": "98fdb1510f29ebc3f6c9955b6316f6e063401b6f9b942476cd25dfc7e55ead68"
+    },
+    {
+      "path": "docs/blender-skills/evidence/reuse.log",
+      "bytes": 420,
+      "sha256": "0a35421fa25a965df39506dbccf35aa9317026c1cb2d7faafc3c7d6f4c96d33d"
+    },
+    {
+      "path": "docs/blender-skills/evidence/tools.json",
+      "bytes": 132,
+      "sha256": "02358c6f0ccd0d37b0bde93e14f3bf6c2a3629407949209c301f168284506ee8"
+    },
+    {
+      "path": "docs/blender-skills/evidence/unit.log",
+      "bytes": 268,
+      "sha256": "b93f9280de21afd1f065e22b1674c43fe8f7404f0753019e42e7d2768bb64141"
+    },
+    {
+      "path": "docs/blender-skills/evidence/validator-final.log",
+      "bytes": 76,
+      "sha256": "3ebdf181cc29d6444f314cc8dab7e2bd725c98a286889f3e9707d030188e03c8"
+    },
+    {
+      "path": "docs/blender-skills/evidence/validator.log",
+      "bytes": 76,
+      "sha256": "3ebdf181cc29d6444f314cc8dab7e2bd725c98a286889f3e9707d030188e03c8"
+    }
+  ]
+}
