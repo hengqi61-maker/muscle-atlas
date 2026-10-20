@@ -390,3 +390,17 @@ Title: Supplemental isolated Blender rest-world exact equality residual
 - Actual isolated-comparison exact world-rest assertion observes E01 subscapularis16vertices max1.1920929e-7m residual; rawbefore/after values and failing exact check retained in artifacts/phase2/isolated-rest-equality-diagnostic.json. OriginalserializedGLB POSITION/index/inverse-bind bytes still exact independently. No originalsource gate or tolerance relaxed.
 - Compare keep literal serializedsource identity plus rawimport-world numericINCONCLUSIVE (selected for this diagnostic-only delivery), normalize/overwrite worldcoords toforceequal (rejected destroys evidence), versus full importer/decomposition trace with common-frame alignment (next bounded experiment). No claim of exact renderedworld equality or medicallycorrect shape.
 - Deferred importer-space provenance investigation; nextaction trace node/armature/decompose rounding on fixedsource if future shape comparison needs exact importedworld correspondence. Reopen if residual grows, serializedsource identity differs or candidate considered for production. No acceptedrisk; bothvariantsalreadyFAIL/notadopted.
+
+## WD-2026-10-20-E03
+Status: OPEN
+Title: Reopened E01 duplicate-vertex divergence investigation
+- Original reproduction: node scripts/rig-v2/phase2/seam-check.mjs --asset artifacts/phase2/E01-local-gradient/motion.glb --output artifacts/phase2/E01-local-gradient/seam-report.json; AUTO FAIL, peak3.179553mm. Historical rejected asset and WD0031 remain immutable.
+- No bypass or threshold change introduced. Compare constrained export-weight projection (bounded candidate), source-index registry rebuild (requires provenance reconstruction), attachment calibration (needed for anatomical correctness, currently absent). Independent read-only investigation requested before choosing candidate.
+- E03 preregistered as one added equivalence projection on otherwise unchanged E01 operator. Actual scans and outcome pending; production not replaced.
+
+## WD-2026-10-20-E03-BROWSER
+Status: OPEN
+Title: E03 real Chrome navigation timeout during concurrent full geometry and native calibration
+- Exact command: E3_BROWSER_ASSET=artifacts/phase2/E03-equivalence-projection/motion.glb E3_BROWSER_OUT=artifacts/phase2/browser-E03 node --test tests/rig-v2/pipeline-browser.node.mjs. Actual page.goto load timeout30000ms; original browser.log/output preserved. No browser PASS claimed.
+- Concurrent attribution/calibration imports unusually slow; resource contention suspected, not yet proven. No retries, relaxed thresholds, killed user applications or security changes.
+- Compare serial rerun after current jobs finish, scoped navigation diagnostics, or explicit higher startup budget after observed timing. Prefer serial exact original path first; wait for evidence before modifying tests. Underlying cause remains unresolved.

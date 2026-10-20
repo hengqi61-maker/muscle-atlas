@@ -80,3 +80,6 @@ Mac已采用Windows PR6固定c12e30e的v1合同，真实导出7份27骨骼packet
 - Fresh frozen baseline reproduced39/91; two preregistered local-weight/Forearm-axis experiments executed across2clips/121all-triangle poses. Both FAIL with adverse regressions, not production repairs.
 - Actual native/Three evidence, source seam regression detector, wrist trajectory comparison and three independent role reviews added under docs/rig-v2/phase2. Owner approval pending, no production/finger/main changes.
 - Issue13 fixture-only Blender Skills pilot stays separate PR14; not automatically integrated into animation assets.
+
+## 2026-10-20 · E03 constrained local-weight continuation
+E03 retains E01's lambda/window/operator and adds exact original same-mesh position/joint/weight equivalence projection. Two fresh GLBs identical;21 classes/43 exported rows;246 changed weight bytes only. Independent software/LBS check shows zero duplicate separation across1785pairs×121×2. Independent targeted biomechanics still FAIL: peak6.469800 at rightsubscap triangle953; original triangle914 not improved. This is a numerical invariant repair, not anatomical acceptance; production/main/hands unchanged. Full scan, actual render and browser evidence tracked separately in E03 report.
