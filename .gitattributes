@@ -1,3 +1,12 @@
 # Preserve evidence bytes so recorded SHA256 values survive checkout on both OSes.
 research/contact/*.log -text
 research/contact/*.json -text
+
+# Preserve exact Windows research evidence and executed-source hashes.
+/research/phase2/** -text
+/scripts/biomechanics/contact_v11.py -text
+/scripts/biomechanics/contact_surface.py -text
+/scripts/biomechanics/phase2_shoulder.py -text
+/scripts/biomechanics/mac_rig_reference.py -text
+/scripts/biomechanics/scan_phase2_contacts.py -text
+/schemas/contact/packet-v1.1.schema.json -text

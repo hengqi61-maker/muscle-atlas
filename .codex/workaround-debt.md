@@ -236,3 +236,9 @@ Oct16 follow-up WD0014: capacity returned and exact maker/test paths resumed, fo
 
 ## WD-2026-10-17-WV2 — RESOLVED
 Independent peer-packet verifier initially hit missing promisor blobs and direct GitHub connection failure. Retried the original git-show path with process-local Git config using the existing Windows system proxy; seven original packets were fetched and verified. No global proxy, firewall or repository credential changes. Chrome original readiness race remains a reported upstream test issue; independent observation harness is diagnostic, not a production workaround.
+
+## WD-2026-10-20-PHASE2 — RESOLVED / DEFERRED
+- RESOLVED: legacy migration previously invented original triangle IDs from packet-local order. Now null; actual-source claims require verified IDs. Geometry preserved; regression tests pass.
+- RESOLVED: mixed convex/surface packet routing discovered by independent review. Reject mixed timelines explicitly; new regression proves failure before wrong kernel. Historical363 single-sample packets unaffected; exact executed sources retained/hash-verified.
+- RESOLVED: new default-world/inverse-bind test guessed1e-6 bound and actual frozen LeftThigh residual1.1942543e-6 failed. Initial log preserved. Corrected test to record numeric identity without invented acceptance bound; default-pose fields explicitly named. No old gate relaxed.
+- DEFERRED: anatomical landmarks/axes/attachments, nonconvex containment,22source topology mismatches and independent PR12 candidate scans require Mac source correspondence. Historical motionFAIL retained; no medical or motionPASS, no accepted risk.

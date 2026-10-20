@@ -1,0 +1,85 @@
+{
+  "peerCommit": "1b06bf4d94169868acdca5f3a430bc964f2cafa0",
+  "packetRecords": [
+    {
+      "path": "docs/rig-v2/handoff/v1/blender-CurlProbe.packet.json",
+      "rawGitBlobSha256": "ca825835e98db21b1c18974ad380f37d4f979a2f9458f7b78f1b93e65e8b9d5d",
+      "byteCount": 166287,
+      "rawCRLFCount": 0,
+      "lfRenderingSha256": "ca825835e98db21b1c18974ad380f37d4f979a2f9458f7b78f1b93e65e8b9d5d",
+      "crlfRenderingSha256": "5085f1edac32e4339bfd4fb0e85d418f1a57566f2f0b54ef94b4f66651464593",
+      "samples": 5,
+      "nodes": 27,
+      "issues": []
+    },
+    {
+      "path": "docs/rig-v2/handoff/v1/blender-PulldownProbe.packet.json",
+      "rawGitBlobSha256": "7883b01e5ccc6a22a6f374f8c0a8a1f8dad5c97a6dbcdd0f22732062574abf59",
+      "byteCount": 166348,
+      "rawCRLFCount": 0,
+      "lfRenderingSha256": "7883b01e5ccc6a22a6f374f8c0a8a1f8dad5c97a6dbcdd0f22732062574abf59",
+      "crlfRenderingSha256": "a6b9869ecb9b64a184c6af604b76915b733b7220e2c2af3d6d93077ed83eff69",
+      "samples": 5,
+      "nodes": 27,
+      "issues": []
+    },
+    {
+      "path": "docs/rig-v2/handoff/v1/blender-rest.packet.json",
+      "rawGitBlobSha256": "2b18d5f1afdb5916f7cff6670a478cffc8990234b0161f8a4f0b7628745c9149",
+      "byteCount": 27948,
+      "rawCRLFCount": 0,
+      "lfRenderingSha256": "2b18d5f1afdb5916f7cff6670a478cffc8990234b0161f8a4f0b7628745c9149",
+      "crlfRenderingSha256": "23d5babf4d805ec273971ff734ba62268c66e323bce5657f658dd7f75b55a30b",
+      "samples": 0,
+      "nodes": 27,
+      "issues": []
+    },
+    {
+      "path": "docs/rig-v2/handoff/v1/gltf-CurlProbe.packet.json",
+      "rawGitBlobSha256": "a6207558d8aec22334ff04adc3b76e9153f6496aa3097471874496452365ef63",
+      "byteCount": 167681,
+      "rawCRLFCount": 0,
+      "lfRenderingSha256": "a6207558d8aec22334ff04adc3b76e9153f6496aa3097471874496452365ef63",
+      "crlfRenderingSha256": "91e27490c4fed957fcd4be89fb77ee5af293ab521d4c4a9e00b5eb7c39f3fc60",
+      "samples": 5,
+      "nodes": 27,
+      "issues": []
+    },
+    {
+      "path": "docs/rig-v2/handoff/v1/gltf-PulldownProbe.packet.json",
+      "rawGitBlobSha256": "d70d9cdb0affbfe2168b05c04e2d7fd45a6c580195117d2c141fc68eef8c4d78",
+      "byteCount": 166886,
+      "rawCRLFCount": 0,
+      "lfRenderingSha256": "d70d9cdb0affbfe2168b05c04e2d7fd45a6c580195117d2c141fc68eef8c4d78",
+      "crlfRenderingSha256": "3547b239731cf00bc897a626566a78f1c51209ed0b2edc514b1ccce9c38d1b1d",
+      "samples": 5,
+      "nodes": 27,
+      "issues": []
+    },
+    {
+      "path": "docs/rig-v2/handoff/v1/gltf-bind.packet.json",
+      "rawGitBlobSha256": "a474e102747971d3394bfa0adac59facdeb126edbbd5a4128aa2f8d9b75f8222",
+      "byteCount": 28513,
+      "rawCRLFCount": 0,
+      "lfRenderingSha256": "a474e102747971d3394bfa0adac59facdeb126edbbd5a4128aa2f8d9b75f8222",
+      "crlfRenderingSha256": "d590c9f1596f7f708c5e98fecd630a8cea2c0b3e1b47632b8657322e45dcd444",
+      "samples": 0,
+      "nodes": 27,
+      "issues": []
+    },
+    {
+      "path": "docs/rig-v2/handoff/v1/gltf-default.packet.json",
+      "rawGitBlobSha256": "e344224755f1adf7ebce527cf5862ddf93ccbfc87425aff077e22ef6d0a8b3ba",
+      "byteCount": 28032,
+      "rawCRLFCount": 0,
+      "lfRenderingSha256": "e344224755f1adf7ebce527cf5862ddf93ccbfc87425aff077e22ef6d0a8b3ba",
+      "crlfRenderingSha256": "7b2b46640714fc41a84204c2d925f00d56346d30ed8973d8352a0fc44738753a",
+      "samples": 0,
+      "nodes": 27,
+      "issues": []
+    }
+  ],
+  "windowsPacketPublishedLfSha256": "242fa6bd38b754e74de1acc32bbcd9fb9949080e9eaeb57d2115ffe6b153c9c5",
+  "windowsPacketCrLfExportSha256": "62e1f48249d78ad4811a2a8b83e420e0e38d3e21c11e9c01b89e73106124c0a8",
+  "scope": "Exact bytes and schema; not anatomical or continuous motion approval"
+}

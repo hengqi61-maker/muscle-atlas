@@ -1,0 +1,386 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "coordinates",
+    "variant",
+    "provenance",
+    "toleranceM",
+    "samples",
+    "inputProvenance",
+    "timeline"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.1.0"
+    },
+    "coordinates": {
+      "const": "right-handed-metres-seconds-column-major-active"
+    },
+    "variant": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance": {
+      "type": "string",
+      "minLength": 1
+    },
+    "toleranceM": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 0.0001
+    },
+    "samples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "timeSeconds",
+          "prop",
+          "hands"
+        ],
+        "properties": {
+          "timeSeconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "prop": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "worldMatrix",
+              "dimensionsM",
+              "vertices",
+              "triangles",
+              "geometryKind",
+              "geometrySha256"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "worldMatrix": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 16,
+                "maxItems": 16
+              },
+              "dimensionsM": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "vertices": {
+                "type": "array",
+                "minItems": 3,
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                }
+              },
+              "triangles": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                }
+              },
+              "geometryKind": {
+                "enum": [
+                  "actual-convex-mesh",
+                  "proxy-convex-mesh",
+                  "unknown",
+                  "actual-triangle-surface",
+                  "proxy-triangle-surface"
+                ]
+              },
+              "geometrySha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            }
+          },
+          "hands": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "side",
+                "skeletonId",
+                "wristWorldMatrix",
+                "palmWorldMatrix",
+                "sources",
+                "frameStatus",
+                "independentlyExported",
+                "handWorldMatrix"
+              ],
+              "properties": {
+                "side": {
+                  "enum": [
+                    "left",
+                    "right"
+                  ]
+                },
+                "skeletonId": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "wristWorldMatrix": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 16,
+                      "maxItems": 16
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "palmWorldMatrix": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 16,
+                      "maxItems": 16
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "sources": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "sourceId",
+                      "originalMeshSha256",
+                      "posedWorldVertices",
+                      "triangles",
+                      "originalTriangleIds",
+                      "geometryKind",
+                      "region",
+                      "posedGeometrySha256"
+                    ],
+                    "properties": {
+                      "sourceId": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "originalMeshSha256": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "posedWorldVertices": {
+                        "type": "array",
+                        "minItems": 3,
+                        "items": {
+                          "type": "array",
+                          "items": {
+                            "type": "number"
+                          },
+                          "minItems": 3,
+                          "maxItems": 3
+                        }
+                      },
+                      "triangles": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "type": "array",
+                          "items": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "minItems": 3,
+                          "maxItems": 3
+                        }
+                      },
+                      "originalTriangleIds": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "uniqueItems": true
+                      },
+                      "geometryKind": {
+                        "enum": [
+                          "actual-source-triangles",
+                          "proxy-triangles",
+                          "unknown"
+                        ]
+                      },
+                      "region": {
+                        "enum": [
+                          "palm",
+                          "thumb",
+                          "finger",
+                          "hand-other",
+                          "unknown"
+                        ]
+                      },
+                      "posedGeometrySha256": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "posedHandVertices": {
+                        "type": "array",
+                        "minItems": 3,
+                        "items": {
+                          "type": "array",
+                          "items": {
+                            "type": "number"
+                          },
+                          "minItems": 3,
+                          "maxItems": 3
+                        }
+                      }
+                    }
+                  }
+                },
+                "frameStatus": {
+                  "enum": [
+                    "provided",
+                    "unknown"
+                  ]
+                },
+                "independentlyExported": {
+                  "type": "boolean"
+                },
+                "handWorldMatrix": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 16,
+                      "maxItems": 16
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "inputProvenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producerCommit",
+        "assetSha256",
+        "originalAssetSha256",
+        "coordinateFrame",
+        "hashSerialization",
+        "evidenceKind"
+      ],
+      "properties": {
+        "producerCommit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "assetSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "originalAssetSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "coordinateFrame": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hashSerialization": {
+          "const": "float64-le-xyz-then-uint32-le-triples"
+        },
+        "evidenceKind": {
+          "enum": [
+            "actual-export",
+            "synthetic-fixture",
+            "legacy-unverified"
+          ]
+        }
+      }
+    },
+    "timeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "clipId",
+        "durationSeconds",
+        "expectedTimesSeconds",
+        "interpolation",
+        "scope"
+      ],
+      "properties": {
+        "clipId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "durationSeconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "expectedTimesSeconds": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "interpolation": {
+          "enum": [
+            "sampled-only",
+            "linear",
+            "gltf-animation"
+          ]
+        },
+        "scope": {
+          "const": "discrete-samples-not-continuous-collision"
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "contact-v1 additive metadata revision 1.1.0"
+}

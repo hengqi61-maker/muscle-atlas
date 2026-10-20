@@ -1,0 +1,13 @@
+
+> muscle-atlas@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.4 D:/codex/muscle-atlas-phase2
+
+
+ Test Files  3 passed (3)
+      Tests  13 passed (13)
+   Start at  11:20:42
+   Duration  800ms (import 52%, transform 29%, worker 16%, tests 2%)
+
