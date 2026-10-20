@@ -1,3 +1,4 @@
+import {Euler,Quaternion} from 'three';
 /** Reusable grasp-controller v1. Applies local Euler heuristics to named bones. */
 export const DIGITS = ['Thumb','Index','Middle','Ring','Little'];
 export const CHAIN = {
@@ -41,13 +42,18 @@ export function lerpPose(a,b,t){
   }
   return out;
 }
+// Cache the exported local reference transform before the first controller update.
+// Pose inputs are Blender Euler XYZ basis deltas, not absolute glTF rotations.
+// Blender XYZ is Rz*Ry*Rx; Three intrinsic Euler ZYX matches that composition.
+const referenceRotations = new WeakMap();
 export function applyToObject3D(root, pose){
   let hit=0;
   root.traverse(o=>{
     if(pose[o.name] && o.isBone){
       const e=pose[o.name];
-      o.rotation.order='XYZ';
-      o.rotation.set(e.x,e.y,e.z);
+      if(!referenceRotations.has(o)) referenceRotations.set(o,o.quaternion.clone());
+      const delta=new Quaternion().setFromEuler(new Euler(e.x,e.y,e.z,'ZYX'));
+      o.quaternion.copy(referenceRotations.get(o)).multiply(delta);
       hit++;
     }
   });

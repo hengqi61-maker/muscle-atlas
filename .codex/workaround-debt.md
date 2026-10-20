@@ -429,3 +429,26 @@ Title: Vite-transformed diagnostic consumer stays in initial loading state in IA
 - Startup5190 servesHTML/41MBGLB HTTP200; after Vite newdependency optimization/reload, actual IAB diagnostic consumer shows Loading actual build output, no visible console error. No model display PASS claimed for Vite consumer.
 - Compare Vite transformed dependency lifecycle investigation versus existing test-proven direct static consumer (selected bounded viewing path, no asset changes). Start static loopback5191 matching tested module/importmap paths; preserve Vite server for R1 React page. No browser/security/proxy setting changes.
 - Cause not established; revisit Vite direct consumer module graph after viewing task. Exact failed5190 URL retained. This is a preview delivery workaround, not resolved module-loading claim.
+## WD-2026-10-20-001
+Status: RESOLVED
+Scope: PR21 controller coordinate adapter only, not anatomical grasp.
+Failure/reproduction: zero deltas replaced exported local rotations; actual source finger origins moved 37.7099636 mm.
+Alternatives: preserve exported reference quaternion and compose relative deltas (chosen); reorient/reexport every finger bone (rejected: unnecessarily changes asset). Blender XYZ requires Three ZYX Euler delta composition. Preserve original float32 quaternion norm for exact neutral identity.
+Verification: neutral/repeated-write/left-right tests; actual Blender six poses and continuous121 samples, maximum joint-origin difference 0.580026 micrometres. Original failing neutral path now preserves identity. No fallback remains in controller.
+Evidence: p3-basis old-neutral, native reference, parity-corrected, continuous and unit logs in published evidence archive; docs/grasp-v1/continuation-results.json.
+Reopen: parity or neutral regression on a new exporter/asset.
+
+## WD-2026-10-20-GRASP-CONTINUATION
+Status: DEFERRED
+Failure: original tissues still intersect actual angled grip and stretch; 121-pose native/Three checks agree, FAIL. Corrected controller does not resolve heuristic weights/topology or provide fingertip surfaces.
+Temporary diagnostic: inherited unconstrained CCD tested as explicitly labelled arm-reach probe only; never training or grasp acceptance. Production assets unchanged.
+Alternatives: calibrated original tissue attachment/weight refinement versus a reviewed representational change to missing hand geometry. No skin shell or arbitrary weight scan authorized as solution.
+Impact: no credible visible training grasp; P3 physical calibration and independent visual/biomechanical review pending.
+Next action/reopen: Cursor/Windows publish physical attachment/axis evidence; choose one local attributable candidate; rerun full gates. No claim of completion.
+
+## WD-2026-10-20-BROWSER-RUNTIME
+Status: DEFERRED
+Failure: Playwright bundled chromium_headless_shell-1248 missing; exact launch error retained in browser.log.
+Workaround: explicitly select installed Google Chrome via supported channel; same actual viewer assertions and recorded video pass, browser-chrome.log/report.json.
+Alternatives: install pinned Playwright browser versus explicit existing Chrome channel (chosen to avoid installation). No claim that bundled Chromium works.
+Next action/reopen: CI requiring bundled Chromium must install and rerun exact original launch. Browser version compatibility remains environment-specific.

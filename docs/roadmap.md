@@ -88,3 +88,6 @@ Owner steering after E03: stop all unsourced weight/axis candidates. E01 exact3.
 
 ## 2026-10-20 · Return to the personal training console
 Original `/` webpage now presents existing equipment-linked motions and explicit shared-rig R1/rejectedE03 comparison in the same central human viewport, with existing explorer, picking, styles, footer playback and real local journal. Engineering evidence collapses inside the exercise panel; no default failed-asset replacement and no fabricated calendar/history. Model/weights/hands unchanged. Calendar and actual-volume heatmap remain pending. Frontend integration is separate from anatomical acceptance; details docs/dev/console-motion-integration.md.
+
+## Pulldown continuation (2026-10-20)
+PR22 baseline retained; PR21 finger controller exported-reference/Euler correction and same-side actual-grip diagnostic added. Native/Three121 comparisons and browser playback measured. Tissue grasp and full two-clip geometry remain FAIL; no production replacement. See docs/grasp-v1/continuation-report.md. Calibrated original-hand attachment evidence and independent expert review remain required before P3.
