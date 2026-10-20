@@ -1,0 +1,79 @@
+{
+  "schema": "m3b-experiment-spec-v1",
+  "id": "D1-bp4795-correspondence",
+  "stamp": "2026-10-20T03:45:00Z",
+  "decision": "AUTHORIZE_READONLY_DIAGNOSTIC",
+  "wf4": {
+    "status": "MET_AS_INCONCLUSIVE",
+    "windowsHead": "a8247a4ff121c94b038ceccb77f729d30a85073c",
+    "unlocksMutation": false,
+    "reason": "PR16 publishes engineering axes and states OpenSim cannot calibrate attachments. E03 already consumed the INCONCLUSIVE-path H2 mutation and failed as motion repair."
+  },
+  "hypothesisUpdate": [
+    {"id": "H1-weight-gradient-two-bone", "result": "TESTED-REJECTED", "note": "E01 and E03 leave 39/91; peak moves 914→953"},
+    {"id": "H2-export-alias-continuity", "result": "TESTED-REJECTED-AS-REPAIR", "note": "E03 alias split 0m; original stretch unchanged"},
+    {"id": "H3-forearm-localX-driver", "result": "TESTED-REJECTED"},
+    {"id": "H4-unknown-subscap-attachment", "result": "INCONCLUSIVE", "next": "D1 mapping only"},
+    {"id": "H5-scapula-humerus-axes", "result": "INCONCLUSIVE", "note": "W-F4 engineering frames exist; not measured anatomy; mutation still forbidden"},
+    {"id": "H6-contact-not-motion", "result": "OPEN", "note": "PR16 scan is frozen M2, not PR12 candidates"},
+    {"id": "H7-pose-space-corrective", "result": "DESIGN-ONLY"},
+    {"id": "H8-import-world-residual", "result": "INCONCLUSIVE"}
+  ],
+  "rejectedNow": [
+    "H1 rerun lambda/ring/smooth",
+    "H2 projection variant",
+    "H5 scapula/humerus axis write",
+    "H7 morph implementation"
+  ],
+  "selected": {
+    "id": "D1-bp4795-correspondence",
+    "family": "H4-eval + H1 remaining-mechanism documentation",
+    "singleVariable": "exportScope=right subscapularis BP4795/FMA13414 only",
+    "mutates": false,
+    "mesh": {
+      "sourceName": "right subscapularis",
+      "bpId": "BP4795",
+      "fmaId": "FMA13414",
+      "polygons": 2092,
+      "focusTriangles": [
+        {"id": 914, "edge": [456, 466], "role": "baseline peak"},
+        {"id": 953, "edge": [480, 483], "role": "E03 peak"}
+      ]
+    }
+  },
+  "inputs": {
+    "baselineGlbSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+    "e01GlbSha256": "f7324b003425ae08310ba00e20f303b59734287121eca539ce79dc66edc8b6c1",
+    "e03GlbSha256": "3deb0d355587950ff212448bff5ef9d92b06f0ed7c5560a173271ac116a35734",
+    "macHead": "13ddb46f27c5ffef003b54fb6f128b83cfc2127e",
+    "windowsHead": "a8247a4ff121c94b038ceccb77f729d30a85073c",
+    "pr17Head": "c6f04a12d48334a51c34b8adaab738a1989ff408"
+  },
+  "expectedReplay": {
+    "baseline": {"pulldownF0Tri914Edge456_466": 3.9884383355, "alias441_1288Mm": 0},
+    "e01": {"alias441_1288Mm": 3.179553092, "pulldownPeakEdge": 6.4698000415},
+    "e03": {"pulldownF0Tri914Edge456_466": 3.989352498032, "pulldownF0Tri953Edge480_483": 6.469800041477274, "alias441_1288Mm": 0, "curlSevere": 39, "pulldownSevere": 91}
+  },
+  "validation": {
+    "fullTriangleScan": "re-run analyze.mjs on the three immutable GLBs only; expect MOTION_GEOMETRY_FAIL 39/91",
+    "thresholds": "area<0.05; count>3 OR fraction>0.01; edge>2; 1092000 triangles x 121 x 2",
+    "seam": "E01 exit1; baseline and E03 0m on original alias pairs",
+    "packet": "2092 triangles; originalTriangleId never invented from local export index; landmarks null"
+  },
+  "stop": [
+    "abort if any input GLB byte changes",
+    "exporter FAIL if replay disagrees beyond float32",
+    "do not expand to 467 meshes in this experiment",
+    "do not start a mutation from D1 pixels or averages",
+    "D1 PASS is correspondence only"
+  ],
+  "review": {
+    "mac": "isolated exporter + hashes",
+    "windows": "read-only consume; no attachment labels",
+    "software": "SHA + index identity + two-edge replay",
+    "biomechanics": "remain INCONCLUSIVE",
+    "visual": "not required",
+    "tl": "no M3-C mutation until one algebraic variable is pre-registered",
+    "owner": "PENDING"
+  }
+}
