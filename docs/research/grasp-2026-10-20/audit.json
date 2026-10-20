@@ -1,0 +1,60 @@
+{
+  "assetSha256": "40e3dbcbbe3423381dd2885936dd3f1c7d4355bcc6b4f0c30eb9245537be1dff",
+  "method": "Actual JOINTS_0/WEIGHTS_0 nonzero slots >1e-7; counts are influences, not unique vertices or clinical metrics.",
+  "counts": {
+    "LeftIndexMCP": 2995,
+    "LeftThumbCMC": 7697,
+    "RightIndexMCP": 3000,
+    "RightThumbCMC": 7701,
+    "LeftMiddleMCP": 4082,
+    "RightMiddleMCP": 4086,
+    "LeftRingMCP": 2236,
+    "RightRingMCP": 2239,
+    "LeftThumbMCP": 437,
+    "LeftThumbIP": 239,
+    "LeftMiddlePIP": 162,
+    "LeftIndexPIP": 146,
+    "RightThumbMCP": 437,
+    "RightThumbIP": 235,
+    "RightMiddlePIP": 162,
+    "RightIndexPIP": 146
+  },
+  "weightedMeshCount": 36,
+  "littleInfluenceSlots": 0,
+  "mapping": {
+    "scope": "Static code-rule reproduction only, not anatomically calibrated assignment",
+    "rows": [
+      {
+        "authoredBoneDigit": "Thumb",
+        "authoredMCPAcrossM": 0.04675,
+        "weightRuleDigitAtSameAcrossCoordinate": "Thumb"
+      },
+      {
+        "authoredBoneDigit": "Index",
+        "authoredMCPAcrossM": 0.00025000000000000196,
+        "weightRuleDigitAtSameAcrossCoordinate": "Index"
+      },
+      {
+        "authoredBoneDigit": "Middle",
+        "authoredMCPAcrossM": 0.018500000000000003,
+        "weightRuleDigitAtSameAcrossCoordinate": "Middle"
+      },
+      {
+        "authoredBoneDigit": "Ring",
+        "authoredMCPAcrossM": 0.036750000000000005,
+        "weightRuleDigitAtSameAcrossCoordinate": "Thumb"
+      },
+      {
+        "authoredBoneDigit": "Little",
+        "authoredMCPAcrossM": 0.055,
+        "weightRuleDigitAtSameAcrossCoordinate": "Thumb"
+      }
+    ],
+    "reachableDigits": [
+      "Index",
+      "Middle",
+      "Ring",
+      "Thumb"
+    ]
+  }
+}
