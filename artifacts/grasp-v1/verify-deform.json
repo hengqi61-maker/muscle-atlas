@@ -1,0 +1,17 @@
+{
+  "fingerBones": 30,
+  "maxDeltaM": 0.048505111030572125,
+  "p50": 0.015016192930051285,
+  "p90": 0.04212907274862804,
+  "weightMass": {
+    "LeftHand": 1308.669,
+    "LeftIndexMCP": 317.816,
+    "LeftIndexPIP": 99.892,
+    "LeftMiddleMCP": 287.846,
+    "LeftMiddlePIP": 120.851,
+    "LeftRingMCP": 40.05,
+    "LeftThumbCMC": 311.797,
+    "LeftThumbMCP": 326.611,
+    "LeftThumbIP": 198.469
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "grasp-controller-v1",
+  "status": "experimental geometric proxy, not clinical grasp",
+  "units": "metres / radians",
+  "handedness": "left/right independent",
+  "space": "bone local XYZ; +X flexion toward palm heuristic",
+  "inputs": {
+    "left": {"curl": [0, 1], "thumb": [0, 1], "spread": [0, 1]},
+    "right": {"curl": [0, 1], "thumb": [0, 1], "spread": [0, 1]}
+  },
+  "digits": ["Thumb", "Index", "Middle", "Ring", "Little"],
+  "joints": {
+    "Thumb": ["CMC", "MCP", "IP"],
+    "Index": ["MCP", "PIP", "DIP"],
+    "Middle": ["MCP", "PIP", "DIP"],
+    "Ring": ["MCP", "PIP", "DIP"],
+    "Little": ["MCP", "PIP", "DIP"]
+  },
+  "presets": ["open", "half", "closed", "pulldown-bar", "rope-end"],
+  "provenance": "additive children of FingerSocket on experimental R1 copy; frozen 467 POSITION bytes unchanged"
+}

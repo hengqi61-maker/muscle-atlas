@@ -1,0 +1,1252 @@
+{
+  "controller": "grasp-v1",
+  "presets": {
+    "open": {
+      "curl": 0.0,
+      "thumb": 0.0,
+      "spread": 0.25
+    },
+    "half": {
+      "curl": 0.45,
+      "thumb": 0.35,
+      "spread": 0.12
+    },
+    "closed": {
+      "curl": 1.0,
+      "thumb": 0.85,
+      "spread": 0.0
+    },
+    "pulldown-bar": {
+      "curl": 0.72,
+      "thumb": 0.62,
+      "spread": 0.06
+    },
+    "rope-end": {
+      "curl": 0.88,
+      "thumb": 0.78,
+      "spread": 0.02
+    }
+  },
+  "limits": "Heuristic geometric proxy. Muscle-only hands; no finger skin shell. Not clinical ROM. Pulldown/curl motion FAIL unchanged.",
+  "identity": {
+    "frozenSourceCount": 467,
+    "positionShaUnchanged": true,
+    "sourceSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+    "exportSha256": "40e3dbcbbe3423381dd2885936dd3f1c7d4355bcc6b4f0c30eb9245537be1dff",
+    "addedBones": [
+      "LeftThumbCMC",
+      "LeftThumbMCP",
+      "LeftThumbIP",
+      "LeftIndexMCP",
+      "LeftIndexPIP",
+      "LeftIndexDIP",
+      "LeftMiddleMCP",
+      "LeftMiddlePIP",
+      "LeftMiddleDIP",
+      "LeftRingMCP",
+      "LeftRingPIP",
+      "LeftRingDIP",
+      "LeftLittleMCP",
+      "LeftLittlePIP",
+      "LeftLittleDIP",
+      "RightThumbCMC",
+      "RightThumbMCP",
+      "RightThumbIP",
+      "RightIndexMCP",
+      "RightIndexPIP",
+      "RightIndexDIP",
+      "RightMiddleMCP",
+      "RightMiddlePIP",
+      "RightMiddleDIP",
+      "RightRingMCP",
+      "RightRingPIP",
+      "RightRingDIP",
+      "RightLittleMCP",
+      "RightLittlePIP",
+      "RightLittleDIP"
+    ],
+    "touchedMeshes": [
+      {
+        "name": "abductor digiti minimi of left hand",
+        "assigned": 620,
+        "side": "Left"
+      },
+      {
+        "name": "abductor digiti minimi of right hand",
+        "assigned": 625,
+        "side": "Right"
+      },
+      {
+        "name": "flexor digiti minimi brevis of left hand",
+        "assigned": 312,
+        "side": "Left"
+      },
+      {
+        "name": "flexor digiti minimi brevis of right hand",
+        "assigned": 312,
+        "side": "Right"
+      },
+      {
+        "name": "flexor retinaculum of left wrist",
+        "assigned": 1591,
+        "side": "Left"
+      },
+      {
+        "name": "flexor retinaculum of right wrist",
+        "assigned": 1594,
+        "side": "Right"
+      },
+      {
+        "name": "interosseous membrane of left forearm",
+        "assigned": 38,
+        "side": "Left"
+      },
+      {
+        "name": "interosseous membrane of right forearm",
+        "assigned": 38,
+        "side": "Right"
+      },
+      {
+        "name": "left abductor pollicis brevis",
+        "assigned": 711,
+        "side": "Left"
+      },
+      {
+        "name": "left abductor pollicis longus",
+        "assigned": 379,
+        "side": "Left"
+      },
+      {
+        "name": "left extensor pollicis brevis",
+        "assigned": 399,
+        "side": "Left"
+      },
+      {
+        "name": "left extensor pollicis longus",
+        "assigned": 618,
+        "side": "Left"
+      },
+      {
+        "name": "left flexor pollicis brevis",
+        "assigned": 735,
+        "side": "Right"
+      },
+      {
+        "name": "left flexor pollicis longus",
+        "assigned": 608,
+        "side": "Left"
+      },
+      {
+        "name": "left opponens pollicis",
+        "assigned": 1015,
+        "side": "Left"
+      },
+      {
+        "name": "oblique head of left adductor pollicis",
+        "assigned": 733,
+        "side": "Left"
+      },
+      {
+        "name": "oblique head of right adductor pollicis",
+        "assigned": 734,
+        "side": "Right"
+      },
+      {
+        "name": "opponens digiti minimi of left hand",
+        "assigned": 624,
+        "side": "Left"
+      },
+      {
+        "name": "opponens digiti minimi of right hand",
+        "assigned": 626,
+        "side": "Right"
+      },
+      {
+        "name": "right abductor pollicis brevis",
+        "assigned": 713,
+        "side": "Right"
+      },
+      {
+        "name": "right abductor pollicis longus",
+        "assigned": 380,
+        "side": "Right"
+      },
+      {
+        "name": "right extensor pollicis brevis",
+        "assigned": 399,
+        "side": "Right"
+      },
+      {
+        "name": "right extensor pollicis longus",
+        "assigned": 619,
+        "side": "Right"
+      },
+      {
+        "name": "right flexor pollicis brevis",
+        "assigned": 735,
+        "side": "Left"
+      },
+      {
+        "name": "right flexor pollicis longus",
+        "assigned": 608,
+        "side": "Right"
+      },
+      {
+        "name": "right opponens pollicis",
+        "assigned": 1015,
+        "side": "Right"
+      },
+      {
+        "name": "set of dorsal interossei of left hand",
+        "assigned": 3756,
+        "side": "Left"
+      },
+      {
+        "name": "set of dorsal interossei of right hand",
+        "assigned": 3762,
+        "side": "Right"
+      },
+      {
+        "name": "set of lumbricals of left hand",
+        "assigned": 3012,
+        "side": "Left"
+      },
+      {
+        "name": "set of lumbricals of right hand",
+        "assigned": 3008,
+        "side": "Right"
+      },
+      {
+        "name": "set of palmar interossei of left hand",
+        "assigned": 1243,
+        "side": "Left"
+      },
+      {
+        "name": "set of palmar interossei of right hand",
+        "assigned": 1239,
+        "side": "Right"
+      },
+      {
+        "name": "superficial head of left flexor pollicis brevis",
+        "assigned": 954,
+        "side": "Left"
+      },
+      {
+        "name": "superficial head of right flexor pollicis brevis",
+        "assigned": 954,
+        "side": "Right"
+      },
+      {
+        "name": "transverse head of left adductor pollicis",
+        "assigned": 645,
+        "side": "Left"
+      },
+      {
+        "name": "transverse head of right adductor pollicis",
+        "assigned": 645,
+        "side": "Right"
+      }
+    ]
+  },
+  "presetReports": [
+    {
+      "preset": "open",
+      "contacts": [
+        {
+          "minSigned": 0.21019858035907077,
+          "insideHits": 0,
+          "tested": 3012,
+          "mesh": "set of lumbricals of left hand",
+          "prop": "GraspBar"
+        },
+        {
+          "minSigned": 0.210213434422405,
+          "insideHits": 0,
+          "tested": 3008,
+          "mesh": "set of lumbricals of right hand",
+          "prop": "GraspBar"
+        },
+        {
+          "minSigned": -0.00842654957256,
+          "insideHits": 132,
+          "tested": 3012,
+          "mesh": "set of lumbricals of left hand",
+          "prop": "GraspRopeLeft"
+        },
+        {
+          "minSigned": -0.00845087353811812,
+          "insideHits": 132,
+          "tested": 3008,
+          "mesh": "set of lumbricals of right hand",
+          "prop": "GraspRopeRight"
+        }
+      ],
+      "bones": {
+        "LeftThumbCMC": [
+          0.0,
+          0.0,
+          -0.06
+        ],
+        "LeftThumbMCP": [
+          0.0,
+          0.0,
+          -0.06
+        ],
+        "LeftThumbIP": [
+          0.0,
+          0.0,
+          -0.06
+        ],
+        "LeftIndexMCP": [
+          0.0,
+          0.0,
+          -0.03
+        ],
+        "LeftIndexPIP": [
+          0.0,
+          0.0,
+          -0.03
+        ],
+        "LeftIndexDIP": [
+          0.0,
+          0.0,
+          -0.03
+        ],
+        "LeftMiddleMCP": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "LeftMiddlePIP": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "LeftMiddleDIP": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "LeftRingMCP": [
+          0.0,
+          0.0,
+          0.03
+        ],
+        "LeftRingPIP": [
+          0.0,
+          0.0,
+          0.03
+        ],
+        "LeftRingDIP": [
+          0.0,
+          0.0,
+          0.03
+        ],
+        "LeftLittleMCP": [
+          0.0,
+          0.0,
+          0.06
+        ],
+        "LeftLittlePIP": [
+          0.0,
+          0.0,
+          0.06
+        ],
+        "LeftLittleDIP": [
+          0.0,
+          0.0,
+          0.06
+        ],
+        "RightThumbCMC": [
+          0.0,
+          -0.0,
+          0.06
+        ],
+        "RightThumbMCP": [
+          0.0,
+          -0.0,
+          0.06
+        ],
+        "RightThumbIP": [
+          0.0,
+          -0.0,
+          0.06
+        ],
+        "RightIndexMCP": [
+          0.0,
+          -0.0,
+          0.03
+        ],
+        "RightIndexPIP": [
+          0.0,
+          -0.0,
+          0.03
+        ],
+        "RightIndexDIP": [
+          0.0,
+          -0.0,
+          0.03
+        ],
+        "RightMiddleMCP": [
+          0.0,
+          -0.0,
+          -0.0
+        ],
+        "RightMiddlePIP": [
+          0.0,
+          -0.0,
+          -0.0
+        ],
+        "RightMiddleDIP": [
+          0.0,
+          -0.0,
+          -0.0
+        ],
+        "RightRingMCP": [
+          0.0,
+          -0.0,
+          -0.03
+        ],
+        "RightRingPIP": [
+          0.0,
+          -0.0,
+          -0.03
+        ],
+        "RightRingDIP": [
+          0.0,
+          -0.0,
+          -0.03
+        ],
+        "RightLittleMCP": [
+          0.0,
+          -0.0,
+          -0.06
+        ],
+        "RightLittlePIP": [
+          0.0,
+          -0.0,
+          -0.06
+        ],
+        "RightLittleDIP": [
+          0.0,
+          -0.0,
+          -0.06
+        ]
+      }
+    },
+    {
+      "preset": "half",
+      "contacts": [
+        {
+          "minSigned": 0.21019858035907077,
+          "insideHits": 0,
+          "tested": 3012,
+          "mesh": "set of lumbricals of left hand",
+          "prop": "GraspBar"
+        },
+        {
+          "minSigned": 0.210213434422405,
+          "insideHits": 0,
+          "tested": 3008,
+          "mesh": "set of lumbricals of right hand",
+          "prop": "GraspBar"
+        },
+        {
+          "minSigned": -0.00842654957256,
+          "insideHits": 132,
+          "tested": 3012,
+          "mesh": "set of lumbricals of left hand",
+          "prop": "GraspRopeLeft"
+        },
+        {
+          "minSigned": -0.00845087353811812,
+          "insideHits": 132,
+          "tested": 3008,
+          "mesh": "set of lumbricals of right hand",
+          "prop": "GraspRopeRight"
+        }
+      ],
+      "bones": {
+        "LeftThumbCMC": [
+          0.1225,
+          0.1925,
+          -0.0288
+        ],
+        "LeftThumbMCP": [
+          0.4025,
+          0.0,
+          -0.0288
+        ],
+        "LeftThumbIP": [
+          0.3675,
+          0.0,
+          -0.0288
+        ],
+        "LeftIndexMCP": [
+          0.5175,
+          0.0,
+          -0.0144
+        ],
+        "LeftIndexPIP": [
+          0.5625,
+          0.0,
+          -0.0144
+        ],
+        "LeftIndexDIP": [
+          0.3825,
+          0.0,
+          -0.0144
+        ],
+        "LeftMiddleMCP": [
+          0.5175,
+          0.0,
+          0.0
+        ],
+        "LeftMiddlePIP": [
+          0.5625,
+          0.0,
+          0.0
+        ],
+        "LeftMiddleDIP": [
+          0.3825,
+          0.0,
+          0.0
+        ],
+        "LeftRingMCP": [
+          0.5175,
+          0.0,
+          0.0144
+        ],
+        "LeftRingPIP": [
+          0.5625,
+          0.0,
+          0.0144
+        ],
+        "LeftRingDIP": [
+          0.3825,
+          0.0,
+          0.0144
+        ],
+        "LeftLittleMCP": [
+          0.5175,
+          0.0,
+          0.0288
+        ],
+        "LeftLittlePIP": [
+          0.5625,
+          0.0,
+          0.0288
+        ],
+        "LeftLittleDIP": [
+          0.3825,
+          0.0,
+          0.0288
+        ],
+        "RightThumbCMC": [
+          0.1225,
+          -0.1925,
+          0.0288
+        ],
+        "RightThumbMCP": [
+          0.4025,
+          -0.0,
+          0.0288
+        ],
+        "RightThumbIP": [
+          0.3675,
+          -0.0,
+          0.0288
+        ],
+        "RightIndexMCP": [
+          0.5175,
+          -0.0,
+          0.0144
+        ],
+        "RightIndexPIP": [
+          0.5625,
+          -0.0,
+          0.0144
+        ],
+        "RightIndexDIP": [
+          0.3825,
+          -0.0,
+          0.0144
+        ],
+        "RightMiddleMCP": [
+          0.5175,
+          -0.0,
+          -0.0
+        ],
+        "RightMiddlePIP": [
+          0.5625,
+          -0.0,
+          -0.0
+        ],
+        "RightMiddleDIP": [
+          0.3825,
+          -0.0,
+          -0.0
+        ],
+        "RightRingMCP": [
+          0.5175,
+          -0.0,
+          -0.0144
+        ],
+        "RightRingPIP": [
+          0.5625,
+          -0.0,
+          -0.0144
+        ],
+        "RightRingDIP": [
+          0.3825,
+          -0.0,
+          -0.0144
+        ],
+        "RightLittleMCP": [
+          0.5175,
+          -0.0,
+          -0.0288
+        ],
+        "RightLittlePIP": [
+          0.5625,
+          -0.0,
+          -0.0288
+        ],
+        "RightLittleDIP": [
+          0.3825,
+          -0.0,
+          -0.0288
+        ]
+      }
+    },
+    {
+      "preset": "closed",
+      "contacts": [
+        {
+          "minSigned": 0.21019858035907077,
+          "insideHits": 0,
+          "tested": 3012,
+          "mesh": "set of lumbricals of left hand",
+          "prop": "GraspBar"
+        },
+        {
+          "minSigned": 0.210213434422405,
+          "insideHits": 0,
+          "tested": 3008,
+          "mesh": "set of lumbricals of right hand",
+          "prop": "GraspBar"
+        },
+        {
+          "minSigned": -0.00842654957256,
+          "insideHits": 132,
+          "tested": 3012,
+          "mesh": "set of lumbricals of left hand",
+          "prop": "GraspRopeLeft"
+        },
+        {
+          "minSigned": -0.00845087353811812,
+          "insideHits": 132,
+          "tested": 3008,
+          "mesh": "set of lumbricals of right hand",
+          "prop": "GraspRopeRight"
+        }
+      ],
+      "bones": {
+        "LeftThumbCMC": [
+          0.2975,
+          0.4675,
+          -0.0
+        ],
+        "LeftThumbMCP": [
+          0.9775,
+          0.0,
+          -0.0
+        ],
+        "LeftThumbIP": [
+          0.8925,
+          0.0,
+          -0.0
+        ],
+        "LeftIndexMCP": [
+          1.15,
+          0.0,
+          -0.0
+        ],
+        "LeftIndexPIP": [
+          1.25,
+          0.0,
+          -0.0
+        ],
+        "LeftIndexDIP": [
+          0.85,
+          0.0,
+          -0.0
+        ],
+        "LeftMiddleMCP": [
+          1.15,
+          0.0,
+          0.0
+        ],
+        "LeftMiddlePIP": [
+          1.25,
+          0.0,
+          0.0
+        ],
+        "LeftMiddleDIP": [
+          0.85,
+          0.0,
+          0.0
+        ],
+        "LeftRingMCP": [
+          1.15,
+          0.0,
+          0.0
+        ],
+        "LeftRingPIP": [
+          1.25,
+          0.0,
+          0.0
+        ],
+        "LeftRingDIP": [
+          0.85,
+          0.0,
+          0.0
+        ],
+        "LeftLittleMCP": [
+          1.15,
+          0.0,
+          0.0
+        ],
+        "LeftLittlePIP": [
+          1.25,
+          0.0,
+          0.0
+        ],
+        "LeftLittleDIP": [
+          0.85,
+          0.0,
+          0.0
+        ],
+        "RightThumbCMC": [
+          0.2975,
+          -0.4675,
+          0.0
+        ],
+        "RightThumbMCP": [
+          0.9775,
+          -0.0,
+          0.0
+        ],
+        "RightThumbIP": [
+          0.8925,
+          -0.0,
+          0.0
+        ],
+        "RightIndexMCP": [
+          1.15,
+          -0.0,
+          0.0
+        ],
+        "RightIndexPIP": [
+          1.25,
+          -0.0,
+          0.0
+        ],
+        "RightIndexDIP": [
+          0.85,
+          -0.0,
+          0.0
+        ],
+        "RightMiddleMCP": [
+          1.15,
+          -0.0,
+          -0.0
+        ],
+        "RightMiddlePIP": [
+          1.25,
+          -0.0,
+          -0.0
+        ],
+        "RightMiddleDIP": [
+          0.85,
+          -0.0,
+          -0.0
+        ],
+        "RightRingMCP": [
+          1.15,
+          -0.0,
+          -0.0
+        ],
+        "RightRingPIP": [
+          1.25,
+          -0.0,
+          -0.0
+        ],
+        "RightRingDIP": [
+          0.85,
+          -0.0,
+          -0.0
+        ],
+        "RightLittleMCP": [
+          1.15,
+          -0.0,
+          -0.0
+        ],
+        "RightLittlePIP": [
+          1.25,
+          -0.0,
+          -0.0
+        ],
+        "RightLittleDIP": [
+          0.85,
+          -0.0,
+          -0.0
+        ]
+      }
+    },
+    {
+      "preset": "pulldown-bar",
+      "contacts": [
+        {
+          "minSigned": 0.21019858035907077,
+          "insideHits": 0,
+          "tested": 3012,
+          "mesh": "set of lumbricals of left hand",
+          "prop": "GraspBar"
+        },
+        {
+          "minSigned": 0.210213434422405,
+          "insideHits": 0,
+          "tested": 3008,
+          "mesh": "set of lumbricals of right hand",
+          "prop": "GraspBar"
+        },
+        {
+          "minSigned": -0.00842654957256,
+          "insideHits": 132,
+          "tested": 3012,
+          "mesh": "set of lumbricals of left hand",
+          "prop": "GraspRopeLeft"
+        },
+        {
+          "minSigned": -0.00845087353811812,
+          "insideHits": 132,
+          "tested": 3008,
+          "mesh": "set of lumbricals of right hand",
+          "prop": "GraspRopeRight"
+        }
+      ],
+      "bones": {
+        "LeftThumbCMC": [
+          0.217,
+          0.341,
+          -0.0144
+        ],
+        "LeftThumbMCP": [
+          0.713,
+          0.0,
+          -0.0144
+        ],
+        "LeftThumbIP": [
+          0.651,
+          0.0,
+          -0.0144
+        ],
+        "LeftIndexMCP": [
+          0.828,
+          0.0,
+          -0.0072
+        ],
+        "LeftIndexPIP": [
+          0.9,
+          0.0,
+          -0.0072
+        ],
+        "LeftIndexDIP": [
+          0.612,
+          0.0,
+          -0.0072
+        ],
+        "LeftMiddleMCP": [
+          0.828,
+          0.0,
+          0.0
+        ],
+        "LeftMiddlePIP": [
+          0.9,
+          0.0,
+          0.0
+        ],
+        "LeftMiddleDIP": [
+          0.612,
+          0.0,
+          0.0
+        ],
+        "LeftRingMCP": [
+          0.828,
+          0.0,
+          0.0072
+        ],
+        "LeftRingPIP": [
+          0.9,
+          0.0,
+          0.0072
+        ],
+        "LeftRingDIP": [
+          0.612,
+          0.0,
+          0.0072
+        ],
+        "LeftLittleMCP": [
+          0.828,
+          0.0,
+          0.0144
+        ],
+        "LeftLittlePIP": [
+          0.9,
+          0.0,
+          0.0144
+        ],
+        "LeftLittleDIP": [
+          0.612,
+          0.0,
+          0.0144
+        ],
+        "RightThumbCMC": [
+          0.217,
+          -0.341,
+          0.0144
+        ],
+        "RightThumbMCP": [
+          0.713,
+          -0.0,
+          0.0144
+        ],
+        "RightThumbIP": [
+          0.651,
+          -0.0,
+          0.0144
+        ],
+        "RightIndexMCP": [
+          0.828,
+          -0.0,
+          0.0072
+        ],
+        "RightIndexPIP": [
+          0.9,
+          -0.0,
+          0.0072
+        ],
+        "RightIndexDIP": [
+          0.612,
+          -0.0,
+          0.0072
+        ],
+        "RightMiddleMCP": [
+          0.828,
+          -0.0,
+          -0.0
+        ],
+        "RightMiddlePIP": [
+          0.9,
+          -0.0,
+          -0.0
+        ],
+        "RightMiddleDIP": [
+          0.612,
+          -0.0,
+          -0.0
+        ],
+        "RightRingMCP": [
+          0.828,
+          -0.0,
+          -0.0072
+        ],
+        "RightRingPIP": [
+          0.9,
+          -0.0,
+          -0.0072
+        ],
+        "RightRingDIP": [
+          0.612,
+          -0.0,
+          -0.0072
+        ],
+        "RightLittleMCP": [
+          0.828,
+          -0.0,
+          -0.0144
+        ],
+        "RightLittlePIP": [
+          0.9,
+          -0.0,
+          -0.0144
+        ],
+        "RightLittleDIP": [
+          0.612,
+          -0.0,
+          -0.0144
+        ]
+      }
+    },
+    {
+      "preset": "rope-end",
+      "contacts": [
+        {
+          "minSigned": 0.21019858035907077,
+          "insideHits": 0,
+          "tested": 3012,
+          "mesh": "set of lumbricals of left hand",
+          "prop": "GraspBar"
+        },
+        {
+          "minSigned": 0.210213434422405,
+          "insideHits": 0,
+          "tested": 3008,
+          "mesh": "set of lumbricals of right hand",
+          "prop": "GraspBar"
+        },
+        {
+          "minSigned": -0.00842654957256,
+          "insideHits": 132,
+          "tested": 3012,
+          "mesh": "set of lumbricals of left hand",
+          "prop": "GraspRopeLeft"
+        },
+        {
+          "minSigned": -0.00845087353811812,
+          "insideHits": 132,
+          "tested": 3008,
+          "mesh": "set of lumbricals of right hand",
+          "prop": "GraspRopeRight"
+        }
+      ],
+      "bones": {
+        "LeftThumbCMC": [
+          0.273,
+          0.429,
+          -0.0048
+        ],
+        "LeftThumbMCP": [
+          0.897,
+          0.0,
+          -0.0048
+        ],
+        "LeftThumbIP": [
+          0.819,
+          0.0,
+          -0.0048
+        ],
+        "LeftIndexMCP": [
+          1.012,
+          0.0,
+          -0.0024
+        ],
+        "LeftIndexPIP": [
+          1.1,
+          0.0,
+          -0.0024
+        ],
+        "LeftIndexDIP": [
+          0.748,
+          0.0,
+          -0.0024
+        ],
+        "LeftMiddleMCP": [
+          1.012,
+          0.0,
+          0.0
+        ],
+        "LeftMiddlePIP": [
+          1.1,
+          0.0,
+          0.0
+        ],
+        "LeftMiddleDIP": [
+          0.748,
+          0.0,
+          0.0
+        ],
+        "LeftRingMCP": [
+          1.012,
+          0.0,
+          0.0024
+        ],
+        "LeftRingPIP": [
+          1.1,
+          0.0,
+          0.0024
+        ],
+        "LeftRingDIP": [
+          0.748,
+          0.0,
+          0.0024
+        ],
+        "LeftLittleMCP": [
+          1.012,
+          0.0,
+          0.0048
+        ],
+        "LeftLittlePIP": [
+          1.1,
+          0.0,
+          0.0048
+        ],
+        "LeftLittleDIP": [
+          0.748,
+          0.0,
+          0.0048
+        ],
+        "RightThumbCMC": [
+          0.273,
+          -0.429,
+          0.0048
+        ],
+        "RightThumbMCP": [
+          0.897,
+          -0.0,
+          0.0048
+        ],
+        "RightThumbIP": [
+          0.819,
+          -0.0,
+          0.0048
+        ],
+        "RightIndexMCP": [
+          1.012,
+          -0.0,
+          0.0024
+        ],
+        "RightIndexPIP": [
+          1.1,
+          -0.0,
+          0.0024
+        ],
+        "RightIndexDIP": [
+          0.748,
+          -0.0,
+          0.0024
+        ],
+        "RightMiddleMCP": [
+          1.012,
+          -0.0,
+          -0.0
+        ],
+        "RightMiddlePIP": [
+          1.1,
+          -0.0,
+          -0.0
+        ],
+        "RightMiddleDIP": [
+          0.748,
+          -0.0,
+          -0.0
+        ],
+        "RightRingMCP": [
+          1.012,
+          -0.0,
+          -0.0024
+        ],
+        "RightRingPIP": [
+          1.1,
+          -0.0,
+          -0.0024
+        ],
+        "RightRingDIP": [
+          0.748,
+          -0.0,
+          -0.0024
+        ],
+        "RightLittleMCP": [
+          1.012,
+          -0.0,
+          -0.0048
+        ],
+        "RightLittlePIP": [
+          1.1,
+          -0.0,
+          -0.0048
+        ],
+        "RightLittleDIP": [
+          0.748,
+          -0.0,
+          -0.0048
+        ]
+      }
+    }
+  ],
+  "shots": [
+    {
+      "file": "shot-left-open.png",
+      "sha256": "1028f7a5758c7eae66d296df40a8bd09c3b457ac58f284038acff2de78d17500",
+      "preset": "open"
+    },
+    {
+      "file": "shot-left-half.png",
+      "sha256": "920f325b112db1728be2e586b40bfc0dedb9a575bae6138bea2a519081fc9288",
+      "preset": "half"
+    },
+    {
+      "file": "shot-left-closed.png",
+      "sha256": "53eec5358a92c4f2de49cb0ed09c3b0c74bb598f443a79a80aa2e0cdbfaabd55",
+      "preset": "closed"
+    },
+    {
+      "file": "shot-bar-both.png",
+      "sha256": "de386e4efba2c1e7bc175e74ee5792e53121b15f6dbf75b1e5ed4759e94565f5",
+      "preset": "pulldown-bar"
+    },
+    {
+      "file": "shot-rope-left.png",
+      "sha256": "3374087c65a8bf1ddc7971241087127bbb53d3b16e2d5fbdc06e3f1d8b5c0f56",
+      "preset": "rope-end"
+    },
+    {
+      "file": "shot-right-open.png",
+      "sha256": "cf6c0e76cd44d1699b93b494d8336166159edac366e8a67a8d7db58eb64af2aa",
+      "preset": "open"
+    },
+    {
+      "file": "shot-right-closed.png",
+      "sha256": "2f42077ca329ce9ee5f1405f45fa3d23d4c78a0cc4a7e4adce7ca13f2f914e75",
+      "preset": "closed"
+    }
+  ],
+  "glb": "artifacts/grasp-v1/grasp-controller.glb",
+  "verifyDeform": {
+    "fingerBones": 30,
+    "maxDeltaM": 0.048505111030572125,
+    "p50": 0.015016192930051285,
+    "p90": 0.04212907274862804,
+    "weightMass": {
+      "LeftHand": 1308.669,
+      "LeftIndexMCP": 317.816,
+      "LeftIndexPIP": 99.892,
+      "LeftMiddleMCP": 287.846,
+      "LeftMiddlePIP": 120.851,
+      "LeftRingMCP": 40.05,
+      "LeftThumbCMC": 311.797,
+      "LeftThumbMCP": 326.611,
+      "LeftThumbIP": 198.469
+    }
+  },
+  "threeSmoke": {
+    "status": "PASS",
+    "bones": 57,
+    "fingerBones": 30,
+    "hitOpen": 30,
+    "hitClosed": 30,
+    "sample": [
+      "LeftIndexMCP",
+      "LeftIndexPIP",
+      "LeftIndexDIP",
+      "LeftLittleMCP",
+      "LeftLittlePIP",
+      "LeftLittleDIP",
+      "LeftMiddleMCP",
+      "LeftMiddlePIP"
+    ]
+  },
+  "contactNote": "Preset contact table used undeformed mesh datablocks (same numbers across poses). Do not treat it as posed penetration. Evaluated LBS verify-deform.json is the numeric deformation evidence.",
+  "motionQuality": "Pulldown/curl historical FAIL unchanged. Grasp v1 is not whole-body acceptance."
+}
