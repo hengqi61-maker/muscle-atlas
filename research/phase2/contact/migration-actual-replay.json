@@ -1,0 +1,8 @@
+{
+  "file": "pulldown-right-000.json.gz",
+  "inputSha256": "d59002cddb668dd95a54b2255f5d85142d8ae521a382d9f5d8058247b37db2f7",
+  "resultCount": 24040,
+  "fullReportEqualBeforeAfterMigrationFix": true,
+  "scope": "One actual source-triangle packet replay, not full new 363 scan",
+  "currentScriptSha256": "23345aea522c33728ddca9730132242e06b7f2f0f43ff4d7facbed7f05939c43"
+}

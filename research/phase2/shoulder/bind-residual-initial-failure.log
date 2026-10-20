@@ -1,0 +1,17 @@
+.........................................................F..........     [100%]
+================================== FAILURES ===================================
+__________________ test_frozen_actual_bind_and_clip_identity __________________
+
+    def test_frozen_actual_bind_and_clip_identity():
+        data = json.loads((Path(__file__).parents[2] / 'research/phase2/shoulder/mac-pr12-bind-axes.json').read_bytes())
+        assert data['assetSha256'] == 'ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274'
+        assert data['jointCount'] == 27
+        assert len({f['nodeIndex'] for f in data['frames']}) == 27
+>       assert max(f['worldTimesInverseBindResidualToIdentity'] for f in data['frames']) < 1e-6
+E       assert 1.1942543084997221e-06 < 1e-06
+E        +  where 1.1942543084997221e-06 = max(<generator object test_frozen_actual_bind_and_clip_identity.<locals>.<genexpr> at 0x000001C5A867CE10>)
+
+tests\biomechanics\test_mac_rig_reference.py:25: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/biomechanics/test_mac_rig_reference.py::test_frozen_actual_bind_and_clip_identity
+1 failed, 67 passed in 1.46s

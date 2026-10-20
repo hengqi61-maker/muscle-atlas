@@ -1,0 +1,23 @@
+[info] Updating Model file from 40000 to latest format...
+
+[info] Loaded model ThoracoscapularShoulderModel from file D:\codex\muscle-atlas-opensim\artifacts\opensim-models\ThoracoscapularShoulderModel.osim
+
+[warning] Couldn't find file 'thorax.vtp'.
+
+[warning] Couldn't find file 'groundspine.vtp'.
+
+[warning] Couldn't find file 'clavicle.vtp'.
+
+[warning] Couldn't find file 'scapula.vtp'.
+
+[warning] Couldn't find file 'humerus.vtp'.
+
+[warning] Couldn't find file 'ulna.vtp'.
+
+[warning] Couldn't find file 'radius.vtp'.
+
+Found simbody-visualizer, setting SIMBODY_HOME env var to  D:\codex\.muscle-atlas-opensim\Lib\opensim
+
+{"rows": 14, "maxAcResidualM": 7.016522229951154e-17, "elbowRows": [5.1934881151822426e-24, 0.5235987755982988, 1.0471975511965976, 1.5707963267948966]}
+
+

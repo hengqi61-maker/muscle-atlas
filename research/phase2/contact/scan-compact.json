@@ -1,0 +1,2897 @@
+{
+  "schemaVersion": "1.1.0",
+  "manifestSha256": "0f9765030bcd2da8a5893baf5d0ff169cb548581575873d28468698e2a3f6ec1",
+  "codeHashes": {
+    "contact_geometry.py": "9b1de48c3d11ae0afe98ecc17aa686f019b2b080c66619d51524bfad2eb2e13b",
+    "contact_packet.py": "6f9cf3b2f482b1756df9aabef348e0e3ef56bcd645f0dc700992fef036f90622",
+    "contact_surface.py": "021366ac76f87c0b272351a6cc0bc178a8c365eb5c1473c3b10984b3b8f8f03a",
+    "contact_v11.py": "a36f66f91cbf62f37c981ce2eff923c383eb0b5ae2a47d5bbbaf11038d9b5ede",
+    "scan_phase2_contacts.py": "c7f83e7c32d85a04b5eb2a5fda4114337c0ccf7cb39b260ab9c9a7e210af3f45",
+    "packet-v1.1.schema.json": "423bd189c58d1846a7d31f58f6f6a87dcae362a71f0f0a69786cad705f4d6c07",
+    "packet-v1.schema.json": "7350586bb8b16d2fbb6dc182c9294ce7983108383988b3d6b7cba91f80727fcd"
+  },
+  "sourceCommit": "0914d4fad3fbe107ea90c08473b6d2a448345ba6",
+  "producerCommit": "c1d7e209901390bfb73f784e0f1f48c8337f2e17",
+  "completeDiscreteTimeline": true,
+  "framesCompleted": 363,
+  "framesExpected": 363,
+  "observationCounts": {
+    "separation": 10237443,
+    "penetration": 1728606,
+    "surface-crossing": 18275
+  },
+  "unknownSources": [
+    {
+      "exercise": "pulldown",
+      "sourceId": "left extensor digitorum",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2129,
+      "posedVertexCount": 2197,
+      "originalIndexCount": 12000,
+      "posedIndexCount": 12000
+    },
+    {
+      "exercise": "pulldown",
+      "sourceId": "left extensor digitorum longus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2299,
+      "posedVertexCount": 2429,
+      "originalIndexCount": 12000,
+      "posedIndexCount": 11994
+    },
+    {
+      "exercise": "pulldown",
+      "sourceId": "left flexor digitorum longus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2004,
+      "posedVertexCount": 2006,
+      "originalIndexCount": 11997,
+      "posedIndexCount": 11988
+    },
+    {
+      "exercise": "pulldown",
+      "sourceId": "left flexor digitorum profundus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2361,
+      "posedVertexCount": 2488,
+      "originalIndexCount": 12000,
+      "posedIndexCount": 11997
+    },
+    {
+      "exercise": "pulldown",
+      "sourceId": "left flexor digitorum superficialis",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2528,
+      "posedVertexCount": 2663,
+      "originalIndexCount": 11997,
+      "posedIndexCount": 11997
+    },
+    {
+      "exercise": "pulldown",
+      "sourceId": "right extensor digitorum",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2130,
+      "posedVertexCount": 2210,
+      "originalIndexCount": 11997,
+      "posedIndexCount": 11997
+    },
+    {
+      "exercise": "pulldown",
+      "sourceId": "right extensor digitorum longus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2301,
+      "posedVertexCount": 2436,
+      "originalIndexCount": 12000,
+      "posedIndexCount": 11994
+    },
+    {
+      "exercise": "pulldown",
+      "sourceId": "right flexor digitorum longus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2004,
+      "posedVertexCount": 2005,
+      "originalIndexCount": 11997,
+      "posedIndexCount": 11988
+    },
+    {
+      "exercise": "pulldown",
+      "sourceId": "right flexor digitorum profundus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2364,
+      "posedVertexCount": 2499,
+      "originalIndexCount": 12000,
+      "posedIndexCount": 11997
+    },
+    {
+      "exercise": "pulldown",
+      "sourceId": "right flexor digitorum superficialis",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2530,
+      "posedVertexCount": 2659,
+      "originalIndexCount": 12000,
+      "posedIndexCount": 11997
+    },
+    {
+      "exercise": "pulldown",
+      "sourceId": "right flexor pollicis longus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 1780,
+      "posedVertexCount": 1781,
+      "originalIndexCount": 4326,
+      "posedIndexCount": 4326
+    },
+    {
+      "exercise": "curl",
+      "sourceId": "left extensor digitorum",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2129,
+      "posedVertexCount": 2194,
+      "originalIndexCount": 12000,
+      "posedIndexCount": 12000
+    },
+    {
+      "exercise": "curl",
+      "sourceId": "left extensor digitorum longus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2299,
+      "posedVertexCount": 2427,
+      "originalIndexCount": 12000,
+      "posedIndexCount": 11994
+    },
+    {
+      "exercise": "curl",
+      "sourceId": "left flexor digitorum longus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2004,
+      "posedVertexCount": 2005,
+      "originalIndexCount": 11997,
+      "posedIndexCount": 11988
+    },
+    {
+      "exercise": "curl",
+      "sourceId": "left flexor digitorum profundus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2361,
+      "posedVertexCount": 2487,
+      "originalIndexCount": 12000,
+      "posedIndexCount": 11997
+    },
+    {
+      "exercise": "curl",
+      "sourceId": "left flexor digitorum superficialis",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2528,
+      "posedVertexCount": 2671,
+      "originalIndexCount": 11997,
+      "posedIndexCount": 11997
+    },
+    {
+      "exercise": "curl",
+      "sourceId": "right extensor digitorum",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2130,
+      "posedVertexCount": 2200,
+      "originalIndexCount": 11997,
+      "posedIndexCount": 11997
+    },
+    {
+      "exercise": "curl",
+      "sourceId": "right extensor digitorum longus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2301,
+      "posedVertexCount": 2437,
+      "originalIndexCount": 12000,
+      "posedIndexCount": 11994
+    },
+    {
+      "exercise": "curl",
+      "sourceId": "right flexor digitorum longus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2004,
+      "posedVertexCount": 2004,
+      "originalIndexCount": 11997,
+      "posedIndexCount": 11988
+    },
+    {
+      "exercise": "curl",
+      "sourceId": "right flexor digitorum profundus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2364,
+      "posedVertexCount": 2494,
+      "originalIndexCount": 12000,
+      "posedIndexCount": 11997
+    },
+    {
+      "exercise": "curl",
+      "sourceId": "right flexor digitorum superficialis",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 2530,
+      "posedVertexCount": 2659,
+      "originalIndexCount": 12000,
+      "posedIndexCount": 11997
+    },
+    {
+      "exercise": "curl",
+      "sourceId": "right flexor pollicis longus",
+      "reason": "Original indexed topology not proven identical; excluded from original-triangle claims",
+      "originalVertexCount": 1780,
+      "posedVertexCount": 1781,
+      "originalIndexCount": 4326,
+      "posedIndexCount": 4326
+    }
+  ],
+  "limits": [
+    "Discrete121times per pair/exercise, not continuous collision clearance",
+    "Dumbbell nonconvex surface intersections only; volume penetration/depth unknown",
+    "Excluded original-topology mismatches are unknown, not PASS",
+    "No measured anatomical wrist/palm frame, skin or finger-bone coverage claimed"
+  ],
+  "fullLocalSummarySha256": "ca51c29938a292b492a7e80b63be02dcc76c5cd454713021f77edc27340f2d7c",
+  "fullLocalSummaryBytes": 12233085,
+  "sources": [
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "abductor digiti minimi of right foot",
+      "frames": 121,
+      "observations": {
+        "separation": 154396
+      },
+      "states": {
+        "separation": 154396
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "abductor digiti minimi of right hand",
+      "frames": 121,
+      "observations": {
+        "separation": 35090,
+        "penetration": 26378
+      },
+      "states": {
+        "separation": 35090,
+        "penetration": 26378
+      },
+      "maxWitnessDepthLowerBoundM": 0.018639813847965626,
+      "witness": {
+        "inputFile": "pulldown-right-115.json.gz",
+        "inputSha256": "dd445601986ffdc2226955dfa2bc697d72a98534849eda725d266e9d6a8cdca5",
+        "payloadSha256": "338d45730bf9bfefd655f8f22b9f577f839ee78617f07d4989003d587b8d433f",
+        "result": {
+          "sourceId": "abductor digiti minimi of right hand",
+          "triangleIndex": 329,
+          "timeSeconds": 3.8333333333333335,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.018639813847965626,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.36235978850334066,
+            1.6295848617287159,
+            0.4645320285016564
+          ],
+          "originalTriangleId": 329,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.018639813847965626,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "flexor digiti minimi brevis of right foot",
+      "frames": 121,
+      "observations": {
+        "separation": 95106
+      },
+      "states": {
+        "separation": 95106
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "flexor digiti minimi brevis of right hand",
+      "frames": 121,
+      "observations": {
+        "separation": 13794,
+        "penetration": 25894
+      },
+      "states": {
+        "separation": 13794,
+        "penetration": 25894
+      },
+      "maxWitnessDepthLowerBoundM": 0.016590529997853844,
+      "witness": {
+        "inputFile": "pulldown-right-005.json.gz",
+        "inputSha256": "d3655b565955efbeecee264b4f300d617aa1f8fb5166491eeb9f52ba46c2c071",
+        "payloadSha256": "c5506f2355ecda351e55ca54f77dc32f9c5d50430700f017bbc38496efd1d64a",
+        "result": {
+          "sourceId": "flexor digiti minimi brevis of right hand",
+          "triangleIndex": 198,
+          "timeSeconds": 0.16666666666666666,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.016590529997853844,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.3703146127469669,
+            1.6260019123706269,
+            0.46643035640945535
+          ],
+          "originalTriangleId": 198,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.016590529997853844,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "oblique head of right adductor pollicis",
+      "frames": 121,
+      "observations": {
+        "penetration": 31823,
+        "separation": 47795
+      },
+      "states": {
+        "penetration": 31823,
+        "separation": 47795
+      },
+      "maxWitnessDepthLowerBoundM": 0.010915880337795208,
+      "witness": {
+        "inputFile": "pulldown-right-111.json.gz",
+        "inputSha256": "8f8e5824bc3b025ed9af626560e8816f4aab62c96f7f9a8902cdbee24bbce6f4",
+        "payloadSha256": "46a0776eeda268ffe02ab406768f3150d88cb30094501b7ea7d806eba20bd95a",
+        "result": {
+          "sourceId": "oblique head of right adductor pollicis",
+          "triangleIndex": 2,
+          "timeSeconds": 3.7,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.010915880337795208,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.42768108716945014,
+            1.5709592948557385,
+            0.470679751074368
+          ],
+          "originalTriangleId": 2,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.010915880337795208,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "opponens digiti minimi of right foot",
+      "frames": 121,
+      "observations": {
+        "separation": 24200
+      },
+      "states": {
+        "separation": 24200
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "opponens digiti minimi of right hand",
+      "frames": 121,
+      "observations": {
+        "separation": 11616,
+        "penetration": 46948
+      },
+      "states": {
+        "separation": 11616,
+        "penetration": 46948
+      },
+      "maxWitnessDepthLowerBoundM": 0.021473843459533418,
+      "witness": {
+        "inputFile": "pulldown-right-115.json.gz",
+        "inputSha256": "dd445601986ffdc2226955dfa2bc697d72a98534849eda725d266e9d6a8cdca5",
+        "payloadSha256": "338d45730bf9bfefd655f8f22b9f577f839ee78617f07d4989003d587b8d433f",
+        "result": {
+          "sourceId": "opponens digiti minimi of right hand",
+          "triangleIndex": 252,
+          "timeSeconds": 3.8333333333333335,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.021473843459533418,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.369804577253318,
+            1.6239690662509048,
+            0.46165001611086065
+          ],
+          "originalTriangleId": 252,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.021473843459533418,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "right abductor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 88572,
+        "penetration": 1452
+      },
+      "states": {
+        "separation": 88572,
+        "penetration": 1452
+      },
+      "maxWitnessDepthLowerBoundM": 9.408735847901348e-05,
+      "witness": {
+        "inputFile": "pulldown-right-111.json.gz",
+        "inputSha256": "8f8e5824bc3b025ed9af626560e8816f4aab62c96f7f9a8902cdbee24bbce6f4",
+        "payloadSha256": "46a0776eeda268ffe02ab406768f3150d88cb30094501b7ea7d806eba20bd95a",
+        "result": {
+          "sourceId": "right abductor pollicis brevis",
+          "triangleIndex": 9,
+          "timeSeconds": 3.7,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 9.408735847901348e-05,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.43465627425229747,
+            1.5776114865989794,
+            0.47644240535347604
+          ],
+          "originalTriangleId": 9,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -9.408735847901348e-05,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "right abductor pollicis longus",
+      "frames": 121,
+      "observations": {
+        "separation": 226754
+      },
+      "states": {
+        "separation": 226754
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "right extensor digiti minimi",
+      "frames": 121,
+      "observations": {
+        "separation": 153307,
+        "penetration": 20207
+      },
+      "states": {
+        "separation": 153307,
+        "penetration": 20207
+      },
+      "maxWitnessDepthLowerBoundM": 0.0161055641359694,
+      "witness": {
+        "inputFile": "pulldown-right-070.json.gz",
+        "inputSha256": "a02d956b3303a8e5e191ab1256bd9a5ecd09705e2321e4918f94127015f41920",
+        "payloadSha256": "078e7d21303c69d5d6d411898b83d79821f6f8f13076517474399c9a9627731f",
+        "result": {
+          "sourceId": "right extensor digiti minimi",
+          "triangleIndex": 173,
+          "timeSeconds": 2.3333333333333335,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.0161055641359694,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.36986550499689363,
+            1.2168902981675251,
+            0.4536346940814921
+          ],
+          "originalTriangleId": 173,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.0161055641359694,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "right extensor indicis",
+      "frames": 121,
+      "observations": {
+        "separation": 77440,
+        "penetration": 9680
+      },
+      "states": {
+        "separation": 77440,
+        "penetration": 9680
+      },
+      "maxWitnessDepthLowerBoundM": 0.010775595946109584,
+      "witness": {
+        "inputFile": "pulldown-right-070.json.gz",
+        "inputSha256": "a02d956b3303a8e5e191ab1256bd9a5ecd09705e2321e4918f94127015f41920",
+        "payloadSha256": "078e7d21303c69d5d6d411898b83d79821f6f8f13076517474399c9a9627731f",
+        "result": {
+          "sourceId": "right extensor indicis",
+          "triangleIndex": 152,
+          "timeSeconds": 2.3333333333333335,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.010775595946109584,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.4045861834690032,
+            1.1919577289807064,
+            0.44760938149989726
+          ],
+          "originalTriangleId": 152,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.010775595946109584,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "right extensor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "penetration": 28556,
+        "separation": 92202
+      },
+      "states": {
+        "penetration": 28556,
+        "separation": 92202
+      },
+      "maxWitnessDepthLowerBoundM": 0.012827882736319749,
+      "witness": {
+        "inputFile": "pulldown-right-111.json.gz",
+        "inputSha256": "8f8e5824bc3b025ed9af626560e8816f4aab62c96f7f9a8902cdbee24bbce6f4",
+        "payloadSha256": "46a0776eeda268ffe02ab406768f3150d88cb30094501b7ea7d806eba20bd95a",
+        "result": {
+          "sourceId": "right extensor pollicis brevis",
+          "triangleIndex": 119,
+          "timeSeconds": 3.7,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.012827882736319749,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.4333809347556021,
+            1.5648770874356401,
+            0.4692277436629173
+          ],
+          "originalTriangleId": 119,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.012827882736319749,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "right extensor pollicis longus",
+      "frames": 121,
+      "observations": {
+        "penetration": 24563,
+        "separation": 135883
+      },
+      "states": {
+        "penetration": 24563,
+        "separation": 135883
+      },
+      "maxWitnessDepthLowerBoundM": 0.013061355867757285,
+      "witness": {
+        "inputFile": "pulldown-right-005.json.gz",
+        "inputSha256": "d3655b565955efbeecee264b4f300d617aa1f8fb5166491eeb9f52ba46c2c071",
+        "payloadSha256": "c5506f2355ecda351e55ca54f77dc32f9c5d50430700f017bbc38496efd1d64a",
+        "result": {
+          "sourceId": "right extensor pollicis longus",
+          "triangleIndex": 316,
+          "timeSeconds": 0.16666666666666666,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.013061355867757285,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.434735399784868,
+            1.5799274855316365,
+            0.469103690197932
+          ],
+          "originalTriangleId": 316,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.013061355867757285,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "right flexor digitorum brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 294756
+      },
+      "states": {
+        "separation": 294756
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "right flexor digitorum superficialis (2)",
+      "frames": 121,
+      "observations": {
+        "separation": 104786
+      },
+      "states": {
+        "separation": 104786
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "right flexor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 86394
+      },
+      "states": {
+        "separation": 86394
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "right opponens pollicis",
+      "frames": 121,
+      "observations": {
+        "separation": 115676
+      },
+      "states": {
+        "separation": 115676
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "set of dorsal interossei of right hand",
+      "frames": 121,
+      "observations": {
+        "separation": 54087,
+        "penetration": 262691
+      },
+      "states": {
+        "separation": 54087,
+        "penetration": 262691
+      },
+      "maxWitnessDepthLowerBoundM": 0.020767397227498183,
+      "witness": {
+        "inputFile": "pulldown-right-088.json.gz",
+        "inputSha256": "907fc664f9e79b28009cc85e2a6cfde87955c516647e0de2c09b535898d86a2b",
+        "payloadSha256": "db92c25cb48c5bdce2e944747bf3b9308e2343b852e94d04f149f5ae57ab318b",
+        "result": {
+          "sourceId": "set of dorsal interossei of right hand",
+          "triangleIndex": 2246,
+          "timeSeconds": 2.933333333333333,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.020767397227498183,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.41580926110260114,
+            1.3541899525212522,
+            0.4577917612339155
+          ],
+          "originalTriangleId": 2246,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.020767397227498183,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "set of lumbricals of right hand",
+      "frames": 121,
+      "observations": {
+        "separation": 134915,
+        "penetration": 187913
+      },
+      "states": {
+        "separation": 134915,
+        "penetration": 187913
+      },
+      "maxWitnessDepthLowerBoundM": 0.022986121817858415,
+      "witness": {
+        "inputFile": "pulldown-right-111.json.gz",
+        "inputSha256": "8f8e5824bc3b025ed9af626560e8816f4aab62c96f7f9a8902cdbee24bbce6f4",
+        "payloadSha256": "46a0776eeda268ffe02ab406768f3150d88cb30094501b7ea7d806eba20bd95a",
+        "result": {
+          "sourceId": "set of lumbricals of right hand",
+          "triangleIndex": 1047,
+          "timeSeconds": 3.7,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.022986121817858415,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.3967292195935623,
+            1.5870968057205979,
+            0.4600257374983413
+          ],
+          "originalTriangleId": 1047,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.022986121817858415,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "set of palmar interossei of right hand",
+      "frames": 121,
+      "observations": {
+        "penetration": 96679,
+        "separation": 20207
+      },
+      "states": {
+        "penetration": 96679,
+        "separation": 20207
+      },
+      "maxWitnessDepthLowerBoundM": 0.02277659834651087,
+      "witness": {
+        "inputFile": "pulldown-right-070.json.gz",
+        "inputSha256": "a02d956b3303a8e5e191ab1256bd9a5ecd09705e2321e4918f94127015f41920",
+        "payloadSha256": "078e7d21303c69d5d6d411898b83d79821f6f8f13076517474399c9a9627731f",
+        "result": {
+          "sourceId": "set of palmar interossei of right hand",
+          "triangleIndex": 787,
+          "timeSeconds": 2.3333333333333335,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.02277659834651087,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.37340400258119477,
+            1.2182010859005885,
+            0.4598040338888269
+          ],
+          "originalTriangleId": 787,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.02277659834651087,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "superficial head of right flexor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 82159,
+        "penetration": 5687
+      },
+      "states": {
+        "separation": 82159,
+        "penetration": 5687
+      },
+      "maxWitnessDepthLowerBoundM": 0.0015311755160026357,
+      "witness": {
+        "inputFile": "pulldown-right-111.json.gz",
+        "inputSha256": "8f8e5824bc3b025ed9af626560e8816f4aab62c96f7f9a8902cdbee24bbce6f4",
+        "payloadSha256": "46a0776eeda268ffe02ab406768f3150d88cb30094501b7ea7d806eba20bd95a",
+        "result": {
+          "sourceId": "superficial head of right flexor pollicis brevis",
+          "triangleIndex": 24,
+          "timeSeconds": 3.7,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.0015311755160026357,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.4324195768225761,
+            1.5759145193218056,
+            0.47712707410506605
+          ],
+          "originalTriangleId": 24,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.0015311755160026357,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "right",
+      "sourceId": "transverse head of right adductor pollicis",
+      "frames": 121,
+      "observations": {
+        "penetration": 90145,
+        "separation": 1089
+      },
+      "states": {
+        "penetration": 90145,
+        "separation": 1089
+      },
+      "maxWitnessDepthLowerBoundM": 0.022807936188342325,
+      "witness": {
+        "inputFile": "pulldown-right-088.json.gz",
+        "inputSha256": "907fc664f9e79b28009cc85e2a6cfde87955c516647e0de2c09b535898d86a2b",
+        "payloadSha256": "db92c25cb48c5bdce2e944747bf3b9308e2343b852e94d04f149f5ae57ab318b",
+        "result": {
+          "sourceId": "transverse head of right adductor pollicis",
+          "triangleIndex": 114,
+          "timeSeconds": 2.933333333333333,
+          "side": "right",
+          "propId": "actual-M2-grip--1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.022807936188342325,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            -0.41634465004558524,
+            1.3523898355920998,
+            0.459614094083926
+          ],
+          "originalTriangleId": 114,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.022807936188342325,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "abductor digiti minimi of left foot",
+      "frames": 121,
+      "observations": {
+        "separation": 154396
+      },
+      "states": {
+        "separation": 154396
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "abductor digiti minimi of left hand",
+      "frames": 121,
+      "observations": {
+        "separation": 35090,
+        "penetration": 26378
+      },
+      "states": {
+        "separation": 35090,
+        "penetration": 26378
+      },
+      "maxWitnessDepthLowerBoundM": 0.018639813847965623,
+      "witness": {
+        "inputFile": "pulldown-left-115.json.gz",
+        "inputSha256": "7692ba173783062d1ccb58c04672f118304b88242bac4bb3d74557f8c58bbb84",
+        "payloadSha256": "f4dcfd7c3bdb2b0121de15dc3dd178957bd98397fcec7a7e77b04164be504ce3",
+        "result": {
+          "sourceId": "abductor digiti minimi of left hand",
+          "triangleIndex": 329,
+          "timeSeconds": 3.8333333333333335,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.018639813847965623,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.36235978850334066,
+            1.6295848617287159,
+            0.4645320285016564
+          ],
+          "originalTriangleId": 329,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.018639813847965623,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "flexor digiti minimi brevis of left foot",
+      "frames": 121,
+      "observations": {
+        "separation": 95106
+      },
+      "states": {
+        "separation": 95106
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "flexor digiti minimi brevis of left hand",
+      "frames": 121,
+      "observations": {
+        "separation": 13794,
+        "penetration": 25894
+      },
+      "states": {
+        "separation": 13794,
+        "penetration": 25894
+      },
+      "maxWitnessDepthLowerBoundM": 0.016590222938330637,
+      "witness": {
+        "inputFile": "pulldown-left-005.json.gz",
+        "inputSha256": "c0e3609419f4b526efd2c7d0eefdbaa6f43049d311ac4c1802224e28960a43b4",
+        "payloadSha256": "41cb84d401871e28fc6507a02fa196c32b0498d2a322297254a84fd009897f8c",
+        "result": {
+          "sourceId": "flexor digiti minimi brevis of left hand",
+          "triangleIndex": 198,
+          "timeSeconds": 0.16666666666666666,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.016590222938330637,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.3703146127471078,
+            1.6260019123706708,
+            0.4664306743008387
+          ],
+          "originalTriangleId": 198,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.016590222938330637,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "left abductor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 88572,
+        "penetration": 1452
+      },
+      "states": {
+        "separation": 88572,
+        "penetration": 1452
+      },
+      "maxWitnessDepthLowerBoundM": 9.408735847901348e-05,
+      "witness": {
+        "inputFile": "pulldown-left-111.json.gz",
+        "inputSha256": "259c61e55710935b41bf012cacd2a21cc306770ef56240df80ec1ab379c80aa8",
+        "payloadSha256": "2163d3e8d42e4df7c571e583b4bdfc1ea35c54b128d46638346a2dea75d307be",
+        "result": {
+          "sourceId": "left abductor pollicis brevis",
+          "triangleIndex": 9,
+          "timeSeconds": 3.7,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 9.408735847901348e-05,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.43465627425229747,
+            1.5776114865989794,
+            0.47644240535347604
+          ],
+          "originalTriangleId": 9,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -9.408735847901348e-05,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "left abductor pollicis longus",
+      "frames": 121,
+      "observations": {
+        "separation": 226754
+      },
+      "states": {
+        "separation": 226754
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "left extensor digiti minimi",
+      "frames": 121,
+      "observations": {
+        "separation": 153307,
+        "penetration": 20207
+      },
+      "states": {
+        "separation": 153307,
+        "penetration": 20207
+      },
+      "maxWitnessDepthLowerBoundM": 0.01610543260284263,
+      "witness": {
+        "inputFile": "pulldown-left-070.json.gz",
+        "inputSha256": "6d39388f4127052550a6c3e526941237724771add8fcb7f4a1f41333d7c92460",
+        "payloadSha256": "25c7bf1983c198de81051f285e0a5501f0b9da334bdd16a16199621b8e10bc50",
+        "result": {
+          "sourceId": "left extensor digiti minimi",
+          "triangleIndex": 173,
+          "timeSeconds": 2.3333333333333335,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.01610543260284263,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.3698662089712291,
+            1.2168906542039837,
+            0.45363436625604064
+          ],
+          "originalTriangleId": 173,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.01610543260284263,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "left extensor indicis",
+      "frames": 121,
+      "observations": {
+        "separation": 77440,
+        "penetration": 9680
+      },
+      "states": {
+        "separation": 77440,
+        "penetration": 9680
+      },
+      "maxWitnessDepthLowerBoundM": 0.010775595946109584,
+      "witness": {
+        "inputFile": "pulldown-left-070.json.gz",
+        "inputSha256": "6d39388f4127052550a6c3e526941237724771add8fcb7f4a1f41333d7c92460",
+        "payloadSha256": "25c7bf1983c198de81051f285e0a5501f0b9da334bdd16a16199621b8e10bc50",
+        "result": {
+          "sourceId": "left extensor indicis",
+          "triangleIndex": 152,
+          "timeSeconds": 2.3333333333333335,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.010775595946109584,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.4045861834690032,
+            1.1919577289807064,
+            0.44760938149989726
+          ],
+          "originalTriangleId": 152,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.010775595946109584,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "left extensor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "penetration": 28556,
+        "separation": 92202
+      },
+      "states": {
+        "penetration": 28556,
+        "separation": 92202
+      },
+      "maxWitnessDepthLowerBoundM": 0.012827882736319749,
+      "witness": {
+        "inputFile": "pulldown-left-111.json.gz",
+        "inputSha256": "259c61e55710935b41bf012cacd2a21cc306770ef56240df80ec1ab379c80aa8",
+        "payloadSha256": "2163d3e8d42e4df7c571e583b4bdfc1ea35c54b128d46638346a2dea75d307be",
+        "result": {
+          "sourceId": "left extensor pollicis brevis",
+          "triangleIndex": 119,
+          "timeSeconds": 3.7,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.012827882736319749,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.4333809347556021,
+            1.5648770874356401,
+            0.4692277436629173
+          ],
+          "originalTriangleId": 119,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.012827882736319749,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "left extensor pollicis longus",
+      "frames": 121,
+      "observations": {
+        "penetration": 24563,
+        "separation": 135883
+      },
+      "states": {
+        "penetration": 24563,
+        "separation": 135883
+      },
+      "maxWitnessDepthLowerBoundM": 0.013061355867757288,
+      "witness": {
+        "inputFile": "pulldown-left-005.json.gz",
+        "inputSha256": "c0e3609419f4b526efd2c7d0eefdbaa6f43049d311ac4c1802224e28960a43b4",
+        "payloadSha256": "41cb84d401871e28fc6507a02fa196c32b0498d2a322297254a84fd009897f8c",
+        "result": {
+          "sourceId": "left extensor pollicis longus",
+          "triangleIndex": 316,
+          "timeSeconds": 0.16666666666666666,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.013061355867757288,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.434735399784868,
+            1.5799274855316365,
+            0.469103690197932
+          ],
+          "originalTriangleId": 316,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.013061355867757288,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "left flexor digitorum brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 294756
+      },
+      "states": {
+        "separation": 294756
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "left flexor digitorum superficialis (2)",
+      "frames": 121,
+      "observations": {
+        "separation": 104786
+      },
+      "states": {
+        "separation": 104786
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "left flexor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 86394
+      },
+      "states": {
+        "separation": 86394
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "left flexor pollicis longus",
+      "frames": 121,
+      "observations": {
+        "separation": 163108,
+        "penetration": 11374
+      },
+      "states": {
+        "separation": 163108,
+        "penetration": 11374
+      },
+      "maxWitnessDepthLowerBoundM": 0.005933676204901046,
+      "witness": {
+        "inputFile": "pulldown-left-005.json.gz",
+        "inputSha256": "c0e3609419f4b526efd2c7d0eefdbaa6f43049d311ac4c1802224e28960a43b4",
+        "payloadSha256": "41cb84d401871e28fc6507a02fa196c32b0498d2a322297254a84fd009897f8c",
+        "result": {
+          "sourceId": "left flexor pollicis longus",
+          "triangleIndex": 253,
+          "timeSeconds": 0.16666666666666666,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.005933676204901046,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.42852864364584603,
+            1.589355627755167,
+            0.4755270211205649
+          ],
+          "originalTriangleId": 253,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.005933676204901046,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "left opponens pollicis",
+      "frames": 121,
+      "observations": {
+        "separation": 115676
+      },
+      "states": {
+        "separation": 115676
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "oblique head of left adductor pollicis",
+      "frames": 121,
+      "observations": {
+        "penetration": 31823,
+        "separation": 47795
+      },
+      "states": {
+        "penetration": 31823,
+        "separation": 47795
+      },
+      "maxWitnessDepthLowerBoundM": 0.010915880337795208,
+      "witness": {
+        "inputFile": "pulldown-left-111.json.gz",
+        "inputSha256": "259c61e55710935b41bf012cacd2a21cc306770ef56240df80ec1ab379c80aa8",
+        "payloadSha256": "2163d3e8d42e4df7c571e583b4bdfc1ea35c54b128d46638346a2dea75d307be",
+        "result": {
+          "sourceId": "oblique head of left adductor pollicis",
+          "triangleIndex": 2,
+          "timeSeconds": 3.7,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.010915880337795208,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.42768108716945014,
+            1.5709592948557385,
+            0.470679751074368
+          ],
+          "originalTriangleId": 2,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.010915880337795208,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "opponens digiti minimi of left foot",
+      "frames": 121,
+      "observations": {
+        "separation": 24200
+      },
+      "states": {
+        "separation": 24200
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "opponens digiti minimi of left hand",
+      "frames": 121,
+      "observations": {
+        "separation": 11616,
+        "penetration": 46948
+      },
+      "states": {
+        "separation": 11616,
+        "penetration": 46948
+      },
+      "maxWitnessDepthLowerBoundM": 0.021473843459533414,
+      "witness": {
+        "inputFile": "pulldown-left-115.json.gz",
+        "inputSha256": "7692ba173783062d1ccb58c04672f118304b88242bac4bb3d74557f8c58bbb84",
+        "payloadSha256": "f4dcfd7c3bdb2b0121de15dc3dd178957bd98397fcec7a7e77b04164be504ce3",
+        "result": {
+          "sourceId": "opponens digiti minimi of left hand",
+          "triangleIndex": 252,
+          "timeSeconds": 3.8333333333333335,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.021473843459533414,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.369804577253318,
+            1.6239690662509048,
+            0.46165001611086065
+          ],
+          "originalTriangleId": 252,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.021473843459533414,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "set of dorsal interossei of left hand",
+      "frames": 121,
+      "observations": {
+        "separation": 54087,
+        "penetration": 262691
+      },
+      "states": {
+        "separation": 54087,
+        "penetration": 262691
+      },
+      "maxWitnessDepthLowerBoundM": 0.020767309808768595,
+      "witness": {
+        "inputFile": "pulldown-left-088.json.gz",
+        "inputSha256": "2dda834d79fa27f44c1c18531de895e7a9d16b43c68f3759c72b68f368b68ea8",
+        "payloadSha256": "883c6df35b091c9d08b3c0d0d15c8847c40ceeaa8e2cc59796ea6dcad0ad3c07",
+        "result": {
+          "sourceId": "set of dorsal interossei of left hand",
+          "triangleIndex": 2246,
+          "timeSeconds": 2.933333333333333,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.020767309808768595,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.4158092047145956,
+            1.3541904268457747,
+            0.4577917612339163
+          ],
+          "originalTriangleId": 2246,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.020767309808768595,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "set of lumbricals of left hand",
+      "frames": 121,
+      "observations": {
+        "separation": 134915,
+        "penetration": 187913
+      },
+      "states": {
+        "separation": 134915,
+        "penetration": 187913
+      },
+      "maxWitnessDepthLowerBoundM": 0.02298612181801349,
+      "witness": {
+        "inputFile": "pulldown-left-111.json.gz",
+        "inputSha256": "259c61e55710935b41bf012cacd2a21cc306770ef56240df80ec1ab379c80aa8",
+        "payloadSha256": "2163d3e8d42e4df7c571e583b4bdfc1ea35c54b128d46638346a2dea75d307be",
+        "result": {
+          "sourceId": "set of lumbricals of left hand",
+          "triangleIndex": 1047,
+          "timeSeconds": 3.7,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.02298612181801349,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.396728954237181,
+            1.587097014688558,
+            0.4600257374982997
+          ],
+          "originalTriangleId": 1047,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.02298612181801349,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "set of palmar interossei of left hand",
+      "frames": 121,
+      "observations": {
+        "penetration": 96679,
+        "separation": 20207
+      },
+      "states": {
+        "penetration": 96679,
+        "separation": 20207
+      },
+      "maxWitnessDepthLowerBoundM": 0.022776598346510864,
+      "witness": {
+        "inputFile": "pulldown-left-070.json.gz",
+        "inputSha256": "6d39388f4127052550a6c3e526941237724771add8fcb7f4a1f41333d7c92460",
+        "payloadSha256": "25c7bf1983c198de81051f285e0a5501f0b9da334bdd16a16199621b8e10bc50",
+        "result": {
+          "sourceId": "set of palmar interossei of left hand",
+          "triangleIndex": 787,
+          "timeSeconds": 2.3333333333333335,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.022776598346510864,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.37340400258119477,
+            1.2182010859005885,
+            0.4598040338888269
+          ],
+          "originalTriangleId": 787,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.022776598346510864,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "superficial head of left flexor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 82159,
+        "penetration": 5687
+      },
+      "states": {
+        "separation": 82159,
+        "penetration": 5687
+      },
+      "maxWitnessDepthLowerBoundM": 0.0015311755160026357,
+      "witness": {
+        "inputFile": "pulldown-left-111.json.gz",
+        "inputSha256": "259c61e55710935b41bf012cacd2a21cc306770ef56240df80ec1ab379c80aa8",
+        "payloadSha256": "2163d3e8d42e4df7c571e583b4bdfc1ea35c54b128d46638346a2dea75d307be",
+        "result": {
+          "sourceId": "superficial head of left flexor pollicis brevis",
+          "triangleIndex": 24,
+          "timeSeconds": 3.7,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.0015311755160026357,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.4324195768225761,
+            1.5759145193218056,
+            0.47712707410506605
+          ],
+          "originalTriangleId": 24,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.0015311755160026357,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "pulldown",
+      "side": "left",
+      "sourceId": "transverse head of left adductor pollicis",
+      "frames": 121,
+      "observations": {
+        "penetration": 90145,
+        "separation": 1089
+      },
+      "states": {
+        "penetration": 90145,
+        "separation": 1089
+      },
+      "maxWitnessDepthLowerBoundM": 0.022808023607069888,
+      "witness": {
+        "inputFile": "pulldown-left-088.json.gz",
+        "inputSha256": "2dda834d79fa27f44c1c18531de895e7a9d16b43c68f3759c72b68f368b68ea8",
+        "payloadSha256": "883c6df35b091c9d08b3c0d0d15c8847c40ceeaa8e2cc59796ea6dcad0ad3c07",
+        "result": {
+          "sourceId": "transverse head of left adductor pollicis",
+          "triangleIndex": 114,
+          "timeSeconds": 2.933333333333333,
+          "side": "left",
+          "propId": "actual-M2-grip-1",
+          "classification": "penetration-candidate",
+          "depthLowerBoundM": 0.022808023607069888,
+          "toleranceM": 1e-08,
+          "positionWorldM": [
+            0.4163446986289993,
+            1.352389367413699,
+            0.4596140940839244
+          ],
+          "originalTriangleId": 114,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-convex-mesh",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "penetration",
+          "state": "penetration",
+          "uncertainties": [],
+          "signedWitnessBoundM": -0.022808023607069888,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "abductor digiti minimi of left foot",
+      "frames": 121,
+      "observations": {
+        "separation": 154396
+      },
+      "states": {
+        "unknown": 154396
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "abductor digiti minimi of left hand",
+      "frames": 121,
+      "observations": {
+        "separation": 60954,
+        "surface-crossing": 514
+      },
+      "states": {
+        "unknown": 61468
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "abductor digiti minimi of left hand",
+          "triangleIndex": 157,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 2,
+          "propTriangleIndex": 7212,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.23344353391255115,
+            0.7651865921865044,
+            0.14274150269071395
+          ],
+          "originalTriangleId": 157,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "flexor digiti minimi brevis of left foot",
+      "frames": 121,
+      "observations": {
+        "separation": 95106
+      },
+      "states": {
+        "unknown": 95106
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "flexor digiti minimi brevis of left hand",
+      "frames": 121,
+      "observations": {
+        "separation": 39218,
+        "surface-crossing": 470
+      },
+      "states": {
+        "unknown": 39688
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "flexor digiti minimi brevis of left hand",
+          "triangleIndex": 65,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 1,
+          "propTriangleIndex": 7465,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.2368304096695913,
+            0.7668831958232507,
+            0.14033338320448338
+          ],
+          "originalTriangleId": 65,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "left abductor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 90024
+      },
+      "states": {
+        "unknown": 90024
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "left abductor pollicis longus",
+      "frames": 121,
+      "observations": {
+        "separation": 226754
+      },
+      "states": {
+        "unknown": 226754
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "left extensor digiti minimi",
+      "frames": 121,
+      "observations": {
+        "separation": 172892,
+        "surface-crossing": 622
+      },
+      "states": {
+        "unknown": 173514
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "left extensor digiti minimi",
+          "triangleIndex": 144,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 3,
+          "propTriangleIndex": 7015,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.23091009124817857,
+            0.7407797031102671,
+            0.1289429115970091
+          ],
+          "originalTriangleId": 144,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "left extensor indicis",
+      "frames": 121,
+      "observations": {
+        "separation": 86504,
+        "surface-crossing": 616
+      },
+      "states": {
+        "unknown": 87120
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "left extensor indicis",
+          "triangleIndex": 39,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 1,
+          "propTriangleIndex": 10995,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.27903150031456553,
+            0.7458900495279146,
+            0.12278199615815961
+          ],
+          "originalTriangleId": 39,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "left extensor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 119358,
+        "surface-crossing": 1400
+      },
+      "states": {
+        "unknown": 120758
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "left extensor pollicis brevis",
+          "triangleIndex": 12,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 1,
+          "propTriangleIndex": 13059,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.3100000321865082,
+            0.7618329871777298,
+            0.14537860131324282
+          ],
+          "originalTriangleId": 12,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "left extensor pollicis longus",
+      "frames": 121,
+      "observations": {
+        "separation": 159214,
+        "surface-crossing": 1232
+      },
+      "states": {
+        "unknown": 160446
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "left extensor pollicis longus",
+          "triangleIndex": 273,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 1,
+          "propTriangleIndex": 13059,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.3100000321865082,
+            0.7638065816152646,
+            0.14235453117529176
+          ],
+          "originalTriangleId": 273,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "left flexor digitorum brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 294756
+      },
+      "states": {
+        "unknown": 294756
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "left flexor digitorum superficialis (2)",
+      "frames": 121,
+      "observations": {
+        "separation": 104786
+      },
+      "states": {
+        "unknown": 104786
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "left flexor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 86394
+      },
+      "states": {
+        "unknown": 86394
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "left flexor pollicis longus",
+      "frames": 121,
+      "observations": {
+        "separation": 173934,
+        "surface-crossing": 548
+      },
+      "states": {
+        "unknown": 174482
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "left flexor pollicis longus",
+          "triangleIndex": 111,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 3,
+          "propTriangleIndex": 811,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.30799999833106995,
+            0.7505815744409615,
+            0.1577071181901718
+          ],
+          "originalTriangleId": 111,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "left opponens pollicis",
+      "frames": 121,
+      "observations": {
+        "separation": 115676
+      },
+      "states": {
+        "unknown": 115676
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "oblique head of left adductor pollicis",
+      "frames": 121,
+      "observations": {
+        "separation": 79354,
+        "surface-crossing": 264
+      },
+      "states": {
+        "unknown": 79618
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "oblique head of left adductor pollicis",
+          "triangleIndex": 4,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 1,
+          "propTriangleIndex": 12599,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.2990824417241036,
+            0.7599062611674464,
+            0.14671535011207443
+          ],
+          "originalTriangleId": 4,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "opponens digiti minimi of left foot",
+      "frames": 121,
+      "observations": {
+        "separation": 24200
+      },
+      "states": {
+        "unknown": 24200
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "opponens digiti minimi of left hand",
+      "frames": 121,
+      "observations": {
+        "separation": 58084,
+        "surface-crossing": 480
+      },
+      "states": {
+        "unknown": 58564
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "opponens digiti minimi of left hand",
+          "triangleIndex": 80,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 1,
+          "propTriangleIndex": 7595,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.2384826653958198,
+            0.7659587176827398,
+            0.14074702924408006
+          ],
+          "originalTriangleId": 80,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "set of dorsal interossei of left hand",
+      "frames": 121,
+      "observations": {
+        "separation": 312052,
+        "surface-crossing": 4726
+      },
+      "states": {
+        "unknown": 316778
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "set of dorsal interossei of left hand",
+          "triangleIndex": 50,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 1,
+          "propTriangleIndex": 7522,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.23634082799384465,
+            0.7403354393279841,
+            0.131522097554078
+          ],
+          "originalTriangleId": 50,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "set of lumbricals of left hand",
+      "frames": 121,
+      "observations": {
+        "separation": 320160,
+        "surface-crossing": 2668
+      },
+      "states": {
+        "unknown": 322828
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "set of lumbricals of left hand",
+          "triangleIndex": 394,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 2,
+          "propTriangleIndex": 11866,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.289638878850209,
+            0.740328860566678,
+            0.1368819906610907
+          ],
+          "originalTriangleId": 394,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "set of palmar interossei of left hand",
+      "frames": 121,
+      "observations": {
+        "separation": 115430,
+        "surface-crossing": 1456
+      },
+      "states": {
+        "unknown": 116886
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "set of palmar interossei of left hand",
+          "triangleIndex": 59,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 1,
+          "propTriangleIndex": 11103,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.28068247703649557,
+            0.7395704579045463,
+            0.13533396723077581
+          ],
+          "originalTriangleId": 59,
+          "region": "finger",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "superficial head of left flexor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 87846
+      },
+      "states": {
+        "unknown": 87846
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "left",
+      "sourceId": "transverse head of left adductor pollicis",
+      "frames": 121,
+      "observations": {
+        "surface-crossing": 1464,
+        "separation": 89770
+      },
+      "states": {
+        "unknown": 91234
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "left",
+          "sourceId": "transverse head of left adductor pollicis",
+          "triangleIndex": 0,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 1,
+          "propTriangleIndex": 13111,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.2980000078678131,
+            0.7576812977354317,
+            0.14224330198404722
+          ],
+          "originalTriangleId": 0,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "abductor digiti minimi of right foot",
+      "frames": 121,
+      "observations": {
+        "separation": 154396
+      },
+      "states": {
+        "unknown": 154396
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "abductor digiti minimi of right hand",
+      "frames": 121,
+      "observations": {
+        "separation": 61468
+      },
+      "states": {
+        "unknown": 61468
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "flexor digiti minimi brevis of right foot",
+      "frames": 121,
+      "observations": {
+        "separation": 95106
+      },
+      "states": {
+        "unknown": 95106
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "flexor digiti minimi brevis of right hand",
+      "frames": 121,
+      "observations": {
+        "separation": 39688
+      },
+      "states": {
+        "unknown": 39688
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "oblique head of right adductor pollicis",
+      "frames": 121,
+      "observations": {
+        "separation": 79618
+      },
+      "states": {
+        "unknown": 79618
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "opponens digiti minimi of right foot",
+      "frames": 121,
+      "observations": {
+        "separation": 24200
+      },
+      "states": {
+        "unknown": 24200
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "opponens digiti minimi of right hand",
+      "frames": 121,
+      "observations": {
+        "separation": 58564
+      },
+      "states": {
+        "unknown": 58564
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "right abductor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 90024
+      },
+      "states": {
+        "unknown": 90024
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "right abductor pollicis longus",
+      "frames": 121,
+      "observations": {
+        "separation": 226754
+      },
+      "states": {
+        "unknown": 226754
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "right extensor digiti minimi",
+      "frames": 121,
+      "observations": {
+        "separation": 173514
+      },
+      "states": {
+        "unknown": 173514
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "right extensor indicis",
+      "frames": 121,
+      "observations": {
+        "separation": 87120
+      },
+      "states": {
+        "unknown": 87120
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "right extensor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 120758
+      },
+      "states": {
+        "unknown": 120758
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "right extensor pollicis longus",
+      "frames": 121,
+      "observations": {
+        "separation": 160446
+      },
+      "states": {
+        "unknown": 160446
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "right flexor digitorum brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 294756
+      },
+      "states": {
+        "unknown": 294756
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "right flexor digitorum superficialis (2)",
+      "frames": 121,
+      "observations": {
+        "separation": 104786
+      },
+      "states": {
+        "unknown": 104786
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "right flexor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 84579,
+        "surface-crossing": 1815
+      },
+      "states": {
+        "unknown": 86394
+      },
+      "maxWitnessDepthLowerBoundM": 0.0,
+      "witness": {
+        "inputFile": "curl-both-000.json.gz",
+        "inputSha256": "13d81abc9f47cb26e05fb7f7ef0c5370e4af0d6e041590c975e9ff74177f8663",
+        "payloadSha256": "da71e55d9cd8972988eca6cb93ce8919e4b1ca9b11ef9d707857f652dfd189ea",
+        "result": {
+          "timeSeconds": 0,
+          "side": "right",
+          "sourceId": "right flexor pollicis brevis",
+          "triangleIndex": 30,
+          "propId": "actual-detailed-dumbbell",
+          "surfaceMatches": 1,
+          "propTriangleIndex": 12983,
+          "classification": "surface-crossing",
+          "positionWorldM": [
+            0.30021081200819677,
+            0.7683228329435082,
+            0.14931090962477167
+          ],
+          "originalTriangleId": 30,
+          "region": "thumb",
+          "geometryKind": {
+            "prop": "actual-triangle-surface",
+            "source": "actual-source-triangles"
+          },
+          "observedState": "surface-crossing",
+          "state": "unknown",
+          "uncertainties": [
+            "proxy, legacy or non-independent evidence cannot establish actual volume contact",
+            "Actual surface intersection is observed separately; volume penetration/separation is unknown"
+          ],
+          "signedWitnessBoundM": null,
+          "signedBoundDefinition": "positive separating-plane lower bound; negative interior witness depth lower bound; not exact signed distance"
+        }
+      }
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "right opponens pollicis",
+      "frames": 121,
+      "observations": {
+        "separation": 115676
+      },
+      "states": {
+        "unknown": 115676
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "set of dorsal interossei of right hand",
+      "frames": 121,
+      "observations": {
+        "separation": 316778
+      },
+      "states": {
+        "unknown": 316778
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "set of lumbricals of right hand",
+      "frames": 121,
+      "observations": {
+        "separation": 322828
+      },
+      "states": {
+        "unknown": 322828
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "set of palmar interossei of right hand",
+      "frames": 121,
+      "observations": {
+        "separation": 116886
+      },
+      "states": {
+        "unknown": 116886
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "superficial head of right flexor pollicis brevis",
+      "frames": 121,
+      "observations": {
+        "separation": 87846
+      },
+      "states": {
+        "unknown": 87846
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    },
+    {
+      "exercise": "curl",
+      "side": "right",
+      "sourceId": "transverse head of right adductor pollicis",
+      "frames": 121,
+      "observations": {
+        "separation": 91234
+      },
+      "states": {
+        "unknown": 91234
+      },
+      "maxWitnessDepthLowerBoundM": 0,
+      "witness": null
+    }
+  ]
+}
