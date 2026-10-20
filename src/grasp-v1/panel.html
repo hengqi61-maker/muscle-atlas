@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Grasp Controller v1 — isolated panel</title>
+  <style>
+    :root { color-scheme: dark; }
+    html, body { margin: 0; height: 100%; background: #10171e; color: #dce4ea; font: 13px/1.4 system-ui, sans-serif; }
+    #app { display: grid; grid-template-columns: 300px 1fr; height: 100%; }
+    #ui { padding: 14px 16px; overflow: auto; border-right: 1px solid #24303a; }
+    h1 { font-size: 14px; margin: 0 0 8px; }
+    .warn { color: #f0c36d; margin: 0 0 12px; }
+    fieldset { border: 1px solid #2c3944; margin: 0 0 12px; padding: 8px 10px 10px; }
+    legend { padding: 0 4px; color: #9db0be; }
+    label { display: grid; grid-template-columns: 64px 1fr 36px; gap: 6px; align-items: center; margin: 4px 0; }
+    input[type=range] { width: 100%; }
+    button, select { background: #1c2730; color: inherit; border: 1px solid #3a4a56; padding: 4px 8px; margin: 2px 2px 2px 0; border-radius: 4px; }
+    button.active { background: #2d5a46; }
+    #stage { position: relative; }
+    canvas { display: block; width: 100%; height: 100%; }
+    #hud { position: absolute; top: 10px; left: 12px; color: #9db0be; pointer-events: none; }
+  </style>
+  <script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head>
+<body>
+  <div id="app">
+    <aside id="ui">
+      <h1>Grasp v1 isolated panel</h1>
+      <p class="warn">Experimental geometric proxy. Not pulldown/curl PASS. No finger skin shell.</p>
+      <fieldset>
+        <legend>Presets</legend>
+        <div id="presets"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Left</legend>
+        <label>curl <input id="L-curl" type="range" min="0" max="1" step="0.01" value="0"><span>0.00</span></label>
+        <label>thumb <input id="L-thumb" type="range" min="0" max="1" step="0.01" value="0"><span>0.00</span></label>
+        <label>spread <input id="L-spread" type="range" min="0" max="1" step="0.01" value="0.25"><span>0.25</span></label>
+      </fieldset>
+      <fieldset>
+        <legend>Right</legend>
+        <label>curl <input id="R-curl" type="range" min="0" max="1" step="0.01" value="0"><span>0.00</span></label>
+        <label>thumb <input id="R-thumb" type="range" min="0" max="1" step="0.01" value="0"><span>0.00</span></label>
+        <label>spread <input id="R-spread" type="range" min="0" max="1" step="0.01" value="0.25"><span>0.25</span></label>
+      </fieldset>
+      <fieldset>
+        <legend>Transport — open → closed → open</legend>
+        <button id="play">Play</button>
+        <button id="pause">Pause</button>
+        <button id="loop">Loop on</button>
+        <label>scrub <input id="scrub" type="range" min="0" max="1" step="0.001" value="0"><span id="scrubVal">0.00</span></label>
+      </fieldset>
+      <fieldset>
+        <legend>Camera</legend>
+        <button data-cam="left-palm">Left palm</button>
+        <button data-cam="right-palm">Right palm</button>
+        <button data-cam="left-digits">Left digits</button>
+        <button data-cam="right-digits">Right digits</button>
+        <button data-cam="bar">Bar both</button>
+        <label><input id="handsOnly" type="checkbox" checked> Hands only</label>
+        <label><input id="showBar" type="checkbox" checked> Show bar</label>
+      </fieldset>
+    </aside>
+    <div id="stage">
+      <div id="hud">Loading isolated grasp GLB…</div>
+    </div>
+  </div>
+  <script type="module" src="./panel.mjs"></script>
+</body>
+</html>
