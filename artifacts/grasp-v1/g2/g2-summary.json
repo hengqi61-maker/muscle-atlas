@@ -1,0 +1,361 @@
+{
+  "phase": "G2-posed-contact",
+  "handMeshCount": 38,
+  "bar": {
+    "radiusM": 0.024,
+    "origin": [
+      0.0,
+      -0.13493847846984863,
+      0.7572160363197327
+    ],
+    "axis": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "halfLengthM": 0.34,
+    "space": "blender_Z_up",
+    "gltfYup": {
+      "origin": [
+        0.0,
+        0.7572160363197327,
+        0.13493847846984863
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "note": "Blender (x,y,z) -> glTF (x,z,-y) because G1 export used export_yup=True."
+    },
+    "note": "Rest-pose hand-height fixture using historical pulldown grip radius 24mm. Not overhead pulldown travel. Sole contact solid for G2."
+  },
+  "blender": {
+    "open": {
+      "verdict": "PERSISTENT_INTERSECTION",
+      "handOnlyMinSignedM": -0.0239651420718974,
+      "handOnlyInsideSamples": 102140,
+      "wrapOccupied": 8
+    },
+    "half": {
+      "verdict": "PERSISTENT_INTERSECTION",
+      "handOnlyMinSignedM": -0.023937052244299643,
+      "handOnlyInsideSamples": 96368,
+      "wrapOccupied": 8
+    },
+    "closed": {
+      "verdict": "PERSISTENT_INTERSECTION",
+      "handOnlyMinSignedM": -0.0235434536447533,
+      "handOnlyInsideSamples": 83397,
+      "wrapOccupied": 8
+    },
+    "pulldown-bar": {
+      "verdict": "PERSISTENT_INTERSECTION",
+      "handOnlyMinSignedM": -0.023568727875289994,
+      "handOnlyInsideSamples": 89018,
+      "wrapOccupied": 8
+    }
+  },
+  "three": {
+    "open": {
+      "minSignedM": -0.02370639041090328,
+      "insideSamples": 67495
+    },
+    "half": {
+      "minSignedM": -0.02382499813565686,
+      "insideSamples": 66302
+    },
+    "closed": {
+      "minSignedM": -0.023505556313192476,
+      "insideSamples": 56550
+    },
+    "pulldown-bar": {
+      "minSignedM": -0.023913059405222186,
+      "insideSamples": 63216
+    }
+  },
+  "seamsClosed": [
+    {
+      "sourceName": "abductor digiti minimi of left hand",
+      "class": "hypothenar",
+      "stretchOver2": 11,
+      "flippedTris": 11,
+      "stretchMax": 5.210342382034103
+    },
+    {
+      "sourceName": "abductor digiti minimi of right hand",
+      "class": "hypothenar",
+      "stretchOver2": 11,
+      "flippedTris": 11,
+      "stretchMax": 5.208693539995881
+    },
+    {
+      "sourceName": "flexor digiti minimi brevis of left hand",
+      "class": "hypothenar",
+      "stretchOver2": 0,
+      "flippedTris": 1,
+      "stretchMax": 1.7003855874150156
+    },
+    {
+      "sourceName": "flexor digiti minimi brevis of right hand",
+      "class": "hypothenar",
+      "stretchOver2": 0,
+      "flippedTris": 1,
+      "stretchMax": 1.7035711546498293
+    },
+    {
+      "sourceName": "flexor retinaculum of left wrist",
+      "class": "wrist-retinaculum",
+      "stretchOver2": 166,
+      "flippedTris": 50,
+      "stretchMax": 10.806714047058396
+    },
+    {
+      "sourceName": "flexor retinaculum of right wrist",
+      "class": "wrist-retinaculum",
+      "stretchOver2": 166,
+      "flippedTris": 50,
+      "stretchMax": 10.807209853623265
+    },
+    {
+      "sourceName": "interosseous membrane of left forearm",
+      "class": "accidental-forearm",
+      "stretchOver2": 31,
+      "flippedTris": 4,
+      "stretchMax": 12.919406133628994
+    },
+    {
+      "sourceName": "interosseous membrane of right forearm",
+      "class": "accidental-forearm",
+      "stretchOver2": 31,
+      "flippedTris": 4,
+      "stretchMax": 12.9122009056081
+    },
+    {
+      "sourceName": "left abductor pollicis brevis",
+      "class": "thenar",
+      "stretchOver2": 85,
+      "flippedTris": 22,
+      "stretchMax": 11.28970306964413
+    },
+    {
+      "sourceName": "left abductor pollicis longus",
+      "class": "long-tendon-thumb",
+      "stretchOver2": 0,
+      "flippedTris": 1,
+      "stretchMax": 1.2047876398896622
+    },
+    {
+      "sourceName": "left extensor pollicis brevis",
+      "class": "long-tendon-thumb",
+      "stretchOver2": 0,
+      "flippedTris": 3,
+      "stretchMax": 1.3277095572273772
+    },
+    {
+      "sourceName": "left extensor pollicis longus",
+      "class": "long-tendon-thumb",
+      "stretchOver2": 13,
+      "flippedTris": 3,
+      "stretchMax": 8.956997132373996
+    },
+    {
+      "sourceName": "left flexor pollicis brevis",
+      "class": "thenar",
+      "stretchOver2": 61,
+      "flippedTris": 14,
+      "stretchMax": 11.713933862978815
+    },
+    {
+      "sourceName": "left flexor pollicis longus",
+      "class": "long-tendon-thumb",
+      "stretchOver2": 29,
+      "flippedTris": 7,
+      "stretchMax": 10.747797696392098
+    },
+    {
+      "sourceName": "left opponens pollicis",
+      "class": "thenar",
+      "stretchOver2": 65,
+      "flippedTris": 16,
+      "stretchMax": 6.672670843005815
+    },
+    {
+      "sourceName": "oblique head of left adductor pollicis",
+      "class": "thenar",
+      "stretchOver2": 68,
+      "flippedTris": 22,
+      "stretchMax": 9.685382322550806
+    },
+    {
+      "sourceName": "oblique head of right adductor pollicis",
+      "class": "thenar",
+      "stretchOver2": 68,
+      "flippedTris": 22,
+      "stretchMax": 9.688090911272909
+    },
+    {
+      "sourceName": "opponens digiti minimi of left hand",
+      "class": "hypothenar",
+      "stretchOver2": 0,
+      "flippedTris": 3,
+      "stretchMax": 1.4346727190131499
+    },
+    {
+      "sourceName": "opponens digiti minimi of right hand",
+      "class": "hypothenar",
+      "stretchOver2": 0,
+      "flippedTris": 3,
+      "stretchMax": 1.4355016136432075
+    },
+    {
+      "sourceName": "right abductor pollicis brevis",
+      "class": "thenar",
+      "stretchOver2": 85,
+      "flippedTris": 22,
+      "stretchMax": 11.28961589864685
+    },
+    {
+      "sourceName": "right abductor pollicis longus",
+      "class": "long-tendon-thumb",
+      "stretchOver2": 0,
+      "flippedTris": 1,
+      "stretchMax": 1.2047937050767166
+    },
+    {
+      "sourceName": "right extensor pollicis brevis",
+      "class": "long-tendon-thumb",
+      "stretchOver2": 0,
+      "flippedTris": 3,
+      "stretchMax": 1.3270649425277343
+    },
+    {
+      "sourceName": "right extensor pollicis longus",
+      "class": "long-tendon-thumb",
+      "stretchOver2": 13,
+      "flippedTris": 3,
+      "stretchMax": 8.95686314193704
+    },
+    {
+      "sourceName": "right flexor pollicis brevis",
+      "class": "thenar",
+      "stretchOver2": 61,
+      "flippedTris": 14,
+      "stretchMax": 11.71411519619249
+    },
+    {
+      "sourceName": "right flexor pollicis longus",
+      "class": "long-tendon-thumb",
+      "stretchOver2": 29,
+      "flippedTris": 7,
+      "stretchMax": 10.737865580637603
+    },
+    {
+      "sourceName": "right opponens pollicis",
+      "class": "thenar",
+      "stretchOver2": 65,
+      "flippedTris": 16,
+      "stretchMax": 6.672799164958304
+    },
+    {
+      "sourceName": "set of dorsal interossei of left hand",
+      "class": "digit-muscle-set",
+      "stretchOver2": 70,
+      "flippedTris": 17,
+      "stretchMax": 13.351590982984677
+    },
+    {
+      "sourceName": "set of dorsal interossei of right hand",
+      "class": "digit-muscle-set",
+      "stretchOver2": 70,
+      "flippedTris": 17,
+      "stretchMax": 13.351065008155045
+    },
+    {
+      "sourceName": "set of lumbricals of left hand",
+      "class": "digit-muscle-set",
+      "stretchOver2": 127,
+      "flippedTris": 244,
+      "stretchMax": 14.099568703757116
+    },
+    {
+      "sourceName": "set of lumbricals of right hand",
+      "class": "digit-muscle-set",
+      "stretchOver2": 128,
+      "flippedTris": 244,
+      "stretchMax": 14.089756386110286
+    },
+    {
+      "sourceName": "set of palmar interossei of left hand",
+      "class": "digit-muscle-set",
+      "stretchOver2": 0,
+      "flippedTris": 1,
+      "stretchMax": 1.0088542726045484
+    },
+    {
+      "sourceName": "set of palmar interossei of right hand",
+      "class": "digit-muscle-set",
+      "stretchOver2": 0,
+      "flippedTris": 1,
+      "stretchMax": 1.0090813283069404
+    },
+    {
+      "sourceName": "superficial head of left flexor pollicis brevis",
+      "class": "thenar",
+      "stretchOver2": 82,
+      "flippedTris": 20,
+      "stretchMax": 10.405570996341165
+    },
+    {
+      "sourceName": "superficial head of right flexor pollicis brevis",
+      "class": "thenar",
+      "stretchOver2": 82,
+      "flippedTris": 20,
+      "stretchMax": 10.406816625414248
+    },
+    {
+      "sourceName": "transverse head of left adductor pollicis",
+      "class": "thenar",
+      "stretchOver2": 80,
+      "flippedTris": 17,
+      "stretchMax": 8.707257838912623
+    },
+    {
+      "sourceName": "transverse head of right adductor pollicis",
+      "class": "thenar",
+      "stretchOver2": 80,
+      "flippedTris": 17,
+      "stretchMax": 8.703972469967384
+    }
+  ],
+  "panel": {
+    "url": "http://127.0.0.1:8766/src/grasp-v1/panel.html",
+    "errors": [],
+    "bones": 57,
+    "handMeshes": 38,
+    "playingObserved": true,
+    "pausedT": 0.4791666666666665,
+    "midT": 0.5,
+    "endT": 1,
+    "midLeftCurl": 1,
+    "endLeftCurl": 0,
+    "loopOff": true,
+    "shots": [
+      "open",
+      "closed",
+      "pulldown-bar",
+      "left-digits",
+      "playing",
+      "paused",
+      "scrub-mid",
+      "scrub-end"
+    ],
+    "verdict": "PANEL_TRANSPORT_PASS"
+  },
+  "limits": [
+    "No finger skin shell. digit-muscle-set is lumbrical/interosseous collections, not phalanx pads.",
+    "Bar is a rest-pose hand-height cylinder with pulldown grip radius; not pulldown travel.",
+    "interosseous membrane of forearm is accidental G1 weight target; excluded from wrap verdict classes.",
+    "Pulldown/curl historical FAIL unchanged. Grasp is not whole-body PASS."
+  ]
+}

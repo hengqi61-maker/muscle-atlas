@@ -1,0 +1,24 @@
+{
+  "url": "http://127.0.0.1:8766/src/grasp-v1/panel.html",
+  "errors": [],
+  "bones": 57,
+  "handMeshes": 38,
+  "playingObserved": true,
+  "pausedT": 0.4791666666666665,
+  "midT": 0.5,
+  "endT": 1,
+  "midLeftCurl": 1,
+  "endLeftCurl": 0,
+  "loopOff": true,
+  "shots": [
+    "open",
+    "closed",
+    "pulldown-bar",
+    "left-digits",
+    "playing",
+    "paused",
+    "scrub-mid",
+    "scrub-end"
+  ],
+  "verdict": "PANEL_TRANSPORT_PASS"
+}

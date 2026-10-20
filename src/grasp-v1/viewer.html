@@ -1,0 +1,9 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Grasp Controller v1 (experimental)</title>
+<p>Isolated viewer. Not a motion-quality PASS. Load artifacts/grasp-v1/grasp-controller.glb via the node smoke or a local static server.</p>
+<pre id="out"></pre>
+<script type="module">
+import {poseFor} from './controller.mjs';
+document.getElementById('out').textContent = JSON.stringify({closedLeft:poseFor('closed','Left'), ropeRight:poseFor('rope-end','Right')},null,2);
+</script>

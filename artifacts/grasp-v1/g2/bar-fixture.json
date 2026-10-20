@@ -1,0 +1,21 @@
+{
+  "radiusM": 0.024,
+  "origin": [
+    0.0,
+    -0.13493847846984863,
+    0.7572160363197327
+  ],
+  "axis": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "halfLengthM": 0.34,
+  "space": "blender_Z_up",
+  "gltfYup": {
+    "origin": [0.0, 0.7572160363197327, 0.13493847846984863],
+    "axis": [1.0, 0.0, 0.0],
+    "note": "Blender (x,y,z) -> glTF (x,z,-y) because G1 export used export_yup=True."
+  },
+  "note": "Rest-pose hand-height fixture using historical pulldown grip radius 24mm. Not overhead pulldown travel. Sole contact solid for G2."
+}

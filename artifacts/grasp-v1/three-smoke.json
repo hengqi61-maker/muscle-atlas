@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "bones": 57,
+  "fingerBones": 30,
+  "hitOpen": 30,
+  "hitClosed": 30,
+  "sample": [
+    "LeftIndexMCP",
+    "LeftIndexPIP",
+    "LeftIndexDIP",
+    "LeftLittleMCP",
+    "LeftLittlePIP",
+    "LeftLittleDIP",
+    "LeftMiddleMCP",
+    "LeftMiddlePIP"
+  ]
+}
