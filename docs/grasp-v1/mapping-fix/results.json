@@ -1,0 +1,132 @@
+{
+  "build-report.json": {
+    "sourceSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+    "candidateSha256": "3c1274de4492270dea8e0bb787a1703984ce42123302dda86870f9a1aa7e85b6",
+    "sourceMeshCount": 467,
+    "allBaseGeometryUnchanged": true,
+    "canonical27MatricesUnchanged": true,
+    "boneCount": 57,
+    "maxWeightMassError": 2.9802322387695312e-08,
+    "maxUnrelatedWeightError": 0.0,
+    "maxRowSumError": 5.960464477539063e-08,
+    "attachmentStatus": "UNCALIBRATED_SPATIAL_HYPOTHESIS",
+    "graspStatus": "NOT_ACCEPTED",
+    "scope": "Correct ordering, conserved donor mass, same rig-local palm frame; no shell, source geometry or production changes."
+  },
+  "weight-audit.json": {
+    "assetSha256": "3c1274de4492270dea8e0bb787a1703984ce42123302dda86870f9a1aa7e85b6",
+    "method": "Actual JOINTS_0/WEIGHTS_0 nonzero slots >1e-7; counts are influences, not unique vertices or clinical metrics.",
+    "counts": {
+      "LeftRingMCP": 2604,
+      "LeftLittleMCP": 28,
+      "RightRingMCP": 2609,
+      "RightLittleMCP": 28,
+      "LeftMiddleMCP": 1967,
+      "RightMiddleMCP": 1969,
+      "LeftThumbCMC": 5897,
+      "LeftIndexMCP": 4885,
+      "RightThumbCMC": 5903,
+      "RightIndexMCP": 4885,
+      "LeftThumbMCP": 344,
+      "LeftThumbIP": 153,
+      "LeftIndexPIP": 93,
+      "LeftIndexDIP": 86,
+      "LeftMiddlePIP": 162,
+      "LeftRingPIP": 146,
+      "RightThumbMCP": 344,
+      "RightThumbIP": 151,
+      "RightIndexPIP": 93,
+      "RightIndexDIP": 84,
+      "RightMiddlePIP": 162,
+      "RightRingPIP": 146
+    },
+    "weightedMeshCount": 32,
+    "littleInfluenceSlots": 56
+  },
+  "preservation-build.json": {
+    "sourceSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+    "candidateSha256": "f33ae9dbe95973e98f41fa7bd178d2946971dfed4cebf4dff58464ac7c45d11b",
+    "sourceBinPrefixByteIdentical": true,
+    "sourceNodesAndAnimationIndicesPreserved": true,
+    "newJointNodes": 30,
+    "changedMeshes": 32,
+    "maxMatchM": 5.981382529862613e-07,
+    "matchingTolerancePurpose": "Exporter roundtrip correspondence only, NOT a motion/contact quality tolerance. Output keeps exact original source POSITION/indices bytes.",
+    "ambiguous": 0,
+    "status": "GEOMETRY_PRESERVED_ATTACHMENT_UNCALIBRATED"
+  },
+  "preserved-export-verification.json": {
+    "referenceSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+    "candidateSha256": "f33ae9dbe95973e98f41fa7bd178d2946971dfed4cebf4dff58464ac7c45d11b",
+    "meshCount": 467,
+    "actualExportUniquePositionSetMismatchCount": 0,
+    "maxNonDonorWeightDifferenceAtBestEqualPositionRow": 2.9802322387695312e-08,
+    "maxCanonicalWorldMatrixDifference": 0,
+    "maxWeightSumError": 4.470348358154297e-08,
+    "method": "Actual exported GLB, raw POSITION equality by exact coordinate keys; seam copies compare nearest equal-position influence row. Does not prove original polygon identity or anatomical attachments.",
+    "status": "POSITION_AND_CANONICAL_PASS_WEIGHT_CORRESPONDENCE_INCONCLUSIVE",
+    "details": []
+  },
+  "browser/report.json": {
+    "status": "SOFTWARE_TEST_PASS",
+    "scope": "Diagnostic viewer only; tissue FAIL remains",
+    "replay": {
+      "fraction": 0.07917499999999975,
+      "playing": true,
+      "bones": 57,
+      "poseSamples": 121,
+      "quality": "FAIL_TISSUE_GRASP",
+      "view": "Left"
+    },
+    "paused": {
+      "fraction": 0.08752500000000012,
+      "playing": false,
+      "bones": 57,
+      "poseSamples": 121,
+      "quality": "FAIL_TISSUE_GRASP",
+      "view": "Left"
+    },
+    "errors": []
+  },
+  "preserved-native-contact/native-contact.json": {
+    "assetSha256": "f33ae9dbe95973e98f41fa7bd178d2946971dfed4cebf4dff58464ac7c45d11b",
+    "trajectorySha256": "898ad68031e819e90d59a318b91a9360119d5ff3b8686447cbf3250a0ba34bb3",
+    "method": "Actual Blender evaluated source vertices in shared metricworld; finite conservative12goninscribedsolid, same ownership and segments as Three. Vertex witnesses only; no positive grasp inference.",
+    "status": "FAIL_TISSUE_GRASP",
+    "maxEngineDifferenceM": 0.00020771747646460698
+  },
+  "full-regression/report.json": {
+    "status": "MOTION_GEOMETRY_FAIL",
+    "clips": [
+      {
+        "name": "CurlProbe",
+        "poses": 121,
+        "severeFrameCount": 39,
+        "maximumEdgeRatio": 265.5111411375763
+      },
+      {
+        "name": "PulldownProbe",
+        "poses": 121,
+        "severeFrameCount": 91,
+        "maximumEdgeRatio": 265.51130463756675
+      }
+    ]
+  },
+  "preserved-regression/report.json": {
+    "status": "MOTION_GEOMETRY_FAIL",
+    "clips": [
+      {
+        "name": "CurlProbe",
+        "poses": 121,
+        "severeFrameCount": 39,
+        "maximumEdgeRatio": 265.51027256957934
+      },
+      {
+        "name": "PulldownProbe",
+        "poses": 121,
+        "severeFrameCount": 91,
+        "maximumEdgeRatio": 265.51045563634386
+      }
+    ]
+  }
+}

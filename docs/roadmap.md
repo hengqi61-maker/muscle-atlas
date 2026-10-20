@@ -94,3 +94,6 @@ PR22 baseline retained; PR21 finger controller exported-reference/Euler correcti
 
 ## Console consolidation (2026-10-20)
 Current state consolidated in docs/CURRENT_STATE.md. Duplicate home-page action links and historical E03 asset probe removed; advanced controls folded away; navigation returns to explicitly unverified training previews. Geometry and source assets unchanged. Source-first text exporter added for external review.
+
+## Grasp mapping repair experiment (2026-10-20)
+Actual generator bugs corrected and two isolated export variants tested; assets rejected due worse265.51 edge ratio and persistent grip penetration. See docs/grasp-v1/mapping-fix/result.md. No production asset changes, no anatomical acceptance.

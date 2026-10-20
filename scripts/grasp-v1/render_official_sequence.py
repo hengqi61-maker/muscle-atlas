@@ -1,10 +1,10 @@
 """Render actual inherited CCD trajectory on original PR21 source; diagnostic FAIL only."""
-import bpy,sys,json,math,hashlib,struct,time
+import bpy,sys,json,math,hashlib,struct,time,os
 from pathlib import Path
 from mathutils import Matrix,Vector
-root=Path(__file__).resolve().parents[2];measure_only='--measure-only' in sys.argv;out=root/('artifacts/grasp-v1/p3-basis/native-contact' if measure_only else 'artifacts/grasp-v1/p3-basis/native-official');out.mkdir(parents=True,exist_ok=False)
-asset=root/'artifacts/grasp-v1/grasp-controller.glb';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();assert sha(asset)=='40e3dbcbbe3423381dd2885936dd3f1c7d4355bcc6b4f0c30eb9245537be1dff'
-input_path=root/'artifacts/grasp-v1/p3-basis/official-sequence/official-bar-align.json';r=json.loads(input_path.read_text());raw=asset.read_bytes();g=json.loads(raw[20:20+struct.unpack_from('<I',raw,12)[0]])
+root=Path(__file__).resolve().parents[2];measure_only='--measure-only' in sys.argv;out=root/os.environ.get('GRASP_NATIVE_OUTPUT',('artifacts/grasp-v1/p3-basis/native-contact' if measure_only else 'artifacts/grasp-v1/p3-basis/native-official'));out.mkdir(parents=True,exist_ok=False)
+asset=root/os.environ.get('GRASP_ASSET','artifacts/grasp-v1/grasp-controller.glb');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();assert sha(asset)==os.environ.get('GRASP_ASSET_SHA','40e3dbcbbe3423381dd2885936dd3f1c7d4355bcc6b4f0c30eb9245537be1dff')
+input_path=root/os.environ.get('GRASP_SEQUENCE_INPUT','artifacts/grasp-v1/p3-basis/official-sequence/official-bar-align.json');r=json.loads(input_path.read_text());raw=asset.read_bytes();g=json.loads(raw[20:20+struct.unpack_from('<I',raw,12)[0]])
 def mat(a):return Matrix([a[i::4] for i in range(4)])
 parents={c:i for i,n in enumerate(g['nodes']) for c in n.get('children',[])};world={}
 def wm(i):
