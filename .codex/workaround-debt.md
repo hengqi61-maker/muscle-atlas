@@ -391,21 +391,24 @@ Title: Supplemental isolated Blender rest-world exact equality residual
 - Compare keep literal serializedsource identity plus rawimport-world numericINCONCLUSIVE (selected for this diagnostic-only delivery), normalize/overwrite worldcoords toforceequal (rejected destroys evidence), versus full importer/decomposition trace with common-frame alignment (next bounded experiment). No claim of exact renderedworld equality or medicallycorrect shape.
 - Deferred importer-space provenance investigation; nextaction trace node/armature/decompose rounding on fixedsource if future shape comparison needs exact importedworld correspondence. Reopen if residual grows, serializedsource identity differs or candidate considered for production. No acceptedrisk; bothvariantsalreadyFAIL/notadopted.
 
-## WD-2026-10-20-E03
+## WD-2026-10-20-101
+Alias: WD-2026-10-20-E03
 Status: RESOLVED
 Title: Reopened E01 duplicate-vertex divergence investigation
 - Original reproduction: node scripts/rig-v2/phase2/seam-check.mjs --asset artifacts/phase2/E01-local-gradient/motion.glb --output artifacts/phase2/E01-local-gradient/seam-report.json; AUTO FAIL, peak3.179553mm. Historical rejected asset and WD0031 remain immutable.
 - No bypass or threshold change introduced. Compare constrained export-weight projection (bounded candidate), source-index registry rebuild (requires provenance reconstruction), attachment calibration (needed for anatomical correctness, currently absent). Independent read-only investigation requested before choosing candidate.
 - E03 preregistered as one added equivalence projection on otherwise unchanged E01 operator. Actual scans and outcome pending; production not replaced.
 
-## WD-2026-10-20-E03-BROWSER
+## WD-2026-10-20-102
+Alias: WD-2026-10-20-E03-BROWSER
 Status: DEFERRED
 Title: E03 real Chrome navigation timeout during concurrent full geometry and native calibration
 - Exact command: E3_BROWSER_ASSET=artifacts/phase2/E03-equivalence-projection/motion.glb E3_BROWSER_OUT=artifacts/phase2/browser-E03 node --test tests/rig-v2/pipeline-browser.node.mjs. Actual page.goto load timeout30000ms; original browser.log/output preserved. No browser PASS claimed.
 - Concurrent attribution/calibration imports unusually slow; resource contention suspected, not yet proven. No retries, relaxed thresholds, killed user applications or security changes.
 - Compare serial rerun after current jobs finish, scoped navigation diagnostics, or explicit higher startup budget after observed timing. Prefer serial exact original path first; wait for evidence before modifying tests. Underlying cause remains unresolved.
 
-## WD-2026-10-20-E03-GIT
+## WD-2026-10-20-103
+Alias: WD-2026-10-20-E03-GIT
 Status: DEFERRED
 Title: GitHub push configured local proxy unavailable
 - Exact git push origin codex/rig-v2-phase2 failed connecting127.0.0.1:7897. git http.proxy and https.proxy both point there; no proxy env override. Local committed7fe2c00 preserved. No system/profile restart or config mutation.
@@ -417,13 +420,15 @@ E03-GIT delivery: direct HTTPS measurement200; command-local git -c http.proxy= 
 
 E03-BROWSER exact-script serial rerun after native/calibration/allmesh jobs completed: PASS85.533s, both121poseclips/100screenshots/two complete-cycleWebMs/pause/pick. Original timeout retained, workload contention plausible not proven. Serial scheduling is disclosed workaround; root attribution DEFERRED, reopen on serial recurrence. No navigation/geometry threshold relaxed.
 
-## WD-2026-10-20-E03-MCP
+## WD-2026-10-20-104
+Alias: WD-2026-10-20-E03-MCP
 Status: DEFERRED
 Title: PR15 guarded client owned by another session
 - Read-only SDK initialize failed with client.lock nonblocking flock Errno35 before any query; transcript retained controlled-mcp.log. No instance takeover, lock deletion, security relaxation or restart.
 - Shared-instance ownership boundary honored; compare coordinator releases owner client versus coordinator executes registered read-only inspection and publishes results. Await coordination; no current MCP connectivity PASS claimed. No listener detected9876 at check time, which is separate from held-client lock and not proof of stale lock. Reopen after owner handoff. Existing deterministic bpy actual121/native evidence continues without claiming MCP succeeded.
 
-## WD-2026-10-20-PREVIEW
+## WD-2026-10-20-105
+Alias: WD-2026-10-20-PREVIEW
 Status: DEFERRED
 Title: Vite-transformed diagnostic consumer stays in initial loading state in IAB
 - Startup5190 servesHTML/41MBGLB HTTP200; after Vite newdependency optimization/reload, actual IAB diagnostic consumer shows Loading actual build output, no visible console error. No model display PASS claimed for Vite consumer.
@@ -438,7 +443,8 @@ Verification: neutral/repeated-write/left-right tests; actual Blender six poses 
 Evidence: p3-basis old-neutral, native reference, parity-corrected, continuous and unit logs in published evidence archive; docs/grasp-v1/continuation-results.json.
 Reopen: parity or neutral regression on a new exporter/asset.
 
-## WD-2026-10-20-GRASP-CONTINUATION
+## WD-2026-10-20-106
+Alias: WD-2026-10-20-GRASP-CONTINUATION
 Status: DEFERRED
 Failure: original tissues still intersect actual angled grip and stretch; 121-pose native/Three checks agree, FAIL. Corrected controller does not resolve heuristic weights/topology or provide fingertip surfaces.
 Temporary diagnostic: inherited unconstrained CCD tested as explicitly labelled arm-reach probe only; never training or grasp acceptance. Production assets unchanged.
@@ -446,14 +452,16 @@ Alternatives: calibrated original tissue attachment/weight refinement versus a r
 Impact: no credible visible training grasp; P3 physical calibration and independent visual/biomechanical review pending.
 Next action/reopen: Cursor/Windows publish physical attachment/axis evidence; choose one local attributable candidate; rerun full gates. No claim of completion.
 
-## WD-2026-10-20-BROWSER-RUNTIME
+## WD-2026-10-20-107
+Alias: WD-2026-10-20-BROWSER-RUNTIME
 Status: DEFERRED
 Failure: Playwright bundled chromium_headless_shell-1248 missing; exact launch error retained in browser.log.
 Workaround: explicitly select installed Google Chrome via supported channel; same actual viewer assertions and recorded video pass, browser-chrome.log/report.json.
 Alternatives: install pinned Playwright browser versus explicit existing Chrome channel (chosen to avoid installation). No claim that bundled Chromium works.
 Next action/reopen: CI requiring bundled Chromium must install and rerun exact original launch. Browser version compatibility remains environment-specific.
 
-## WD-2026-10-20-CLEANUP-IAB
+## WD-2026-10-20-108
+Alias: WD-2026-10-20-CLEANUP-IAB
 Status: DEFERRED
 Failure: cua.createBrowserTab(iab,http://127.0.0.1:5173/,visible=true) timed out after38.7s and reset its kernel. Does not establish application failure; actual separate Chrome loaded both source anatomy and seated pulldown with screenshots/snapshots.
 Workaround: keep verified loopback dev URL available and request native Codex browser panel (queued); no claim automatic foreground opening succeeded.
