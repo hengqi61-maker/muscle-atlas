@@ -27,3 +27,6 @@ public/models/*.part
 .codex/*.backup-*
 
 /.playwright-cli/
+
+/artifacts/grasp-fix/
+/artifacts/grasp-research/

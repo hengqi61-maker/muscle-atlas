@@ -19,13 +19,13 @@ function latPulldownFrame(progress) {
   };
 }
 
-const out = path.join(root, 'artifacts/grasp-v1/p3-basis/official-sequence');
+const out = path.join(root, process.env.GRASP_SEQUENCE_OUTPUT || 'artifacts/grasp-v1/p3-basis/official-sequence');
 mkdirSync(out, {recursive: false});
 const require = createRequire(import.meta.url);
 const THREE = require('three');
 const {GLTFLoader} = require('three/examples/jsm/loaders/GLTFLoader.js');
 
-const glb = readFileSync(path.join(root, 'artifacts/grasp-v1/grasp-controller.glb'));
+const glb = readFileSync(path.join(root, process.env.GRASP_ASSET || 'artifacts/grasp-v1/grasp-controller.glb'));
 const loader = new GLTFLoader();
 const gltf = await new Promise((res, rej) => loader.parse(
   glb.buffer.slice(glb.byteOffset, glb.byteOffset + glb.byteLength), '', res, rej,

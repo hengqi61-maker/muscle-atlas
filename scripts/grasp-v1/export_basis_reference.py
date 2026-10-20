@@ -1,11 +1,11 @@
 """Actual Blender local-pose reference; source GLB read only, fresh evidence directory."""
-import bpy,sys,json,hashlib
+import bpy,sys,json,hashlib,os
 from pathlib import Path
 from mathutils import Matrix,Euler
 root=Path(__file__).resolve().parents[2]
 out=Path(sys.argv[sys.argv.index('--')+1]).resolve();out.mkdir(parents=True,exist_ok=False)
-asset=root/'artifacts/grasp-v1/grasp-controller.glb';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
-assert sha(asset)=='40e3dbcbbe3423381dd2885936dd3f1c7d4355bcc6b4f0c30eb9245537be1dff'
+asset=root/os.environ.get('GRASP_ASSET','artifacts/grasp-v1/grasp-controller.glb');sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+assert sha(asset)==os.environ.get('GRASP_ASSET_SHA','40e3dbcbbe3423381dd2885936dd3f1c7d4355bcc6b4f0c30eb9245537be1dff')
 args=sys.argv[sys.argv.index('--')+1:];input_path=Path(args[1]).resolve() if len(args)>1 else root/'artifacts/grasp-v1/p3-basis/pose-input.json';cases=json.loads(input_path.read_text())
 bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.ops.import_scene.gltf(filepath=str(asset),bone_heuristic='BLENDER')
