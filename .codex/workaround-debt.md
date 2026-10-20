@@ -392,15 +392,33 @@ Title: Supplemental isolated Blender rest-world exact equality residual
 - Deferred importer-space provenance investigation; nextaction trace node/armature/decompose rounding on fixedsource if future shape comparison needs exact importedworld correspondence. Reopen if residual grows, serializedsource identity differs or candidate considered for production. No acceptedrisk; bothvariantsalreadyFAIL/notadopted.
 
 ## WD-2026-10-20-E03
-Status: OPEN
+Status: RESOLVED
 Title: Reopened E01 duplicate-vertex divergence investigation
 - Original reproduction: node scripts/rig-v2/phase2/seam-check.mjs --asset artifacts/phase2/E01-local-gradient/motion.glb --output artifacts/phase2/E01-local-gradient/seam-report.json; AUTO FAIL, peak3.179553mm. Historical rejected asset and WD0031 remain immutable.
 - No bypass or threshold change introduced. Compare constrained export-weight projection (bounded candidate), source-index registry rebuild (requires provenance reconstruction), attachment calibration (needed for anatomical correctness, currently absent). Independent read-only investigation requested before choosing candidate.
 - E03 preregistered as one added equivalence projection on otherwise unchanged E01 operator. Actual scans and outcome pending; production not replaced.
 
 ## WD-2026-10-20-E03-BROWSER
-Status: OPEN
+Status: DEFERRED
 Title: E03 real Chrome navigation timeout during concurrent full geometry and native calibration
 - Exact command: E3_BROWSER_ASSET=artifacts/phase2/E03-equivalence-projection/motion.glb E3_BROWSER_OUT=artifacts/phase2/browser-E03 node --test tests/rig-v2/pipeline-browser.node.mjs. Actual page.goto load timeout30000ms; original browser.log/output preserved. No browser PASS claimed.
 - Concurrent attribution/calibration imports unusually slow; resource contention suspected, not yet proven. No retries, relaxed thresholds, killed user applications or security changes.
 - Compare serial rerun after current jobs finish, scoped navigation diagnostics, or explicit higher startup budget after observed timing. Prefer serial exact original path first; wait for evidence before modifying tests. Underlying cause remains unresolved.
+
+## WD-2026-10-20-E03-GIT
+Status: DEFERRED
+Title: GitHub push configured local proxy unavailable
+- Exact git push origin codex/rig-v2-phase2 failed connecting127.0.0.1:7897. git http.proxy and https.proxy both point there; no proxy env override. Local committed7fe2c00 preserved. No system/profile restart or config mutation.
+- Compare restore owned proxy service after coordination versus command-local direct route with unchanged persistent config. Read-only direct connectivity measurement first; if direct route works it is a scoped delivery workaround, not repair of shared proxy lifecycle.
+
+E03 continuity closure verification:21 original exact classes/43 rows receive identical float32 values; independent raw-byte and actualLBS review1785pairs×121×2 zero separation; two clean fresh builds exact. Original rejectedE01 path rerun AUTOFAIL, no test relaxed. This resolves E03 numerical duplicate divergence only. E01/R1 historical anatomy FAIL and WD0031 rejectedcandidate remain unchanged. Full E03scan39/91/peak6.469800, independently rejected; no adoption.
+
+E03-GIT delivery: direct HTTPS measurement200; command-local git -c http.proxy= -c https.proxy= push succeeded7fe2c00. Persistent config untouched. CLI observation confirms unavailableMihomo/mixedport; shared proxy lifecycle not repaired. DEFERRED pending coordinator ownership/startup diagnosis, reopen when default Git path needed. Scoped direct route is disclosed workaround only.
+
+E03-BROWSER exact-script serial rerun after native/calibration/allmesh jobs completed: PASS85.533s, both121poseclips/100screenshots/two complete-cycleWebMs/pause/pick. Original timeout retained, workload contention plausible not proven. Serial scheduling is disclosed workaround; root attribution DEFERRED, reopen on serial recurrence. No navigation/geometry threshold relaxed.
+
+## WD-2026-10-20-E03-MCP
+Status: DEFERRED
+Title: PR15 guarded client owned by another session
+- Read-only SDK initialize failed with client.lock nonblocking flock Errno35 before any query; transcript retained controlled-mcp.log. No instance takeover, lock deletion, security relaxation or restart.
+- Shared-instance ownership boundary honored; compare coordinator releases owner client versus coordinator executes registered read-only inspection and publishes results. Await coordination; no current MCP connectivity PASS claimed. No listener detected9876 at check time, which is separate from held-client lock and not proof of stale lock. Reopen after owner handoff. Existing deterministic bpy actual121/native evidence continues without claiming MCP succeeded.
