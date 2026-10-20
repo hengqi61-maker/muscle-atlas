@@ -92,7 +92,7 @@ for (const t of [0, 0.25, 0.5, 0.75, 1]) {
   poseScene({...cyclePose('Left', t), ...cyclePose('Right', t)});
   report.cycle.push({t, ...measure()});
 }
-const out = path.join(root, 'artifacts/grasp-v1/g2/three-posed-contact.json');
+const out = process.env.GRASP_CONTACT_OUTPUT || path.join(root, 'artifacts/grasp-v1/g2/three-posed-contact.json');
 writeFileSync(out, JSON.stringify(report, null, 2));
 console.log(JSON.stringify({
   status: 'PASS_MEASURE',

@@ -1,0 +1,65 @@
+{
+  "full-regression": [
+    {
+      "clip": "CurlProbe",
+      "severeFrames": 39,
+      "maxEdgeRatio": 77.88632351179282
+    },
+    {
+      "clip": "PulldownProbe",
+      "severeFrames": 91,
+      "maxEdgeRatio": 77.88632772667764
+    }
+  ],
+  "full-regression-legacy": [
+    {
+      "clip": "CurlProbe",
+      "severeFrames": 39,
+      "maxEdgeRatio": 107.59739198194899
+    },
+    {
+      "clip": "PulldownProbe",
+      "severeFrames": 91,
+      "maxEdgeRatio": 107.59742496023483
+    }
+  ],
+  "native-contact/native-contact.json": {
+    "assetSha256": "40e3dbcbbe3423381dd2885936dd3f1c7d4355bcc6b4f0c30eb9245537be1dff",
+    "trajectorySha256": "6e8e13f9ede3d38ee52ee60da4b74dc95e5ea09a137a607265c657237dbe0167",
+    "method": "Actual Blender evaluated source vertices in shared metricworld; finite conservative12goninscribedsolid, same ownership and segments as Three. Vertex witnesses only; no positive grasp inference.",
+    "status": "FAIL_TISSUE_GRASP",
+    "maxEngineDifferenceM": 4.681778634219036e-07
+  },
+  "native-official/native-report.json": {
+    "assetSha256": "40e3dbcbbe3423381dd2885936dd3f1c7d4355bcc6b4f0c30eb9245537be1dff",
+    "trajectorySha256": "6e8e13f9ede3d38ee52ee60da4b74dc95e5ea09a137a607265c657237dbe0167",
+    "frames": 31,
+    "sampleCoverage": 121,
+    "maxBoneOriginRoundtripErrorM": 8.724499445143013e-07,
+    "sourceIdentities": 467,
+    "allOriginalBaseGeometryUnchanged": true,
+    "scope": "Original source tissues and actual two12gonsegments. Camera follows left hand. Inherited unconstrained CCD, NOT seated exercise, no skin shell, no grasp acceptance.",
+    "secondsRender": 100.20733837498119
+  },
+  "browser/report.json": {
+    "status": "SOFTWARE_TEST_PASS",
+    "scope": "Diagnostic viewer only; tissue FAIL remains",
+    "replay": {
+      "fraction": 0.08750000000000002,
+      "playing": true,
+      "bones": 57,
+      "poseSamples": 121,
+      "quality": "FAIL_TISSUE_GRASP",
+      "view": "Left"
+    },
+    "paused": {
+      "fraction": 0.09582500000000008,
+      "playing": false,
+      "bones": 57,
+      "poseSamples": 121,
+      "quality": "FAIL_TISSUE_GRASP",
+      "view": "Left"
+    },
+    "errors": []
+  }
+}

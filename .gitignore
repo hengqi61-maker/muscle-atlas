@@ -21,3 +21,7 @@ public/models/*.part
 
 # Isolated experimental viewer build.
 /dist-rig-v2/
+
+/node_modules
+/artifacts/grasp-v1/p3-basis/
+.codex/*.backup-*
