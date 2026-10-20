@@ -24,18 +24,22 @@ Therefore G1 adds **reversible child bones** under FingerSocket and spatially pa
 - 15 bones/hand × 2 = 30 additive bones
 - 36 hand-region meshes received extra groups; **POSITION SHA unchanged**
 
-## G2 — real runs (Blender 5.2.0 `fbe6228777e7`)
+## G2 — posed bar contact (Blender 5.2.0 `fbe6228777e7` + Three.js)
+
+Posed contact is no longer UNKNOWN. Packet: `docs/grasp-v1/g2-posed-contact.md`. Topology limit: `docs/grasp-v1/topology-limit.md`. Isolated panel: `src/grasp-v1/panel.html`.
 
 | Check | Result |
 |---|---|
-| Build | `artifacts/grasp-v1/grasp-controller.glb` SHA256 `40e3dbcbbe3423381dd2885936dd3f1c7d4355bcc6b4f0c30eb9245537be1dff` |
-| Evaluated left lumbricals, Index/Middle/Thumb +1.1 rad | max Δ **48.5 mm**, p50 15.0 mm, p90 42.1 mm |
-| Three.js `GLTFLoader.parse` + controller | 57 bones, **30 finger hits** open and closed |
-| Controller unit tests | 3/3 PASS |
-| Interpolation video | `grasp-open-to-closed.mp4` SHA256 `2f8c26ac766f2e949db39b80eb289be05a2eae7690a880c6bd9555caecc575ae` |
-| Rest-space prop table | **not posed contact** (same numbers every preset). Rope rest overlap ~8.4 mm / 132 verts; bar rest gap ~210 mm. Fail closed: posed penetration UNKNOWN |
+| Sole solid | pulldown-diameter cylinder, r=24 mm, rest-pose hand height |
+| 38 hand-region meshes | thenar / hypothenar / lumbrical-interosseous sets / long thumb tendons / retinaculum. **No finger skin.** |
+| Blender evaluated triangles | open −23.97 mm / closed −23.54 mm, 8/8 bins already at open → **PERSISTENT_INTERSECTION** |
+| Three.js skinned triangles | open −23.71 mm / closed −23.51 mm (same fixture, glTF Y-up) |
+| Seams on closed | lumbricals 244 flipped tris, stretch max ~14×; retinaculum ~10.8×; thenar 6–12× |
+| O→C→O video | `g2/open-closed-open.mp4` SHA256 `d8983e59d4ec398fdc5dce762b8236a718ddc6fb81468f0819f735f22302758c` |
+| Three panel transport | Playwright `PANEL_TRANSPORT_PASS` (play / pause / scrub / loop) |
+| Controller unit tests | 6/6 PASS |
 
-Close-up PNG cameras framed forearm tendon fans more than palm pads. Use `verify-deform.json` as numeric deformation proof; pixels are observation only.
+G1 rest-space prop table remains invalid as posed contact. G1 GLB SHA unchanged `40e3dbc…`.
 
 ## What this is not
 
@@ -50,13 +54,17 @@ Close-up PNG cameras framed forearm tendon fans more than palm pads. Use `verify
 /Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python scripts/grasp-v1/inspect_hands.py
 /Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python scripts/grasp-v1/build.py
 /Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python scripts/grasp-v1/verify_deform.py
-node --test tests/grasp-v1/controller.node.mjs
+node --test tests/grasp-v1/controller.node.mjs tests/grasp-v1/cycle.node.mjs
 npm ci --ignore-scripts
 node scripts/grasp-v1/three-smoke.mjs
+/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python scripts/grasp-v1/g2_verify.py
+node scripts/grasp-v1/g2_contact_three.mjs
+python3 -m http.server 8766 --bind 127.0.0.1
+node scripts/grasp-v1/g2_panel_playwright.mjs
 ```
 
 ## Next
 
-1. Palm-locked cameras and posed (evaluated) contact-v1.1 packets.
-2. Optional later: a disposable skin shell if Owner wants visible phalanges; do not invent anatomy on frozen source.
-3. Call the same `poseFor(preset, side)` from new exercises; do not rebuild a hand per motion.
+1. Do not retune weights to fake fingers. If Owner wants recognizable digits, implement the additive overlay in `docs/grasp-v1/topology-limit.md` on a new isolated copy.
+2. Call the same `poseFor(preset, side)` from new exercises; do not rebuild a hand per motion.
+3. Pulldown/curl FAIL numbers stay. Do not start Face Pull from this packet.

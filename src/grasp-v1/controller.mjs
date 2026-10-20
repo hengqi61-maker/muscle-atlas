@@ -46,9 +46,15 @@ export function applyToObject3D(root, pose){
   root.traverse(o=>{
     if(pose[o.name] && o.isBone){
       const e=pose[o.name];
+      o.rotation.order='XYZ';
       o.rotation.set(e.x,e.y,e.z);
       hit++;
     }
   });
   return hit;
+}
+/** t in [0,1]: open → closed → open. */
+export function cyclePose(side, t){
+  const u = t<=0.5 ? t*2 : (1-t)*2;
+  return lerpPose(poseFor('open',side), poseFor('closed',side), u);
 }

@@ -63,5 +63,215 @@
     "file": "verify-deform.json",
     "bytes": 398,
     "sha256": "6f457b6a576fb35c4dbcde0828d9421045649fdd14c7e8aaf9427f02c6968c1e"
+  },
+  {
+    "file": "g2/bar-fixture.json",
+    "bytes": 535,
+    "sha256": "3d32042b78c5b1a3015ca284429c09def56ffe5836239cd27269fac7c3e95796"
+  },
+  {
+    "file": "g2/g2-summary.json",
+    "bytes": 9639,
+    "sha256": "f2f7e9fdf4ab40ce8cce6a808fe2333d73fd928ae05492c59b11a5543038f93e"
+  },
+  {
+    "file": "g2/open-closed-open.mp4",
+    "bytes": 49658,
+    "sha256": "d8983e59d4ec398fdc5dce762b8236a718ddc6fb81468f0819f735f22302758c"
+  },
+  {
+    "file": "g2/panel-closed.png",
+    "bytes": 232139,
+    "sha256": "14f34ab06990ff39f4be67b07e60649713d8490a67e1cdd49bfd0f9856e0c5ee"
+  },
+  {
+    "file": "g2/panel-left-digits.png",
+    "bytes": 174464,
+    "sha256": "ab01b86974d7206126a89eaf1c4fcb68006f3d86f9a7303f472d200e70d05400"
+  },
+  {
+    "file": "g2/panel-open.png",
+    "bytes": 231414,
+    "sha256": "16e957341bc49329dea1a9590d41417f897e848a76ee1a27d4186ef0ba20cfbf"
+  },
+  {
+    "file": "g2/panel-paused.png",
+    "bytes": 234128,
+    "sha256": "bf3ac66220b55ccb5b56199b8a26a3077b1277f287b73e31b01e1814af08b607"
+  },
+  {
+    "file": "g2/panel-playing.png",
+    "bytes": 234432,
+    "sha256": "f941210ac4fb62831d6dcffbd2c21b83a61069e20edc5bccdf8e4827b42c915b"
+  },
+  {
+    "file": "g2/panel-playwright.json",
+    "bytes": 440,
+    "sha256": "22f491e58c1e539ef89b42fd61da3f101a87d8f4112c2d1b34f67c38e69eab7c"
+  },
+  {
+    "file": "g2/panel-pulldown-bar.png",
+    "bytes": 233347,
+    "sha256": "f3e304261dbdafc050306a747b65c3cc94f7ce4de7d308305bbccff7099031f7"
+  },
+  {
+    "file": "g2/panel-scrub-end.png",
+    "bytes": 231491,
+    "sha256": "bdbdac91962d91d8d2bc3301d8ca8f4460acc542da3a220d5927889e7a04751a"
+  },
+  {
+    "file": "g2/panel-scrub-mid.png",
+    "bytes": 232470,
+    "sha256": "7ec483d7d05cd71c4998443f159dcf70eed55bcfdbe9d393dfcf92dba6c018e5"
+  },
+  {
+    "file": "g2/posed-contact.json",
+    "bytes": 264721,
+    "sha256": "8d48a909b69675e3fa45f9db07ab2b2a62445538c03159eab8fc51c28c3ff81f"
+  },
+  {
+    "file": "g2/shot-bar-closed.png",
+    "bytes": 382670,
+    "sha256": "9c5560258ce445414196dd1c417745a37a1b396f37045bea6b198dd90e81a90b"
+  },
+  {
+    "file": "g2/shot-bar-half.png",
+    "bytes": 382250,
+    "sha256": "7d28f4a27df7dd0d76fef1135f8fc92af138c84b01af28af129e4f4bd47e4bd7"
+  },
+  {
+    "file": "g2/shot-bar-open.png",
+    "bytes": 382514,
+    "sha256": "3937141affe4f4903e81e6485ba18e2bb3b4eda1b04b0f2351d63f6ad92a756d"
+  },
+  {
+    "file": "g2/shot-bar-pulldown-bar.png",
+    "bytes": 382345,
+    "sha256": "fd5c9328e5893aad1ed795fa24f3e744d41ca793ae6679412352bf40674220b0"
+  },
+  {
+    "file": "g2/shot-class-digit-muscle-set.png",
+    "bytes": 357802,
+    "sha256": "07427713c0a7ac1b421d3c0885174ac22cf70596488e03f6d9e852d4928ead6c"
+  },
+  {
+    "file": "g2/shot-class-hypothenar.png",
+    "bytes": 361456,
+    "sha256": "c65e2c698e4fb63ddade736cfded3aecbae03e001bf581a8ca7c6372581f48e6"
+  },
+  {
+    "file": "g2/shot-class-long-tendon-thumb.png",
+    "bytes": 392577,
+    "sha256": "4eb69de96fa5aef7766ff578c4915a7644e3f512ce92465c9adf5be8130bd534"
+  },
+  {
+    "file": "g2/shot-class-thenar.png",
+    "bytes": 372468,
+    "sha256": "126d02d943b0df49cf991a2d1acc0aaf0560f510cffdf0f38b87045803fe8739"
+  },
+  {
+    "file": "g2/shot-context-closed.png",
+    "bytes": 368188,
+    "sha256": "675e3e6f41f27ef66bd24f5573d702b45ee9213a02bc301a411d7faa53926c7b"
+  },
+  {
+    "file": "g2/shot-context-half.png",
+    "bytes": 368135,
+    "sha256": "871c4dde12d024f3766a641e2fe27968144a8846eadfc629cea0327b6bf2e14d"
+  },
+  {
+    "file": "g2/shot-context-open.png",
+    "bytes": 368274,
+    "sha256": "5cb7559ce2bea87a3ed138a32335591f9a8fa24647cd3383836887560f8da1ad"
+  },
+  {
+    "file": "g2/shot-context-pulldown-bar.png",
+    "bytes": 368298,
+    "sha256": "042a3c37bd86fe4d3921753af11e5ad4d498a0e48c006e45a8d07593caf50395"
+  },
+  {
+    "file": "g2/shot-left-digits-closed.png",
+    "bytes": 425109,
+    "sha256": "3dec7711f5df3b14f2f67a2740fb4232ed65f9bc2a40bf28b8ce341ed6c847c9"
+  },
+  {
+    "file": "g2/shot-left-digits-half.png",
+    "bytes": 416957,
+    "sha256": "231c44a586eea230b756714438638fbbc1b4373075121bbf2752bf6af20cc000"
+  },
+  {
+    "file": "g2/shot-left-digits-open.png",
+    "bytes": 416439,
+    "sha256": "cd626759c119be80816573e86e4fe0e53e9810556c83f2565942e0ac79fa5808"
+  },
+  {
+    "file": "g2/shot-left-digits-pulldown-bar.png",
+    "bytes": 422925,
+    "sha256": "879a85a2f8309acd69dcf71d8a37a4e81e9a759df9e6c32e0c97d880d1609815"
+  },
+  {
+    "file": "g2/shot-left-palm-closed.png",
+    "bytes": 405370,
+    "sha256": "ac3f68e05c7b75ec95fbe8d15123b58400533f22de7f6a49839767b0fe60e8d0"
+  },
+  {
+    "file": "g2/shot-left-palm-half.png",
+    "bytes": 404644,
+    "sha256": "f5cae66ede81da4c457294e91d32cca39de4206f3dfcc15d2e931147044bc1ad"
+  },
+  {
+    "file": "g2/shot-left-palm-open.png",
+    "bytes": 397574,
+    "sha256": "33c14aedd5b1a6eb14f75b724d696d98b32946f4eee8cad3df299daaf1490d10"
+  },
+  {
+    "file": "g2/shot-left-palm-pulldown-bar.png",
+    "bytes": 405594,
+    "sha256": "331947fcfc426d586f4c9d87175aa9cd579aaaf99308f5c9d1f48df127442d66"
+  },
+  {
+    "file": "g2/shot-right-digits-closed.png",
+    "bytes": 427498,
+    "sha256": "84077d067c5703ec0856c1b29ef2a972845d09872e235f7348d6f11415a949d3"
+  },
+  {
+    "file": "g2/shot-right-digits-half.png",
+    "bytes": 418200,
+    "sha256": "28cd37b61f22cf4cf13fd54507b2a356f035fe93b022e755e82d64ba5d91c10c"
+  },
+  {
+    "file": "g2/shot-right-digits-open.png",
+    "bytes": 419016,
+    "sha256": "a66a96dacc32553c7fa28160aa560cf165a4d7d734f28bcfa98d8252cad56b28"
+  },
+  {
+    "file": "g2/shot-right-digits-pulldown-bar.png",
+    "bytes": 425921,
+    "sha256": "eac04a47ed90860cdeb081f24de772d505087af6d748f4925e0913e91b078075"
+  },
+  {
+    "file": "g2/shot-right-palm-closed.png",
+    "bytes": 421179,
+    "sha256": "a1896b1b871cf877d5c3857c33d7e513a7c01901dd47351fde1693488c4f33d9"
+  },
+  {
+    "file": "g2/shot-right-palm-half.png",
+    "bytes": 420771,
+    "sha256": "81f8fb1e125f9783b2fada0961cf00a804976c751f0f2f7dc07fbc0d6e3ebc2c"
+  },
+  {
+    "file": "g2/shot-right-palm-open.png",
+    "bytes": 415326,
+    "sha256": "871c33dc73411a82b082d4a7762b1d64272515200a56fc7174ab229d33690570"
+  },
+  {
+    "file": "g2/shot-right-palm-pulldown-bar.png",
+    "bytes": 422476,
+    "sha256": "98ed075b66fa35e81391a45780b9812e5d507b049a2ac8dd3d0ed8c5162d4e0e"
+  },
+  {
+    "file": "g2/three-posed-contact.json",
+    "bytes": 54966,
+    "sha256": "b3fe0128deb1c2077cabe07b3d33eedf164de09996627a6a452f807cfbaab7e5"
   }
 ]

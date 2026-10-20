@@ -1,0 +1,1814 @@
+{
+  "engine": "three@0.180 skinned boneTransform triangles",
+  "bar": {
+    "radiusM": 0.024,
+    "origin": [
+      0,
+      -0.13493847846984863,
+      0.7572160363197327
+    ],
+    "axis": [
+      1,
+      0,
+      0
+    ],
+    "halfLengthM": 0.34,
+    "space": "blender_Z_up",
+    "gltfYup": {
+      "origin": [
+        0,
+        0.7572160363197327,
+        0.13493847846984863
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "note": "Blender (x,y,z) -> glTF (x,z,-y) because G1 export used export_yup=True."
+    },
+    "note": "Rest-pose hand-height fixture using historical pulldown grip radius 24mm. Not overhead pulldown travel. Sole contact solid for G2."
+  },
+  "presets": {
+    "open": {
+      "minSignedM": -0.02370639041090328,
+      "insideSamples": 67495,
+      "tested": 181680,
+      "meshes": [
+        {
+          "name": "abductor digiti minimi of left hand",
+          "minSignedM": -0.020152722498198217,
+          "insideSamples": 740
+        },
+        {
+          "name": "abductor digiti minimi of right hand",
+          "minSignedM": -0.02015261346086581,
+          "insideSamples": 740
+        },
+        {
+          "name": "flexor digiti minimi brevis of left hand",
+          "minSignedM": -0.01813270380120724,
+          "insideSamples": 790
+        },
+        {
+          "name": "flexor digiti minimi brevis of right hand",
+          "minSignedM": -0.01813296073400373,
+          "insideSamples": 790
+        },
+        {
+          "name": "flexor retinaculum of left wrist",
+          "minSignedM": -0.002432314257850572,
+          "insideSamples": 219
+        },
+        {
+          "name": "flexor retinaculum of right wrist",
+          "minSignedM": -0.0024325206496889386,
+          "insideSamples": 219
+        },
+        {
+          "name": "interosseous membrane of left forearm",
+          "minSignedM": 0.04242000495128232,
+          "insideSamples": 0
+        },
+        {
+          "name": "interosseous membrane of right forearm",
+          "minSignedM": 0.04241991926987968,
+          "insideSamples": 0
+        },
+        {
+          "name": "left abductor pollicis brevis",
+          "minSignedM": -0.008975620534201105,
+          "insideSamples": 1161
+        },
+        {
+          "name": "left abductor pollicis longus",
+          "minSignedM": -0.004700641136829546,
+          "insideSamples": 464
+        },
+        {
+          "name": "left extensor digiti minimi",
+          "minSignedM": -0.015259983687113298,
+          "insideSamples": 561
+        },
+        {
+          "name": "left extensor pollicis brevis",
+          "minSignedM": -0.023429363217569613,
+          "insideSamples": 1110
+        },
+        {
+          "name": "left extensor pollicis longus",
+          "minSignedM": -0.023531509118325796,
+          "insideSamples": 940
+        },
+        {
+          "name": "left flexor pollicis brevis",
+          "minSignedM": -0.01469814667689336,
+          "insideSamples": 1208
+        },
+        {
+          "name": "left flexor pollicis longus",
+          "minSignedM": -0.015698062577413727,
+          "insideSamples": 628
+        },
+        {
+          "name": "left opponens pollicis",
+          "minSignedM": -0.014742917010197781,
+          "insideSamples": 1587
+        },
+        {
+          "name": "oblique head of left adductor pollicis",
+          "minSignedM": -0.020647940641671768,
+          "insideSamples": 1649
+        },
+        {
+          "name": "oblique head of right adductor pollicis",
+          "minSignedM": -0.02064797577360044,
+          "insideSamples": 1650
+        },
+        {
+          "name": "opponens digiti minimi of left hand",
+          "minSignedM": -0.02282089006438463,
+          "insideSamples": 1601
+        },
+        {
+          "name": "opponens digiti minimi of right hand",
+          "minSignedM": -0.022820364141829867,
+          "insideSamples": 1601
+        },
+        {
+          "name": "right abductor pollicis brevis",
+          "minSignedM": -0.008975889728491854,
+          "insideSamples": 1161
+        },
+        {
+          "name": "right abductor pollicis longus",
+          "minSignedM": -0.0047008815480440655,
+          "insideSamples": 464
+        },
+        {
+          "name": "right extensor digiti minimi",
+          "minSignedM": -0.01526022537664838,
+          "insideSamples": 561
+        },
+        {
+          "name": "right extensor pollicis brevis",
+          "minSignedM": -0.023429989022106065,
+          "insideSamples": 1110
+        },
+        {
+          "name": "right extensor pollicis longus",
+          "minSignedM": -0.023531229635921885,
+          "insideSamples": 940
+        },
+        {
+          "name": "right flexor pollicis brevis",
+          "minSignedM": -0.014698141694466085,
+          "insideSamples": 1208
+        },
+        {
+          "name": "right flexor pollicis longus",
+          "minSignedM": -0.015698012251308686,
+          "insideSamples": 628
+        },
+        {
+          "name": "right opponens pollicis",
+          "minSignedM": -0.014742911227022116,
+          "insideSamples": 1587
+        },
+        {
+          "name": "set of dorsal interossei of left hand",
+          "minSignedM": -0.021858903935906997,
+          "insideSamples": 8327
+        },
+        {
+          "name": "set of dorsal interossei of right hand",
+          "minSignedM": -0.021857985450897777,
+          "insideSamples": 8327
+        },
+        {
+          "name": "set of lumbricals of left hand",
+          "minSignedM": -0.023706122887538136,
+          "insideSamples": 5681
+        },
+        {
+          "name": "set of lumbricals of right hand",
+          "minSignedM": -0.02370639041090328,
+          "insideSamples": 5681
+        },
+        {
+          "name": "set of palmar interossei of left hand",
+          "minSignedM": -0.02355820602259653,
+          "insideSamples": 2919
+        },
+        {
+          "name": "set of palmar interossei of right hand",
+          "minSignedM": -0.02355802067545566,
+          "insideSamples": 2919
+        },
+        {
+          "name": "superficial head of left flexor pollicis brevis",
+          "minSignedM": -0.009114466247575786,
+          "insideSamples": 1146
+        },
+        {
+          "name": "superficial head of right flexor pollicis brevis",
+          "minSignedM": -0.009114461208890678,
+          "insideSamples": 1146
+        },
+        {
+          "name": "transverse head of left adductor pollicis",
+          "minSignedM": -0.023705468845211193,
+          "insideSamples": 3016
+        },
+        {
+          "name": "transverse head of right adductor pollicis",
+          "minSignedM": -0.023705327594185834,
+          "insideSamples": 3016
+        }
+      ]
+    },
+    "half": {
+      "minSignedM": -0.02382499813565686,
+      "insideSamples": 66302,
+      "tested": 181680,
+      "meshes": [
+        {
+          "name": "abductor digiti minimi of left hand",
+          "minSignedM": -0.02252761681164716,
+          "insideSamples": 832
+        },
+        {
+          "name": "abductor digiti minimi of right hand",
+          "minSignedM": -0.022527672931300185,
+          "insideSamples": 832
+        },
+        {
+          "name": "flexor digiti minimi brevis of left hand",
+          "minSignedM": -0.023709592479453846,
+          "insideSamples": 852
+        },
+        {
+          "name": "flexor digiti minimi brevis of right hand",
+          "minSignedM": -0.023710073816051423,
+          "insideSamples": 852
+        },
+        {
+          "name": "flexor retinaculum of left wrist",
+          "minSignedM": -0.0018590011967349884,
+          "insideSamples": 209
+        },
+        {
+          "name": "flexor retinaculum of right wrist",
+          "minSignedM": -0.0018592733191733386,
+          "insideSamples": 209
+        },
+        {
+          "name": "interosseous membrane of left forearm",
+          "minSignedM": 0.0422761889967753,
+          "insideSamples": 0
+        },
+        {
+          "name": "interosseous membrane of right forearm",
+          "minSignedM": 0.042276103424122614,
+          "insideSamples": 0
+        },
+        {
+          "name": "left abductor pollicis brevis",
+          "minSignedM": -0.005321540659154904,
+          "insideSamples": 989
+        },
+        {
+          "name": "left abductor pollicis longus",
+          "minSignedM": -0.004364865467287236,
+          "insideSamples": 442
+        },
+        {
+          "name": "left extensor digiti minimi",
+          "minSignedM": -0.015259983687113298,
+          "insideSamples": 561
+        },
+        {
+          "name": "left extensor pollicis brevis",
+          "minSignedM": -0.020143598408541085,
+          "insideSamples": 1122
+        },
+        {
+          "name": "left extensor pollicis longus",
+          "minSignedM": -0.022501581246065657,
+          "insideSamples": 940
+        },
+        {
+          "name": "left flexor pollicis brevis",
+          "minSignedM": -0.01208996336156303,
+          "insideSamples": 1144
+        },
+        {
+          "name": "left flexor pollicis longus",
+          "minSignedM": -0.01263153864399613,
+          "insideSamples": 592
+        },
+        {
+          "name": "left opponens pollicis",
+          "minSignedM": -0.01051671426772614,
+          "insideSamples": 1469
+        },
+        {
+          "name": "oblique head of left adductor pollicis",
+          "minSignedM": -0.01857541089547087,
+          "insideSamples": 1497
+        },
+        {
+          "name": "oblique head of right adductor pollicis",
+          "minSignedM": -0.018575520271897118,
+          "insideSamples": 1497
+        },
+        {
+          "name": "opponens digiti minimi of left hand",
+          "minSignedM": -0.023824945395877765,
+          "insideSamples": 1600
+        },
+        {
+          "name": "opponens digiti minimi of right hand",
+          "minSignedM": -0.02382499813565686,
+          "insideSamples": 1600
+        },
+        {
+          "name": "right abductor pollicis brevis",
+          "minSignedM": -0.0053214751507062105,
+          "insideSamples": 989
+        },
+        {
+          "name": "right abductor pollicis longus",
+          "minSignedM": -0.004365098517216948,
+          "insideSamples": 442
+        },
+        {
+          "name": "right extensor digiti minimi",
+          "minSignedM": -0.01526022537664838,
+          "insideSamples": 561
+        },
+        {
+          "name": "right extensor pollicis brevis",
+          "minSignedM": -0.020143945647752997,
+          "insideSamples": 1122
+        },
+        {
+          "name": "right extensor pollicis longus",
+          "minSignedM": -0.022501795710425414,
+          "insideSamples": 940
+        },
+        {
+          "name": "right flexor pollicis brevis",
+          "minSignedM": -0.012089897950723355,
+          "insideSamples": 1144
+        },
+        {
+          "name": "right flexor pollicis longus",
+          "minSignedM": -0.012631627172882576,
+          "insideSamples": 592
+        },
+        {
+          "name": "right opponens pollicis",
+          "minSignedM": -0.010516709985777266,
+          "insideSamples": 1469
+        },
+        {
+          "name": "set of dorsal interossei of left hand",
+          "minSignedM": -0.02343044065066789,
+          "insideSamples": 8025
+        },
+        {
+          "name": "set of dorsal interossei of right hand",
+          "minSignedM": -0.02343127241581801,
+          "insideSamples": 8025
+        },
+        {
+          "name": "set of lumbricals of left hand",
+          "minSignedM": -0.023314893504037634,
+          "insideSamples": 5787
+        },
+        {
+          "name": "set of lumbricals of right hand",
+          "minSignedM": -0.02331447898434913,
+          "insideSamples": 5787
+        },
+        {
+          "name": "set of palmar interossei of left hand",
+          "minSignedM": -0.021462569496269245,
+          "insideSamples": 2996
+        },
+        {
+          "name": "set of palmar interossei of right hand",
+          "minSignedM": -0.021461661466004124,
+          "insideSamples": 2996
+        },
+        {
+          "name": "superficial head of left flexor pollicis brevis",
+          "minSignedM": -0.006339480878376633,
+          "insideSamples": 1078
+        },
+        {
+          "name": "superficial head of right flexor pollicis brevis",
+          "minSignedM": -0.006339484403087826,
+          "insideSamples": 1078
+        },
+        {
+          "name": "transverse head of left adductor pollicis",
+          "minSignedM": -0.0235673229965001,
+          "insideSamples": 3016
+        },
+        {
+          "name": "transverse head of right adductor pollicis",
+          "minSignedM": -0.023567542498294267,
+          "insideSamples": 3016
+        }
+      ]
+    },
+    "closed": {
+      "minSignedM": -0.023505556313192476,
+      "insideSamples": 56550,
+      "tested": 181680,
+      "meshes": [
+        {
+          "name": "abductor digiti minimi of left hand",
+          "minSignedM": -0.022056639064491082,
+          "insideSamples": 1323
+        },
+        {
+          "name": "abductor digiti minimi of right hand",
+          "minSignedM": -0.02205686287153089,
+          "insideSamples": 1323
+        },
+        {
+          "name": "flexor digiti minimi brevis of left hand",
+          "minSignedM": -0.019270064149213496,
+          "insideSamples": 1033
+        },
+        {
+          "name": "flexor digiti minimi brevis of right hand",
+          "minSignedM": -0.019269953059458,
+          "insideSamples": 1033
+        },
+        {
+          "name": "flexor retinaculum of left wrist",
+          "minSignedM": -0.0030283763662277384,
+          "insideSamples": 237
+        },
+        {
+          "name": "flexor retinaculum of right wrist",
+          "minSignedM": -0.003028751420669957,
+          "insideSamples": 237
+        },
+        {
+          "name": "interosseous membrane of left forearm",
+          "minSignedM": 0.040933793535323275,
+          "insideSamples": 0
+        },
+        {
+          "name": "interosseous membrane of right forearm",
+          "minSignedM": 0.040933706682561015,
+          "insideSamples": 0
+        },
+        {
+          "name": "left abductor pollicis brevis",
+          "minSignedM": -0.0010873218687582134,
+          "insideSamples": 220
+        },
+        {
+          "name": "left abductor pollicis longus",
+          "minSignedM": -0.002357636540802354,
+          "insideSamples": 172
+        },
+        {
+          "name": "left extensor digiti minimi",
+          "minSignedM": -0.015259983687113298,
+          "insideSamples": 561
+        },
+        {
+          "name": "left extensor pollicis brevis",
+          "minSignedM": -0.01492820122463116,
+          "insideSamples": 1109
+        },
+        {
+          "name": "left extensor pollicis longus",
+          "minSignedM": -0.017893481803725367,
+          "insideSamples": 918
+        },
+        {
+          "name": "left flexor pollicis brevis",
+          "minSignedM": -0.008764212291281142,
+          "insideSamples": 851
+        },
+        {
+          "name": "left flexor pollicis longus",
+          "minSignedM": -0.008671717095672037,
+          "insideSamples": 520
+        },
+        {
+          "name": "left opponens pollicis",
+          "minSignedM": -0.005152194482087341,
+          "insideSamples": 1170
+        },
+        {
+          "name": "oblique head of left adductor pollicis",
+          "minSignedM": -0.015777902860487452,
+          "insideSamples": 1377
+        },
+        {
+          "name": "oblique head of right adductor pollicis",
+          "minSignedM": -0.015777997646931604,
+          "insideSamples": 1377
+        },
+        {
+          "name": "opponens digiti minimi of left hand",
+          "minSignedM": -0.017640224430853366,
+          "insideSamples": 1597
+        },
+        {
+          "name": "opponens digiti minimi of right hand",
+          "minSignedM": -0.017640141033921947,
+          "insideSamples": 1597
+        },
+        {
+          "name": "right abductor pollicis brevis",
+          "minSignedM": -0.00108724931604455,
+          "insideSamples": 220
+        },
+        {
+          "name": "right abductor pollicis longus",
+          "minSignedM": -0.002357856725823077,
+          "insideSamples": 172
+        },
+        {
+          "name": "right extensor digiti minimi",
+          "minSignedM": -0.01526022537664838,
+          "insideSamples": 561
+        },
+        {
+          "name": "right extensor pollicis brevis",
+          "minSignedM": -0.014928756194081709,
+          "insideSamples": 1109
+        },
+        {
+          "name": "right extensor pollicis longus",
+          "minSignedM": -0.017893553659771348,
+          "insideSamples": 918
+        },
+        {
+          "name": "right flexor pollicis brevis",
+          "minSignedM": -0.008764138099285662,
+          "insideSamples": 851
+        },
+        {
+          "name": "right flexor pollicis longus",
+          "minSignedM": -0.008671805383629662,
+          "insideSamples": 520
+        },
+        {
+          "name": "right opponens pollicis",
+          "minSignedM": -0.005151967983528613,
+          "insideSamples": 1170
+        },
+        {
+          "name": "set of dorsal interossei of left hand",
+          "minSignedM": -0.023505556313192476,
+          "insideSamples": 5133
+        },
+        {
+          "name": "set of dorsal interossei of right hand",
+          "minSignedM": -0.023505204700741255,
+          "insideSamples": 5133
+        },
+        {
+          "name": "set of lumbricals of left hand",
+          "minSignedM": -0.023251448948088303,
+          "insideSamples": 5837
+        },
+        {
+          "name": "set of lumbricals of right hand",
+          "minSignedM": -0.023251425173704092,
+          "insideSamples": 5837
+        },
+        {
+          "name": "set of palmar interossei of left hand",
+          "minSignedM": -0.02246723995717189,
+          "insideSamples": 3187
+        },
+        {
+          "name": "set of palmar interossei of right hand",
+          "minSignedM": -0.022467199787643374,
+          "insideSamples": 3187
+        },
+        {
+          "name": "superficial head of left flexor pollicis brevis",
+          "minSignedM": -0.005358610270505344,
+          "insideSamples": 522
+        },
+        {
+          "name": "superficial head of right flexor pollicis brevis",
+          "minSignedM": -0.005358879241429165,
+          "insideSamples": 522
+        },
+        {
+          "name": "transverse head of left adductor pollicis",
+          "minSignedM": -0.022409577511608,
+          "insideSamples": 2508
+        },
+        {
+          "name": "transverse head of right adductor pollicis",
+          "minSignedM": -0.022409826727219327,
+          "insideSamples": 2508
+        }
+      ]
+    },
+    "pulldown-bar": {
+      "minSignedM": -0.023913059405222186,
+      "insideSamples": 63216,
+      "tested": 181680,
+      "meshes": [
+        {
+          "name": "abductor digiti minimi of left hand",
+          "minSignedM": -0.02358589926063561,
+          "insideSamples": 1071
+        },
+        {
+          "name": "abductor digiti minimi of right hand",
+          "minSignedM": -0.02358567165631155,
+          "insideSamples": 1071
+        },
+        {
+          "name": "flexor digiti minimi brevis of left hand",
+          "minSignedM": -0.023232241541485392,
+          "insideSamples": 1032
+        },
+        {
+          "name": "flexor digiti minimi brevis of right hand",
+          "minSignedM": -0.02323266323751956,
+          "insideSamples": 1032
+        },
+        {
+          "name": "flexor retinaculum of left wrist",
+          "minSignedM": -0.001976561983900362,
+          "insideSamples": 223
+        },
+        {
+          "name": "flexor retinaculum of right wrist",
+          "minSignedM": -0.001976818287349441,
+          "insideSamples": 223
+        },
+        {
+          "name": "interosseous membrane of left forearm",
+          "minSignedM": 0.041759840790571,
+          "insideSamples": 0
+        },
+        {
+          "name": "interosseous membrane of right forearm",
+          "minSignedM": 0.041759754775445364,
+          "insideSamples": 0
+        },
+        {
+          "name": "left abductor pollicis brevis",
+          "minSignedM": -0.0028664943526455593,
+          "insideSamples": 788
+        },
+        {
+          "name": "left abductor pollicis longus",
+          "minSignedM": -0.003525917570932475,
+          "insideSamples": 329
+        },
+        {
+          "name": "left extensor digiti minimi",
+          "minSignedM": -0.015259983687113298,
+          "insideSamples": 561
+        },
+        {
+          "name": "left extensor pollicis brevis",
+          "minSignedM": -0.017323796486904977,
+          "insideSamples": 1121
+        },
+        {
+          "name": "left extensor pollicis longus",
+          "minSignedM": -0.02018148983386713,
+          "insideSamples": 941
+        },
+        {
+          "name": "left flexor pollicis brevis",
+          "minSignedM": -0.010241959688869325,
+          "insideSamples": 1035
+        },
+        {
+          "name": "left flexor pollicis longus",
+          "minSignedM": -0.010468216639923878,
+          "insideSamples": 570
+        },
+        {
+          "name": "left opponens pollicis",
+          "minSignedM": -0.007477118771713066,
+          "insideSamples": 1395
+        },
+        {
+          "name": "oblique head of left adductor pollicis",
+          "minSignedM": -0.01706542984242073,
+          "insideSamples": 1403
+        },
+        {
+          "name": "oblique head of right adductor pollicis",
+          "minSignedM": -0.017065523076339156,
+          "insideSamples": 1408
+        },
+        {
+          "name": "opponens digiti minimi of left hand",
+          "minSignedM": -0.021788432169657763,
+          "insideSamples": 1592
+        },
+        {
+          "name": "opponens digiti minimi of right hand",
+          "minSignedM": -0.02178834069862227,
+          "insideSamples": 1592
+        },
+        {
+          "name": "right abductor pollicis brevis",
+          "minSignedM": -0.0028664466412491596,
+          "insideSamples": 788
+        },
+        {
+          "name": "right abductor pollicis longus",
+          "minSignedM": -0.003526143354129988,
+          "insideSamples": 329
+        },
+        {
+          "name": "right extensor digiti minimi",
+          "minSignedM": -0.01526022537664838,
+          "insideSamples": 561
+        },
+        {
+          "name": "right extensor pollicis brevis",
+          "minSignedM": -0.017324135853363717,
+          "insideSamples": 1121
+        },
+        {
+          "name": "right extensor pollicis longus",
+          "minSignedM": -0.020181571333930136,
+          "insideSamples": 941
+        },
+        {
+          "name": "right flexor pollicis brevis",
+          "minSignedM": -0.010241893209202765,
+          "insideSamples": 1035
+        },
+        {
+          "name": "right flexor pollicis longus",
+          "minSignedM": -0.010468300240120266,
+          "insideSamples": 570
+        },
+        {
+          "name": "right opponens pollicis",
+          "minSignedM": -0.007477171891121896,
+          "insideSamples": 1395
+        },
+        {
+          "name": "set of dorsal interossei of left hand",
+          "minSignedM": -0.023913059405222186,
+          "insideSamples": 6970
+        },
+        {
+          "name": "set of dorsal interossei of right hand",
+          "minSignedM": -0.023912968518599764,
+          "insideSamples": 6969
+        },
+        {
+          "name": "set of lumbricals of left hand",
+          "minSignedM": -0.02325800836169781,
+          "insideSamples": 5820
+        },
+        {
+          "name": "set of lumbricals of right hand",
+          "minSignedM": -0.02325793028464809,
+          "insideSamples": 5820
+        },
+        {
+          "name": "set of palmar interossei of left hand",
+          "minSignedM": -0.022050926756255723,
+          "insideSamples": 3071
+        },
+        {
+          "name": "set of palmar interossei of right hand",
+          "minSignedM": -0.022050041146736463,
+          "insideSamples": 3071
+        },
+        {
+          "name": "superficial head of left flexor pollicis brevis",
+          "minSignedM": -0.004459470782819396,
+          "insideSamples": 811
+        },
+        {
+          "name": "superficial head of right flexor pollicis brevis",
+          "minSignedM": -0.004459484680317476,
+          "insideSamples": 811
+        },
+        {
+          "name": "transverse head of left adductor pollicis",
+          "minSignedM": -0.02315253880057392,
+          "insideSamples": 2873
+        },
+        {
+          "name": "transverse head of right adductor pollicis",
+          "minSignedM": -0.023152225345783147,
+          "insideSamples": 2873
+        }
+      ]
+    }
+  },
+  "cycle": [
+    {
+      "t": 0,
+      "minSignedM": -0.02370639041090328,
+      "insideSamples": 67495,
+      "tested": 181680,
+      "meshes": [
+        {
+          "name": "abductor digiti minimi of left hand",
+          "minSignedM": -0.020152722498198217,
+          "insideSamples": 740
+        },
+        {
+          "name": "abductor digiti minimi of right hand",
+          "minSignedM": -0.02015261346086581,
+          "insideSamples": 740
+        },
+        {
+          "name": "flexor digiti minimi brevis of left hand",
+          "minSignedM": -0.01813270380120724,
+          "insideSamples": 790
+        },
+        {
+          "name": "flexor digiti minimi brevis of right hand",
+          "minSignedM": -0.01813296073400373,
+          "insideSamples": 790
+        },
+        {
+          "name": "flexor retinaculum of left wrist",
+          "minSignedM": -0.002432314257850572,
+          "insideSamples": 219
+        },
+        {
+          "name": "flexor retinaculum of right wrist",
+          "minSignedM": -0.0024325206496889386,
+          "insideSamples": 219
+        },
+        {
+          "name": "interosseous membrane of left forearm",
+          "minSignedM": 0.04242000495128232,
+          "insideSamples": 0
+        },
+        {
+          "name": "interosseous membrane of right forearm",
+          "minSignedM": 0.04241991926987968,
+          "insideSamples": 0
+        },
+        {
+          "name": "left abductor pollicis brevis",
+          "minSignedM": -0.008975620534201105,
+          "insideSamples": 1161
+        },
+        {
+          "name": "left abductor pollicis longus",
+          "minSignedM": -0.004700641136829546,
+          "insideSamples": 464
+        },
+        {
+          "name": "left extensor digiti minimi",
+          "minSignedM": -0.015259983687113298,
+          "insideSamples": 561
+        },
+        {
+          "name": "left extensor pollicis brevis",
+          "minSignedM": -0.023429363217569613,
+          "insideSamples": 1110
+        },
+        {
+          "name": "left extensor pollicis longus",
+          "minSignedM": -0.023531509118325796,
+          "insideSamples": 940
+        },
+        {
+          "name": "left flexor pollicis brevis",
+          "minSignedM": -0.01469814667689336,
+          "insideSamples": 1208
+        },
+        {
+          "name": "left flexor pollicis longus",
+          "minSignedM": -0.015698062577413727,
+          "insideSamples": 628
+        },
+        {
+          "name": "left opponens pollicis",
+          "minSignedM": -0.014742917010197781,
+          "insideSamples": 1587
+        },
+        {
+          "name": "oblique head of left adductor pollicis",
+          "minSignedM": -0.020647940641671768,
+          "insideSamples": 1649
+        },
+        {
+          "name": "oblique head of right adductor pollicis",
+          "minSignedM": -0.02064797577360044,
+          "insideSamples": 1650
+        },
+        {
+          "name": "opponens digiti minimi of left hand",
+          "minSignedM": -0.02282089006438463,
+          "insideSamples": 1601
+        },
+        {
+          "name": "opponens digiti minimi of right hand",
+          "minSignedM": -0.022820364141829867,
+          "insideSamples": 1601
+        },
+        {
+          "name": "right abductor pollicis brevis",
+          "minSignedM": -0.008975889728491854,
+          "insideSamples": 1161
+        },
+        {
+          "name": "right abductor pollicis longus",
+          "minSignedM": -0.0047008815480440655,
+          "insideSamples": 464
+        },
+        {
+          "name": "right extensor digiti minimi",
+          "minSignedM": -0.01526022537664838,
+          "insideSamples": 561
+        },
+        {
+          "name": "right extensor pollicis brevis",
+          "minSignedM": -0.023429989022106065,
+          "insideSamples": 1110
+        },
+        {
+          "name": "right extensor pollicis longus",
+          "minSignedM": -0.023531229635921885,
+          "insideSamples": 940
+        },
+        {
+          "name": "right flexor pollicis brevis",
+          "minSignedM": -0.014698141694466085,
+          "insideSamples": 1208
+        },
+        {
+          "name": "right flexor pollicis longus",
+          "minSignedM": -0.015698012251308686,
+          "insideSamples": 628
+        },
+        {
+          "name": "right opponens pollicis",
+          "minSignedM": -0.014742911227022116,
+          "insideSamples": 1587
+        },
+        {
+          "name": "set of dorsal interossei of left hand",
+          "minSignedM": -0.021858903935906997,
+          "insideSamples": 8327
+        },
+        {
+          "name": "set of dorsal interossei of right hand",
+          "minSignedM": -0.021857985450897777,
+          "insideSamples": 8327
+        },
+        {
+          "name": "set of lumbricals of left hand",
+          "minSignedM": -0.023706122887538136,
+          "insideSamples": 5681
+        },
+        {
+          "name": "set of lumbricals of right hand",
+          "minSignedM": -0.02370639041090328,
+          "insideSamples": 5681
+        },
+        {
+          "name": "set of palmar interossei of left hand",
+          "minSignedM": -0.02355820602259653,
+          "insideSamples": 2919
+        },
+        {
+          "name": "set of palmar interossei of right hand",
+          "minSignedM": -0.02355802067545566,
+          "insideSamples": 2919
+        },
+        {
+          "name": "superficial head of left flexor pollicis brevis",
+          "minSignedM": -0.009114466247575786,
+          "insideSamples": 1146
+        },
+        {
+          "name": "superficial head of right flexor pollicis brevis",
+          "minSignedM": -0.009114461208890678,
+          "insideSamples": 1146
+        },
+        {
+          "name": "transverse head of left adductor pollicis",
+          "minSignedM": -0.023705468845211193,
+          "insideSamples": 3016
+        },
+        {
+          "name": "transverse head of right adductor pollicis",
+          "minSignedM": -0.023705327594185834,
+          "insideSamples": 3016
+        }
+      ]
+    },
+    {
+      "t": 0.25,
+      "minSignedM": -0.02377107896177732,
+      "insideSamples": 66110,
+      "tested": 181680,
+      "meshes": [
+        {
+          "name": "abductor digiti minimi of left hand",
+          "minSignedM": -0.023231740217712515,
+          "insideSamples": 845
+        },
+        {
+          "name": "abductor digiti minimi of right hand",
+          "minSignedM": -0.02323190080094067,
+          "insideSamples": 845
+        },
+        {
+          "name": "flexor digiti minimi brevis of left hand",
+          "minSignedM": -0.02376782870566191,
+          "insideSamples": 871
+        },
+        {
+          "name": "flexor digiti minimi brevis of right hand",
+          "minSignedM": -0.023767559992962234,
+          "insideSamples": 871
+        },
+        {
+          "name": "flexor retinaculum of left wrist",
+          "minSignedM": -0.0018814153305173678,
+          "insideSamples": 220
+        },
+        {
+          "name": "flexor retinaculum of right wrist",
+          "minSignedM": -0.0018816866328334597,
+          "insideSamples": 220
+        },
+        {
+          "name": "interosseous membrane of left forearm",
+          "minSignedM": 0.042203677234205435,
+          "insideSamples": 0
+        },
+        {
+          "name": "interosseous membrane of right forearm",
+          "minSignedM": 0.04220359160801567,
+          "insideSamples": 0
+        },
+        {
+          "name": "left abductor pollicis brevis",
+          "minSignedM": -0.004603165299345735,
+          "insideSamples": 960
+        },
+        {
+          "name": "left abductor pollicis longus",
+          "minSignedM": -0.004293972715933677,
+          "insideSamples": 430
+        },
+        {
+          "name": "left extensor digiti minimi",
+          "minSignedM": -0.015259983687113298,
+          "insideSamples": 561
+        },
+        {
+          "name": "left extensor pollicis brevis",
+          "minSignedM": -0.01942305434968192,
+          "insideSamples": 1122
+        },
+        {
+          "name": "left extensor pollicis longus",
+          "minSignedM": -0.02205922504469357,
+          "insideSamples": 949
+        },
+        {
+          "name": "left flexor pollicis brevis",
+          "minSignedM": -0.011599726492462442,
+          "insideSamples": 1143
+        },
+        {
+          "name": "left flexor pollicis longus",
+          "minSignedM": -0.012074908449926676,
+          "insideSamples": 584
+        },
+        {
+          "name": "left opponens pollicis",
+          "minSignedM": -0.009662953858203363,
+          "insideSamples": 1462
+        },
+        {
+          "name": "oblique head of left adductor pollicis",
+          "minSignedM": -0.01819898514059509,
+          "insideSamples": 1492
+        },
+        {
+          "name": "oblique head of right adductor pollicis",
+          "minSignedM": -0.018199084246357338,
+          "insideSamples": 1492
+        },
+        {
+          "name": "opponens digiti minimi of left hand",
+          "minSignedM": -0.02341356192697576,
+          "insideSamples": 1600
+        },
+        {
+          "name": "opponens digiti minimi of right hand",
+          "minSignedM": -0.023413627671302818,
+          "insideSamples": 1600
+        },
+        {
+          "name": "right abductor pollicis brevis",
+          "minSignedM": -0.004603102933372294,
+          "insideSamples": 960
+        },
+        {
+          "name": "right abductor pollicis longus",
+          "minSignedM": -0.0042942037566456905,
+          "insideSamples": 430
+        },
+        {
+          "name": "right extensor digiti minimi",
+          "minSignedM": -0.01526022537664838,
+          "insideSamples": 561
+        },
+        {
+          "name": "right extensor pollicis brevis",
+          "minSignedM": -0.019423396916294355,
+          "insideSamples": 1122
+        },
+        {
+          "name": "right extensor pollicis longus",
+          "minSignedM": -0.022059366055961357,
+          "insideSamples": 949
+        },
+        {
+          "name": "right flexor pollicis brevis",
+          "minSignedM": -0.011599663650139995,
+          "insideSamples": 1143
+        },
+        {
+          "name": "right flexor pollicis longus",
+          "minSignedM": -0.012074992284084173,
+          "insideSamples": 584
+        },
+        {
+          "name": "right opponens pollicis",
+          "minSignedM": -0.009662949146386202,
+          "insideSamples": 1462
+        },
+        {
+          "name": "set of dorsal interossei of left hand",
+          "minSignedM": -0.023024249523429054,
+          "insideSamples": 7967
+        },
+        {
+          "name": "set of dorsal interossei of right hand",
+          "minSignedM": -0.023024084489946577,
+          "insideSamples": 7967
+        },
+        {
+          "name": "set of lumbricals of left hand",
+          "minSignedM": -0.023223987037214244,
+          "insideSamples": 5802
+        },
+        {
+          "name": "set of lumbricals of right hand",
+          "minSignedM": -0.02322388014346017,
+          "insideSamples": 5802
+        },
+        {
+          "name": "set of palmar interossei of left hand",
+          "minSignedM": -0.021682834413900457,
+          "insideSamples": 3015
+        },
+        {
+          "name": "set of palmar interossei of right hand",
+          "minSignedM": -0.021681917794043083,
+          "insideSamples": 3015
+        },
+        {
+          "name": "superficial head of left flexor pollicis brevis",
+          "minSignedM": -0.005806404160066919,
+          "insideSamples": 1016
+        },
+        {
+          "name": "superficial head of right flexor pollicis brevis",
+          "minSignedM": -0.005806408658511376,
+          "insideSamples": 1016
+        },
+        {
+          "name": "transverse head of left adductor pollicis",
+          "minSignedM": -0.023771038300806846,
+          "insideSamples": 3016
+        },
+        {
+          "name": "transverse head of right adductor pollicis",
+          "minSignedM": -0.02377107896177732,
+          "insideSamples": 3016
+        }
+      ]
+    },
+    {
+      "t": 0.5,
+      "minSignedM": -0.023505556313192476,
+      "insideSamples": 56550,
+      "tested": 181680,
+      "meshes": [
+        {
+          "name": "abductor digiti minimi of left hand",
+          "minSignedM": -0.022056639064491082,
+          "insideSamples": 1323
+        },
+        {
+          "name": "abductor digiti minimi of right hand",
+          "minSignedM": -0.02205686287153089,
+          "insideSamples": 1323
+        },
+        {
+          "name": "flexor digiti minimi brevis of left hand",
+          "minSignedM": -0.019270064149213496,
+          "insideSamples": 1033
+        },
+        {
+          "name": "flexor digiti minimi brevis of right hand",
+          "minSignedM": -0.019269953059458,
+          "insideSamples": 1033
+        },
+        {
+          "name": "flexor retinaculum of left wrist",
+          "minSignedM": -0.0030283763662277384,
+          "insideSamples": 237
+        },
+        {
+          "name": "flexor retinaculum of right wrist",
+          "minSignedM": -0.003028751420669957,
+          "insideSamples": 237
+        },
+        {
+          "name": "interosseous membrane of left forearm",
+          "minSignedM": 0.040933793535323275,
+          "insideSamples": 0
+        },
+        {
+          "name": "interosseous membrane of right forearm",
+          "minSignedM": 0.040933706682561015,
+          "insideSamples": 0
+        },
+        {
+          "name": "left abductor pollicis brevis",
+          "minSignedM": -0.0010873218687582134,
+          "insideSamples": 220
+        },
+        {
+          "name": "left abductor pollicis longus",
+          "minSignedM": -0.002357636540802354,
+          "insideSamples": 172
+        },
+        {
+          "name": "left extensor digiti minimi",
+          "minSignedM": -0.015259983687113298,
+          "insideSamples": 561
+        },
+        {
+          "name": "left extensor pollicis brevis",
+          "minSignedM": -0.01492820122463116,
+          "insideSamples": 1109
+        },
+        {
+          "name": "left extensor pollicis longus",
+          "minSignedM": -0.017893481803725367,
+          "insideSamples": 918
+        },
+        {
+          "name": "left flexor pollicis brevis",
+          "minSignedM": -0.008764212291281142,
+          "insideSamples": 851
+        },
+        {
+          "name": "left flexor pollicis longus",
+          "minSignedM": -0.008671717095672037,
+          "insideSamples": 520
+        },
+        {
+          "name": "left opponens pollicis",
+          "minSignedM": -0.005152194482087341,
+          "insideSamples": 1170
+        },
+        {
+          "name": "oblique head of left adductor pollicis",
+          "minSignedM": -0.015777902860487452,
+          "insideSamples": 1377
+        },
+        {
+          "name": "oblique head of right adductor pollicis",
+          "minSignedM": -0.015777997646931604,
+          "insideSamples": 1377
+        },
+        {
+          "name": "opponens digiti minimi of left hand",
+          "minSignedM": -0.017640224430853366,
+          "insideSamples": 1597
+        },
+        {
+          "name": "opponens digiti minimi of right hand",
+          "minSignedM": -0.017640141033921947,
+          "insideSamples": 1597
+        },
+        {
+          "name": "right abductor pollicis brevis",
+          "minSignedM": -0.00108724931604455,
+          "insideSamples": 220
+        },
+        {
+          "name": "right abductor pollicis longus",
+          "minSignedM": -0.002357856725823077,
+          "insideSamples": 172
+        },
+        {
+          "name": "right extensor digiti minimi",
+          "minSignedM": -0.01526022537664838,
+          "insideSamples": 561
+        },
+        {
+          "name": "right extensor pollicis brevis",
+          "minSignedM": -0.014928756194081709,
+          "insideSamples": 1109
+        },
+        {
+          "name": "right extensor pollicis longus",
+          "minSignedM": -0.017893553659771348,
+          "insideSamples": 918
+        },
+        {
+          "name": "right flexor pollicis brevis",
+          "minSignedM": -0.008764138099285662,
+          "insideSamples": 851
+        },
+        {
+          "name": "right flexor pollicis longus",
+          "minSignedM": -0.008671805383629662,
+          "insideSamples": 520
+        },
+        {
+          "name": "right opponens pollicis",
+          "minSignedM": -0.005151967983528613,
+          "insideSamples": 1170
+        },
+        {
+          "name": "set of dorsal interossei of left hand",
+          "minSignedM": -0.023505556313192476,
+          "insideSamples": 5133
+        },
+        {
+          "name": "set of dorsal interossei of right hand",
+          "minSignedM": -0.023505204700741255,
+          "insideSamples": 5133
+        },
+        {
+          "name": "set of lumbricals of left hand",
+          "minSignedM": -0.023251448948088303,
+          "insideSamples": 5837
+        },
+        {
+          "name": "set of lumbricals of right hand",
+          "minSignedM": -0.023251425173704092,
+          "insideSamples": 5837
+        },
+        {
+          "name": "set of palmar interossei of left hand",
+          "minSignedM": -0.02246723995717189,
+          "insideSamples": 3187
+        },
+        {
+          "name": "set of palmar interossei of right hand",
+          "minSignedM": -0.022467199787643374,
+          "insideSamples": 3187
+        },
+        {
+          "name": "superficial head of left flexor pollicis brevis",
+          "minSignedM": -0.005358610270505344,
+          "insideSamples": 522
+        },
+        {
+          "name": "superficial head of right flexor pollicis brevis",
+          "minSignedM": -0.005358879241429165,
+          "insideSamples": 522
+        },
+        {
+          "name": "transverse head of left adductor pollicis",
+          "minSignedM": -0.022409577511608,
+          "insideSamples": 2508
+        },
+        {
+          "name": "transverse head of right adductor pollicis",
+          "minSignedM": -0.022409826727219327,
+          "insideSamples": 2508
+        }
+      ]
+    },
+    {
+      "t": 0.75,
+      "minSignedM": -0.02377107896177732,
+      "insideSamples": 66110,
+      "tested": 181680,
+      "meshes": [
+        {
+          "name": "abductor digiti minimi of left hand",
+          "minSignedM": -0.023231740217712515,
+          "insideSamples": 845
+        },
+        {
+          "name": "abductor digiti minimi of right hand",
+          "minSignedM": -0.02323190080094067,
+          "insideSamples": 845
+        },
+        {
+          "name": "flexor digiti minimi brevis of left hand",
+          "minSignedM": -0.02376782870566191,
+          "insideSamples": 871
+        },
+        {
+          "name": "flexor digiti minimi brevis of right hand",
+          "minSignedM": -0.023767559992962234,
+          "insideSamples": 871
+        },
+        {
+          "name": "flexor retinaculum of left wrist",
+          "minSignedM": -0.0018814153305173678,
+          "insideSamples": 220
+        },
+        {
+          "name": "flexor retinaculum of right wrist",
+          "minSignedM": -0.0018816866328334597,
+          "insideSamples": 220
+        },
+        {
+          "name": "interosseous membrane of left forearm",
+          "minSignedM": 0.042203677234205435,
+          "insideSamples": 0
+        },
+        {
+          "name": "interosseous membrane of right forearm",
+          "minSignedM": 0.04220359160801567,
+          "insideSamples": 0
+        },
+        {
+          "name": "left abductor pollicis brevis",
+          "minSignedM": -0.004603165299345735,
+          "insideSamples": 960
+        },
+        {
+          "name": "left abductor pollicis longus",
+          "minSignedM": -0.004293972715933677,
+          "insideSamples": 430
+        },
+        {
+          "name": "left extensor digiti minimi",
+          "minSignedM": -0.015259983687113298,
+          "insideSamples": 561
+        },
+        {
+          "name": "left extensor pollicis brevis",
+          "minSignedM": -0.01942305434968192,
+          "insideSamples": 1122
+        },
+        {
+          "name": "left extensor pollicis longus",
+          "minSignedM": -0.02205922504469357,
+          "insideSamples": 949
+        },
+        {
+          "name": "left flexor pollicis brevis",
+          "minSignedM": -0.011599726492462442,
+          "insideSamples": 1143
+        },
+        {
+          "name": "left flexor pollicis longus",
+          "minSignedM": -0.012074908449926676,
+          "insideSamples": 584
+        },
+        {
+          "name": "left opponens pollicis",
+          "minSignedM": -0.009662953858203363,
+          "insideSamples": 1462
+        },
+        {
+          "name": "oblique head of left adductor pollicis",
+          "minSignedM": -0.01819898514059509,
+          "insideSamples": 1492
+        },
+        {
+          "name": "oblique head of right adductor pollicis",
+          "minSignedM": -0.018199084246357338,
+          "insideSamples": 1492
+        },
+        {
+          "name": "opponens digiti minimi of left hand",
+          "minSignedM": -0.02341356192697576,
+          "insideSamples": 1600
+        },
+        {
+          "name": "opponens digiti minimi of right hand",
+          "minSignedM": -0.023413627671302818,
+          "insideSamples": 1600
+        },
+        {
+          "name": "right abductor pollicis brevis",
+          "minSignedM": -0.004603102933372294,
+          "insideSamples": 960
+        },
+        {
+          "name": "right abductor pollicis longus",
+          "minSignedM": -0.0042942037566456905,
+          "insideSamples": 430
+        },
+        {
+          "name": "right extensor digiti minimi",
+          "minSignedM": -0.01526022537664838,
+          "insideSamples": 561
+        },
+        {
+          "name": "right extensor pollicis brevis",
+          "minSignedM": -0.019423396916294355,
+          "insideSamples": 1122
+        },
+        {
+          "name": "right extensor pollicis longus",
+          "minSignedM": -0.022059366055961357,
+          "insideSamples": 949
+        },
+        {
+          "name": "right flexor pollicis brevis",
+          "minSignedM": -0.011599663650139995,
+          "insideSamples": 1143
+        },
+        {
+          "name": "right flexor pollicis longus",
+          "minSignedM": -0.012074992284084173,
+          "insideSamples": 584
+        },
+        {
+          "name": "right opponens pollicis",
+          "minSignedM": -0.009662949146386202,
+          "insideSamples": 1462
+        },
+        {
+          "name": "set of dorsal interossei of left hand",
+          "minSignedM": -0.023024249523429054,
+          "insideSamples": 7967
+        },
+        {
+          "name": "set of dorsal interossei of right hand",
+          "minSignedM": -0.023024084489946577,
+          "insideSamples": 7967
+        },
+        {
+          "name": "set of lumbricals of left hand",
+          "minSignedM": -0.023223987037214244,
+          "insideSamples": 5802
+        },
+        {
+          "name": "set of lumbricals of right hand",
+          "minSignedM": -0.02322388014346017,
+          "insideSamples": 5802
+        },
+        {
+          "name": "set of palmar interossei of left hand",
+          "minSignedM": -0.021682834413900457,
+          "insideSamples": 3015
+        },
+        {
+          "name": "set of palmar interossei of right hand",
+          "minSignedM": -0.021681917794043083,
+          "insideSamples": 3015
+        },
+        {
+          "name": "superficial head of left flexor pollicis brevis",
+          "minSignedM": -0.005806404160066919,
+          "insideSamples": 1016
+        },
+        {
+          "name": "superficial head of right flexor pollicis brevis",
+          "minSignedM": -0.005806408658511376,
+          "insideSamples": 1016
+        },
+        {
+          "name": "transverse head of left adductor pollicis",
+          "minSignedM": -0.023771038300806846,
+          "insideSamples": 3016
+        },
+        {
+          "name": "transverse head of right adductor pollicis",
+          "minSignedM": -0.02377107896177732,
+          "insideSamples": 3016
+        }
+      ]
+    },
+    {
+      "t": 1,
+      "minSignedM": -0.02370639041090328,
+      "insideSamples": 67495,
+      "tested": 181680,
+      "meshes": [
+        {
+          "name": "abductor digiti minimi of left hand",
+          "minSignedM": -0.020152722498198217,
+          "insideSamples": 740
+        },
+        {
+          "name": "abductor digiti minimi of right hand",
+          "minSignedM": -0.02015261346086581,
+          "insideSamples": 740
+        },
+        {
+          "name": "flexor digiti minimi brevis of left hand",
+          "minSignedM": -0.01813270380120724,
+          "insideSamples": 790
+        },
+        {
+          "name": "flexor digiti minimi brevis of right hand",
+          "minSignedM": -0.01813296073400373,
+          "insideSamples": 790
+        },
+        {
+          "name": "flexor retinaculum of left wrist",
+          "minSignedM": -0.002432314257850572,
+          "insideSamples": 219
+        },
+        {
+          "name": "flexor retinaculum of right wrist",
+          "minSignedM": -0.0024325206496889386,
+          "insideSamples": 219
+        },
+        {
+          "name": "interosseous membrane of left forearm",
+          "minSignedM": 0.04242000495128232,
+          "insideSamples": 0
+        },
+        {
+          "name": "interosseous membrane of right forearm",
+          "minSignedM": 0.04241991926987968,
+          "insideSamples": 0
+        },
+        {
+          "name": "left abductor pollicis brevis",
+          "minSignedM": -0.008975620534201105,
+          "insideSamples": 1161
+        },
+        {
+          "name": "left abductor pollicis longus",
+          "minSignedM": -0.004700641136829546,
+          "insideSamples": 464
+        },
+        {
+          "name": "left extensor digiti minimi",
+          "minSignedM": -0.015259983687113298,
+          "insideSamples": 561
+        },
+        {
+          "name": "left extensor pollicis brevis",
+          "minSignedM": -0.023429363217569613,
+          "insideSamples": 1110
+        },
+        {
+          "name": "left extensor pollicis longus",
+          "minSignedM": -0.023531509118325796,
+          "insideSamples": 940
+        },
+        {
+          "name": "left flexor pollicis brevis",
+          "minSignedM": -0.01469814667689336,
+          "insideSamples": 1208
+        },
+        {
+          "name": "left flexor pollicis longus",
+          "minSignedM": -0.015698062577413727,
+          "insideSamples": 628
+        },
+        {
+          "name": "left opponens pollicis",
+          "minSignedM": -0.014742917010197781,
+          "insideSamples": 1587
+        },
+        {
+          "name": "oblique head of left adductor pollicis",
+          "minSignedM": -0.020647940641671768,
+          "insideSamples": 1649
+        },
+        {
+          "name": "oblique head of right adductor pollicis",
+          "minSignedM": -0.02064797577360044,
+          "insideSamples": 1650
+        },
+        {
+          "name": "opponens digiti minimi of left hand",
+          "minSignedM": -0.02282089006438463,
+          "insideSamples": 1601
+        },
+        {
+          "name": "opponens digiti minimi of right hand",
+          "minSignedM": -0.022820364141829867,
+          "insideSamples": 1601
+        },
+        {
+          "name": "right abductor pollicis brevis",
+          "minSignedM": -0.008975889728491854,
+          "insideSamples": 1161
+        },
+        {
+          "name": "right abductor pollicis longus",
+          "minSignedM": -0.0047008815480440655,
+          "insideSamples": 464
+        },
+        {
+          "name": "right extensor digiti minimi",
+          "minSignedM": -0.01526022537664838,
+          "insideSamples": 561
+        },
+        {
+          "name": "right extensor pollicis brevis",
+          "minSignedM": -0.023429989022106065,
+          "insideSamples": 1110
+        },
+        {
+          "name": "right extensor pollicis longus",
+          "minSignedM": -0.023531229635921885,
+          "insideSamples": 940
+        },
+        {
+          "name": "right flexor pollicis brevis",
+          "minSignedM": -0.014698141694466085,
+          "insideSamples": 1208
+        },
+        {
+          "name": "right flexor pollicis longus",
+          "minSignedM": -0.015698012251308686,
+          "insideSamples": 628
+        },
+        {
+          "name": "right opponens pollicis",
+          "minSignedM": -0.014742911227022116,
+          "insideSamples": 1587
+        },
+        {
+          "name": "set of dorsal interossei of left hand",
+          "minSignedM": -0.021858903935906997,
+          "insideSamples": 8327
+        },
+        {
+          "name": "set of dorsal interossei of right hand",
+          "minSignedM": -0.021857985450897777,
+          "insideSamples": 8327
+        },
+        {
+          "name": "set of lumbricals of left hand",
+          "minSignedM": -0.023706122887538136,
+          "insideSamples": 5681
+        },
+        {
+          "name": "set of lumbricals of right hand",
+          "minSignedM": -0.02370639041090328,
+          "insideSamples": 5681
+        },
+        {
+          "name": "set of palmar interossei of left hand",
+          "minSignedM": -0.02355820602259653,
+          "insideSamples": 2919
+        },
+        {
+          "name": "set of palmar interossei of right hand",
+          "minSignedM": -0.02355802067545566,
+          "insideSamples": 2919
+        },
+        {
+          "name": "superficial head of left flexor pollicis brevis",
+          "minSignedM": -0.009114466247575786,
+          "insideSamples": 1146
+        },
+        {
+          "name": "superficial head of right flexor pollicis brevis",
+          "minSignedM": -0.009114461208890678,
+          "insideSamples": 1146
+        },
+        {
+          "name": "transverse head of left adductor pollicis",
+          "minSignedM": -0.023705468845211193,
+          "insideSamples": 3016
+        },
+        {
+          "name": "transverse head of right adductor pollicis",
+          "minSignedM": -0.023705327594185834,
+          "insideSamples": 3016
+        }
+      ]
+    }
+  ]
+}

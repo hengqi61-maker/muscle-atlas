@@ -17,6 +17,7 @@ public/models/*.part
 /artifacts/*
 !/artifacts/grasp-v1/
 /artifacts/grasp-v1/frames/
+/artifacts/grasp-v1/g2/frames/
 
 # Isolated experimental viewer build.
 /dist-rig-v2/
