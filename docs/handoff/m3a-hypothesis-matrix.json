@@ -1,0 +1,115 @@
+{
+  "schema": "m3a-hypothesis-matrix-v1",
+  "stamp": "2026-10-20T03:30:00Z",
+  "frozenBaseline": {
+    "pr8": "1b06bf4d94169868acdca5f3a430bc964f2cafa0",
+    "pr12": "7214f3ffbf5c1315323d976b62f73a5b100faaf9",
+    "pr9": "c1d7e209901390bfb73f784e0f1f48c8337f2e17",
+    "glbSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+    "curlSevere": 39,
+    "pulldownSevere": 91,
+    "peak": {
+      "clip": "PulldownProbe",
+      "frame": 0,
+      "mesh": "right subscapularis",
+      "bpId": "BP4795",
+      "fmaId": "FMA13414",
+      "triangle": 914,
+      "edge": [456, 466],
+      "edgeRatio": 3.9884383355
+    },
+    "thresholds": "area<0.05; count>3 OR fraction>0.01; edge>2; 1092000 triangles x 121 x 2 clips"
+  },
+  "statusVocabulary": ["OPEN", "TESTED-REJECTED", "PARKED", "BLOCKED-ON-WINDOWS", "DESIGN-ONLY", "INCONCLUSIVE"],
+  "hypotheses": [
+    {
+      "id": "H1-weight-gradient-two-bone",
+      "family": "weights",
+      "claim": "Short-edge amplification on BP4795 triangle 914 is driven by a local WEIGHTS gradient under Humerus vs Scapula differential motion.",
+      "evidence": "Rest edge 1.190418797mm to posed 4.747911965mm; humeral weight delta 0.017621696 on E01 isolation.",
+      "testedBy": "E01-local-gradient lambda=0.5 two-ring neighborhood",
+      "result": "TESTED-REJECTED",
+      "why": "Severe-frame counts unchanged (39/91); peak edge worsened to 6.469800; distortion moved; 11 equivalence classes split."
+    },
+    {
+      "id": "H2-export-alias-continuity",
+      "family": "continuity",
+      "claim": "Independent writes to export-duplicate vertices that originally share POSITION+JOINTS_0+WEIGHTS_0 create false seams that area/edge gates miss.",
+      "evidence": "E01 pair 441/1288 separates 3.179553mm at Pulldown frame 0 vs 0mm baseline; seam-check.mjs exit 1.",
+      "testedBy": "seam-check.mjs on rejected E01 asset",
+      "result": "OPEN",
+      "why": "Mechanism confirmed as a regression of E01, not proven as the original FAIL cause. Repairing aliases does not imply attachment PASS."
+    },
+    {
+      "id": "H3-forearm-localX-driver",
+      "family": "axes",
+      "claim": "Replacing rest-world-X Forearm driver with bone localX (alpha=1, angle preserved) is a calibrated elbow-axis correction.",
+      "evidence": "Axis delta 4.69869deg; float32 angle error ~7.6e-8 rad; wrist path Curl 24.767mm / Pulldown 21.699mm.",
+      "testedBy": "E02-elbow-axis",
+      "result": "TESTED-REJECTED",
+      "why": "Pulldown severe 91 to 93; held-out/other-muscle failures; uncalibrated localX; path not preserved."
+    },
+    {
+      "id": "H4-unknown-subscap-attachment",
+      "family": "attachments",
+      "claim": "True subscapularis glenoid/humerus landmarks are not identified by mesh name, triangle index, or spatial quantiles.",
+      "evidence": "MCP/bpy locate 'right subscapularis' and polygon 914 verts [466,456,468]; mesh_mapping bpId BP4795; no Blender custom attachment property.",
+      "testedBy": "PR15 read-only inspect + M-F1 provenance",
+      "result": "INCONCLUSIVE",
+      "why": "Identity of the mesh is known; anatomical insertion is not. E01 neighborhood is not a landmark."
+    },
+    {
+      "id": "H5-scapula-humerus-axes",
+      "family": "axes",
+      "claim": "Scapula/humerus rest local axes vs observed drivers, not Forearm, dominate axillary/shoulder FAIL.",
+      "evidence": "Visual gross FAIL at shoulder-to-arm depression and axillary traction persists on baseline, E01, and E02. E02 only edited Forearm.",
+      "testedBy": null,
+      "result": "BLOCKED-ON-WINDOWS",
+      "why": "Needs W-F4 comparable-axis packet labeled model-provided vs measured. OpenSim rank 3 / tangent 9 cannot uniquely determine scapulohumeral rhythm."
+    },
+    {
+      "id": "H6-contact-not-motion",
+      "family": "continuity",
+      "claim": "Hand/prop intrusion on original source triangles is a separate FAIL family from muscle LBS stretch.",
+      "evidence": "PR9 contact-v1 1.0.0; M2 adductor-pollicis candidates; Issue11 363/363 local packets; 22 topologies UNKNOWN; unknown palm/wrist frames must stay null.",
+      "testedBy": "PR9 fixtures + unpublished Windows local scan",
+      "result": "OPEN",
+      "why": "Contact evidence must not be used as motion or grasp PASS. Mac diagnostic GLB has no apparatus."
+    },
+    {
+      "id": "H7-pose-space-corrective",
+      "family": "weights",
+      "claim": "A pose-indexed morph/corrective layer can hide FAIL before attachments/axes are known.",
+      "evidence": "Reuse report: shared skin, no morph targets. Phase2 alternativesNotExecuted.",
+      "testedBy": null,
+      "result": "DESIGN-ONLY",
+      "why": "Forbidden as an implementation in M3-A. Would conceal H1/H4/H5."
+    },
+    {
+      "id": "H8-import-world-residual",
+      "family": "continuity",
+      "claim": "Blender import-world residual up to 1.1920929e-7 m on E01 subscapularis is a source identity failure.",
+      "evidence": "Serialized GLB POSITION/index/inverse-bind bytes exact; isolated rest-world assertion not exact.",
+      "testedBy": "isolated-rest-equality-diagnostic.json",
+      "result": "INCONCLUSIVE",
+      "why": "Do not relax source gates. Do not treat importer float as anatomical error."
+    }
+  ],
+  "parkedNotAuthorized": {
+    "id": "E03-equivalence-projection",
+    "relation": "H2 only; E01 operator plus projection onto original alias classes",
+    "publishedInPr12": false,
+    "motionScanInPr12": false,
+    "rule": "Do not treat local uncommitted files or a software-only note as M3-A authorization. Dual-end W-F4 required before one minimal experiment is named."
+  },
+  "minimalExperimentRule": {
+    "when": "After Windows W-F4 packet or explicit INCONCLUSIVE is published with hashes",
+    "oneVariable": true,
+    "mustKeepImmutable": ["E01/E02 rejected assets", "frozen R1", "original hands", "thresholds"],
+    "candidatesAfterGate": [
+      "If Windows cannot constrain attachments: one source-equivalence-preserving weight projection (H2 engineering continuity), never motion PASS by seam-check alone",
+      "If Windows supplies one labeled comparable axis: one scapula/humerus axis experiment (H5), never mixed with weight edits"
+    ],
+    "forbiddenNow": ["running both families in one GLB", "MCP/skills writing weights", "corrective morph implementation"]
+  }
+}
