@@ -12,7 +12,7 @@ import LatPulldownMachine from './LatPulldownMachine';
 import {latPulldownAnatomyRelations} from '../data/latPulldown';
 
 function Anatomy({model}:{model:'anatomy'|'rigged'|'pulldown'}){
- const version=useAtlas(s=>s.motionVersion);const experimental=version!=='original'&&model!=='anatomy';
+ const version=useAtlas(s=>s.motionVersion);const playbackKind=useAtlas(s=>s.playbackKind);const experimental=playbackKind==='diagnostic'&&model!=='anatomy';
  const animated=model!=='anatomy';const seated=model==='pulldown'&&!experimental;
  const {scene,animations}=useGLTF(experimental?(version==='e03'?'/artifacts/phase2/E03-equivalence-projection/motion.glb':'/experimental/rig-v2/unified-rig-prototype.glb'):seated?'/models/anatomy-pulldown.glb':animated?'/models/anatomy-curl.glb':'/models/anatomy.glb');
  const root=useMemo(()=>{
@@ -83,20 +83,20 @@ function Anatomy({model}:{model:'anatomy'|'rigged'|'pulldown'}){
 function Clock(){useFrame((_,delta)=>{const s=useAtlas.getState();if(s.playing){const time=advance(s.time,delta,s.speed,s.loop);s.set({time,playing:s.loop||time<DURATION});}});return null;}
 function CameraControls(){
  const ref=useRef<React.ComponentRef<typeof OrbitControls>>(null);
- const version=useAtlas(s=>s.motionVersion);const reset=useAtlas(s=>s.reset),focus=useAtlas(s=>s.focus),model=useAtlas(s=>s.model);
+ const version=useAtlas(s=>s.motionVersion);const playbackKind=useAtlas(s=>s.playbackKind);const reset=useAtlas(s=>s.reset),focus=useAtlas(s=>s.focus),model=useAtlas(s=>s.model);
  useEffect(()=>{const controls=ref.current;if(!controls)return;
   if(focus==='grip'){controls.object.position.set(.95,1.15,1.55);controls.target.set(.40,.90,.55);}
   else if(focus==='arm'){controls.object.position.set(1.7,1.25,2.1);controls.target.set(.44,.90,.15);}
   else if(focus==='back'){controls.object.position.set(-.4,1.1,-3.3);controls.target.set(0,.30,.10);}
   else if(focus==='side'){controls.object.position.set(4,1.1,.1);controls.target.set(0,.30,.10);}
-  else if(model==='pulldown'&&version==='original'){controls.object.position.set(3,1.4,5.3);controls.target.set(0,.15,.1);}
+  else if(model==='pulldown'&&playbackKind!=='diagnostic'){controls.object.position.set(3,1.4,5.3);controls.target.set(0,.15,.1);}
   else{controls.object.position.set(0,1,5.8);controls.target.set(0,.3,0);}
   controls.update();
- },[reset,focus,model,version]);
+ },[reset,focus,model,version,playbackKind]);
  return <OrbitControls ref={ref} makeDefault minDistance={.8} maxDistance={12} target={[0,.3,0]}/>;
 }
-export default function Scene(){const model=useAtlas(s=>s.model),version=useAtlas(s=>s.motionVersion);return <Canvas camera={{position:[0,1,5.8],fov:42}} dpr={[1,2]} onPointerMissed={()=>useAtlas.getState().set({selected:null})}>
+export default function Scene(){const model=useAtlas(s=>s.model),version=useAtlas(s=>s.motionVersion),playbackKind=useAtlas(s=>s.playbackKind);return <Canvas camera={{position:[0,1,5.8],fov:42}} dpr={[1,2]} onPointerMissed={()=>useAtlas.getState().set({selected:null})}>
  <color attach="background" args={['#111922']}/><ambientLight intensity={.8}/><directionalLight position={[3,5,5]} intensity={2.5}/><directionalLight position={[-4,2,-3]} intensity={1.5} color="#8eaed1"/>
- <Suspense fallback={null}>{model==='pulldown'&&version==='original'?<group position={[0,-1.45,0]} scale={1.45}><Anatomy model={model}/><LatPulldownMachine/></group>:<Anatomy key={model+version} model={model}/>}</Suspense>
+ <Suspense fallback={null}>{model==='pulldown'&&playbackKind!=='diagnostic'?<group position={[0,-1.45,0]} scale={1.45}><Anatomy model={model}/><LatPulldownMachine/></group>:<Anatomy key={model+version+playbackKind} model={model}/>}</Suspense>
  <Grid position={[0,-1.5,0]} args={[10,10]} cellColor="#2b3947" sectionColor="#43515e" fadeDistance={12} infiniteGrid/><CameraControls/><Clock/>
  </Canvas>;}
