@@ -452,3 +452,11 @@ Failure: Playwright bundled chromium_headless_shell-1248 missing; exact launch e
 Workaround: explicitly select installed Google Chrome via supported channel; same actual viewer assertions and recorded video pass, browser-chrome.log/report.json.
 Alternatives: install pinned Playwright browser versus explicit existing Chrome channel (chosen to avoid installation). No claim that bundled Chromium works.
 Next action/reopen: CI requiring bundled Chromium must install and rerun exact original launch. Browser version compatibility remains environment-specific.
+
+## WD-2026-10-20-CLEANUP-IAB
+Status: DEFERRED
+Failure: cua.createBrowserTab(iab,http://127.0.0.1:5173/,visible=true) timed out after38.7s and reset its kernel. Does not establish application failure; actual separate Chrome loaded both source anatomy and seated pulldown with screenshots/snapshots.
+Workaround: keep verified loopback dev URL available and request native Codex browser panel (queued); no claim automatic foreground opening succeeded.
+Alternatives: investigate CUA/browser bridge timeout versus open same verified URL in native browser panel. Chosen bounded URL delivery because no app code error observed. Root cause not established; no bridge restart/security changes performed.
+Impact: automatic in-app presentation unverified; source/assets and server unaffected. No motion quality claim changed.
+Next action/reopen: investigate browser bridge responsiveness if in-app open fails again after own test browser closes; compare same URL with native foreground open. Do not equate queued with opened.

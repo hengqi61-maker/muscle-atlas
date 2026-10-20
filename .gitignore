@@ -25,3 +25,5 @@ public/models/*.part
 /node_modules
 /artifacts/grasp-v1/p3-basis/
 .codex/*.backup-*
+
+/.playwright-cli/

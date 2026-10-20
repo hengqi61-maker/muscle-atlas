@@ -43,12 +43,12 @@ export function sceneLabel(kind: PlaybackKind, exerciseId: ExerciseId) {
   }
   if (exerciseId === 'lat-pulldown') {
     return {
-      title: 'SEATED LAT PULLDOWN · UNVERIFIED',
-      detail: '旧版坐姿联动未通过抓握与全身形变验收。不能当作合格训练示范。',
+      title: '高位下拉 · 实验预览',
+      detail: '坐姿器械联动 · 抓握与组织形变未通过验收',
     };
   }
   return {
-    title: 'SKINNED ANATOMY · 哑铃弯举',
+    title: '哑铃弯举 · 实验预览',
     detail: '真实解剖 · 原始手部网格 · 肘窝形变仍待精修',
   };
 }

@@ -4,3 +4,6 @@
 label:has(input[type=checkbox]){display:flex;align-items:center;gap:8px}label input[type=checkbox]{width:auto!important;margin:0!important;accent-color:#79d2b5}
 
 .motion-version{margin-top:22px;padding:15px;background:#17232b;border:1px solid #30414a;border-radius:12px}.motion-version label{margin:0 0 10px;color:#c8d9df}.motion-version select{width:100%;font-size:12px}.motion-version p{margin-bottom:8px}.quality-label{display:inline-block;color:#e8bc7b;font-size:11px;line-height:1.7}.progress-details{margin:24px 0;padding:14px 0;border-top:1px solid #2b3944;font-size:12px;line-height:1.7}.progress-details summary{cursor:pointer;color:#a9c7bd}.progress-details a{color:#7fd9be}.scene-label{max-width:calc(100% - 48px)}
+
+/* Keep experimental controls out of the main exploration flow. */
+.preview-note{font-size:12px!important;color:#d9b67c;line-height:1.7;padding:10px 12px;background:#29251d;border-radius:8px}.rig-controls{margin-top:20px;font-size:12px;color:#91aaa0}.rig-controls summary{cursor:pointer}.right h2{margin-bottom:8px}.right .section{margin-top:22px}.left .section{margin-top:22px}.viewport{background:radial-gradient(ellipse at 50% 42%,#1a2830 0%,#10161d 72%)}.scene-label{background:#10161dcc;padding:12px 14px;border-radius:9px;max-width:calc(100% - 48px)}

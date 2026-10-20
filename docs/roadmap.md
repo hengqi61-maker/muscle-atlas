@@ -91,3 +91,6 @@ Original `/` webpage now presents existing equipment-linked motions and explicit
 
 ## Pulldown continuation (2026-10-20)
 PR22 baseline retained; PR21 finger controller exported-reference/Euler correction and same-side actual-grip diagnostic added. Native/Three121 comparisons and browser playback measured. Tissue grasp and full two-clip geometry remain FAIL; no production replacement. See docs/grasp-v1/continuation-report.md. Calibrated original-hand attachment evidence and independent expert review remain required before P3.
+
+## Console consolidation (2026-10-20)
+Current state consolidated in docs/CURRENT_STATE.md. Duplicate home-page action links and historical E03 asset probe removed; advanced controls folded away; navigation returns to explicitly unverified training previews. Geometry and source assets unchanged. Source-first text exporter added for external review.

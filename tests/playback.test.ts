@@ -9,7 +9,8 @@ describe('playback kinds', () => {
     expect(p.model).toBe('pulldown');
     expect(isDiagnostic(p.playbackKind)).toBe(false);
     expect(exerciseButtonLabel('lat-pulldown')).toBe('高位下拉');
-    expect(sceneLabel(p.playbackKind, 'lat-pulldown').title).toContain('UNVERIFIED');
+    expect(sceneLabel(p.playbackKind, 'lat-pulldown').title).toContain('实验预览');
+    expect(sceneLabel(p.playbackKind, 'lat-pulldown').detail).toContain('未通过验收');
     expect(sceneLabel(p.playbackKind, 'lat-pulldown').title).not.toContain('DIAGNOSTIC');
   });
 
