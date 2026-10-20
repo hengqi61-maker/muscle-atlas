@@ -75,3 +75,13 @@ Mac已采用Windows PR6固定c12e30e的v1合同，真实导出7份27骨骼packet
 
 ## 2026-10-17 · E3流水线与P1网格级归因
 独立PR8基于PR5，原source/R1/手部/正式资产不变。两次分阶段重建＋两次统一入口全冷启动完成，同GLB字节与121矩阵差0，每次50native＋50Three关键帧和完整视频。24新增测试、原build/13Vitest/26quality通过。权威全三角检查仍FAIL：新Curl39/121，冻结R1完整覆盖Curl39/Pulldown91；旧抽样42保留。四独立专业审查阻止正式放行。WD0020–23耐久修复；待Owner选择附着/骨轴与局部权重敏感性，或可复用姿态修正。Windowscontact规范待发布，未造假适配。完整报告docs/rig-v2/pipeline/PHASE-1-report.md。
+
+## Phase2 isolated sensitivity evidence
+- Fresh frozen baseline reproduced39/91; two preregistered local-weight/Forearm-axis experiments executed across2clips/121all-triangle poses. Both FAIL with adverse regressions, not production repairs.
+- Actual native/Three evidence, source seam regression detector, wrist trajectory comparison and three independent role reviews added under docs/rig-v2/phase2. Owner approval pending, no production/finger/main changes.
+- Issue13 fixture-only Blender Skills pilot stays separate PR14; not automatically integrated into animation assets.
+
+## 2026-10-20 · E03 constrained local-weight continuation
+E03 retains E01's lambda/window/operator and adds exact original same-mesh position/joint/weight equivalence projection. Two fresh GLBs identical;21 classes/43 exported rows;246 changed weight bytes only. Independent software/LBS check shows zero duplicate separation across1785pairs×121×2. Independent targeted biomechanics still FAIL: peak6.469800 at rightsubscap triangle953; original triangle914 not improved. This is a numerical invariant repair, not anatomical acceptance; production/main/hands unchanged. Full scan, actual render and browser evidence tracked separately in E03 report.
+
+Owner steering after E03: stop all unsourced weight/axis candidates. E01 exact3.179553mm split now has full121-time worldpoints/weights/matrices/CSV diagnosis. PR14 pinned negative-fixtureQA rerun completed; PR15 guarded interactivequery blocked by exclusiveclient ownership, no takeover. Full E03 numerical/native/Chrome evidence and independentFAIL reviews published; await Cursor/Windows physical attachment/axis correspondence before one further candidate. E03 report and publication index preserve the rejected control and all limitations.

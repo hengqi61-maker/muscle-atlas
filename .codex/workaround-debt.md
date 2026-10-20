@@ -323,3 +323,102 @@ Title: Windows published packet export/Git hash provenance clarification
 - No workaround/normalization applied to input. Published Gitbytes and own computed SHA retained; both identities and evidence recorded in docs/rig-v2/pipeline/results/windows-receipt.json. Core E3 inputs do not depend on this external packet.
 - Compared paths: normalize packet to match exporthash (rejected changes transportbytes) versus preserve rawGitbytes and explicitly distinguish export/transportSHA (selected). Windows owns result metadata, no remote edits byMac.
 - Deferred only upstream label clarification: ask Windows publish both rawexportCRLF and GitLF SHA or binary-stable transport. Nextaction GitHubPR6 comment; reopen when Windows metadata update arrives or packetbytes change. Not an anatomy approval or accepted risk; no remaining task OPEN entry.
+
+## WD-2026-10-18-0025
+Status: RESOLVED
+Title: Experimental GLB elbow rotation must remove bind-local orientation before changing basis axis
+- Original reproduction: node scripts/rig-v2/phase2/derive.mjs E02-elbow-axis artifacts/phase2/E02-elbow-axis. Initial experimental quaternion edit used full GLB local animation quaternion as if it were Blender matrix_basis. Report max axis delta15.872deg and Curl angle113.005deg disagrees with actual basis100deg /4.698654deg expectation.
+- Initial candidate is INVALID_EXPERIMENT, preserved separately; no geometry scan/render or quality verdict based on it. No production assets affected. No runtime bypass used.
+- Compare durable paths: derive rest-local quaternion from actual inverse-bind parent-child matrices, subtract/restcompose around basis-only edit (selected, retains exact binary provenance), versus rebuild all animations in Blender basis space (larger export identity surface). Independent read-only axis review requested.
+- Fix must retain preregistered angle and exact untouched bytes, assert measured axis delta and rotation-angle invariance, then rerun exact generator path in fresh output. Remains OPEN until true validation.
+
+WD0025 durable verification: independent axis Agent reconstructed inverse-bind matrices and confirmed restLocal inverse times track gives actual basis. Fixed generator edits basis only, then restLocal times basis; near-identity samples preserved. Exact fresh E02-elbow-axis-basis rerun produces d60a589aff96eea65fe84da64f288af231e95b3b278fcb428c1c6fb0747bf55d; four channels all121samples, axis delta4.698685–4.698688deg, Curl amplitude100.000012deg and Pulldown90.000018deg, max angle difference9.3e-14rad. Assertions enforce expected axis/amplitude invariance; untouched bytes exact. Initial invalid candidate preserved/excluded; no workaround retained.
+
+## WD-2026-10-18-0026
+Status: DEFERRED
+Title: GitHub Issue progress comment TLS handshake timeout
+- Original exact command: gh issue comment 10 --body-file /tmp/phase2-progress.md. gh returned1: POST https://api.github.com/graphql net/http TLS handshake timeout. DraftPR12 and Git push had succeeded earlier. The body is preserved; no assertion that failed delivery succeeded.
+- No configuration or transport workaround applied. Compare bounded unchanged exact command after same-host health read versus switching REST/client (would obscure original GraphQL failure); selected read-only health + one evidence-preserving exact retry. Do not mutate proxy/security or loop retries. Local CPU/native experiments continue independent of network.
+- Root cause not established; transient network path/remote TLS remains plausible. Scope limited to communication. Next action preserve actual gh result/comment URL; reopen on next failure, then controlled proxy diagnosis with permission before disruption. DEFERRED transport investigation, never treat retry as permanent resolution.
+
+## WD-2026-10-18-0027
+Status: RESOLVED
+Title: Native import total meshes differs from original anatomy identity count
+- Actual render worker initial import stopped before GPU/render on total meshCount==467 assertion; log artifacts/phase2/native-baseline/blender.log preserved. Frozen GLB imports469 mesh objects,467 unique sourceName identities plus2 additional objects. Distinguish total imported geometry from source anatomy; do not hide or delete extras.
+- Compared durable identity-based set+name/hash verification versus filtering/deleting extras (rejected). Maker correcting source-identity gate while preserving all scene objects visible. Exact native-baseline-v2 rerun pending; no motion/visual PASS claim.
+
+## WD-2026-10-18-0028
+Status: RESOLVED
+Title: Recurrent Blender new diagnostic material has no implicit Principled node
+- Renderer v2 stopped strictly before rendering because new material lacked implicit Principled node; evidence native-baseline-v2 log retained by render maker. Same class as earlier WD0020 world-node assumption.
+- Durable paths: explicitly construct Principled and Output nodes/link (selected) versus depend on factory template/get node by translated/default name (rejected). No material substitute or omitted mesh. v3 actual native frames produced after explicit nodes; full fixed-run verification pending.
+
+## WD-2026-10-18-0029
+Status: DEFERRED
+Title: Bounded diagnostic render uses explicit eight samples instead of default64
+- Actual512px EEVEE factory default64 samples measured about40s/frame,122images/asset implies roughly80min each/4h three assets. Partial real native-baseline-v3 data/log/PNGs/121trajectories retained; stopped withTERM under coordinator authorization, never marked complete.
+- Compared durable production options: retain64 about4h, fixed8 at identical512px/camera/material/frame settings (selected bounded engineering diagnostic), lower resolution (rejected harms local detail). Three sets must share8 samples; no geometric threshold/sample-frame/culling/identity change. This is explicit rendering-budget adaptation, not proof default64 pipeline performance fixed.
+- Maker executes new native-baseline-v4 then same E01/E02 runs; actual times and quality review pending. High-sample production visual validation deferred; reopen if independent VisualReviewer finds8-sample noise insufficient, then render required regions64 with evidence. No accepted risk or anatomy PASS claimed.
+
+WD0026 delivery follow-up: same-host curl health HTTP200; exact original gh issue comment rerun succeeded https://github.com/hengqi61-maker/muscle-atlas/issues/10#issuecomment-6251322684 . Delivery now confirmed but underlying transient TLS cause remains DEFERRED; retry not permanent resolution.
+
+WD0027 corrected evidence and durable verification: initial469 count came from probe retaining default Cube. Factory-startup + deleting scene + frozen GLB import actually468=467 unique original sourceName identities plus1 Icosphere (localized name棱角球), not2extras. Correct source-set validation preserves it visible. Actual native-baseline-v4 completed both real clips/121nonstatic matrix samples with467identities/27bones, no meshes hidden. Old failed probes are retained; no source modifications.
+
+WD0028 durable verification: explicitPrincipled/Output construction in renderer eliminated implicit-node assumption. Actual native-baseline-v4 completed both diagnostic clips, produced actual frames/video/Blend under explicit8samples; sourceShaef803.../467identities/27bones fixed. Camera/framing quality is separate and not implied by this material-node closure. No template fallback remains.
+
+## WD-2026-10-19-0030
+Status: RESOLVED
+Title: Native full-body framing used bounds before individual NLA activation
+- Old baseline-v4 kept actual frames/videos but initial framing was calculated with simultaneously imported NLA state, not a full-cycle bound; source pose framing could crop. No final framing approval based on it.
+- Compared fixed guessed ortho scale versus measured full-cycle eval-mesh bbox union (selected); bone-only bounds rejected for hands/tissue. New camera-calibration-v2 independently activates2clips for each3assets, samplesall121 evaluated mesh bounds and verifies eachclip firstpose against all actual evaluated vertices (difference0m). Contract adds10percent margin, clipping proof0.90909 maximum extent.
+- Actual3smoke images preserve fullbody; independent fullvertex camera projection max0.875751, image tissueYfront40–334/back31–330/side30–333. Root actually viewed back hand tips with>30pxmargin. No contract change after maker initially misread smoke; corrected against pixel+projection evidence. Fixed contract applied uniformly; pending fullvideos are separate work. No geometry threshold, source or finger edits.
+
+## WD-2026-10-19-0031
+Status: DEFERRED
+Title: E01 experimental local exported weights introduce coincident-source seam separation
+- Full candidatef7324... retained unchanged/FAIL. SoftwareReviewer actualLBS detected11 source-equivalent groups split; pair441/1288 separates3.179553mm atPulldownframe0 (baseline0). Original2byte-scope unit tests pass but do not test continuity. Fulltriangle metric worsenspeak3.988438→6.469800 even though severeframesremain91. No adoption or hidden workaround.
+- New seam-check.mjs measures1785 same-mesh exactoriginalPOSITION/JOINTS/WEIGHTS duplicate pairs over121actualLBS samples/two clips, outputsAUTOFAIL/exit1onE01; E02newseamcheckAUTOPASSonlyfor thissourcegroup screen. Threshold1micrometre explicitly numericalregression, not medicalgapallowance.
+- Durable alternatives for next separately numbered experiment: preserve verified same-source equivalence classes duringlocalweight changes; or move experiments to native source-index registry with topology provenance beforeexport. Pose-space correction third alternative remainsdesignonly and cannot conceal seam. Uncalibrated attachment regions mean no anatomical fix selected. Reopen when owner/calibration reference supports next experiment. Priorcandidate/reportneveroverwritten; remainingmotionqualityFAIL and ownerpending.
+
+Final WD0027 scope clarification: frozenGLB JSON exactly467 meshes/nodes. bpy.data and scene contain an importer-created Icosphere/棱角球 custom_shape referenced by27bones, linked to glTF_not_exported collection with importer-default hide_render/hide_viewport; it is not an original extra asset or prop. Renderer never hides originalsource meshes (all467 hide_render=False). Earlier temporary extra-asset count interpretations superseded by binaryJSON + native helper-inspection/visibility logs. Camera contract included helper bbox conservatively, causing spare whitespace only; identicalcontract preserved for scientific comparison. No helper or source was deleted/hidden by this work.
+
+WD0029 measurement caveat: initial64sample40s/frame and later8sample5.7s/frame occurred under heavy concurrent fulltriangle scans; with scansfinished native-baseline-v5 71.59s total and E01 58.54s total. Do not attribute speed difference solely to sample count; no controlled FPS/performance improvement claim. Explicit8-sample diagnostic imagery remains reviewed only for gross shape; micro-seams/high-sample productionvisual validation DEFERRED.
+
+## WD-2026-10-19-0032
+Status: DEFERRED
+Title: Supplemental isolated Blender rest-world exact equality residual
+- Actual isolated-comparison exact world-rest assertion observes E01 subscapularis16vertices max1.1920929e-7m residual; rawbefore/after values and failing exact check retained in artifacts/phase2/isolated-rest-equality-diagnostic.json. OriginalserializedGLB POSITION/index/inverse-bind bytes still exact independently. No originalsource gate or tolerance relaxed.
+- Compare keep literal serializedsource identity plus rawimport-world numericINCONCLUSIVE (selected for this diagnostic-only delivery), normalize/overwrite worldcoords toforceequal (rejected destroys evidence), versus full importer/decomposition trace with common-frame alignment (next bounded experiment). No claim of exact renderedworld equality or medicallycorrect shape.
+- Deferred importer-space provenance investigation; nextaction trace node/armature/decompose rounding on fixedsource if future shape comparison needs exact importedworld correspondence. Reopen if residual grows, serializedsource identity differs or candidate considered for production. No acceptedrisk; bothvariantsalreadyFAIL/notadopted.
+
+## WD-2026-10-20-E03
+Status: RESOLVED
+Title: Reopened E01 duplicate-vertex divergence investigation
+- Original reproduction: node scripts/rig-v2/phase2/seam-check.mjs --asset artifacts/phase2/E01-local-gradient/motion.glb --output artifacts/phase2/E01-local-gradient/seam-report.json; AUTO FAIL, peak3.179553mm. Historical rejected asset and WD0031 remain immutable.
+- No bypass or threshold change introduced. Compare constrained export-weight projection (bounded candidate), source-index registry rebuild (requires provenance reconstruction), attachment calibration (needed for anatomical correctness, currently absent). Independent read-only investigation requested before choosing candidate.
+- E03 preregistered as one added equivalence projection on otherwise unchanged E01 operator. Actual scans and outcome pending; production not replaced.
+
+## WD-2026-10-20-E03-BROWSER
+Status: DEFERRED
+Title: E03 real Chrome navigation timeout during concurrent full geometry and native calibration
+- Exact command: E3_BROWSER_ASSET=artifacts/phase2/E03-equivalence-projection/motion.glb E3_BROWSER_OUT=artifacts/phase2/browser-E03 node --test tests/rig-v2/pipeline-browser.node.mjs. Actual page.goto load timeout30000ms; original browser.log/output preserved. No browser PASS claimed.
+- Concurrent attribution/calibration imports unusually slow; resource contention suspected, not yet proven. No retries, relaxed thresholds, killed user applications or security changes.
+- Compare serial rerun after current jobs finish, scoped navigation diagnostics, or explicit higher startup budget after observed timing. Prefer serial exact original path first; wait for evidence before modifying tests. Underlying cause remains unresolved.
+
+## WD-2026-10-20-E03-GIT
+Status: DEFERRED
+Title: GitHub push configured local proxy unavailable
+- Exact git push origin codex/rig-v2-phase2 failed connecting127.0.0.1:7897. git http.proxy and https.proxy both point there; no proxy env override. Local committed7fe2c00 preserved. No system/profile restart or config mutation.
+- Compare restore owned proxy service after coordination versus command-local direct route with unchanged persistent config. Read-only direct connectivity measurement first; if direct route works it is a scoped delivery workaround, not repair of shared proxy lifecycle.
+
+E03 continuity closure verification:21 original exact classes/43 rows receive identical float32 values; independent raw-byte and actualLBS review1785pairs×121×2 zero separation; two clean fresh builds exact. Original rejectedE01 path rerun AUTOFAIL, no test relaxed. This resolves E03 numerical duplicate divergence only. E01/R1 historical anatomy FAIL and WD0031 rejectedcandidate remain unchanged. Full E03scan39/91/peak6.469800, independently rejected; no adoption.
+
+E03-GIT delivery: direct HTTPS measurement200; command-local git -c http.proxy= -c https.proxy= push succeeded7fe2c00. Persistent config untouched. CLI observation confirms unavailableMihomo/mixedport; shared proxy lifecycle not repaired. DEFERRED pending coordinator ownership/startup diagnosis, reopen when default Git path needed. Scoped direct route is disclosed workaround only.
+
+E03-BROWSER exact-script serial rerun after native/calibration/allmesh jobs completed: PASS85.533s, both121poseclips/100screenshots/two complete-cycleWebMs/pause/pick. Original timeout retained, workload contention plausible not proven. Serial scheduling is disclosed workaround; root attribution DEFERRED, reopen on serial recurrence. No navigation/geometry threshold relaxed.
+
+## WD-2026-10-20-E03-MCP
+Status: DEFERRED
+Title: PR15 guarded client owned by another session
+- Read-only SDK initialize failed with client.lock nonblocking flock Errno35 before any query; transcript retained controlled-mcp.log. No instance takeover, lock deletion, security relaxation or restart.
+- Shared-instance ownership boundary honored; compare coordinator releases owner client versus coordinator executes registered read-only inspection and publishes results. Await coordination; no current MCP connectivity PASS claimed. No listener detected9876 at check time, which is separate from held-client lock and not proof of stale lock. Reopen after owner handoff. Existing deterministic bpy actual121/native evidence continues without claiming MCP succeeded.

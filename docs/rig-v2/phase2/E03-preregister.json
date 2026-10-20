@@ -1,0 +1,10 @@
+{
+ "id":"E03-equivalence-projection",
+ "baselineSha256":"ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+ "comparison":"E01 rejected local-gradient candidate; preserve its seed, two-ring neighborhood and lambda=0.5",
+ "singleVariable":"Project E01 proposed weights onto original same-mesh exact POSITION+JOINTS_0+WEIGHTS_0 equivalence classes. Average proposals of selected members only, then apply common row to all original aliases.",
+ "rationale":"Prevent differing updates to export duplicates which originally share identical rest position and deformation. This is a numerical invariant, not an assertion that coincident anatomy should be welded.",
+ "frozen":["original geometry/topology","all animation channels","rest and inverse bind","other meshes","hands","existing severe thresholds"],
+ "uncertainty":"Cannot establish anatomical attachment correctness. Boundary distortion or compression may remain or worsen. Alias propagation changes more exported rows than E01; record every member.",
+ "acceptance":"Two fresh builds byte-identical; declared weight bytes only; all1785 duplicate-pair trajectories over121 samples each clip; all1092000 triangles over121 samples each clip; report adverse changes and independent review. Seam PASS alone never means motion PASS."
+}

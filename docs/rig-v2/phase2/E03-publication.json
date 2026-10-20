@@ -1,0 +1,14 @@
+{
+  "path": "artifacts/phase2-E03-d109028-evidence.zip",
+  "bytes": 160561284,
+  "sha256": "c0fc2d6d510c7e25e9ca0af5b01bbc10d86ba7fe81f4dac2ef234743b0be9cbf",
+  "files": 281,
+  "url": "https://github.com/hengqi61-maker/muscle-atlas/releases/tag/evidence-phase2-E03-d109028",
+  "candidate": "d1090286898a045f79e84ba044145a1605dfe345",
+  "githubDigestVerified": true,
+  "issue10": "https://github.com/hengqi61-maker/muscle-atlas/issues/10#issuecomment-6282715999",
+  "windowsRequest": "https://github.com/hengqi61-maker/muscle-atlas/issues/11#issuecomment-6282719107",
+  "nextCandidate": "WAIT_CURSOR_WINDOWS_PHYSICAL_EVIDENCE",
+  "ownerApproval": "PENDING",
+  "quality": "FAIL; rejected numerical continuity control only"
+}

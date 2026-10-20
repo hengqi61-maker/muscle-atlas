@@ -1,0 +1,144 @@
+{
+  "commit": "c1d7e209901390bfb73f784e0f1f48c8337f2e17",
+  "mode": "read-only Git bytes; no normalization or OpenSim rerun",
+  "files": [
+    {
+      "path": "research/contact/SHA256.json",
+      "sha256": "93a1d3ac3042b2b79add343cff56da7c228f81e7f942ee36124854fcead55bed",
+      "publishedHashMatches": null
+    },
+    {
+      "path": "research/contact/build.log",
+      "sha256": "89ec8bf7f02f2c3bce1b257ac0f4b096bbe23ee3982afa8a4c2cd5e4cb62023e",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/chrome-diagnostic-20.log",
+      "sha256": "93ed48ce72cf486b053038c124d2977d068106535b9938233b8434015e67b0c5",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/chrome-diagnostic.log",
+      "sha256": "20d4e26660d816d0b9d0eda207fff3a1dc14df06264651084a66318f84f9f4cf",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/chrome-full.log",
+      "sha256": "28442235aee806da5e70239e1ed04a280110fd00ccb48769d8564ddecc6d7831",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/chrome-observations-20.json",
+      "sha256": "465cc1e4c6429ef2104b8b9b5cb5407797c8d910e9c0f90304a2f0ffab0dbd14",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/chrome-observations.json",
+      "sha256": "b3144ba0889d1dda49c04d925a32eb0f90b439c96e1bd78fb744eee40a423a65",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/chrome-original.log",
+      "sha256": "98464ecc9d9671ab51142339c4455d1193d7122f4ea4fe55e6dbc9e384a89f81",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/chrome-repeat.log",
+      "sha256": "d6cdf6f3c9a81e88f7cc7e22c177fb2cec8eae2533b12fb8bbc94abd9f66d886",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/example.contact.json",
+      "sha256": "6ca1289f3d605dda6a4bf76289d121ceabe39fd4aa428fc2f1d9ca91d2070546",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/example.report.json",
+      "sha256": "0b349b1f35cd718da872dc5f86b1e6090f6ee43dd2854b1c5130893c91a41d96",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/m2-export.log",
+      "sha256": "a4215e0be7e9a6a2f12b8ffb9120b26506b5bfe0e3a87454e8df22fec2df27ff",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/m2-left-triangle.contact.json",
+      "sha256": "046e4376154a129bcba48a782f2eea2422692e0b5b7379c61a7202963abd3e15",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/m2-right-triangle.contact.json",
+      "sha256": "5f9656ba0494c93def571169253d6ba3c2eeb2c9aa0ca6baa3c5388888404ab4",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/m2-summary.json",
+      "sha256": "f39ce185b0d3cfc4d7c7d56282928d1735ba4c20a9dcd37a0d4d9f91e2406ab1",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/m2-witnesses.json",
+      "sha256": "4c7aa3c604162fa492ba628873a99327cc2cdac0522e8554f85c46f4a2a8707a",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/mac-v1.log",
+      "sha256": "f2660efa4b62dfb969f1c913873d6ec69ffc4fb7efc8513d8a499f5967772877",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/pytest.log",
+      "sha256": "53ddec177e76bdabb4a67d56eddc35e24b70b063e2af750b904fc3ad2c1ed115",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/quality.log",
+      "sha256": "e699c17b7706b70007f943d68174913b66a3ca63766a4172ab86d5be4d601b86",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/ruff.log",
+      "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/shoulder-reference.log",
+      "sha256": "e1487d5235832cc9f500c7072bb646c4239b76db514217a230c512fcbb6e0cf0",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/contact/unit.log",
+      "sha256": "734e7adbebdd1b32f9dd841c977cbb0457da1d650909d69258c91d9da81ac41e",
+      "publishedHashMatches": true
+    },
+    {
+      "path": "research/opensim/results/shoulder-reference.json",
+      "sha256": "1570575ddb77fed0267ab5b5af2951e4a1f0ad0c41df84871f3445533234b286",
+      "publishedHashMatches": null
+    },
+    {
+      "path": "schemas/contact/packet-v1.schema.json",
+      "sha256": "5602118361a0b3cc158c71537ff3c04442fe48f05dbea472a92d8b4e16585147",
+      "publishedHashMatches": null
+    },
+    {
+      "path": "scripts/biomechanics/contact_geometry.py",
+      "sha256": "e264dc2593408dc4ee6f94e12cf7fe46194520cb00bbb478b6352428a100cc5b",
+      "publishedHashMatches": null
+    },
+    {
+      "path": "scripts/biomechanics/contact_packet.py",
+      "sha256": "0af84b34932d431abe50b880326fec793e6de561c759d7e6ef2d49a1753d6fda",
+      "publishedHashMatches": null
+    }
+  ],
+  "publishedManifestVerified": 21,
+  "frameConvention": "right-handed-metres-seconds-column-major-active",
+  "unknownPalmWristFrames": "null; never identity as calibrated",
+  "limits": [
+    "model-specific right-shoulder reference; no left/finger proof",
+    "closed convex props/discrete surface tests only",
+    "no props in current rig diagnostic assets; no true grip PASS"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "baselineCommit": "1b06bf4d94169868acdca5f3a430bc964f2cafa0",
+  "inputs": [
+    {
+      "path": "public/models/anatomy.glb",
+      "expected": "6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f",
+      "actual": "6e84529b60b64cc8f8d5cef665fda932e359e828b66d0c2dd44ec1bd9d0bd01f",
+      "match": true
+    },
+    {
+      "path": "public/models/mesh_mapping.json",
+      "expected": "231a4e8c52cfeab8144e62d6a8ccbfb27ae04361b3a8d0b4f03e50668ce94596",
+      "actual": "231a4e8c52cfeab8144e62d6a8ccbfb27ae04361b3a8d0b4f03e50668ce94596",
+      "match": true
+    },
+    {
+      "path": "config/rig-v2/canonical-rig.json",
+      "expected": "4acb41a3f8a9541a84ad3dea729fe71132c3c025460b95cdb46cd8db3df731fc",
+      "actual": "4acb41a3f8a9541a84ad3dea729fe71132c3c025460b95cdb46cd8db3df731fc",
+      "match": true
+    },
+    {
+      "path": "config/rig-v2/attachment-registry.json",
+      "expected": "20c1182fa18cff325377dab76929d979c4d4ace5c4fdbe74a4f6621cfb843451",
+      "actual": "20c1182fa18cff325377dab76929d979c4d4ace5c4fdbe74a4f6621cfb843451",
+      "match": true
+    },
+    {
+      "path": "config/rig-v2/motions/r1-observed-trajectories.json",
+      "expected": "bfc4a72e5c47a1dabbecc4665bfb761d419d3db1f6e5751b431744e4901e50ef",
+      "actual": "bfc4a72e5c47a1dabbecc4665bfb761d419d3db1f6e5751b431744e4901e50ef",
+      "match": true
+    },
+    {
+      "path": "public/experimental/rig-v2/unified-rig-prototype.glb",
+      "expected": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+      "actual": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+      "match": true
+    },
+    {
+      "path": "scripts/rig-v2/pipeline/native_build.py",
+      "expected": "26be5f6efa4fea6b23511a7117bcde4a4872695082a4a4ea6a259914aeeab439",
+      "actual": "26be5f6efa4fea6b23511a7117bcde4a4872695082a4a4ea6a259914aeeab439",
+      "match": true
+    },
+    {
+      "archiveSha256": "90fafb3d45757ff56e18bf62ba5c138d14f6b50df0d2a7d8d2b55422c095d4b5"
+    }
+  ]
+}
