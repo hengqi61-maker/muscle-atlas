@@ -1,5 +1,5 @@
 import {describe, expect, it} from 'vitest';
-import {diagnosticPatch, exerciseButtonLabel, isDiagnostic, sceneLabel, trainingPatch} from '../src/motion/playback';
+import {diagnosticPatch, exerciseEntry, exerciseButtonLabel, isDiagnostic, sceneLabel, trainingPatch} from '../src/motion/playback';
 
 describe('playback kinds', () => {
   it('training pulldown never selects a diagnostic clip or unified probe', () => {
@@ -27,4 +27,9 @@ describe('playback kinds', () => {
     expect(exerciseButtonLabel('dumbbell-curl')).toBe('哑铃弯举');
     expect(trainingPatch('dumbbell-curl').motionVersion).toBe('original');
   });
+});
+
+it('direct exercise links always restore the seated production scene instead of a probe',()=>{
+  expect(exerciseEntry('?exercise=lat-pulldown')).toMatchObject({mode:'exercise',model:'pulldown',motionVersion:'original',playbackKind:'training-unverified',diagnosticClip:null});
+  expect(exerciseEntry('?exercise=PulldownProbe')).toBeNull();
 });

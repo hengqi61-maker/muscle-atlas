@@ -97,3 +97,6 @@ Current state consolidated in docs/CURRENT_STATE.md. Duplicate home-page action 
 
 ## Grasp mapping repair experiment (2026-10-20)
 Actual generator bugs corrected and two isolated export variants tested; assets rejected due worse265.51 edge ratio and persistent grip penetration. See docs/grasp-v1/mapping-fix/result.md. No production asset changes, no anatomical acceptance.
+
+## Seated pulldown target correction (2026-10-20)
+Active work now explicitly anchored to original seated16bone/machine scene; see docs/exercises/lat-pulldown/active-work.md. Direct exercise route added; diagnosticProbe excluded. Forearm mechanics must precede adapting existing finger controller. No new motion/grasp acceptance.

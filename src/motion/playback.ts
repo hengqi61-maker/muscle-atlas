@@ -10,6 +10,7 @@ export function isDiagnostic(kind: PlaybackKind) {
 export function trainingPatch(exerciseId: ExerciseId) {
   return {
     playbackKind: 'training-unverified' as const,
+    diagnosticClip: null,
     motionVersion: 'original' as const,
     exerciseId,
     model: (exerciseId === 'lat-pulldown' ? 'pulldown' : 'rigged') as 'pulldown' | 'rigged',
@@ -55,4 +56,12 @@ export function sceneLabel(kind: PlaybackKind, exerciseId: ExerciseId) {
 
 export function exerciseButtonLabel(exerciseId: ExerciseId) {
   return exerciseId === 'lat-pulldown' ? '高位下拉' : '哑铃弯举';
+}
+
+/** Direct links select only real exercise scenes, never a diagnostic probe. */
+export function exerciseEntry(search: string) {
+  const id = new URLSearchParams(search).get('exercise');
+  return id === 'lat-pulldown' || id === 'dumbbell-curl'
+    ? {mode: 'exercise' as const, ...trainingPatch(id)}
+    : null;
 }
