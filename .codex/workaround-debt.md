@@ -422,3 +422,10 @@ Status: DEFERRED
 Title: PR15 guarded client owned by another session
 - Read-only SDK initialize failed with client.lock nonblocking flock Errno35 before any query; transcript retained controlled-mcp.log. No instance takeover, lock deletion, security relaxation or restart.
 - Shared-instance ownership boundary honored; compare coordinator releases owner client versus coordinator executes registered read-only inspection and publishes results. Await coordination; no current MCP connectivity PASS claimed. No listener detected9876 at check time, which is separate from held-client lock and not proof of stale lock. Reopen after owner handoff. Existing deterministic bpy actual121/native evidence continues without claiming MCP succeeded.
+
+## WD-2026-10-20-PREVIEW
+Status: DEFERRED
+Title: Vite-transformed diagnostic consumer stays in initial loading state in IAB
+- Startup5190 servesHTML/41MBGLB HTTP200; after Vite newdependency optimization/reload, actual IAB diagnostic consumer shows Loading actual build output, no visible console error. No model display PASS claimed for Vite consumer.
+- Compare Vite transformed dependency lifecycle investigation versus existing test-proven direct static consumer (selected bounded viewing path, no asset changes). Start static loopback5191 matching tested module/importmap paths; preserve Vite server for R1 React page. No browser/security/proxy setting changes.
+- Cause not established; revisit Vite direct consumer module graph after viewing task. Exact failed5190 URL retained. This is a preview delivery workaround, not resolved module-loading claim.
