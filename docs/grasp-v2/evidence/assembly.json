@@ -1,0 +1,18 @@
+{
+  "sourceSha256": "40e3dbcbbe3423381dd2885936dd3f1c7d4355bcc6b4f0c30eb9245537be1dff",
+  "donorSha256": "ef803a4bbb3c644504c124519e39ba0b3b760ec139eaf60d277ef7f7f5d23274",
+  "outputSha256": "7c5b9ec06acc6c232456abdda6a5fc96aaf06ff256d9c814d4de1b0cfe118852",
+  "bytes": 41229644,
+  "maxReferenceError": 7.006456144154072e-7,
+  "originalBufferPrefixIdentical": true,
+  "channels": [
+    {
+      "name": "CurlProbe",
+      "channels": 81
+    },
+    {
+      "name": "PulldownProbe",
+      "channels": 81
+    }
+  ]
+}
