@@ -91,3 +91,9 @@ Original `/` webpage now presents existing equipment-linked motions and explicit
 
 ## Pulldown continuation (2026-10-20)
 PR22 baseline retained; PR21 finger controller exported-reference/Euler correction and same-side actual-grip diagnostic added. Native/Three121 comparisons and browser playback measured. Tissue grasp and full two-clip geometry remain FAIL; no production replacement. See docs/grasp-v1/continuation-report.md. Calibrated original-hand attachment evidence and independent expert review remain required before P3.
+
+## 2026-10-21 — Grasp Controller v2 (stacked Draft development)
+
+Main-page sidebar integration reuses PR21/24's 30 finger bones, reference transforms and shared animation clips. Added bounded independent bilateral solver, per-digit/per-joint manual controls, thumb opposition, pose layering, finite-handle capsule and source-triangle contact validation, Windows-v1.1 export and native/browser tests. Production/frozen/source geometry unchanged. See `grasp-v2/README.md` and `grasp-v2/acceptance.md`.
+
+Visible tissue grasp remains BLOCKED/FAIL: 14 unweighted finger joints, no validated pads or anatomical axes, existing tissue distortion. Solver results retain GAP/PENETRATION/NOT_CONVERGED rather than asserting wrist coincidence as success. Cursor review and complete exercise-grasp acceptance remain separate gates.

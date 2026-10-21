@@ -452,3 +452,48 @@ Failure: Playwright bundled chromium_headless_shell-1248 missing; exact launch e
 Workaround: explicitly select installed Google Chrome via supported channel; same actual viewer assertions and recorded video pass, browser-chrome.log/report.json.
 Alternatives: install pinned Playwright browser versus explicit existing Chrome channel (chosen to avoid installation). No claim that bundled Chromium works.
 Next action/reopen: CI requiring bundled Chromium must install and rerun exact original launch. Browser version compatibility remains environment-specific.
+
+## WD-2026-10-20-V2-ASSEMBLY
+Status: RESOLVED
+Failure: v2 animation assembly exact JSON comparison rejected Pelvis rotation because donor omitted identity while source stored float32-near-identity. Reproduction: node scripts/grasp-v2/assemble.mjs before semantic comparison.
+Paths: retarget/reexport skeleton (adds asset drift) versus semantic default TRS comparison with existing numerical parity tolerance (chosen). No anatomy/contact threshold relaxed. Durable fix validates omitted identity defaults and float32 import error with existing 64*float32 epsilon, rejects incompatible target references. Original assembler now passes. Original source BIN is copied byte-identically; no frozen/production asset changed. New experimental assembly manifest records input/output SHA. No retry/fallback remains.
+
+## WD-2026-10-20-V2-TISSUE
+Status: DEFERRED
+Associated inherited GRASP-CONTINUATION: missing actual fingertip surfaces and 14/30 joints unweighted; heuristic axes are not calibrated anatomical axes. Reproduction: inspect actual source GLB JOINTS_0/WEIGHTS_0 and build.py. No weight mutation, new skin, or fallback anatomy introduced. Proxy solver remains explicitly separate.
+Paths compared by independent rig/contact read-only investigations: retain asset/reference and use bounded proxy solve (selected for controller); physical landmark/attachment calibration and reviewed source tissue adaptation (requires missing evidence); replace skeleton/skin (excluded by user). Complete visible tissue grasp blocked. Next action: obtain independently reviewed finger-surface and attachment/axis data, adapt manifest then rerun mesh/Blender/browser gates. Reopen on new source geometry or calibration. Existing deformation/penetration FAIL must persist.
+
+## WD-2026-10-21-V2-NODE-TYPES
+Status: RESOLVED
+Failure: npm run build after actual-GLB Vitest tests were added: TS2307 node:fs types absent. Test runtime passes but typecheck fails. No skipped test/typecheck.
+Paths: add proper @types/node development dependency (chosen) versus moving actual-asset tests out of TypeScript typecheck (reject hides coverage from typecheck). Shared node_modules symlink was initial dependency reuse, now replace with worktree-owned install before dependency changes to preserve other checkout.
+Verified: declared @types/node in worktree-owned install; exact build and27 tests pass. No exclusions or dependency symlink remain.
+
+## WD-2026-10-21-V2-IDLE
+Status: RESOLVED
+Failure: second Chrome recording generated report/screenshots but context.close remained pending while owned renderer/GPU busy; paused v2 still solves and scans unchanged full source geometry each second. Original: node scripts/grasp-v2/browser.mjs; browser-run.log and video retained. No PASS for completion of second run.
+Paths: move full checks into worker (better concurrency, still redundant work) versus revision/time/pose convergence invalidation (chosen first because unchanged paused pose requires no recomputation). Preserve all full geometry checks on changed poses; mark report pose/time. Remove idle repeated solve rather than drop thresholds or skip contact. Reopen if original browser close still hangs after invalidation.
+V2-IDLE evidence-preserving stop: own second recording process80084/Chrome80093 stopped after >5min pending close; partial203fee9f video retained, never counted as passing recording. Clean server/browser restart required to load fix (test mode disables HMR). Compare page/renderer teardown diagnostics if recurrence. No user browser processes touched.
+V2-IDLE correctness extension: real test found unchanged opposite hand drifted ~3e-7 quaternion components after another control event. Finite transition completion now snaps to target at existing internal interpolation epsilon; idle invalidation no longer pauses an asymptotic interpolation then resumes it on unrelated edits. Tests await actual transition completion and retain exact opposite-side equality. No contact/geometry threshold changed.
+
+## WD-2026-10-21-V2-REGRESSION-LABEL
+Status: RESOLVED
+Inherited browser test expected 'SEATED LAT PULLDOWN · 坐姿联动', while PR22/24 sceneLabel already intentionally says 'SEATED LAT PULLDOWN · UNVERIFIED'. Original failure captured in playwright.json/error-context. Compared restoring obsolete UI label (reject loses quality warning) versus updating assertion to documented baseline contract (chosen). Source playback.ts unchanged; matrix/source/actual playback assertions retained. No functionality gate skipped. Final exact regression rerun required below.
+
+V2-NODE-TYPES verification: declared @types/node installed into worktree-owned node_modules; exact build and26unit tests pass. No typecheck exclusion remains.
+V2-IDLE closure: clean server5186/fresh real Chrome reran original node scripts/grasp-v2/browser.mjs, exit0,97d618ab completeWebM. Exact opposite-side equality, pause/seek/loop and release pass. Finite transition completion and idle invalidation replace repeated unchanged computation. Failed videos preserved locally. No geometry threshold changed. Reopen on idle/teardown recurrence.
+
+## WD-2026-10-21-V2-TEST-LOAD
+Status: DEFERRED
+Failure: existing pulldown regression exceeded unchanged30s timeout during a concurrent high-resolution Chrome recording. Other two tests passed. Compared serial heavy-browser scheduling (selected verification), GPU/load diagnostics, worker geometry evaluation. No timeout/quality threshold changed; no user apps stopped. Original report preserved locally. Next: exact serial three-test run, reopen on serial recurrence. Resource-contention cause remains an inference.
+
+## WD-2026-10-21-V2-SCHEMA-RUNTIME
+Status: RESOLVED
+System Python lacked jsonschema. Compared isolated Python dependency versus worktree-owned Ajv2020. Selected Node project dependency; Windows schema unchanged and packet validates using npm run test:grasp-v2:contact. No global Python install, skipped schema gate or claim to repair system Python. Ajv validation is maintained project path.
+
+## WD-2026-10-21-V2-SOLVER-OBJECTIVE
+Status: RESOLVED
+Original: reach-probe.ts with actual rig, y.055/z.02/radius.024 returned PENETRATION although sampled objective had low residual. Final continuous capsule validation correctly refused PASS.
+Compared increasing sample density/penalty (still discretization mismatch) versus sharing bounded capsule-cylinder minimum between objective and validator (selected). Prepared rigid transform removes repeated inversions; objective enforces nonpenetration and per-digit contact. No tolerance changed (0.0001m). Original probe now PROXY_CONTACT for .008/.016/.024 reachable targets, no penetrating segments; exact numerical/actual bilateral tests retained. Tissue remains separate FAIL/GEOMETRY_INSUFFICIENT. Reopen if objective and validation diverge on another shape.
+V2-TEST-LOAD final serial original three-test run PASS (46.479s total, all3, no skipped/flaky). Serial scheduling is disclosed verification scheduling, not proof that underlying concurrent GPU contention is fixed. DEFERRED diagnostic attribution reopens on a serial timeout.
+V2-REGRESSION-LABEL durable verification: same original pulldown/curl regression with corrected UNVERIFIED contract passes; playback.ts and quality semantics unchanged.

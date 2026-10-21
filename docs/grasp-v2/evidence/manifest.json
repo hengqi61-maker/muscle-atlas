@@ -1,0 +1,26 @@
+{
+  "implementationCommit": "d49a554ca8b496a3f685bfc062f0a34422503bcb",
+  "sourceTreeGitSha": "deebfd01d1685375d73550f6886c4bab3a3e5c0a",
+  "baseCommit": "8b83ed2abc86f2f95a7dce3092928d0a61d3cacf",
+  "generatedAssetSha256": "7c5b9ec06acc6c232456abdda6a5fc96aaf06ff256d9c814d4de1b0cfe118852",
+  "filesSha256": {
+    "assembly.json": "2a83531e844f418d258ad56f5b151883fda4e0e92283d7a6b596194717e3c9a1",
+    "asset-audit.json": "0ee65964c2a3a3d0fd89250e2ce54c40d4b4d7d433a03db7f9223417f68b54c2",
+    "blender-parity.json": "8e655f1c32c3cf589d19f62819d45dc22272fad8f226e112c31c92c047d7ceed",
+    "blender-reference.json": "d32685ae7954dfe8da3b5bf92c8c89d084466479913e538159483d525e5f3726",
+    "build.log": "a0bdaccaa3d33735c94dc6f06c479d86fc9e290cad8c0a9c09e74eceb4e51e37",
+    "contact-schema.json": "e325e8fb1ea1572e7919b9a5b81d5004da8a546ced00795ee35cc1102ca04320",
+    "contact-v1.1.json.gz": "997fe7c08b5bb8befbc1de89e68c7279ab1d46aecfa55ac0c88c76ad70cc2453",
+    "front-final.png": "c4318f7d906a46c07b5210b99bc1d72860e763c8a8381ca3ed82e40197f8e222",
+    "hand-final.png": "b0e4721d187e7d55afc7bc5f97cfd85dfb3325f8bf876642ddff0ab682011446",
+    "main-page-interaction.webm": "629c470bf85c53b3f2804f9128e6efd0b8ba0d11fec9ee5ab489a59c79237218",
+    "numerical.json": "8f1a14d03ed85298ba77f5839a9ce28f7ea63c1be9e840f2a3de4ee241ed45d0",
+    "playwright.json": "5e58a991ab4b287bee1ccd308d9216b8f0c71339a686ab38c87bb31ead27cdcf",
+    "pose-input.json": "bb067cc83886a2570c3ed2d00da3dfe27644173c80d8edb268a95c05c19ce773",
+    "side-final.png": "75cf104643707df83c4327e7dabb76390866eb9333cc59e3639cb90609c93387",
+    "three-matrices.json": "4fb71bdc13a5d184b090604d4cce703e00733f47c2f661c7217cd1c15d99bca9",
+    "trajectory-audit.json": "80db4b7309141c80dabecbe819157fc9120f384917a626e0e038fa4394a788e5",
+    "unit-tests.json": "e18b9b0399b1fba688089f57a552a29c645d3f55db6f828aff78a23a05d9d24e"
+  },
+  "scope": "Code tested in this implementation commit; following delivery commits contain evidence metadata only. All physical/tissue limits preserved."
+}

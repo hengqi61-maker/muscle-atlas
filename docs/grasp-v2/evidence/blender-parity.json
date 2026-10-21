@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "blender": "5.2.0 LTS",
+  "tolerance": 0.00000762939453125,
+  "scope": "actual v2 adapter vs native Blender, deformation matrices cancel importer bone frame conventions",
+  "rows": [
+    {
+      "name": "v2-0",
+      "maxDeformationMatrixError": 5.780009517675211e-7,
+      "maxJointOriginErrorM": 5.639148439173444e-7
+    },
+    {
+      "name": "v2-0.2",
+      "maxDeformationMatrixError": 6.154594878182706e-7,
+      "maxJointOriginErrorM": 5.494302893177722e-7
+    },
+    {
+      "name": "v2-0.45",
+      "maxDeformationMatrixError": 8.56053734621387e-7,
+      "maxJointOriginErrorM": 5.468425749439673e-7
+    },
+    {
+      "name": "v2-0.7",
+      "maxDeformationMatrixError": 0.0000013823755540265381,
+      "maxJointOriginErrorM": 5.708472215124683e-7
+    },
+    {
+      "name": "v2-1",
+      "maxDeformationMatrixError": 0.0000014921260594880081,
+      "maxJointOriginErrorM": 5.534518357429533e-7
+    },
+    {
+      "name": "solver-Left-0.008",
+      "maxDeformationMatrixError": 9.440769670188143e-7,
+      "maxJointOriginErrorM": 2.905618909883822e-7
+    },
+    {
+      "name": "solver-Left-0.016",
+      "maxDeformationMatrixError": 8.590182424272896e-7,
+      "maxJointOriginErrorM": 2.9382808771596987e-7
+    },
+    {
+      "name": "solver-Left-0.024",
+      "maxDeformationMatrixError": 8.439327561227117e-7,
+      "maxJointOriginErrorM": 2.9838095179979234e-7
+    },
+    {
+      "name": "solver-Left-0.04",
+      "maxDeformationMatrixError": 7.459548339583399e-7,
+      "maxJointOriginErrorM": 3.0326913574595685e-7
+    },
+    {
+      "name": "solver-Right-0.008",
+      "maxDeformationMatrixError": 0.0000012968691684989153,
+      "maxJointOriginErrorM": 5.429504984589906e-7
+    },
+    {
+      "name": "solver-Right-0.016",
+      "maxDeformationMatrixError": 9.248011611784346e-7,
+      "maxJointOriginErrorM": 5.540137726663248e-7
+    },
+    {
+      "name": "solver-Right-0.024",
+      "maxDeformationMatrixError": 0.0000011941366692136413,
+      "maxJointOriginErrorM": 5.711842056709047e-7
+    },
+    {
+      "name": "solver-Right-0.04",
+      "maxDeformationMatrixError": 9.061827313250337e-7,
+      "maxJointOriginErrorM": 5.543127869675854e-7
+    }
+  ]
+}

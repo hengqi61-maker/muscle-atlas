@@ -1,0 +1,1417 @@
+[
+  {
+    "name": "v2-0",
+    "pose": {
+      "LeftThumbCMC": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftThumbMCP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftThumbIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexMCP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexPIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexDIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleMCP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddlePIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleDIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingMCP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingPIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingDIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleMCP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittlePIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleDIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbCMC": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbMCP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexMCP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexPIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexDIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleMCP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddlePIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleDIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingMCP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingPIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingDIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleMCP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittlePIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleDIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  {
+    "name": "v2-0.2",
+    "pose": {
+      "LeftThumbCMC": {
+        "x": 0.06999999999999999,
+        "y": 0.11000000000000001,
+        "z": 0
+      },
+      "LeftThumbMCP": {
+        "x": 0.22999999999999998,
+        "y": 0,
+        "z": 0
+      },
+      "LeftThumbIP": {
+        "x": 0.21000000000000002,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexMCP": {
+        "x": 0.22999999999999998,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexPIP": {
+        "x": 0.25,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexDIP": {
+        "x": 0.17,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleMCP": {
+        "x": 0.22999999999999998,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddlePIP": {
+        "x": 0.25,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleDIP": {
+        "x": 0.17,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingMCP": {
+        "x": 0.22999999999999998,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingPIP": {
+        "x": 0.25,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingDIP": {
+        "x": 0.17,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleMCP": {
+        "x": 0.22999999999999998,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittlePIP": {
+        "x": 0.25,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleDIP": {
+        "x": 0.17,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbCMC": {
+        "x": 0.06999999999999999,
+        "y": -0.11000000000000001,
+        "z": 0
+      },
+      "RightThumbMCP": {
+        "x": 0.22999999999999998,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbIP": {
+        "x": 0.21000000000000002,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexMCP": {
+        "x": 0.22999999999999998,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexPIP": {
+        "x": 0.25,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexDIP": {
+        "x": 0.17,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleMCP": {
+        "x": 0.22999999999999998,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddlePIP": {
+        "x": 0.25,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleDIP": {
+        "x": 0.17,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingMCP": {
+        "x": 0.22999999999999998,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingPIP": {
+        "x": 0.25,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingDIP": {
+        "x": 0.17,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleMCP": {
+        "x": 0.22999999999999998,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittlePIP": {
+        "x": 0.25,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleDIP": {
+        "x": 0.17,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  {
+    "name": "v2-0.45",
+    "pose": {
+      "LeftThumbCMC": {
+        "x": 0.1575,
+        "y": 0.24750000000000003,
+        "z": 0
+      },
+      "LeftThumbMCP": {
+        "x": 0.5175,
+        "y": 0,
+        "z": 0
+      },
+      "LeftThumbIP": {
+        "x": 0.47250000000000003,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexMCP": {
+        "x": 0.5175,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexPIP": {
+        "x": 0.5625,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexDIP": {
+        "x": 0.3825,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleMCP": {
+        "x": 0.5175,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddlePIP": {
+        "x": 0.5625,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleDIP": {
+        "x": 0.3825,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingMCP": {
+        "x": 0.5175,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingPIP": {
+        "x": 0.5625,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingDIP": {
+        "x": 0.3825,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleMCP": {
+        "x": 0.5175,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittlePIP": {
+        "x": 0.5625,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleDIP": {
+        "x": 0.3825,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbCMC": {
+        "x": 0.1575,
+        "y": -0.24750000000000003,
+        "z": 0
+      },
+      "RightThumbMCP": {
+        "x": 0.5175,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbIP": {
+        "x": 0.47250000000000003,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexMCP": {
+        "x": 0.5175,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexPIP": {
+        "x": 0.5625,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexDIP": {
+        "x": 0.3825,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleMCP": {
+        "x": 0.5175,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddlePIP": {
+        "x": 0.5625,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleDIP": {
+        "x": 0.3825,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingMCP": {
+        "x": 0.5175,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingPIP": {
+        "x": 0.5625,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingDIP": {
+        "x": 0.3825,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleMCP": {
+        "x": 0.5175,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittlePIP": {
+        "x": 0.5625,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleDIP": {
+        "x": 0.3825,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  {
+    "name": "v2-0.7",
+    "pose": {
+      "LeftThumbCMC": {
+        "x": 0.24499999999999997,
+        "y": 0.385,
+        "z": 0
+      },
+      "LeftThumbMCP": {
+        "x": 0.8049999999999999,
+        "y": 0,
+        "z": 0
+      },
+      "LeftThumbIP": {
+        "x": 0.735,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexMCP": {
+        "x": 0.8049999999999999,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexPIP": {
+        "x": 0.875,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexDIP": {
+        "x": 0.595,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleMCP": {
+        "x": 0.8049999999999999,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddlePIP": {
+        "x": 0.875,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleDIP": {
+        "x": 0.595,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingMCP": {
+        "x": 0.8049999999999999,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingPIP": {
+        "x": 0.875,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingDIP": {
+        "x": 0.595,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleMCP": {
+        "x": 0.8049999999999999,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittlePIP": {
+        "x": 0.875,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleDIP": {
+        "x": 0.595,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbCMC": {
+        "x": 0.24499999999999997,
+        "y": -0.385,
+        "z": 0
+      },
+      "RightThumbMCP": {
+        "x": 0.8049999999999999,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbIP": {
+        "x": 0.735,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexMCP": {
+        "x": 0.8049999999999999,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexPIP": {
+        "x": 0.875,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexDIP": {
+        "x": 0.595,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleMCP": {
+        "x": 0.8049999999999999,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddlePIP": {
+        "x": 0.875,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleDIP": {
+        "x": 0.595,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingMCP": {
+        "x": 0.8049999999999999,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingPIP": {
+        "x": 0.875,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingDIP": {
+        "x": 0.595,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleMCP": {
+        "x": 0.8049999999999999,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittlePIP": {
+        "x": 0.875,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleDIP": {
+        "x": 0.595,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  {
+    "name": "v2-1",
+    "pose": {
+      "LeftThumbCMC": {
+        "x": 0.35,
+        "y": 0.55,
+        "z": 0
+      },
+      "LeftThumbMCP": {
+        "x": 1.15,
+        "y": 0,
+        "z": 0
+      },
+      "LeftThumbIP": {
+        "x": 1.05,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexMCP": {
+        "x": 1.15,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexPIP": {
+        "x": 1.25,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexDIP": {
+        "x": 0.85,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleMCP": {
+        "x": 1.15,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddlePIP": {
+        "x": 1.25,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleDIP": {
+        "x": 0.85,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingMCP": {
+        "x": 1.15,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingPIP": {
+        "x": 1.25,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingDIP": {
+        "x": 0.85,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleMCP": {
+        "x": 1.15,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittlePIP": {
+        "x": 1.25,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleDIP": {
+        "x": 0.85,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbCMC": {
+        "x": 0.35,
+        "y": -0.55,
+        "z": 0
+      },
+      "RightThumbMCP": {
+        "x": 1.15,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbIP": {
+        "x": 1.05,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexMCP": {
+        "x": 1.15,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexPIP": {
+        "x": 1.25,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexDIP": {
+        "x": 0.85,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleMCP": {
+        "x": 1.15,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddlePIP": {
+        "x": 1.25,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleDIP": {
+        "x": 0.85,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingMCP": {
+        "x": 1.15,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingPIP": {
+        "x": 1.25,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingDIP": {
+        "x": 0.85,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleMCP": {
+        "x": 1.15,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittlePIP": {
+        "x": 1.25,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleDIP": {
+        "x": 0.85,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  {
+    "name": "solver-Left-0.008",
+    "pose": {
+      "LeftThumbCMC": {
+        "x": 0,
+        "y": 0.497837369386988,
+        "z": 0
+      },
+      "LeftThumbMCP": {
+        "x": 0.47063679999999997,
+        "y": 0,
+        "z": 0
+      },
+      "LeftThumbIP": {
+        "x": 1.05,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexMCP": {
+        "x": 1.04,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexPIP": {
+        "x": 0.56856,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleMCP": {
+        "x": 1.04,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddlePIP": {
+        "x": 0.56856,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingMCP": {
+        "x": 1.04,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingPIP": {
+        "x": 0.56856,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleMCP": {
+        "x": 1.04,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittlePIP": {
+        "x": 0.56856,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  {
+    "name": "solver-Left-0.016",
+    "pose": {
+      "LeftThumbCMC": {
+        "x": 0,
+        "y": 0.55,
+        "z": 0
+      },
+      "LeftThumbMCP": {
+        "x": 0.42082578896918565,
+        "y": 0,
+        "z": 0
+      },
+      "LeftThumbIP": {
+        "x": 0.63,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexMCP": {
+        "x": 0.9781364038244144,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexPIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleMCP": {
+        "x": 0.9781364038244144,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddlePIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingMCP": {
+        "x": 0.9781364038244144,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingPIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleMCP": {
+        "x": 0.9781364038244144,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittlePIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  {
+    "name": "solver-Left-0.024",
+    "pose": {
+      "LeftThumbCMC": {
+        "x": 0.35,
+        "y": 0.55,
+        "z": 0
+      },
+      "LeftThumbMCP": {
+        "x": 0.6281364038244143,
+        "y": 0,
+        "z": 0
+      },
+      "LeftThumbIP": {
+        "x": 0.63,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexMCP": {
+        "x": 0.69,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexPIP": {
+        "x": 0.3228432391485863,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleMCP": {
+        "x": 0.69,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddlePIP": {
+        "x": 0.3228432391485863,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingMCP": {
+        "x": 0.69,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingPIP": {
+        "x": 0.3228432391485863,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleMCP": {
+        "x": 0.69,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittlePIP": {
+        "x": 0.3228432391485863,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  {
+    "name": "solver-Left-0.04",
+    "pose": {
+      "LeftThumbCMC": {
+        "x": 0.12534865699613287,
+        "y": 0.55,
+        "z": 0
+      },
+      "LeftThumbMCP": {
+        "x": 0.573150342657017,
+        "y": 0,
+        "z": 0
+      },
+      "LeftThumbIP": {
+        "x": 0.3852735277502804,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexMCP": {
+        "x": 0.33999999999999997,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexPIP": {
+        "x": 0.4,
+        "y": 0,
+        "z": 0
+      },
+      "LeftIndexDIP": {
+        "x": 0.3435746806122494,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleMCP": {
+        "x": 0.33999999999999997,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddlePIP": {
+        "x": 0.4,
+        "y": 0,
+        "z": 0
+      },
+      "LeftMiddleDIP": {
+        "x": 0.34356145622879,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingMCP": {
+        "x": 0.33999999999999997,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingPIP": {
+        "x": 0.4,
+        "y": 0,
+        "z": 0
+      },
+      "LeftRingDIP": {
+        "x": 0.34356145622879,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleMCP": {
+        "x": 0.33999999999999997,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittlePIP": {
+        "x": 0.4,
+        "y": 0,
+        "z": 0
+      },
+      "LeftLittleDIP": {
+        "x": 0.34356145622879,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  {
+    "name": "solver-Right-0.008",
+    "pose": {
+      "RightThumbCMC": {
+        "x": 0,
+        "y": -0.497837369386988,
+        "z": 0
+      },
+      "RightThumbMCP": {
+        "x": 0.47063679999999997,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbIP": {
+        "x": 1.05,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexMCP": {
+        "x": 1.04,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexPIP": {
+        "x": 0.56856,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleMCP": {
+        "x": 1.04,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddlePIP": {
+        "x": 0.56856,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingMCP": {
+        "x": 1.04,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingPIP": {
+        "x": 0.56856,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleMCP": {
+        "x": 1.04,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittlePIP": {
+        "x": 0.56856,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  {
+    "name": "solver-Right-0.016",
+    "pose": {
+      "RightThumbCMC": {
+        "x": 0,
+        "y": -0.55,
+        "z": 0
+      },
+      "RightThumbMCP": {
+        "x": 0.42082578896918565,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbIP": {
+        "x": 0.63,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexMCP": {
+        "x": 0.9781364038244144,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexPIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleMCP": {
+        "x": 0.9781364038244144,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddlePIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingMCP": {
+        "x": 0.9781364038244144,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingPIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleMCP": {
+        "x": 0.9781364038244144,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittlePIP": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  {
+    "name": "solver-Right-0.024",
+    "pose": {
+      "RightThumbCMC": {
+        "x": 0.35,
+        "y": -0.55,
+        "z": 0
+      },
+      "RightThumbMCP": {
+        "x": 0.6281364038244143,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbIP": {
+        "x": 0.63,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexMCP": {
+        "x": 0.69,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexPIP": {
+        "x": 0.3228432391485863,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleMCP": {
+        "x": 0.69,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddlePIP": {
+        "x": 0.3228432391485863,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingMCP": {
+        "x": 0.69,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingPIP": {
+        "x": 0.3228432391485863,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleMCP": {
+        "x": 0.69,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittlePIP": {
+        "x": 0.3228432391485863,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleDIP": {
+        "x": 0.51,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  {
+    "name": "solver-Right-0.04",
+    "pose": {
+      "RightThumbCMC": {
+        "x": 0.12534865699613287,
+        "y": -0.55,
+        "z": 0
+      },
+      "RightThumbMCP": {
+        "x": 0.573150342657017,
+        "y": 0,
+        "z": 0
+      },
+      "RightThumbIP": {
+        "x": 0.3852735277502804,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexMCP": {
+        "x": 0.33999999999999997,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexPIP": {
+        "x": 0.4,
+        "y": 0,
+        "z": 0
+      },
+      "RightIndexDIP": {
+        "x": 0.3435563134130002,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleMCP": {
+        "x": 0.33999999999999997,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddlePIP": {
+        "x": 0.4,
+        "y": 0,
+        "z": 0
+      },
+      "RightMiddleDIP": {
+        "x": 0.3435563134130002,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingMCP": {
+        "x": 0.33999999999999997,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingPIP": {
+        "x": 0.4,
+        "y": 0,
+        "z": 0
+      },
+      "RightRingDIP": {
+        "x": 0.3435563134130002,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleMCP": {
+        "x": 0.33999999999999997,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittlePIP": {
+        "x": 0.4,
+        "y": 0,
+        "z": 0
+      },
+      "RightLittleDIP": {
+        "x": 0.34356145622879,
+        "y": 0,
+        "z": 0
+      }
+    }
+  }
+]

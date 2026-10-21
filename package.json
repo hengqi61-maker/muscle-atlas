@@ -17,7 +17,15 @@
     "test:motion-quality": "node scripts/quality/motion-quality.mjs",
     "test:motion-support": "node scripts/quality/motion-quality-support.mjs",
     "build:rig-v2": "tsc -b && vite build --config vite.rig-v2.config.ts",
-    "preview:rig-v2": "vite preview --config vite.rig-v2.config.ts"
+    "preview:rig-v2": "vite preview --config vite.rig-v2.config.ts",
+    "predev": "node scripts/grasp-v2/assemble.mjs",
+    "prebuild": "node scripts/grasp-v2/assemble.mjs",
+    "pretest": "node scripts/grasp-v2/assemble.mjs",
+    "test:grasp-v2:numeric": "node scripts/grasp-v2/run-numeric.mjs",
+    "test:grasp-v2:contact": "node scripts/grasp-v2/validate-contact.mjs",
+    "test:grasp-v2:browser": "playwright test tests/browser/grasp-v2.spec.ts",
+    "test:grasp-v2:assets": "node scripts/grasp-v2/audit-asset.mjs",
+    "test:grasp-v2:trajectory": "node scripts/grasp-v2/run-trajectory.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.0.0",
@@ -30,10 +38,13 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
+    "@types/node": "^22.20.5",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@types/three": "^0.180.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "ajv": "^8.20.0",
+    "esbuild": "^0.28.2",
     "gltf-validator": "^2.0.0-dev.3.10",
     "typescript": "^5.9.0",
     "vite": "^7.0.0",
